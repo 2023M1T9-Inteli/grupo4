@@ -10,7 +10,7 @@
 
 ## Pandawan
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://github.com/CaioPaula">Caio Paula</a>, <a href="https://github.com/enricopasmanik">Enrico Pasmanik</a>, <a href="https://github.com/heitorep">Heitor Prudente</a>, <a href="https://github.com/henriqueecox">Henrique Cox</a>, <a href="https://github.com/uMorit4">Pedro Morita</a>, <a href="https://github.com/raissavieiram">Raissa Viera</a>, <a href="https://github.com/raphaelaferraz">Raphaela Ferraz</a> e <a href="https://github.com/YanMCoutinho">Yan Mendonça Coutinho</a>
 
 ## Descrição
 
