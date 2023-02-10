@@ -1,5 +1,5 @@
 # Inteli - Instituto de Tecnologia e Liderança 
-# Scrip de exemplo, modifique de acordo com seu grupo #
+# Script de exemplo, modifique de acordo com seu grupo #
 
 
 <p align="center">
