@@ -1,6 +1,7 @@
-tool
+tool # permite que possamos alterar as variaveis mais facilmente
 extends Control
 
+# Foi comentado as variáveis de cor, pois não iriamos usar.
 """
 # PT_BR: Variaveis exportadas
 # EN_US: Exported variables
@@ -48,7 +49,7 @@ export(float, 0.0, 1.0) var opacityPreview = 1
 
 # PT_BR: Cor de fundo para o slote
 # EN_US: Background color for slot
-export(Color) var color: Color = Color(0.25,0.25,0.25,1) setget _setColor
+#export(Color) var color: Color = Color(0.25,0.25,0.25,1) setget _setColor
 
 # PT_BR: Tamanho do slote
 # EN_US: Slot size
@@ -79,10 +80,10 @@ func _setQtd(newValue) -> void:
 	qtd = newValue
 	if weakref($qtd).get_ref():
 		$qtd.text = str(qtd)
-func _setColor(newValue) -> void:
-	color = newValue
-	if weakref($color).get_ref():
-		$color.color = color
+#func _setColor(newValue) -> void:
+#	color = newValue
+#	if weakref($color).get_ref():
+#		$color.color = color
 func _setImage(newValue) -> void:
 	image = newValue
 	if weakref($image).get_ref():
@@ -99,12 +100,12 @@ func _setSize(newValue) -> void:
 	size = newValue
 	rect_min_size = size
 	rect_size = size
-	$color.rect_min_size = size
-	$color.rect_size = size
+	#$color.rect_min_size = size
+	#$color.rect_size = size
 	$image.rect_min_size = size / 2
 	$image.rect_size = size / 2
-	$image.margin_left = size.x / 4
-	$image.margin_top = size.y / 4
+	$image.margin_right = size.x /4
+	$image.margin_bottom = size.y/4
 	$background.rect_min_size = size
 	$background.rect_size = size
 	$preview.rect_min_size = size
@@ -113,9 +114,9 @@ func _setSize(newValue) -> void:
 	$touch.scale = (newValue * 64 / 2.0) / 1000.0
 
 func _ready():
-	defaults = {
-		"color": color
-	}
+	#defaults = {
+	#	"color": color
+	#}
 	
 	# PT_BR: É necessráio colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# EN_US: It is necessary to put the mouse filter as ignore, otherwise the drag will not work
@@ -129,14 +130,6 @@ func _process(_delta):
 		self.get_node("image").hide()
 	else:
 		self.get_node("image").show()
-		
-
-#if isDragging:
-#	self.get_node("image").hide()
-#else:
-	#self.get_node("image").show()
-
-
 
 # PT_BR: Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
 # PT_BR: Habilita / Desabilita a transferência unitária dos slotes que incrementam
@@ -168,7 +161,7 @@ func _clearSlot() -> void:
 	# EN_US: Sets the default values
 	qtd = 0
 	uid = ""
-	$color.color = defaults["color"]
+	#$color.color = defaults["color"]
 	$image.texture = null
 	$qtd.text = str(qtd)
 
@@ -190,7 +183,7 @@ DRAG AND DROP
 # EN_US: Function called automatically as soon as a drag action is identified
 func get_drag_data(_position):
 	isDragging = true
-	var previewPos = -($color.rect_size / 2)
+	var previewPos = -($background.rect_size / 2)
 	
 	# PT_BR(1): Preview do item arrastado, duplicando ele mesmo
 	# PT_BR(2): Esse item duplicado, só server para o preview, depois ele é descartado automaticamente
@@ -198,7 +191,7 @@ func get_drag_data(_position):
 	# EN_US(2): This duplicate item, only server for the preview, then it is automatically discarded
 	var dragPreview = self.duplicate()
 	dragPreview.modulate.a = opacityPreview
-	dragPreview.get_node("color").rect_position = previewPos
+	#dragPreview.get_node("color").rect_position = previewPos
 	dragPreview.get_node("image").rect_position = previewPos
 	dragPreview.get_node("preview").rect_position = previewPos
 	dragPreview.get_node("image").hide()
@@ -208,11 +201,11 @@ func get_drag_data(_position):
 	
 	if dragPreview.image is Texture:
 		dragPreview.get_node("image").show()
-		dragPreview.get_node("color").hide()
+		#dragPreview.get_node("color").hide()
 	
 	if dragPreview.imagePreview is Texture:
 		dragPreview.get_node("preview").show()
-		dragPreview.get_node("color").hide()
+		#dragPreview.get_node("color").hide()
 		dragPreview.get_node("image").modulate.a = 0 #gambiarra
 	
 	# PT_BR: Constrói o preview
@@ -297,7 +290,7 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the image, color and quantity of the slot that received the item
 	imagePreview = data["imagePreview"]
 	image = data["image"] 
-	$color.color = data["color"]
+	#$color.color = data["color"]
 	$qtd.text = str(qtd)
 	
 	# PT_BR: Se a imagem dropada tiver uma textura
@@ -338,3 +331,4 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the variable in the dropped object (source)
 	data.isDragging = false
 
+# Código retirado de https://github.com/GDQuest/godot-design-patterns.git
