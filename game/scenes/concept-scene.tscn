@@ -11,7 +11,8 @@
 [node name="concept-scene" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 512, 288 )
+position = Vector2( 633.5, 400 )
+scale = Vector2( 1.54241, 1.62222 )
 texture = ExtResource( 6 )
 
 [node name="Chairman" type="Sprite" parent="."]

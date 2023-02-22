@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/fundo_volume.png" type="Texture" id=1]
+[ext_resource path="res://assets/botao_fechar.png" type="Texture" id=2]
+[ext_resource path="res://Opcoes.gd" type="Script" id=3]
+[ext_resource path="res://assets/tela_opcoes.png" type="Texture" id=4]
+[ext_resource path="res://assets/controle_volume.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 452, 83 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="Opcoes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 641.875, 361.875 )
+scale = Vector2( 0.851599, 0.759969 )
+texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1150.0
+margin_top = 16.0
+margin_right = 1240.0
+margin_bottom = 99.0
+custom_styles/normal = SubResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 1194, 57.25 )
+scale = Vector2( 1.22857, 1.21014 )
+texture = ExtResource( 2 )
+
+[node name="SliderMusic" type="HSlider" parent="."]
+margin_left = 130.0
+margin_top = 223.0
+margin_right = 582.0
+margin_bottom = 308.0
+custom_icons/grabber_highlight = ExtResource( 5 )
+custom_icons/grabber = ExtResource( 5 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
+min_value = -40.0
+max_value = 0.0
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="value_changed" from="SliderMusic" to="." method="_on_SliderMusic_value_changed"]

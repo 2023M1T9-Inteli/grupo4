@@ -48,6 +48,19 @@ config/name="jogo-cia"
 run/main_scene="res://scenes/concept-scene.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+default_bus_layout=""
+
+[autoload]
+
+Audio="*res://Audio.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
