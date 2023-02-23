@@ -48,6 +48,14 @@ config/name="O Talento de Delegar"
 run/main_scene="res://scenes/ConceptScene.tscn"
 config/icon="res://icon/icon.png"
 
+[audio]
+
+default_bus_layout=""
+
+[autoload]
+
+Audio="*res://scenes/Audio.tscn"
+
 [display]
 
 window/size/width=1280
