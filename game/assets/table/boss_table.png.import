@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/workerTable.png-a90a15a8e811a152164a61956f2d7dc2.stex"
+path="res://.import/boss_table.png-7b639cb3e837e2075872efef6a90b0b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/table/workerTable.png"
-dest_files=[ "res://.import/workerTable.png-a90a15a8e811a152164a61956f2d7dc2.stex" ]
+source_file="res://assets/table/boss_table.png"
+dest_files=[ "res://.import/boss_table.png-7b639cb3e837e2075872efef6a90b0b7.stex" ]
 
 [params]
 
