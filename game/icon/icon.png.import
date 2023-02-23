@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/simple-npc.png-cd57223ca08969cff9948b654675ccaf.stex"
+path="res://.import/icon.png-ffd744aa4cf81fe1c91e4d1cd246c5a2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scrap-assets/simple-npc.png"
-dest_files=[ "res://.import/simple-npc.png-cd57223ca08969cff9948b654675ccaf.stex" ]
+source_file="res://icon/icon.png"
+dest_files=[ "res://.import/icon.png-ffd744aa4cf81fe1c91e4d1cd246c5a2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

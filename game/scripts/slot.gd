@@ -1,7 +1,6 @@
-tool # permite que possamos alterar as variaveis mais facilmente
+tool
 extends Control
 
-# Foi comentado as variáveis de cor, pois não iriamos usar.
 """
 # PT_BR: Variaveis exportadas
 # EN_US: Exported variables
@@ -9,23 +8,23 @@ extends Control
 
 # PT_BR: ID único para o slote, para o item arrastado ou para o slote aceitar somente outros slotes desse ID
 # EN_US: Unique ID for the slot, for the dragged item, or for the slot to accept only other slots of that ID
-export var uid = "" 
+export(String) var uid = "" 
 
 # PT_BR: Aceita somente itens do mesmo grupo
 # EN_US: Accepts items in the same group
-export var group = "" 
+export(String) var group = "" setget _set_group
 
 # PT_BR: Quantidade do item, usar com a variável "increment"
 # EN_US: Item quantity, use with the "increment" variable
-export(int) var qtd = 0 setget _setQtd 
+export(int) var qtd = 0 setget _set_qtd 
 
 # PT_BR: Quantidade máxima para o slote, usar com a variável "increment"
 # EN_US: Maximum amount for the slot, use with the "increment" variable
-export(int) var maxQtd = 0 
+export(int) var max_qtd = 0 
 
 # PT_BR: Mostra ou oculta o contador de quantidade
 # EN_US: Shows or hides the quantity counter
-export(bool) var showQtd = true setget _setShowQtd 
+export(bool) var show_qtd = true setget _set_show_qtd 
 
 # PT_BR: Permite o controle incremental da quantidade
 # EN_US: Allows incremental control of the quantity
@@ -33,75 +32,64 @@ export(bool) var increment = true
 
 # PT_BR: Permite um item que não tenha imagem, sobreescrever a imagem do slote pra onde está indo
 # EN_US: Allows an item that has no image, overwrite the image of the slot where it is going
-export(bool) var replaceNull = true 
+export(bool) var replace_null = true 
 
 # PT_BR: Permite o clique para limpar o slote
 # EN_US: Allows click to clear the slot
-export(bool) var canClear = true 
+export(bool) var can_clear = true 
 
 # PT_BR: Permite o clique para limpar o slote
 # EN_US: Allows click to clear the slot
-export(bool) var canReceive = true 
+export(bool) var can_receive = true 
 
 # PT_BR: Transparência do preview
 # EN_US: Preview transparency
-export(float, 0.0, 1.0) var opacityPreview = 1 
-
-# PT_BR: Cor de fundo para o slote
-# EN_US: Background color for slot
-#export(Color) var color: Color = Color(0.25,0.25,0.25,1) setget _setColor
+export(float, 0.0, 1.0) var opacity_preview = 1.0 
 
 # PT_BR: Tamanho do slote
 # EN_US: Slot size
-export(Vector2) var size: Vector2 = Vector2(64, 64) setget _setSize
+export(Vector2) var size: Vector2 = Vector2(64, 64) setget _set_size
 
 # PT_BR: Imagem para o slote
 # EN_US: Slot image
-export(Texture) var image: Texture = null setget _setImage
-export(Texture) var background: Texture = null setget _setBackground
+export(Texture) var image: Texture = null setget _set_image
 
 # PT_BR: Imagem para o preview do drag
 # EN_US: Drag preview image
-export(Texture) var imagePreview: Texture = null setget _setImagePreview
+export(Texture) var image_preview: Texture = null setget _set_image_preview
 
 # PT_BR: Variaveis locais
 # EN_US: Local variables
 var defaults: Dictionary = {}
-var _mouseRightButton: bool = false
-var isDragging: bool = false
+var _mouse_right_button: bool = false
+var is_dragging: bool = false
 
 # PT_BR: Funções setGet
 # EN_US: setGet Functions
-func _setShowQtd(newValue) -> void:
-	showQtd = newValue
+func _set_group(new_value) -> void:
+	var new_group_name = new_value.strip_edges(true, true)
+	assert(new_group_name != "", "ERROR: You must give a non-whitespace value to group property in " + str(self))
+	group = new_group_name
+func _set_show_qtd(new_value) -> void:
+	show_qtd = new_value
 	if weakref($qtd).get_ref():
-		$qtd.set("visible", showQtd)
-func _setQtd(newValue) -> void:
-	qtd = newValue
+		$qtd.set("visible", show_qtd)
+func _set_qtd(new_value) -> void:
+	qtd = new_value
 	if weakref($qtd).get_ref():
 		$qtd.text = str(qtd)
-#func _setColor(newValue) -> void:
-#	color = newValue
-#	if weakref($color).get_ref():
-#		$color.color = color
-func _setImage(newValue) -> void:
-	image = newValue
+func _set_image(new_value) -> void:
+	image = new_value
 	if weakref($image).get_ref():
 		$image.texture = image
-func _setBackground(newValue) -> void:
-	background = newValue
-	if weakref($background).get_ref():
-		$background.texture = background
-func _setImagePreview(newValue) -> void:
-	imagePreview = newValue
+func _set_image_preview(new_value) -> void:
+	image_preview = new_value
 	if weakref($preview).get_ref():
-		$preview.texture = imagePreview
-func _setSize(newValue) -> void:
-	size = newValue
+		$preview.texture = image_preview
+func _set_size(new_value) -> void:
+	size = new_value
 	rect_min_size = size
 	rect_size = size
-	#$color.rect_min_size = size
-	#$color.rect_size = size
 	$image.rect_min_size = size / 2
 	$image.rect_size = size / 2
 	$image.margin_right = size.x /4
@@ -111,48 +99,45 @@ func _setSize(newValue) -> void:
 	$preview.rect_min_size = size
 	$preview.rect_size = size
 	$qtd.rect_size.x = size.x - 10
-	$touch.scale = (newValue * 64 / 2.0) / 1000.0
+	$touch.scale = (size * 64 / 2.0) / 1000.0
 
 func _ready():
-	#defaults = {
-	#	"color": color
-	#}
-	
 	# PT_BR: É necessráio colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# EN_US: It is necessary to put the mouse filter as ignore, otherwise the drag will not work
-	# Set all children as MOUSE_FILTER_IGNORE
 	for n in get_children():
 		if "mouse_filter" in n:
 			n.mouse_filter = MOUSE_FILTER_IGNORE
 
+# PT_BR: Se a Preview do Control estiver sendo arrastada, ele será ocultado até que o arraste termine 
+# EN_US: If the Preview of the Control is being dragged, it will be hidden until the drag is finished
 func _process(_delta):
-	if isDragging:
+	if is_dragging:
 		self.get_node("image").hide()
 	else:
 		self.get_node("image").show()
 
-# PT_BR: Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
-# PT_BR: Habilita / Desabilita a transferência unitária dos slotes que incrementam
+# PT_BR (1): Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
+# PT_BR (2): Habilita / Desabilita a transferência unitária dos slotes que incrementam
 
-# EN_US: If the user clicks the right mouse button, or two fingers on the screen
-# EN_US: Enables / Disables unit transfer of slots that increment
+# EN_US (1): If the user clicks the right mouse button, or two fingers on the screen
+# EN_US (2): Enables / Disables unit transfer of slots that increment
 func _input(event) -> void:
 	# PT_BR: Se clicar com botão direito do mouse
 	# EN_US: If you right-click
 	if event is InputEventMouseButton:
 		if event.button_index == 2 and event.is_pressed():
 			if increment:
-				_mouseRightButton = !_mouseRightButton
-				$unit.set("visible", _mouseRightButton)
+				_mouse_right_button = !_mouse_right_button
+				$unit.set("visible", _mouse_right_button)
 		elif event.is_action_released("click"):
-			isDragging = false
+			is_dragging = false
 	# PT_BR: Se tocar com os dois dedos na tela
 	# EN_US: If you touch the screen with both fingers
 	if event is InputEventScreenTouch:
 		if event.index == 1 and event.is_pressed():
 			if increment:
-				_mouseRightButton = !_mouseRightButton
-				$unit.set("visible", _mouseRightButton)
+				_mouse_right_button = !_mouse_right_button
+				$unit.set("visible", _mouse_right_button)
 
 # PT_BR: Uma função para resetar o slote
 # EN_US: A function to reset the slot
@@ -161,7 +146,6 @@ func _clearSlot() -> void:
 	# EN_US: Sets the default values
 	qtd = 0
 	uid = ""
-	#$color.color = defaults["color"]
 	$image.texture = null
 	$qtd.text = str(qtd)
 
@@ -170,8 +154,8 @@ func _clearSlot() -> void:
 func _on_touch_pressed() -> void:
 	if increment: return
 	yield(get_tree().create_timer(.2), "timeout")
-	if isDragging: return
-	if !canClear: return
+	if is_dragging: return
+	if !can_clear: return
 	_clearSlot()
 
 
@@ -182,35 +166,31 @@ DRAG AND DROP
 # PT_BR: Função chamada automaticamente assim que uma ação de drag é identificada
 # EN_US: Function called automatically as soon as a drag action is identified
 func get_drag_data(_position):
-	isDragging = true
-	var previewPos = -($background.rect_size / 2)
+	is_dragging = true
+	var preview_pos = -($image.rect_size / 2)
 	
 	# PT_BR(1): Preview do item arrastado, duplicando ele mesmo
 	# PT_BR(2): Esse item duplicado, só server para o preview, depois ele é descartado automaticamente
 	# EN_US(1): Preview of the dragged item, duplicating itself
 	# EN_US(2): This duplicate item, only server for the preview, then it is automatically discarded
-	var dragPreview = self.duplicate()
-	dragPreview.modulate.a = opacityPreview
-	#dragPreview.get_node("color").rect_position = previewPos
-	dragPreview.get_node("image").rect_position = previewPos
-	dragPreview.get_node("preview").rect_position = previewPos
-	dragPreview.get_node("image").hide()
-	dragPreview.get_node("background").hide()
-	dragPreview.get_node("touch").hide()
-	dragPreview.get_node("qtd").hide()
+	var drag_preview = self.duplicate()
+	drag_preview.modulate.a = opacity_preview
+	drag_preview.get_node("image").rect_position = preview_pos
+	drag_preview.get_node("preview").rect_position = preview_pos
+	drag_preview.get_node("image").hide()
+	drag_preview.get_node("touch").hide()
+	drag_preview.get_node("qtd").hide()
 	
-	if dragPreview.image is Texture:
-		dragPreview.get_node("image").show()
-		#dragPreview.get_node("color").hide()
-	
-	if dragPreview.imagePreview is Texture:
-		dragPreview.get_node("preview").show()
-		#dragPreview.get_node("color").hide()
-		dragPreview.get_node("image").modulate.a = 0 #gambiarra
+	if drag_preview.image_preview is Texture:
+		drag_preview.get_node("preview").show()
+		drag_preview.get_node("image").modulate.a = 0
+		
+	elif drag_preview.image is Texture:
+		drag_preview.get_node("image").show()
 	
 	# PT_BR: Constrói o preview
 	# EN_US: Build the preview
-	set_drag_preview(dragPreview)
+	set_drag_preview(drag_preview)
 	
 	# PR_BR: Retornar para o can_drag / drop
 	# EN_US: Return to can_drag / drop
@@ -219,7 +199,7 @@ func get_drag_data(_position):
 # PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
 # EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(_position, data) -> bool:
-	if !canReceive: return false
+	if !can_receive: return false
 	if data == self: return false
 	var ret = false
 	
@@ -228,7 +208,7 @@ func can_drop_data(_position, data) -> bool:
 	if increment != data["increment"]:
 		return false 
 		
-		# PT_BR: Se o slote for incremental
+	# PT_BR: Se o slote for incremental
 	# EN_US: If the slot is incremental
 	if increment:
 		# PT_BR: Se o slote arrastado estiver vazio
@@ -238,7 +218,12 @@ func can_drop_data(_position, data) -> bool:
 			
 		# PT_BR: Se o slote tem limite máximo, e já estiver totalmente ocupado
 		# EN_US: If the slot has a maximum limit, and is already fully occupied
-		if maxQtd != 0 and maxQtd == qtd:
+		if max_qtd != 0 and max_qtd == qtd:
+			return false
+		
+		# PT_BR: Se origem e destino não são do mesmo grupo
+		# EN_US: If origin and destination are not from the same group
+		if data["group"] != group:
 			return false
 
 		# PT_BR: Se a origem e destino possuem o mesmo uid, ou o slote não possui uid
@@ -247,9 +232,9 @@ func can_drop_data(_position, data) -> bool:
 			ret = true
 
 	else:
-		# PT_BR: Se origem e destino são do mesmo grupo, ou o slote não possui grupo
-		# EN_US: If origin and destination are from the same group, or the slot has no group
-		if ((data["group"] == group) or (group == "")):
+		# PT_BR: Se origem e destino são do mesmo grupo
+		# EN_US: If origin and destination are from the same group
+		if data["group"] == group:
 			ret = true
 					
 	return ret
@@ -258,29 +243,29 @@ func can_drop_data(_position, data) -> bool:
 # EN_US: This function captures the preview that was being dragged, and comes in the parameter "data"
 func drop_data(_position, data) -> void:
 	
-	var qtdDrop = 0
+	var qtd_drop = 0
 	
 	# PT_BR: Se o slote é do tipo increment
 	# EN_US: If the slot is of the increment type
 	if increment:
 		# PT_BR: Se está com o modo unitário habilitado
 		# EN_US: If you have unit mode enabled
-		if _mouseRightButton:
-			qtdDrop = 1
+		if _mouse_right_button:
+			qtd_drop = 1
 			# PT_BR: Se o slote possui limite máixmo
 			# EN_US: If the slot has a maximum limit
-			if maxQtd > 0:
-				qtdDrop = clamp(1, 0, abs(maxQtd - qtd))
+			if max_qtd > 0:
+				qtd_drop = clamp(1, 0, abs(max_qtd - qtd))
 		else:
-			qtdDrop = data["qtd"]
+			qtd_drop = data["qtd"]
 			# PT_BR: Se possui limite máximo, então limita o valor dropado
 			# EN_US: If it has a maximum limit, then limit the dropped value
-			if maxQtd > 0:
-				qtdDrop = clamp(data["qtd"], 1, abs(maxQtd - qtd))
+			if max_qtd > 0:
+				qtd_drop = clamp(data["qtd"], 1, abs(max_qtd - qtd))
 		
 		# PT_BR: Incrementa a quantidade
 		# EN_US: Increase the amount
-		qtd += qtdDrop 
+		qtd += qtd_drop 
 		
 		# PT_BR: Atualiza o uid do slote
 		# EN_US: Updates the slid uid
@@ -288,27 +273,32 @@ func drop_data(_position, data) -> void:
 	
 	# PT_BR: Atualiza a imagem, cor e quantidade do slote que recebeu o item
 	# EN_US: Updates the image, color and quantity of the slot that received the item
-	imagePreview = data["imagePreview"]
+	image_preview = data["image_preview"]
 	image = data["image"] 
-	#$color.color = data["color"]
 	$qtd.text = str(qtd)
 	
 	# PT_BR: Se a imagem dropada tiver uma textura
 	# EN_US: If the dropped image has a texture
 	if data["image"] is Texture:
-		# PT_BR: Atualiza a textura do slote
-		# EN_US: Updates the slot texture
+		# PT_BR: Atualiza a textura da imagem
+		# EN_US: Updates the image texture
 		$image.texture = data["image"] 
 	else:
 		# PT_BR: Se estiver marcado para limpar em caso de imagem nula
 		# EN_US: If checked to clear in case of null image
-		if replaceNull: 
+		if replace_null: 
 			$image.texture = null
-			
-	if data["imagePreview"] is Texture:
-		$preview.texture = data["imagePreview"] 
+	
+	# PT_BR: Se a preview dropada tiver uma textura
+	# EN_US: If the dropped preview has a texture
+	if data["image_preview"] is Texture:
+		# PT_BR: Atualiza a textura do preview
+		# EN_US: Updates the preview texture
+		$preview.texture = data["image_preview"] 
 	else:
-		if replaceNull: 
+		# PT_BR: Se estiver marcado para limpar em caso de imagem nula
+		# EN_US: If checked to clear in case of null image
+		if replace_null: 
 			$preview.texture = null
 	
 	# PT_BR: Atualiza informações no objeto origem 
@@ -316,7 +306,7 @@ func drop_data(_position, data) -> void:
 	if data.increment:
 		# PT_BR: Decrementa a quantidade dropada
 		# EN_US: Decreases the amount dropped
-		data["qtd"] -= qtdDrop 
+		data["qtd"] -= qtd_drop 
 		
 		# PT_BR: Se a quantidade for 0, limpa o slote de origem
 		# EN_US: If the quantity is 0, clean the original slot
@@ -329,6 +319,6 @@ func drop_data(_position, data) -> void:
 	
 	# PT_BR: Atualiza a variável no objeto dropado (origem)
 	# EN_US: Updates the variable in the dropped object (source)
-	data.isDragging = false
+	data.is_dragging = false
 
-# Código retirado de https://github.com/GDQuest/godot-design-patterns.git
+# Código base pego de https://github.com/GDQuest/godot-design-patterns.git
