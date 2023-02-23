@@ -6,10 +6,9 @@ extends Control
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://scenes/ConceptScene.tscn")
 
-
 # PT_BR: Abre a cena de créditos
 # EN_US: Opens the credits scene
-func _on_Creditos_button_up():
+func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
 
 # PT_BR: Abre a cena de opções

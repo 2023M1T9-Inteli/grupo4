@@ -89,7 +89,7 @@ custom_styles/normal = SubResource( 3 )
 icon = ExtResource( 6 )
 icon_align = 1
 
-[node name="Creditos" type="Button" parent="ButtonsVBoxContainer"]
+[node name="CreditsButton" type="Button" parent="ButtonsVBoxContainer"]
 margin_top = 177.0
 margin_right = 228.0
 margin_bottom = 232.0
@@ -108,5 +108,5 @@ script = ExtResource( 3 )
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="button_up" from="ButtonsVBoxContainer/Creditos" to="." method="_on_Creditos_button_up"]
+[connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_ExitButton_pressed"]
