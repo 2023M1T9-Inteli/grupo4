@@ -15,11 +15,11 @@ func _on_StartButton_pressed():
 
 
 func _on_Creditos_button_up():
-	get_tree().change_scene("res://Créditos.tscn")
+	get_tree().change_scene("res://scenes/Créditos.tscn")
 
 
 
 
 func _on_OptionsButton_pressed():
-	get_tree().change_scene("res://Opcoes.tscn")
+	get_tree().change_scene("res://scenes/Opcoes.tscn")
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tela_opcoes_sem_texto.png-5b073b05e4952c33c97754fd6ae48e0c.stex"
+path="res://.import/botao_sair.png-f09c57e671eb08a119993575e01c40f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tela_opcoes_sem_texto.png"
-dest_files=[ "res://.import/tela_opcoes_sem_texto.png-5b073b05e4952c33c97754fd6ae48e0c.stex" ]
+source_file="res://assets/MenuScreen/botao_sair.png"
+dest_files=[ "res://.import/botao_sair.png-f09c57e671eb08a119993575e01c40f5.stex" ]
 
 [params]
 

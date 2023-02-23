@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controle_volume.png-2712dc0ea21e215797da5d29442a0011.stex"
+path="res://.import/controle_volume.png-20910108444bff93b2276c2801412137.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/controle_volume.png"
-dest_files=[ "res://.import/controle_volume.png-2712dc0ea21e215797da5d29442a0011.stex" ]
+source_file="res://assets/OptionsScreen/controle_volume.png"
+dest_files=[ "res://.import/controle_volume.png-20910108444bff93b2276c2801412137.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao_iniciar (8).png-12b6ec027d4099ab4b43513a06a487b5.stex"
+path="res://.import/Tela de Início 8.png-8ec5edcc71e6817110668dac22c5291c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/botao_iniciar (8).png"
-dest_files=[ "res://.import/botao_iniciar (8).png-12b6ec027d4099ab4b43513a06a487b5.stex" ]
+source_file="res://assets/MenuScreen/Tela de Início 8.png"
+dest_files=[ "res://.import/Tela de Início 8.png-8ec5edcc71e6817110668dac22c5291c.stex" ]
 
 [params]
 

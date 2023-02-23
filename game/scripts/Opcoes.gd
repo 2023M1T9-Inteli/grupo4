@@ -4,7 +4,7 @@ var master_bus = AudioServer.get_bus_index("Master")
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene("res://scenes/Menu.tscn")
 	pass # Replace with function body.
 
 

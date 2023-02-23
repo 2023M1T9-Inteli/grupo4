@@ -54,7 +54,7 @@ default_bus_layout=""
 
 [autoload]
 
-Audio="*res://Audio.tscn"
+Audio="*res://scenes/Audio.tscn"
 
 [display]
 
