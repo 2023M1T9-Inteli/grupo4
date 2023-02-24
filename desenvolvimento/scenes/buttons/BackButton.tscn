@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/MenuScreen/botao_fechar.png" type="Texture" id=1]
-[ext_resource path="res://scripts/buttons/BackButton.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -9,11 +8,8 @@
 margin_right = 90.0
 margin_bottom = 83.0
 custom_styles/normal = SubResource( 1 )
-script = ExtResource( 2 )
 
 [node name="ExitSprite" type="Sprite" parent="."]
 position = Vector2( 44, 41.25 )
 scale = Vector2( 1.22857, 1.21014 )
 texture = ExtResource( 1 )
-
-[connection signal="pressed" from="." to="." method="_on_BackButton_pressed"]
