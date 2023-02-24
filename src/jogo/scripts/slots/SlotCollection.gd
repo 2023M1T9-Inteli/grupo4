@@ -78,6 +78,7 @@ func get_drag_data(position):
 				return child.get_drag_data(position)
 			actual_child += 1
 
+
 # PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
 # EN_US: Checks if any child Control accepts the object being dragged and returns the result
 func can_drop_data(position, data) -> bool:
@@ -86,6 +87,7 @@ func can_drop_data(position, data) -> bool:
 		if child is Control:
 			can_drop = can_drop or child.can_drop_data(position, data)
 	return can_drop
+
 
 # PT_BR: Checa qual dos Controls filhos aceita o objeto e, ao achar, o envia o objeto arrastado para o Control
 # EN_US: Checks which of the child Controls accepts the object and, when found, sends the dragged object to the Control
