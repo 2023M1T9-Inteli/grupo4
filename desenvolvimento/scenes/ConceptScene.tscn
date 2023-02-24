@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/player.png" type="Texture" id=2]
@@ -7,9 +7,16 @@
 [ext_resource path="res://assets/table/boss_table.png" type="Texture" id=5]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/prefabs/WorkerTableTextureRect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/buttons/BackButton.tscn" type="PackedScene" id=8]
 
 [node name="ConceptScene" type="Node2D"]
 position = Vector2( 164, 70 )
+
+[node name="BackButton" parent="." instance=ExtResource( 8 )]
+margin_left = -104.0
+margin_top = -22.0
+margin_right = -14.0
+margin_bottom = 61.0
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 512, 288 )

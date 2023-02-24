@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/PhaseScreen/phase_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/PhaseScreen/phase2.png" type="Texture" id=2]
+[ext_resource path="res://assets/PhaseScreen/phase3.png" type="Texture" id=3]
+[ext_resource path="res://assets/PhaseScreen/phase4.png" type="Texture" id=4]
+[ext_resource path="res://assets/PhaseScreen/phase1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scripts/buttons/Phase1Button.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 61
+outline_size = 2
+outline_color = Color( 0.47451, 0.317647, 0.356863, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Phases" type="Node2D"]
+
+[node name="PhaseBackground" type="Sprite" parent="."]
+position = Vector2( 641, 361 )
+scale = Vector2( 0.667593, 0.667593 )
+texture = ExtResource( 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 35.0
+margin_right = 563.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 1 )
+text = "FASES"
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 94.0
+margin_top = 168.0
+margin_right = 1171.0
+margin_bottom = 798.0
+columns = 2
+
+[node name="Phase1Button" type="Button" parent="GridContainer"]
+margin_left = 20.0
+margin_top = 7.0
+margin_right = 554.0
+margin_bottom = 320.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource( 5 )
+flat = true
+icon_align = 1
+script = ExtResource( 7 )
+
+[node name="Phase2Button" type="Button" parent="GridContainer"]
+margin_left = 579.0
+margin_right = 1158.0
+margin_bottom = 327.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource( 2 )
+flat = true
+icon_align = 1
+
+[node name="Phase3Button" type="Button" parent="GridContainer"]
+margin_top = 331.0
+margin_right = 575.0
+margin_bottom = 660.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource( 3 )
+flat = true
+icon_align = 1
+
+[node name="Phase4Button" type="Button" parent="GridContainer"]
+margin_left = 579.0
+margin_top = 331.0
+margin_right = 1157.0
+margin_bottom = 660.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+
+[connection signal="pressed" from="GridContainer/Phase1Button" to="GridContainer/Phase1Button" method="_on_Phase1Button_pressed"]
