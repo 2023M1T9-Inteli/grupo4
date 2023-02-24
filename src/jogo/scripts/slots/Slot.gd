@@ -106,9 +106,9 @@ func _ready():
 		if "mouse_filter" in n:
 			n.mouse_filter = MOUSE_FILTER_IGNORE
 
-# PT_BR: Se a Preview do Control estiver sendo arrastada, ele será ocultado até que o arraste termine 
-# EN_US: If the Preview of the Control is being dragged, it will be hidden until the drag is finished
 func _process(_delta):
+	# PT_BR: Se a Preview do Control estiver sendo arrastada, ele será ocultado até que o arraste termine 
+	# EN_US: If the Preview of the Control is being dragged, it will be hidden until the drag is finished
 	if is_dragging:
 		self.get_node("image").hide()
 	else:
@@ -319,4 +319,6 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the variable in the dropped object (source)
 	data.is_dragging = false
 
-# Código base pego de https://github.com/GDQuest/godot-design-patterns.git
+# PT_BR: Código baseado no seguinte repositório:
+# EN_US: Code based on the following repository:
+# https://github.com/thiagobruno/godot_dragndrop.git

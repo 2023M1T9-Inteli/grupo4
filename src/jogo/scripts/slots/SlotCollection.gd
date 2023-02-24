@@ -44,9 +44,15 @@ func _ready():
 			
 	_change_separation_to_space_between(qtd_control_children, total_children_size, size.x)
 
-# PT_BR: Divide o espaço do Slot Collection igualmente entre os nós Control
-# EN_US: Divide Slot Collection space equally between controls nodes
+
+# PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
+# PT_BR (2): Não retorna um valor
+
+# EN_US (1): Receives the number of child nodes, their total size and the size of the container.
+# EN_US (2): It does not return a value.
 func _change_separation_to_space_between(qtd_childs, total_children_size, container_size):
+	# PT_BR: Divide o espaço do Slot Collection igualmente entre os nós Control
+	# EN_US: Divide Slot Collection space equally between controls nodes
 	var space_between =  (container_size - total_children_size) / (qtd_childs - 1)
 	self.add_constant_override("separation", space_between)
 
