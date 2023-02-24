@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/AboutScreen/tela_sobre.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Buttons/BackButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/Credits.gd" type="Script" id=3]
 [ext_resource path="res://assets/Fonts/AnyConv.com__joystix monospace.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="Shader" id=3]
@@ -136,9 +137,10 @@ shader_param/height = 30.0
 shader_param/speed = 5.0
 shader_param/frequency = 20.0
 
-[node name="Control" type="Control"]
+[node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 643.5, 361 )
@@ -227,3 +229,5 @@ margin_left = 23.0
 margin_top = 20.0
 margin_right = 113.0
 margin_bottom = 103.0
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

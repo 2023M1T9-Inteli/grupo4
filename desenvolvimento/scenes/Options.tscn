@@ -43,4 +43,5 @@ custom_styles/grabber_area = SubResource( 4 )
 min_value = -40.0
 max_value = 0.0
 
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="value_changed" from="SliderMusic" to="." method="_on_SliderMusic_value_changed"]

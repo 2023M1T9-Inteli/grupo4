@@ -11,3 +11,9 @@ func _on_SliderMusic_value_changed(value):
 		AudioServer.set_bus_mute(master_bus,true)
 	else:
 		AudioServer.set_bus_mute(master_bus,false)
+
+
+# PT_BR: Abre a cena do menu
+# EN_US: Open the menu scene
+func _on_BackButton_pressed():
+	get_tree().change_scene("res://scenes/Menu.tscn")

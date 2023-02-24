@@ -107,6 +107,6 @@ icon_align = 1
 script = ExtResource( 3 )
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="button_up" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_button_up"]
+[connection signal="button_up" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_button_up"]
 [connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_ExitButton_pressed"]
