@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao_fechar.png-2acfdd6fd756c89d64508e52cf3bb1a2.stex"
+path="res://.import/botao_fechar.png-d3368773318c7379318454d143f5ced6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MenuScreen/botao_fechar.png"
-dest_files=[ "res://.import/botao_fechar.png-2acfdd6fd756c89d64508e52cf3bb1a2.stex" ]
+source_file="res://assets/buttons/botao_fechar.png"
+dest_files=[ "res://.import/botao_fechar.png-d3368773318c7379318454d143f5ced6.stex" ]
 
 [params]
 
