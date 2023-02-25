@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/levels/background.png" type="Texture" id=1]
+[ext_resource path="res://assets/levels/back_ground.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player.png" type="Texture" id=2]
 [ext_resource path="res://assets/items/book4.png" type="Texture" id=3]
 [ext_resource path="res://assets/characters/chairman.png" type="Texture" id=4]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/prefabs/WorkerTableTextureRect.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=8]
 [ext_resource path="res://scripts/ConceptScene.gd" type="Script" id=9]
+
 
 [node name="ConceptScene" type="Node2D"]
 position = Vector2( 164, 70 )
