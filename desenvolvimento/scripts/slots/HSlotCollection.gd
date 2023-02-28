@@ -15,18 +15,18 @@ enum ORIENTATION_DIRECTION {
 
 # PT_BR: Tamanho da coleção de slote
 # EN_US: Slot Collection size
-export(Vector2) var size: Vector2 = Vector2(64, 64) setget _set_size
+export(Vector2) var collection_size: Vector2 = Vector2(64, 64) setget _set_collection_size
 
-# PT_BR: Tamanho da coleção de slote
-# EN_US: Slot Collection size
+# PT_BR: Ativar o espaçamento entre os itens
+# EN_US: Enable spacing between items
 export(bool) var active_space_between = true setget _set_active_space_between
 
 # PT_BR: Funções para definir as variáveis
 # EN_US: Functions to set variables
-func _set_size(newValue) -> void:
-	size = newValue
-	self.rect_min_size = size
-	self.rect_size = size
+func _set_collection_size(newValue) -> void:
+	collection_size = newValue
+	self.rect_min_size = collection_size
+	self.rect_size = collection_size
 	self.margin_bottom = 0
 	self.margin_left = 0
 	self.margin_right = 0
@@ -58,7 +58,7 @@ func _ready():
 			total_children_size += _get_object_property_orientation(direction, child.size)
 	
 	if active_space_between:
-		_change_separation_to_space_between(qtd_control_children, total_children_size, _get_object_property_orientation(direction, self.size))
+		_change_separation_to_space_between(qtd_control_children, total_children_size, _get_object_property_orientation(direction, collection_size))
 
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
 # PT_BR (2): Não retorna um valor
@@ -96,7 +96,7 @@ DRAG AND DROP
 # EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
 # EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
 func get_drag_data(position):
-	var size_x_per_children = (size.x) / qtd_control_children
+	var size_x_per_children = (collection_size) / qtd_control_children
 	var actual_child = 0
 	for child in self.get_children():
 		if child is Control:
