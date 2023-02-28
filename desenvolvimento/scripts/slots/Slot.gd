@@ -48,7 +48,7 @@ export(float, 0.0, 1.0) var opacity_preview = 1.0
 
 # PT_BR: Tamanho do slote
 # EN_US: Slot size
-export(Vector2) var size: Vector2 = Vector2(64, 64) setget _set_size
+export(Vector2) var slot_size: Vector2 = Vector2(64, 64) setget _set_slot_size
 
 # PT_BR: Imagem para o slote
 # EN_US: Slot image
@@ -96,18 +96,18 @@ func _set_image_preview(new_value) -> void:
 		$preview.texture = image_preview
 		
 		
-func _set_size(new_value) -> void:
-	size = new_value
-	rect_min_size = size
-	rect_size = size
-	$image.rect_min_size = size / 2
-	$image.rect_size = size / 2
-	$image.margin_right = size.x /4
-	$image.margin_bottom = size.y/4
-	$preview.rect_min_size = size
-	$preview.rect_size = size
-	$qtd.rect_size.x = size.x - 10
-	$touch.scale = (size * 64 / 2.0) / 1000.0
+func _set_slot_size(new_value) -> void:
+	slot_size = new_value
+	rect_min_size = slot_size
+	rect_size = slot_size
+	$image.rect_min_size = slot_size / 2
+	$image.rect_size = slot_size / 2
+	$image.margin_right = slot_size.x /4
+	$image.margin_bottom = slot_size.y/4
+	$preview.rect_min_size = slot_size
+	$preview.rect_size = slot_size
+	$qtd.rect_size.x = slot_size.x - 10
+	$touch.scale = (slot_size * 64 / 2.0) / 1000.0
 
 
 func _ready():

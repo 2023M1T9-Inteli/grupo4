@@ -1,6 +1,13 @@
 tool
 extends HBoxContainer
 
+# PT_BR: Inicializa as constantes locais
+# EN_US: Initialize local constants
+enum ORIENTATION_DIRECTION {
+	X = 0,
+	Y = 1,
+}
+
 """
 # PT_BR: Variaveis exportadas
 # EN_US: Exported variables
@@ -10,7 +17,11 @@ extends HBoxContainer
 # EN_US: Slot Collection size
 export(Vector2) var size: Vector2 = Vector2(64, 64) setget _set_size
 
-# PT_BR: Funções para definir as variavéis
+# PT_BR: Tamanho da coleção de slote
+# EN_US: Slot Collection size
+export(bool) var active_space_between = true setget _set_active_space_between
+
+# PT_BR: Funções para definir as variáveis
 # EN_US: Functions to set variables
 func _set_size(newValue) -> void:
 	size = newValue
@@ -20,10 +31,14 @@ func _set_size(newValue) -> void:
 	self.margin_left = 0
 	self.margin_right = 0
 	self.margin_top = 0
+	
+func _set_active_space_between(newValue) -> void:
+	active_space_between = newValue
 
-# PT_BR: Inicializa as variaveis locais
+# PT_BR: Inicializa as variáveis locais
 # EN_US: Initialize local variables
 var qtd_control_children = 0
+var direction = ORIENTATION_DIRECTION.X
 
 func _ready():	
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
@@ -40,10 +55,10 @@ func _ready():
 			child.mouse_filter = MOUSE_FILTER_IGNORE
 		if child is Control:
 			qtd_control_children += 1
-			total_children_size += child.size.x
-			
-	_change_separation_to_space_between(qtd_control_children, total_children_size, size.x)
-
+			total_children_size += _get_object_property_orientation(direction, child.size)
+	
+	if active_space_between:
+		_change_separation_to_space_between(qtd_control_children, total_children_size, _get_object_property_orientation(direction, self.size))
 
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
 # PT_BR (2): Não retorna um valor
@@ -55,6 +70,19 @@ func _change_separation_to_space_between(qtd_childs, total_children_size, contai
 	# EN_US: Divide Slot Collection space equally between controls nodes
 	var space_between =  (container_size - total_children_size) / (qtd_childs - 1)
 	self.add_constant_override("separation", space_between)
+
+# PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
+# PT_BR (2): Não retorna um valor
+
+# EN_US (1): Receives the orientation to be obtained and the object property (Vector2)
+# EN_US (2): It does not return a value.
+func _get_object_property_orientation(orientation, object_property: Vector2):
+	# PT_BR: Essa função pega a orientação de uma propriedade que seja um Vector2
+	# EN_US: This function takes the orientation of a Vector2 property
+	if orientation == ORIENTATION_DIRECTION.X:
+		return object_property.x
+	elif orientation == ORIENTATION_DIRECTION.Y:
+		return object_property.y
 
 """ 
 DRAG AND DROP
