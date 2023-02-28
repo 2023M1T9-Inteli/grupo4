@@ -31,7 +31,8 @@ func _set_collection_size(newValue) -> void:
 	self.margin_left = 0
 	self.margin_right = 0
 	self.margin_top = 0
-	
+
+
 func _set_active_space_between(newValue) -> void:
 	active_space_between = newValue
 
@@ -60,9 +61,9 @@ func _ready():
 	if active_space_between:
 		_change_separation_to_space_between(qtd_control_children, total_children_size, _get_object_property_orientation(direction, collection_size))
 
+
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
 # PT_BR (2): Não retorna um valor
-
 # EN_US (1): Receives the number of child nodes, their total size and the size of the container.
 # EN_US (2): It does not return a value.
 func _change_separation_to_space_between(qtd_childs, total_children_size, container_size):
@@ -71,9 +72,9 @@ func _change_separation_to_space_between(qtd_childs, total_children_size, contai
 	var space_between =  (container_size - total_children_size) / (qtd_childs - 1)
 	self.add_constant_override("separation", space_between)
 
+
 # PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
 # PT_BR (2): Não retorna um valor
-
 # EN_US (1): Receives the orientation to be obtained and the object property (Vector2)
 # EN_US (2): It does not return a value.
 func _get_object_property_orientation(orientation, object_property: Vector2):
@@ -91,7 +92,6 @@ DRAG AND DROP
 # PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
 # PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
 # PT_BR (3): Ao final, é verificado se a posição horizontal clicada é a que o Control está
-
 # EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
 # EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
 # EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
@@ -114,6 +114,8 @@ func can_drop_data(position, data) -> bool:
 	for child in self.get_children():
 		if child is Control:
 			can_drop = can_drop or child.can_drop_data(position, data)
+			if can_drop:
+				return can_drop
 	return can_drop
 
 
