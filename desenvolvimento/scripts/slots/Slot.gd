@@ -1,5 +1,5 @@
 tool
-extends Control
+extends CenterContainer
 
 """
 # PT_BR: Variaveis exportadas
@@ -48,7 +48,7 @@ export(float, 0.0, 1.0) var opacity_preview = 1.0
 
 # PT_BR: Tamanho do slote
 # EN_US: Slot size
-export(Vector2) var slot_size: Vector2 = Vector2(64, 64) setget _set_slot_size
+export(Vector2) var slot_size: Vector2 = Vector2(32, 32) setget _set_slot_size
 
 # PT_BR: Imagem para o slote
 # EN_US: Slot image
@@ -100,10 +100,10 @@ func _set_slot_size(new_value) -> void:
 	slot_size = new_value
 	rect_min_size = slot_size
 	rect_size = slot_size
-	$image.rect_min_size = slot_size / 2
-	$image.rect_size = slot_size / 2
-	$image.margin_right = slot_size.x /4
-	$image.margin_bottom = slot_size.y/4
+	$image.rect_min_size = slot_size
+	$image.rect_size = slot_size
+	$image.margin_right = 0
+	$image.margin_bottom = 0
 	$preview.rect_min_size = slot_size
 	$preview.rect_size = slot_size
 	$qtd.rect_size.x = slot_size.x - 10
@@ -221,6 +221,7 @@ func can_drop_data(_position, data) -> bool:
 	# EN_US: If the source slot has an option that is significantly different from the target slot
 	if increment != data["increment"]:
 		return false 
+		
 		
 	# PT_BR: Se o slote for incremental
 	# EN_US: If the slot is incremental

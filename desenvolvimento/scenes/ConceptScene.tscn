@@ -27,18 +27,19 @@ position = Vector2( 431, 250 )
 texture = ExtResource( 5 )
 
 [node name="bossTableControl1" parent="." instance=ExtResource( 6 )]
-margin_left = 383.0
-margin_top = 230.0
-margin_right = 415.0
-margin_bottom = 262.0
-rect_min_size = Vector2( 32, 32 )
+margin_left = 389.0
+margin_top = 238.0
+margin_right = 414.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 25, 25 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
-uid = "task"
 group = "work"
 qtd = 1
-size = Vector2( 32, 32 )
+max_qtd = 1
+slot_size = Vector2( 25, 25 )
 image = ExtResource( 3 )
+image_preview = ExtResource( 3 )
 
 [node name="Chairman" type="Sprite" parent="."]
 position = Vector2( 618, 304 )
