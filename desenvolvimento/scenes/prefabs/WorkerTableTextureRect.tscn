@@ -9,12 +9,11 @@ margin_right = 103.0
 margin_bottom = 52.0
 texture = ExtResource( 1 )
 
-[node name="slotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
+[node name="HSlotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
 rect_min_size = Vector2( 100, 40 )
-custom_constants/separation = 36
-collection_size = Vector2( 100, 40 )
+custom_constants/separation = 0
 
-[node name="profileControl" parent="slotCollectionVBoxContainer" instance=ExtResource( 2 )]
+[node name="ProfileControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
 margin_top = 4.0
 margin_bottom = 36.0
 grow_horizontal = 2
@@ -23,11 +22,12 @@ size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "profile"
 max_qtd = 1
+show_qtd = false
 
-[node name="workerTableControl" parent="slotCollectionVBoxContainer" instance=ExtResource( 2 )]
-margin_left = 68.0
+[node name="WorkerTableControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
+margin_left = 32.0
 margin_top = 4.0
-margin_right = 100.0
+margin_right = 64.0
 margin_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -37,4 +37,4 @@ size_flags_vertical = 4
 group = "work"
 max_qtd = 1
 
-[editable path="slotCollectionVBoxContainer"]
+[editable path="HSlotCollectionVBoxContainer"]

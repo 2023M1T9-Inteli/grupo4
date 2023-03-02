@@ -10,6 +10,8 @@ margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
 script = ExtResource( 1 )
+max_qtd = 0
+show_qtd = true
 
 [node name="image" type="TextureRect" parent="."]
 margin_right = 32.0

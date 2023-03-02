@@ -21,6 +21,10 @@ export(Vector2) var collection_size: Vector2 = Vector2(64, 64) setget _set_colle
 # EN_US: Enable spacing between items
 export(bool) var active_space_between = true setget _set_active_space_between
 
+# PT_BR: Ativar o espaçamento entre os itens
+# EN_US: Enable spacing between items
+export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
+
 # PT_BR: Funções para definir as variáveis
 # EN_US: Functions to set variables
 func _set_collection_size(newValue) -> void:
@@ -39,10 +43,8 @@ func _set_active_space_between(newValue) -> void:
 # PT_BR: Inicializa as variáveis locais
 # EN_US: Initialize local variables
 var qtd_control_children = 0
-var orientation = ORIENTATION_DIRECTION.X
 
 func _ready():	
-	#_change_orientation()
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# PT_BR (2): Define todos os nós filhos como MOUSE_FILTER_IGNORE
 	# PT_BR (3): Salva a quantidade de Controls dentro do nó
@@ -59,14 +61,14 @@ func _ready():
 			qtd_control_children += 1
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 	
+	# PT_BR (1): Se o space_between for verdadeiro
+	# PT_BR (2): Chama a função para mudar a separação do node
+	# EN_US (1): If the space_between is true
+	# EN_US (2): Calls the function to change the node separation 
 	if active_space_between:
 		_change_separation_to_space_between(qtd_control_children, 
 											total_children_size,
 											_get_object_property_orientation(orientation, collection_size) )
-
-
-func _change_orientation():
-	print(typeof(self))
 
 
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
@@ -78,6 +80,7 @@ func _change_separation_to_space_between(qtd_childs, total_children_size, contai
 	# EN_US: Divide Slot Collection space equally between controls nodes
 	self.add_constant_override("separation",
 								_calc_space_between(container_size, total_children_size, qtd_childs) )
+
 
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
 # PT_BR (2): Retorna a distância adequada entre os nodes
