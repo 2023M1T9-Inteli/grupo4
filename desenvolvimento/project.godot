@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="O Talento de Delegar"
+config/name="Desenvolvimento: O Talento de Delegar"
 run/main_scene="res://scenes/Menu.tscn"
 config/icon="res://icon/icon.png"
 

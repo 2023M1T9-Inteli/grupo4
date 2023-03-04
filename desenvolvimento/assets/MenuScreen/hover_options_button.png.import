@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao_sair.png-f09c57e671eb08a119993575e01c40f5.stex"
+path="res://.import/hover_options_button.png-4b93ca2c82fb6f0adf504db34d82a9d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MenuScreen/botao_sair.png"
-dest_files=[ "res://.import/botao_sair.png-f09c57e671eb08a119993575e01c40f5.stex" ]
+source_file="res://assets/MenuScreen/hover_options_button.png"
+dest_files=[ "res://.import/hover_options_button.png-4b93ca2c82fb6f0adf504db34d82a9d0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
