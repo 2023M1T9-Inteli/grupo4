@@ -10,7 +10,6 @@
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=8]
 [ext_resource path="res://scripts/ConceptScene.gd" type="Script" id=9]
 
-
 [node name="ConceptScene" type="Node2D"]
 position = Vector2( 164, 70 )
 script = ExtResource( 9 )
