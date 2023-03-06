@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/items/book4.png" type="Texture" id=3]
 [ext_resource path="res://scenes/prefabs/BossWorkerTableTextureRect.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/BossTable/Tasks/tarefa_sem_hover.png" type="Texture" id=7]
-[ext_resource path="res://assets/BossTable/TasksHover/tarefa_com_hover.png" type="Texture" id=8]
+[ext_resource path="res://assets/BossTable/Tasks/task_no_hover.png" type="Texture" id=7]
+[ext_resource path="res://assets/BossTable/TasksHover/task_with_hover.png" type="Texture" id=8]
 [ext_resource path="res://scenes/phase1/BossTable.gd" type="Script" id=9]
 
 [sub_resource type="TileSet" id=1]

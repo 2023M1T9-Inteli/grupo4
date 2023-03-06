@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tarefa_sem_hover.png-6eb8e0fe13059e8a44e3d2501dd8779a.stex"
+path="res://.import/click_cursor.png-c633a45ad522ef09b16d061436a8d995.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BossTable/Tasks/tarefa_sem_hover.png"
-dest_files=[ "res://.import/tarefa_sem_hover.png-6eb8e0fe13059e8a44e3d2501dd8779a.stex" ]
+source_file="res://assets/BossTable/Tasks/click_cursor.png"
+dest_files=[ "res://.import/click_cursor.png-c633a45ad522ef09b16d061436a8d995.stex" ]
 
 [params]
 

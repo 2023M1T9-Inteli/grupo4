@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cursor_clique.png-ab13809a7399b2a59ad3258301a4859d.stex"
+path="res://.import/task_with_hover.png-eac763c44803d075eb8682244612d5a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BossTable/Tasks/cursor_clique.png"
-dest_files=[ "res://.import/cursor_clique.png-ab13809a7399b2a59ad3258301a4859d.stex" ]
+source_file="res://assets/BossTable/TasksHover/task_with_hover.png"
+dest_files=[ "res://.import/task_with_hover.png-eac763c44803d075eb8682244612d5a9.stex" ]
 
 [params]
 
