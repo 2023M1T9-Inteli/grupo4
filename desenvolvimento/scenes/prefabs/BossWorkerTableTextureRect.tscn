@@ -5,7 +5,6 @@
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
-load_path = "res://.import/mesa (3).png-02e8aba4b905bad67cbd088e1d4adfb2.stex"
 
 [node name="BossWorkerTableTextureRect" type="TextureRect"]
 anchor_left = 0.5
@@ -32,8 +31,6 @@ mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "profile"
-max_qtd = 1
-show_qtd = false
 slot_size = Vector2( 517, 312 )
 
 [node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 3 )]
@@ -45,6 +42,4 @@ mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "work"
-max_qtd = 1
-show_qtd = false
 slot_size = Vector2( 517, 312 )

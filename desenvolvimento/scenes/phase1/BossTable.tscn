@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/BossTable/Tasks/task_no_hover.png" type="Texture" id=7]
 [ext_resource path="res://assets/BossTable/TasksHover/task_with_hover.png" type="Texture" id=8]
-[ext_resource path="res://scenes/phase1/BossTable.gd" type="Script" id=9]
+[ext_resource path="res://scripts/BossTable.gd" type="Script" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "mesa.png 0"
@@ -72,13 +72,10 @@ margin_left = 389.0
 margin_top = 238.0
 margin_right = 414.0
 margin_bottom = 263.0
-rect_min_size = Vector2( 25, 25 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
 group = "work"
 qtd = 1
-max_qtd = 1
-slot_size = Vector2( 25, 25 )
 image = ExtResource( 3 )
 image_preview = ExtResource( 3 )
 
@@ -88,14 +85,10 @@ margin_left = 390.0
 margin_top = 281.0
 margin_right = 415.0
 margin_bottom = 306.0
-rect_min_size = Vector2( 25, 25 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
 group = "profile"
 qtd = 1
-max_qtd = 1
-replace_null = false
-slot_size = Vector2( 25, 25 )
 
 [node name="taskNoHover" type="Sprite" parent="."]
 position = Vector2( 1018, 642 )

@@ -1,5 +1,5 @@
 tool
-extends Control
+extends CenterContainer
 
 """
 # PT_BR: Variaveis exportadas
@@ -20,11 +20,11 @@ export(int) var qtd = 0 setget _set_qtd
 
 # PT_BR: Quantidade máxima para o slote, usar com a variável "increment"
 # EN_US: Maximum amount for the slot, use with the "increment" variable
-export(int) var max_qtd = 0 
+export(int) var max_qtd = 1 
 
 # PT_BR: Mostra ou oculta o contador de quantidade
 # EN_US: Shows or hides the quantity counter
-export(bool) var show_qtd = true setget _set_show_qtd 
+export(bool) var show_qtd = false setget _set_show_qtd 
 
 # PT_BR: Permite o controle incremental da quantidade
 # EN_US: Allows incremental control of the quantity
@@ -48,7 +48,7 @@ export(float, 0.0, 1.0) var opacity_preview = 1.0
 
 # PT_BR: Tamanho do slote
 # EN_US: Slot size
-export(Vector2) var size: Vector2 = Vector2(64, 64) setget _set_size
+export(Vector2) var slot_size: Vector2 = Vector2(32, 32) setget _set_slot_size
 
 # PT_BR: Imagem para o slote
 # EN_US: Slot image
@@ -70,44 +70,44 @@ func _set_group(new_value) -> void:
 	var new_group_name = new_value.strip_edges(true, true)
 	assert(new_group_name != "", "ERROR: You must give a non-whitespace value to group property in " + str(self))
 	group = new_group_name
-	
-	
+
+
 func _set_show_qtd(new_value) -> void:
 	show_qtd = new_value
 	if weakref($qtd).get_ref():
 		$qtd.set("visible", show_qtd)
-		
-		
+
+
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($qtd).get_ref():
 		$qtd.text = str(qtd)
-		
-		
+
+
 func _set_image(new_value) -> void:
 	image = new_value
 	if weakref($image).get_ref():
 		$image.texture = image
-		
-		
+
+
 func _set_image_preview(new_value) -> void:
 	image_preview = new_value
 	if weakref($preview).get_ref():
 		$preview.texture = image_preview
-		
-		
-func _set_size(new_value) -> void:
-	size = new_value
-	rect_min_size = size
-	rect_size = size
-	$image.rect_min_size = size / 2
-	$image.rect_size = size / 2
-	$image.margin_right = size.x /4
-	$image.margin_bottom = size.y/4
-	$preview.rect_min_size = size
-	$preview.rect_size = size
-	$qtd.rect_size.x = size.x - 10
-	$touch.scale = (size * 64 / 2.0) / 1000.0
+
+
+func _set_slot_size(new_value) -> void:
+	slot_size = new_value
+	rect_min_size = slot_size
+	rect_size = slot_size
+	$image.rect_min_size = slot_size
+	$image.rect_size = slot_size
+	$image.margin_right = 0
+	$image.margin_bottom = 0
+	$preview.rect_min_size = slot_size
+	$preview.rect_size = slot_size
+	$qtd.rect_size.x = slot_size.x - 10
+	$touch.scale = (slot_size * 64 / 2.0) / 1000.0
 
 
 func _ready():
@@ -221,6 +221,7 @@ func can_drop_data(_position, data) -> bool:
 	# EN_US: If the source slot has an option that is significantly different from the target slot
 	if increment != data["increment"]:
 		return false 
+		
 		
 	# PT_BR: Se o slote for incremental
 	# EN_US: If the slot is incremental

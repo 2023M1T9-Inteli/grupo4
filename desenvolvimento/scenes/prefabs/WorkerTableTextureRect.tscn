@@ -185,8 +185,7 @@ texture = ExtResource( 5 )
 
 [node name="HSlotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
 rect_min_size = Vector2( 192, 52 )
-custom_constants/separation = 128
-collection_size = Vector2( 192, 52 )
+custom_constants/separation = 0
 
 [node name="WorkerTableControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
 margin_top = 10.0
@@ -197,20 +196,17 @@ mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "work"
-max_qtd = 1
 
 [node name="ProfileControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
-margin_left = 160.0
+margin_left = 32.0
 margin_top = 10.0
-margin_right = 192.0
+margin_right = 64.0
 margin_bottom = 42.0
 grow_horizontal = 2
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "profile"
-max_qtd = 1
-show_qtd = false
 
 [node name="Mesas" type="TileMap" parent="."]
 visible = false
