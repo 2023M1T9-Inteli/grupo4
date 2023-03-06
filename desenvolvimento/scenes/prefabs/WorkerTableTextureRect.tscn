@@ -1,43 +1,222 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/table/worker_table.png" type="Texture" id=1]
+[ext_resource path="res://assets/Phase1/Base_assets/Modern_Office_32x32.png" type="Texture" id=1]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/slots/SlotCollection.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Phase1/Base_assets/Modern_Office_48x48.png" type="Texture" id=4]
+[ext_resource path="res://assets/table/worker_table.png" type="Texture" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Modern_Office_48x48.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 480, 1344, 128, 96 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Modern_Office_48x48.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 480, 1344, 128, 96 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Modern_Office_48x48.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 448, 2240, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Modern_Office_32x32.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 288, 1504, 32, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Modern_Office_32x32.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 288, 1504, 32, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Modern_Office_48x48.png 5"
+5/texture = ExtResource( 4 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 320, 1440, 160, 96 )
+5/tile_mode = 2
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 32, 32 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Modern_Office_32x32.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 224, 960, 96, 64 )
+6/tile_mode = 2
+6/autotile/icon_coordinate = Vector2( 0, 0 )
+6/autotile/tile_size = Vector2( 32, 32 )
+6/autotile/spacing = 0
+6/autotile/occluder_map = [  ]
+6/autotile/navpoly_map = [  ]
+6/autotile/priority_map = [  ]
+6/autotile/z_index_map = [  ]
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Modern_Office_32x32.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 320, 896, 96, 64 )
+7/tile_mode = 2
+7/autotile/icon_coordinate = Vector2( 0, 0 )
+7/autotile/tile_size = Vector2( 32, 32 )
+7/autotile/spacing = 0
+7/autotile/occluder_map = [  ]
+7/autotile/navpoly_map = [  ]
+7/autotile/priority_map = [  ]
+7/autotile/z_index_map = [  ]
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Modern_Office_32x32.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 416, 992, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Modern_Office_32x32.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 192, 640, 64, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
 
 [node name="WorkerTableTextureRect" type="TextureRect"]
-margin_right = 103.0
-margin_bottom = 52.0
-texture = ExtResource( 1 )
+margin_left = 38.0
+margin_top = 12.0
+margin_right = 160.0
+margin_bottom = 64.0
+texture = ExtResource( 5 )
 
-[node name="slotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
-rect_min_size = Vector2( 97, 39 )
-custom_constants/separation = 33
-size = Vector2( 97, 39 )
+[node name="HSlotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
+rect_min_size = Vector2( 192, 52 )
+custom_constants/separation = 128
+collection_size = Vector2( 192, 52 )
 
-[node name="workerTableControl" parent="slotCollectionVBoxContainer" instance=ExtResource( 2 )]
-margin_top = 3.0
-margin_right = 32.0
-margin_bottom = 35.0
-grow_horizontal = 2
+[node name="WorkerTableControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
+margin_top = 10.0
+margin_bottom = 42.0
+grow_horizontal = 0
 grow_vertical = 0
-rect_min_size = Vector2( 32, 32 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "work"
-size = Vector2( 32, 32 )
+max_qtd = 1
 
-[node name="profileControl" parent="slotCollectionVBoxContainer" instance=ExtResource( 2 )]
-margin_left = 65.0
-margin_top = 3.0
-margin_right = 97.0
-margin_bottom = 35.0
+[node name="ProfileControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
+margin_left = 160.0
+margin_top = 10.0
+margin_right = 192.0
+margin_bottom = 42.0
 grow_horizontal = 2
-rect_min_size = Vector2( 32, 32 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 group = "profile"
-size = Vector2( 32, 32 )
+max_qtd = 1
+show_qtd = false
 
-[editable path="slotCollectionVBoxContainer"]
+[node name="Mesas" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 393220, 6, 0, 393221, 6, 1, 393222, 6, 1, 393223, 6, 1, 393224, 6, 1, 393225, 6, 2, 458756, 6, 65536, 458757, 6, 65537, 458758, 6, 65537, 458759, 6, 65537, 458760, 6, 65537, 458761, 6, 65538, 655364, 7, 0, 655365, 7, 1, 655366, 7, 1, 655367, 7, 1, 655368, 7, 1, 655369, 7, 2, 655374, 7, 0, 655375, 7, 1, 655376, 7, 1, 655377, 7, 1, 655378, 7, 1, 655379, 7, 2, 720900, 7, 65536, 720901, 7, 65537, 720902, 7, 65537, 720903, 7, 65537, 720904, 7, 65537, 720905, 7, 65538, 720910, 7, 65536, 720911, 7, 65537, 720912, 7, 65537, 720913, 7, 65537, 720914, 7, 65537, 720915, 7, 65538, 983044, 7, 0, 983045, 7, 1, 983046, 7, 1, 983047, 7, 1, 983048, 7, 1, 983049, 7, 2, 983054, 7, 0, 983055, 7, 1, 983056, 7, 1, 983057, 7, 1, 983058, 7, 1, 983059, 7, 2, 1048580, 7, 65536, 1048581, 7, 65537, 1048582, 7, 65537, 1048583, 7, 65537, 1048584, 7, 65537, 1048585, 7, 65538, 1048590, 7, 65536, 1048591, 7, 65537, 1048592, 7, 65537, 1048593, 7, 65537, 1048594, 7, 65537, 1048595, 7, 65538 )
+
+[editable path="HSlotCollectionVBoxContainer"]

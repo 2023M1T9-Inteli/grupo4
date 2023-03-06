@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/slots/VSlotCollection.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/mesa (3).png-02e8aba4b905bad67cbd088e1d4adfb2.stex"
+
+[node name="BossWorkerTableTextureRect" type="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -256.0
+margin_top = -312.0
+margin_right = 256.0
+margin_bottom = 312.0
+texture = SubResource( 1 )
+
+[node name="SlotCollectioVBoxContainer" parent="." instance=ExtResource( 4 )]
+rect_min_size = Vector2( 517, 624 )
+custom_constants/separation = 0
+collection_size = Vector2( 517, 624 )
+
+[node name="ProfileControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 3 )]
+margin_right = 517.0
+margin_bottom = 312.0
+grow_horizontal = 2
+rect_min_size = Vector2( 517, 312 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+group = "profile"
+max_qtd = 1
+show_qtd = false
+slot_size = Vector2( 517, 312 )
+
+[node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 3 )]
+margin_top = 312.0
+margin_right = 517.0
+margin_bottom = 624.0
+rect_min_size = Vector2( 517, 312 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+group = "work"
+max_qtd = 1
+show_qtd = false
+slot_size = Vector2( 517, 312 )
