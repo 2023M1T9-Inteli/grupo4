@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
@@ -30,16 +30,6 @@ shader = SubResource( 6 )
 shader_param/height = 20.0
 shader_param/speed = 10.0
 shader_param/frequency = 5.0
-
-[sub_resource type="StyleBoxEmpty" id=1]
-
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
 
 [node name="Menu" type="Control"]
 anchor_left = 0.5
@@ -76,80 +66,43 @@ margin_right = 112.5
 margin_bottom = -13.0
 alignment = 1
 
-[node name="StartButton" type="Button" parent="ButtonsVBoxContainer"]
+[node name="StartButton" type="TextureButton" parent="ButtonsVBoxContainer"]
 margin_top = 6.0
 margin_right = 225.0
 margin_bottom = 61.0
-custom_styles/normal = SubResource( 1 )
-icon = ExtResource( 5 )
-icon_align = 1
-
-[node name="HoverStartButton" type="TextureButton" parent="ButtonsVBoxContainer/StartButton"]
-margin_left = 1.0
-margin_right = 226.0
-margin_bottom = 55.0
-grow_vertical = 2
-size_flags_horizontal = 9
-size_flags_vertical = 9
+texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 10 )
 
-[node name="TutorialButton" type="Button" parent="ButtonsVBoxContainer"]
+[node name="TutorialButton" type="TextureButton" parent="ButtonsVBoxContainer"]
 margin_top = 65.0
 margin_right = 225.0
 margin_bottom = 120.0
-custom_styles/normal = SubResource( 2 )
-icon = ExtResource( 7 )
-icon_align = 1
-
-[node name="TutorialButtonHover" type="TextureButton" parent="ButtonsVBoxContainer/TutorialButton"]
-margin_left = -0.5
-margin_right = 226.5
-margin_bottom = 55.0
+texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 11 )
 
-[node name="OptionsButton" type="Button" parent="ButtonsVBoxContainer"]
+[node name="OptionsButton" type="TextureButton" parent="ButtonsVBoxContainer"]
 margin_top = 124.0
 margin_right = 225.0
 margin_bottom = 179.0
-custom_styles/normal = SubResource( 3 )
-icon = ExtResource( 6 )
-icon_align = 1
-
-[node name="HoverOptionsButton" type="TextureButton" parent="ButtonsVBoxContainer/OptionsButton"]
-margin_right = 225.0
-margin_bottom = 55.0
+texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 12 )
 
-[node name="CreditsButton" type="Button" parent="ButtonsVBoxContainer"]
+[node name="CreditsButton" type="TextureButton" parent="ButtonsVBoxContainer"]
 margin_top = 183.0
 margin_right = 225.0
 margin_bottom = 238.0
-custom_styles/normal = SubResource( 4 )
-icon = ExtResource( 9 )
-icon_align = 1
-
-[node name="HoverCreditsButton" type="TextureButton" parent="ButtonsVBoxContainer/CreditsButton"]
-margin_left = 1.0
-margin_right = 226.0
-margin_bottom = 55.0
+texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 13 )
 
-[node name="ExitButton" type="Button" parent="ButtonsVBoxContainer"]
+[node name="ExitButton" type="TextureButton" parent="ButtonsVBoxContainer"]
 margin_top = 242.0
 margin_right = 225.0
 margin_bottom = 297.0
-custom_styles/normal = SubResource( 5 )
-icon = ExtResource( 8 )
-icon_align = 1
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 14 )
 script = ExtResource( 3 )
 
-[node name="HoverExitButton" type="TextureButton" parent="ButtonsVBoxContainer/ExitButton"]
-margin_left = 1.0
-margin_right = 226.0
-margin_bottom = 55.0
-texture_hover = ExtResource( 14 )
-
-[connection signal="pressed" from="ButtonsVBoxContainer/StartButton/HoverStartButton" to="." method="_on_HoverStartButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton/HoverOptionsButton" to="." method="_on_HoverOptionsButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton/HoverCreditsButton" to="." method="_on_HoverCreditsButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton/HoverExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_HoverExitButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_ExitButton_pressed"]
