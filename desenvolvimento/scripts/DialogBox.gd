@@ -9,7 +9,7 @@ var counter = 0
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "???: Olá, tudo bem?",
+			"text": "Rosaline: Olá, tudo bem?",
 			"anim": "idle",
 			"showPC": false,
 		},
