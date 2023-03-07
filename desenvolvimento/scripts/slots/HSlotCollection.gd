@@ -31,10 +31,6 @@ func _set_collection_size(newValue) -> void:
 	collection_size = newValue
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
-	self.margin_bottom = 0
-	self.margin_left = 0
-	self.margin_right = 0
-	self.margin_top = 0
 
 
 func _set_active_space_between(newValue) -> void:
@@ -78,9 +74,12 @@ func _ready():
 func _change_separation_to_space_between(qtd_childs, total_children_size, container_size):
 	# PT_BR: Divide o espaço do Slot Collection igualmente entre os nós Control
 	# EN_US: Divide Slot Collection space equally between controls nodes
-	self.add_constant_override("separation",
-								_calc_space_between(container_size, total_children_size, qtd_childs) )
-
+	if (container_size - total_children_size) == 0:
+		self.add_constant_override("separation", 
+									_calc_space_between(container_size, total_children_size - 1, qtd_childs) )
+	else:
+		self.add_constant_override("separation", 
+							_calc_space_between(container_size, total_children_size, qtd_childs) )
 
 # PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
 # PT_BR (2): Retorna a distância adequada entre os nodes
@@ -122,13 +121,14 @@ DRAG AND DROP
 # EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
 func get_drag_data(position):
 	var actual_child = 0
+	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
 		if child.is_in_group("slot"):
 			var min_position = _calc_slot_size(_get_object_property_orientation(orientation, collection_size), 
 												qtd_control_children) * (actual_child)
 			var max_position = _calc_slot_size(_get_object_property_orientation(orientation, collection_size), 
 												qtd_control_children) * (actual_child + 1)
-			if min_position <= position.x and position.x <= max_position:
+			if min_position <= orientation_position and orientation_position <= max_position:
 				return child.get_drag_data(position)
 			actual_child += 1
 
