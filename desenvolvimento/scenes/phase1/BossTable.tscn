@@ -25,6 +25,8 @@
 0/shapes = [  ]
 0/z_index = 0
 
+[sub_resource type="GDScript" id=3]
+
 [sub_resource type="TileSet" id=2]
 0/name = "Gaveta Copy Copy.png 0"
 0/texture = ExtResource( 2 )
@@ -40,8 +42,6 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-
-[sub_resource type="GDScript" id=3]
 
 [node name="BossTable" type="Node2D"]
 script = ExtResource( 9 )
@@ -59,12 +59,6 @@ visible = false
 tile_set = SubResource( 1 )
 format = 1
 tile_data = PoolIntArray( 12, 0, 0 )
-
-[node name="drawer" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( 2555952, 0, 0 )
 
 [node name="task" parent="." instance=ExtResource( 6 )]
 visible = false
@@ -103,8 +97,9 @@ margin_bottom = 24.0
 texture_hover = ExtResource( 8 )
 
 [node name="taskNoHover2" type="Sprite" parent="."]
-position = Vector2( 1080, 642 )
+position = Vector2( 1064, 642 )
 texture = ExtResource( 7 )
+script = SubResource( 3 )
 
 [node name="TextureButton" type="TextureButton" parent="taskNoHover2"]
 margin_left = -240.0
@@ -113,7 +108,129 @@ margin_right = 240.0
 margin_bottom = 24.0
 texture_hover = ExtResource( 8 )
 
+[node name="taskNoHover3" type="Sprite" parent="."]
+position = Vector2( 1112, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover3"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+
+[node name="taskNoHover4" type="Sprite" parent="."]
+position = Vector2( 1160, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover4"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="taskNoHover5" type="Sprite" parent="."]
+position = Vector2( 1208, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover5"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="taskNoHover6" type="Sprite" parent="."]
+position = Vector2( 1256, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover6"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="taskNoHover7" type="Sprite" parent="."]
+position = Vector2( 1304, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover7"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="taskNoHover8" type="Sprite" parent="."]
+position = Vector2( 1352, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover8"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="taskNoHover9" type="Sprite" parent="."]
+position = Vector2( 1400, 642 )
+texture = ExtResource( 7 )
+script = SubResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="taskNoHover9"]
+margin_left = -240.0
+margin_top = -56.0
+margin_right = 240.0
+margin_bottom = 24.0
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="drawer" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 2555952, 0, 0 )
+
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
 [connection signal="mouse_entered" from="taskNoHover2/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover2/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover3/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover3/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover4/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover4/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover5/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover5/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover6/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover6/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover7/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover7/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover8/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover8/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="mouse_entered" from="taskNoHover9/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
+[connection signal="mouse_exited" from="taskNoHover9/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
