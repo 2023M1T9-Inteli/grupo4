@@ -365,7 +365,6 @@ flags = 4
 12/z_index = 0
 
 [sub_resource type="StreamTexture" id=13]
-load_path = "res://.import/Personagem primeirosprite.png-e4d17aa9611c36365cb008944e048aa8.stex"
 
 [sub_resource type="TileSet" id=9]
 0/name = "asiatico.png 0"

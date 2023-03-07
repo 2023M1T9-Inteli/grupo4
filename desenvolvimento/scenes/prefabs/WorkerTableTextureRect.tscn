@@ -184,8 +184,9 @@ margin_bottom = 64.0
 texture = ExtResource( 5 )
 
 [node name="HSlotCollectionVBoxContainer" parent="." instance=ExtResource( 3 )]
-rect_min_size = Vector2( 192, 52 )
+rect_min_size = Vector2( 65, 52 )
 custom_constants/separation = 0
+collection_size = Vector2( 65, 52 )
 
 [node name="WorkerTableControl" parent="HSlotCollectionVBoxContainer" instance=ExtResource( 2 )]
 margin_top = 10.0
