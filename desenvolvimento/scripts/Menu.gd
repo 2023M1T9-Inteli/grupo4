@@ -4,7 +4,7 @@ extends Control
 # PT_BR: Inicia o jogo
 # EN_US: Start the game
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/Phases.tscn")
+	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
 
 
 # PT_BR: Abre a cena de opções
@@ -18,8 +18,3 @@ func _on_OptionsButton_pressed():
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
 
-
-# PT_BR: Abre a cena de tutorial
-# EN_US: Opens the tutorial scene
-func _on_TutorialButton_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
