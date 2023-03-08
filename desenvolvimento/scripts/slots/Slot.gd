@@ -358,7 +358,7 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the variable in the dropped object (source)
 	data.is_dragging = false
 	
-	emit_signal("dropped_task", self)
+	data.emit_signal("dropped_task", data)
 
 # PT_BR: Código baseado no seguinte repositório:
 # EN_US: Code based on the following repository:
