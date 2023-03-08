@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_background.png-c22097b91c52aabdc3bdffb4fbceefdd.stex"
+path="res://.import/hover_tutorial_button.png-56bb35b5c9e16e923014fda0f908498b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MenuScreen/menu_background.png"
-dest_files=[ "res://.import/menu_background.png-c22097b91c52aabdc3bdffb4fbceefdd.stex" ]
+source_file="res://assets/MenuScreen/hover_tutorial_button.png"
+dest_files=[ "res://.import/hover_tutorial_button.png-56bb35b5c9e16e923014fda0f908498b.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao_iniciar.png-ad2a948d38b2c3b369481bcedc7c4e3f.stex"
+path="res://.import/exit_button.png-dde74b721719aaa2b4c2f2b5e8b8484f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MenuScreen/botao_iniciar.png"
-dest_files=[ "res://.import/botao_iniciar.png-ad2a948d38b2c3b369481bcedc7c4e3f.stex" ]
+source_file="res://assets/MenuScreen/exit_button.png"
+dest_files=[ "res://.import/exit_button.png-dde74b721719aaa2b4c2f2b5e8b8484f.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

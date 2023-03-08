@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botao_tutorial.png-3ee5e56e8a6aa41b5df0542f23b4a903.stex"
+path="res://.import/options_button.png-9ead8a872fb0f90615c3ec5b86cf435a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MenuScreen/botao_tutorial.png"
-dest_files=[ "res://.import/botao_tutorial.png-3ee5e56e8a6aa41b5df0542f23b4a903.stex" ]
+source_file="res://assets/MenuScreen/options_button.png"
+dest_files=[ "res://.import/options_button.png-9ead8a872fb0f90615c3ec5b86cf435a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
