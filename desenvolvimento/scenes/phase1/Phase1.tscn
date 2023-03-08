@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/Phase1/Sheet/ana_small_sheet.png" type="Texture" id=10]
 [ext_resource path="res://assets/Phase1/Sheet/bento_small_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=12]
-[ext_resource path="res://scenes/phase1/Phase1.gd" type="Script" id=14]
+[ext_resource path="res://scripts/Phase1.gd" type="Script" id=14]
 
 [node name="Phase1" type="Node2D"]
 script = ExtResource( 14 )
