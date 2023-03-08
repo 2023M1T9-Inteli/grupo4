@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Mapa/back_ground_tutorial.png" type="Texture" id=1]
+[ext_resource path="res://joystix_monospace_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Script/Tutorial.gd" type="Script" id=3]
+[ext_resource path="res://Assets/botaoright.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0, 0, 0, 0.666667 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.988235, 0.972549, 0.898039, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.14902, 0.482353, 0.65098, 1 )
+corner_radius_bottom_right = 1
+corner_detail = 3
+shadow_color = Color( 0.466667, 0.72549, 0.858824, 1 )
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.207843, 0.192157, 0.192157, 1 )
+shadow_color = Color( 0.0666667, 0.0666667, 0.0666667, 0.823529 )
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.466667, 0.72549, 0.858824, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 28
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BackGroundTutorial" type="Sprite" parent="."]
+position = Vector2( 640.75, 360.25 )
+scale = Vector2( 0.727661, 0.750261 )
+texture = ExtResource( 1 )
+
+[node name="Opack_back_panel" type="Panel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="Tutorial_area" type="Panel" parent="."]
+modulate = Color( 0.886275, 0.858824, 0.858824, 1 )
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 1088.0
+margin_bottom = 656.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="next_button" type="Button" parent="Tutorial_area"]
+margin_left = 784.0
+margin_top = 504.0
+margin_right = 844.0
+margin_bottom = 558.0
+custom_styles/hover = SubResource( 10 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="Skip_button" type="Button" parent="Tutorial_area"]
+margin_left = 64.0
+margin_top = 488.0
+margin_right = 256.0
+margin_bottom = 552.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/normal = SubResource( 5 )
+text = "Pular Tutorial"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 248.0
+margin_top = 128.0
+margin_right = 1048.0
+margin_bottom = 520.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+bbcode_text = "Olá, tudo bem?!
+
+Seja bem vindo ao jogo [color=#EE222B]O Talento de Delegar[/color].
+
+Este é o  tutorial do jogo. Caso já o tenha jogado, pode clicar no botão de [color=#267ba6]\"pular tutorial\"[/color] mas, se é sua primeira vez, ficaremos muito felizes em te guiar!!"
+text = "Olá, tudo bem?!
+
+Seja bem vindo ao jogo O Talento de Delegar.
+
+Este é o  tutorial do jogo. Caso já o tenha jogado, pode clicar no botão de \"pular tutorial\" mas, se é sua primeira vez, ficaremos muito felizes em te guiar!!"
+
+[connection signal="pressed" from="Tutorial_area/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Tutorial_area/Skip_button" to="." method="_on_Skip_button_pressed"]
