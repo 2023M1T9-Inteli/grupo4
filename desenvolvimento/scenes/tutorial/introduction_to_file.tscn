@@ -11,7 +11,6 @@
 [ext_resource path="res://assets/tutorial/characters/ana.png" type="Texture" id=9]
 [ext_resource path="res://Assets/tutorial/office_sprites/Ficha_pequena_kira.png" type="Texture" id=10]
 
-
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.666667 )
 

@@ -10,7 +10,6 @@
 [ext_resource path="res://scripts/tutorial/introduction_to_files.gd" type="Script" id=8]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=9]
 
-
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.666667 )
 
