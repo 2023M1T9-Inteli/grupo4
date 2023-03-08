@@ -70,22 +70,32 @@ func _set_group(new_value) -> void:
 	var new_group_name = new_value.strip_edges(true, true)
 	assert(new_group_name != "", "ERROR: You must give a non-whitespace value to group property in " + str(self))
 	group = new_group_name
+	
+	
 func _set_show_qtd(new_value) -> void:
 	show_qtd = new_value
 	if weakref($qtd).get_ref():
 		$qtd.set("visible", show_qtd)
+		
+		
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($qtd).get_ref():
 		$qtd.text = str(qtd)
+		
+		
 func _set_image(new_value) -> void:
 	image = new_value
 	if weakref($image).get_ref():
 		$image.texture = image
+		
+		
 func _set_image_preview(new_value) -> void:
 	image_preview = new_value
 	if weakref($preview).get_ref():
 		$preview.texture = image_preview
+		
+		
 func _set_size(new_value) -> void:
 	size = new_value
 	rect_min_size = size
@@ -99,20 +109,23 @@ func _set_size(new_value) -> void:
 	$qtd.rect_size.x = size.x - 10
 	$touch.scale = (size * 64 / 2.0) / 1000.0
 
+
 func _ready():
-	# PT_BR: É necessráio colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
+	# PT_BR: É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# EN_US: It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	for n in get_children():
 		if "mouse_filter" in n:
 			n.mouse_filter = MOUSE_FILTER_IGNORE
 
-# PT_BR: Se a Preview do Control estiver sendo arrastada, ele será ocultado até que o arraste termine 
-# EN_US: If the Preview of the Control is being dragged, it will be hidden until the drag is finished
+
 func _process(_delta):
+	# PT_BR: Se a Preview do Control estiver sendo arrastada, ele será ocultado até que o arraste termine 
+	# EN_US: If the Preview of the Control is being dragged, it will be hidden until the drag is finished
 	if is_dragging:
 		self.get_node("image").hide()
 	else:
 		self.get_node("image").show()
+
 
 # PT_BR (1): Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
 # PT_BR (2): Habilita / Desabilita a transferência unitária dos slotes que incrementam
@@ -137,6 +150,7 @@ func _input(event) -> void:
 				_mouse_right_button = !_mouse_right_button
 				$unit.set("visible", _mouse_right_button)
 
+
 # PT_BR: Uma função para resetar o slote
 # EN_US: A function to reset the slot
 func _clearSlot() -> void:
@@ -146,6 +160,7 @@ func _clearSlot() -> void:
 	uid = ""
 	$image.texture = null
 	$qtd.text = str(qtd)
+
 
 # PT_BR: Uma função para quando o usuṕario clicar no slote, permitir limpar o mesmo, desde que o parâmetro "canClear" seja "TRUE"
 # EN_US: A function for when the user clicks on the slot, to allow it to be cleaned, as long as the parameter "canClear" is "TRUE"
@@ -194,6 +209,7 @@ func get_drag_data(_position):
 	# EN_US: Return to can_drag / drop
 	return self
 
+
 # PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
 # EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(_position, data) -> bool:
@@ -236,6 +252,7 @@ func can_drop_data(_position, data) -> bool:
 			ret = true
 					
 	return ret
+
 
 # PT_BR: Essa função captura o preview que estava sendo arrastado, e vem no parâmetro "data"
 # EN_US: This function captures the preview that was being dragged, and comes in the parameter "data"
@@ -319,4 +336,6 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the variable in the dropped object (source)
 	data.is_dragging = false
 
-# Código base pego de https://github.com/GDQuest/godot-design-patterns.git
+# PT_BR: Código baseado no seguinte repositório:
+# EN_US: Code based on the following repository:
+# https://github.com/thiagobruno/godot_dragndrop.git
