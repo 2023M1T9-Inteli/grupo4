@@ -117,24 +117,12 @@ func _set_image_size(new_value) -> void:
 	
 	$TableImage.rect_min_size = images_size
 	$TableImage.rect_size = images_size
-	$TableImage.margin_top = 0
-	$TableImage.margin_left = 0
-	$TableImage.margin_bottom = 0
-	$TableImage.margin_right = 0
 	
 	$DrawerImage.rect_min_size = images_size
 	$DrawerImage.rect_size = images_size
-	$DrawerImage.margin_top = 0
-	$DrawerImage.margin_left = 0
-	$DrawerImage.margin_bottom = 0
-	$DrawerImage.margin_right = 0
 	
 	$BossTableImage.rect_min_size = images_size
 	$BossTableImage.rect_size = images_size
-	$BossTableImage.margin_top = 0
-	$BossTableImage.margin_left = 0
-	$BossTableImage.margin_bottom = 0
-	$BossTableImage.margin_right = 0
 
 func _set_preview_size(new_value) -> void:
 	preview_size = new_value

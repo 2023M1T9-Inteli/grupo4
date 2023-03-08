@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/slots/VSlotCollection.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[node name="BossWorkerTableTextureRect" type="TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -360.0
+margin_right = -128.0
+margin_bottom = 264.0
+texture = SubResource( 1 )
+
+[node name="SlotCollectioVBoxContainer" parent="." instance=ExtResource( 4 )]
+rect_min_size = Vector2( 517, 624 )
+custom_constants/separation = 1
+collection_size = Vector2( 517, 624 )
+
+[node name="ProfileControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 3 )]
+margin_right = 517.0
+margin_bottom = 312.0
+grow_horizontal = 2
+rect_min_size = Vector2( 517, 312 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+location = 2
+slot_type = 2
+slot_size = Vector2( 517, 312 )
+images_size = Vector2( 300, 300 )
+
+[node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 3 )]
+margin_top = 313.0
+margin_right = 517.0
+margin_bottom = 625.0
+rect_min_size = Vector2( 517, 312 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+location = 2
+slot_size = Vector2( 517, 312 )
+images_size = Vector2( 300, 300 )
