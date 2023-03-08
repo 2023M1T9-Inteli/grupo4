@@ -9,48 +9,43 @@ var counter = 0
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "Rosaline: Olá, tudo bem?",
+			"text": "Rosaline: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência!",
 			"anim": "idle",
 			"showPC": false,
 		},
 	1: {
-			"text": "Rosaline: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência! ",
-			"anim": "idle",
-			"showPC": false,
-		}, 
-	2: {
 			"text": "Rosaline: Minha empresa está trabalhando no desenvolvimento de novos hardwares para comercialização, e nossos investidores estão nos pressionando para que o projeto saia o mais rápido possível. ",
 			"anim": "arm_up",
 			"showPC": true,
-		},
-	3: {
+		}, 
+	2: {
 			"text": "Rosaline:Mesmo com bom ritmo de trabalho, estamos atrasados e acreditamos que a sua empresa poderá nos auxiliar em acelerar esse processo, pois sua equipe possui os profissionais mais qualificados do mercado. ",
 			"anim": "idle",
 			"showPC": false,
 		},
-	4: {
-			"text": "Rosaline: Então, chega de conversa fiada e vamos ao trabalho!",
+	3: {
+			"text": "Rosaline: Então, chega de conversa fiada e vamos ao trabalho! ",
 			"anim": "idle",
 			"showPC": false,
 		},
-	5: {
-			"text": "Rosaline: ",
+	4: {
+			"text": "",
 			"anim": "idle",
 			"showPC": false,
-		}
+		},
 	}
 
 # PT_BR: Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
 # EN_US: Function that erases the anterior text and executes the function of sprite change for the character
 func change_speech(speech, anim):
+	$InitialText.hide()
 	text_element.visible_characters = 0
 	text_element.bbcode_text = speech
 	self.get_parent().change_anim(anim)
 
 # PT_BR: Função que define que após pressionado o botão esquerdo do mouse, a função "show_message" é executada
 # EN_US: Function that defines that after the button of the mouse is pressed, the function "show_message" is executed
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == 1 and event.is_pressed():
+func _on_PassButton_pressed():
 		show_message()
 
 # PT_BR: Função que verifica se o texto exibido na tela é o mesmo que o dentro do item do dicionário.
@@ -89,3 +84,6 @@ func _on_Timer_timeout():
 		# PT_BR: Aumenta o numero de caracteres visíveis na tela
 		# EN_US: Raises the number of charactesr visible on the screen
 	text_element.visible_characters += 2
+
+
+
