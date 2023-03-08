@@ -5,10 +5,9 @@
 [ext_resource path="res://assets/Phase1/visible_computer.png" type="Texture" id=3]
 
 [node name="TextureProgress" type="TextureProgress"]
-margin_left = 522.0
-margin_top = 235.0
-margin_right = 809.0
-margin_bottom = 472.0
+margin_right = 346.0
+margin_bottom = 354.0
+rect_scale = Vector2( 0.290439, 0.290439 )
 max_value = 81.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 3 )

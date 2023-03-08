@@ -10,12 +10,12 @@ extents = Vector2( 32, 32 )
 [node name="Worker" type="StaticBody2D"]
 script = ExtResource( 4 )
 
-[node name="Collison" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 33, 32 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.45
+wait_time = 0.01
 
 [node name="Cronometer" type="TextureProgress" parent="."]
 visible = false

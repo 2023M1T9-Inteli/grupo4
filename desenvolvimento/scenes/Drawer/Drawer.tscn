@@ -35,12 +35,12 @@ rect_clip_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SlotExpansor"]
 margin_left = 4.0
-margin_right = 516.0
+margin_right = 452.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 512, 64 )
+rect_min_size = Vector2( 448, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
-collection_size = Vector2( 512, 64 )
+drawer_size = Vector2( 448, 64 )
 
 [node name="root" type="Node2D" parent="SlotExpansor/HBoxContainer"]
 visible = false

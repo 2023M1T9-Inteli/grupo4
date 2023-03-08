@@ -1,6 +1,8 @@
 extends Node2D
 
 onready var phase_progress = $PhaseProgress
+onready var score_label = $ScoreLabel
+onready var map = $Map
 
 var score = 0
 
@@ -12,15 +14,15 @@ onready var slot_bento = $SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
 func _change_score(new_value): 
 	score += new_value
-	$ScoreLabel.text = "Score: %0000006d" % score
+	score_label.text = "Score: %0000006d" % score
 
 
 func _on_TimeDisplayer_timer_is_over():
-	get_tree().change_scene("res://scenes/base_phase/Defeat.tscn")
+	get_tree().change_scene("res://scenes/Defeat.tscn")
 
 
 func _on_PhaseProgress_completed_change():
-	get_tree().change_scene("res://scenes/base_phase/Victory.tscn")
+	get_tree().change_scene("res://scenes/Victory.tscn")
 
 
 func _on_TextureButton_pressed():
@@ -58,19 +60,19 @@ func _on_Map_roger_fineshed_task(worker):
 func _on_workSlotKira_get_item(slot):
 	print("get_item: ", slot, "\n")
 	slot.can_give = false
-	$Map.Kira_initiate_task(slot)
+	map.Kira_initiate_task(slot)
 
 
 func _on_workSlotRoger_get_item(slot):
 	slot.can_give = false
-	$Map.Roger_initiate_task(slot)
+	map.Roger_initiate_task(slot)
 
 
 func _on_workSlotBento_get_item(slot):
 	slot.can_give = false
-	$Map.Bento_initiate_task(slot)
+	map.Bento_initiate_task(slot)
 
 
 func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
-	$Map.Ana_initiate_task(slot)
+	map.Ana_initiate_task(slot)

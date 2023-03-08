@@ -48,7 +48,7 @@ func _ready():
 			qtd_control_children += 1
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 			if child.connect("dropped_item", self, "_delete_slot") != OK:
-				print("erro ;-; no connect: ", self)
+				print("Erro ao conectar o sinal dropped_item do node ", self)
 	drawer_size.x = total_children_size
 
 
@@ -79,7 +79,6 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 
 
 func _delete_slot(node) -> void:
-	print("apagou o ", node.to_string(), '\n')
 	self._set_slot_collection_size_x(-node.rect_size.x)
 	node.queue_free()
 	_count_control_childs()
