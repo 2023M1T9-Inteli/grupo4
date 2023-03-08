@@ -163,7 +163,7 @@ func _set_boss_table_image(new_value) -> void:
 
 
 func _ready():
-	# PT_BR: É necessráio colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
+	# PT_BR: É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# EN_US: It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	for n in get_children():
 		if "mouse_filter" in n:

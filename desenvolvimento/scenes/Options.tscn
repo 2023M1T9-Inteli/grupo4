@@ -57,10 +57,10 @@ min_value = -40.0
 max_value = 0.0
 
 [node name="BackButton" type="Button" parent="."]
-margin_left = 36.0
-margin_top = 24.0
-margin_right = 118.0
-margin_bottom = 99.0
+margin_left = 1138.0
+margin_top = 23.0
+margin_right = 1220.0
+margin_bottom = 98.0
 icon = ExtResource( 3 )
 flat = true
 

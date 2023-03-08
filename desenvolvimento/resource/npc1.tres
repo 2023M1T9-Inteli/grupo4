@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Resource
+class_name Dialog_Metadata
+
+export(Array, String) var msg_queue: Array
+
+
+"
+
+[resource]
+script = SubResource( 1 )
+msg_queue = [ "Olá!", "Como você está?", "Tenho um projeto que necessito que realize!" ]
