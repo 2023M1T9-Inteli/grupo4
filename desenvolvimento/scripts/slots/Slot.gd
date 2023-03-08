@@ -9,20 +9,23 @@ extends CenterContainer
 # PT_BR: Inicializa as constantes locais
 # EN_US: Initialize local constants
 enum LOCATIONS {
-	TABLE = 0,
-	DRAWER = 1,
-	BOSS_TABLE = 2,
+	TABLE,
+	DRAWER,
+	BOSS_TABLE,
 }
 
 enum ATTRIBUTES_TYPE {
-	 MANUAL_WORK = 1,
-	 LOGIC_RAC = 2,
-	 ART_THINK = 3,
+	 MANUAL_WORK = 0,
+	 LOGIC_RAC = 0,
+	 ART_THINK = 0,
 }
 
 enum SLOTS_TYPE {
-	WORK = 1,
-	PROFILE = 2,
+	WORK,
+	ANA_PROFILE,
+	BENTO_PROFILE,
+	KIRA_PROFILE,
+	ROGER_PROFILE,	
 }
 
 # PT_BR: Inicializa os sinais
@@ -201,6 +204,8 @@ func _clearSlot() -> void:
 	$DrawerImage.texture = null
 	$BossTableImage.texture = null
 	$Qtd.text = str(qtd)
+	attributes = ATTRIBUTES_TYPE
+	
 
 func _get_location_node():
 	if location == LOCATIONS.TABLE:

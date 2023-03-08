@@ -125,7 +125,6 @@ position = Vector2( 299, 438 )
 scale = Vector2( 4.88194, 4.90086 )
 frames = SubResource( 12 )
 animation = "idle"
-frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -163,6 +162,7 @@ custom_styles/normal = SubResource( 20 )
 icon = ExtResource( 12 )
 flat = true
 
+[connection signal="finished_dialog" from="DialogBox" to="." method="_on_DialogBox_finished_dialog"]
 [connection signal="timeout" from="DialogBox/Timer" to="DialogBox" method="_on_Timer_timeout"]
 [connection signal="hide" from="RosalinneAnimSprite" to="DialogBox" method="_on_Rosalinne_Down_hide"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

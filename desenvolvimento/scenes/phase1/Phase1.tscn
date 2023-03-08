@@ -2,17 +2,17 @@
 
 [ext_resource path="res://scenes/phase1/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase1/Map.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Phase1/Task/big_task.png" type="Texture" id=3]
+[ext_resource path="res://assets/items/task/big_task.png" type="Texture" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/Phase1/Sheet/kira_big_sheet.png" type="Texture" id=5]
+[ext_resource path="res://assets/items/profile_sheet/kira_big_sheet.png" type="Texture" id=5]
 [ext_resource path="res://scenes/prefabs/WorkerTableTextureRect.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/Phase1/Sheet/kira_small_sheet.png" type="Texture" id=7]
-[ext_resource path="res://assets/Phase1/Task/small_task.png" type="Texture" id=8]
-[ext_resource path="res://assets/Phase1/Sheet/roger_small_sheet.png" type="Texture" id=9]
-[ext_resource path="res://assets/Phase1/Sheet/ana_small_sheet.png" type="Texture" id=10]
-[ext_resource path="res://assets/Phase1/Sheet/bento_small_sheet.png" type="Texture" id=11]
+[ext_resource path="res://assets/items/profile_sheet/kira_small_sheet.png" type="Texture" id=7]
+[ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=8]
+[ext_resource path="res://assets/items/profile_sheet/roger_small_sheet.png" type="Texture" id=9]
+[ext_resource path="res://assets/items/profile_sheet/ana_small_sheet.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/profile_sheet/bento_small_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=12]
-[ext_resource path="res://scripts/Phase1.gd" type="Script" id=14]
+[ext_resource path="res://scripts/Phase1/Phase1.gd" type="Script" id=14]
 
 [node name="Phase1" type="Node2D"]
 script = ExtResource( 14 )
@@ -40,7 +40,6 @@ margin_right = 158.0
 margin_bottom = 380.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = null
 
 [node name="profileKira" parent="." instance=ExtResource( 4 )]
 margin_left = 119.0
@@ -64,7 +63,6 @@ margin_right = 605.0
 margin_bottom = 389.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = null
 
 [node name="profileRoger" parent="." instance=ExtResource( 4 )]
 margin_left = 565.0
@@ -88,13 +86,12 @@ margin_right = 164.0
 margin_bottom = 580.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = null
 
 [node name="profileAna" parent="." instance=ExtResource( 4 )]
 margin_left = 119.0
 margin_top = 541.0
-margin_right = 151.0
-margin_bottom = 573.0
+margin_right = 144.0
+margin_bottom = 566.0
 rect_min_size = Vector2( 25, 25 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
@@ -112,13 +109,12 @@ margin_right = 595.0
 margin_bottom = 570.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = null
 
 [node name="profileBento" parent="." instance=ExtResource( 4 )]
 margin_left = 555.0
 margin_top = 534.0
-margin_right = 587.0
-margin_bottom = 566.0
+margin_right = 580.0
+margin_bottom = 559.0
 rect_min_size = Vector2( 25, 25 )
 size_flags_horizontal = 5
 size_flags_vertical = 5

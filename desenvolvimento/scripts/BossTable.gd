@@ -2,8 +2,8 @@ extends Node2D
 
 # PT_BR: Variáveis que definem as imagens do cursor
 # EN_US: Variables that define the cursor images
-var new_cursor = load("res://assets/BossTable/Tasks/click_cursor.png")
-var normal_cursor = load("res://assets/BossTable/Tasks/cursor.png")
+var new_cursor = load("res://assets/Cursor/click_cursor.png")
+var normal_cursor = load("res://assets/Cursor/cursor.png")
 
 
 # PT_BR: Muda o cursor do mouse ao entrar no "TextureButton"

@@ -1,0 +1,117 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assets/tutorial/map/background_tutorial.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/tutorial/office_sprites/right_button.png" type="Texture" id=3]
+[ext_resource path="res://Assets/tutorial/office_sprites/left_button.png" type="Texture" id=4]
+[ext_resource path="res://scripts/tutorial/TimeTutorial.gd" type="Script" id=5]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer01.png" type="Texture" id=6]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer04.png" type="Texture" id=7]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer05.png" type="Texture" id=8]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer02.png" type="Texture" id=9]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer03.png" type="Texture" id=10]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer06.png" type="Texture" id=11]
+[ext_resource path="res://assets/tutorial/gifs/Timer/timer07.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.666667 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.988235, 0.972549, 0.898039, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxFlat" id=5]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="BackGroundTutorial" type="Sprite" parent="."]
+position = Vector2( 640.75, 360.25 )
+scale = Vector2( 0.727661, 0.750261 )
+texture = ExtResource( 1 )
+
+[node name="Opack_back_panel" type="Panel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Local_tutorial" type="Panel" parent="."]
+modulate = Color( 0.886275, 0.858824, 0.858824, 1 )
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 1088.0
+margin_bottom = 656.0
+rect_pivot_offset = Vector2( 232, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="back_button4" type="Button" parent="Local_tutorial"]
+margin_left = 56.0
+margin_top = 504.0
+margin_right = 116.0
+margin_bottom = 558.0
+custom_styles/hover = SubResource( 2 )
+icon = ExtResource( 4 )
+flat = true
+
+[node name="next_button4" type="Button" parent="Local_tutorial"]
+margin_left = 784.0
+margin_top = 504.0
+margin_right = 844.0
+margin_bottom = 558.0
+custom_styles/hover = SubResource( 3 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="Back_timer" type="Panel" parent="."]
+margin_left = 256.0
+margin_top = 224.0
+margin_right = 576.0
+margin_bottom = 472.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Timer" type="AnimatedSprite" parent="Back_timer"]
+position = Vector2( 160, 124 )
+scale = Vector2( 1.85714, 2.18182 )
+frames = SubResource( 6 )
+frame = 6
+playing = true
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 600.0
+margin_top = 208.0
+margin_right = 1056.0
+margin_bottom = 472.0
+rect_pivot_offset = Vector2( 112, 416 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Tempo: fique de olho no [color=#EE222B]contador[/color] do tempo. [color=#267ba6]Não deixe[/color] que ele se esgote antes de concluir todas as tarefas."
+text = "Tempo: fique de olho no contador do tempo. Não deixe que ele se esgote antes de concluir todas as tarefas."
+
+[connection signal="pressed" from="Local_tutorial/back_button4" to="." method="_on_back_button4_pressed"]
+[connection signal="pressed" from="Local_tutorial/next_button4" to="." method="_on_next_button4_pressed"]

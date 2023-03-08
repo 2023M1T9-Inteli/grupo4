@@ -14,7 +14,6 @@ func _ready():
 # EN_US: Controls music volume and mute
 func _on_SliderMusic_value_changed(value):
 	AudioServer.set_bus_volume_db(master_bus, value)
-	print(value)
 	if value == -40:
 		AudioServer.set_bus_mute(master_bus,true)
 	else:

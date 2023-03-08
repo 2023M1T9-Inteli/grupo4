@@ -22,4 +22,5 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
 
 
-
+func _on_DialogBox_finished_dialog():
+	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")

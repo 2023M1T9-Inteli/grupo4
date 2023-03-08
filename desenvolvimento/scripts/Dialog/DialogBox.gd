@@ -5,6 +5,8 @@ onready var text_element := $Text
 onready var timer := $Timer
 var counter = 0
 
+signal finished_dialog()
+
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
@@ -61,7 +63,7 @@ func show_message() -> void:
 		# PT_BR: Se o timer parar e o texto já tiver atingido seu tamanho, ele deve mudar para a próxima cena definida
 		# EN_US: If the timer stops and the text reached it's limit, it needs to change to the next defined scene
 		if counter == ( len(message_queue) - 1 ):
-			get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+			emit_signal("finished_dialog")
 			return
 		# PT_BR: Variáveis que contém o texto, animações e a imagem do sprite, associando os mesmos a itens na lista
 		# EN_US(1): Variables that have the text, animations and images from the sprite, merging them with the itens in
