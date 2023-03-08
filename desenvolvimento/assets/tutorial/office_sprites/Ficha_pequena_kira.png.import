@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ficha_pequena_kira.png-af4cb8cc548bd9af929ac6d2693d7640.stex"
+path="res://.import/Ficha_pequena_kira.png-711f55f7c181c20f9d2eea317c0b6197.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ficha_pequena_kira.png"
-dest_files=[ "res://.import/Ficha_pequena_kira.png-af4cb8cc548bd9af929ac6d2693d7640.stex" ]
+source_file="res://assets/tutorial/office_sprites/Ficha_pequena_kira.png"
+dest_files=[ "res://.import/Ficha_pequena_kira.png-711f55f7c181c20f9d2eea317c0b6197.stex" ]
 
 [params]
 

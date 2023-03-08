@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tarefa grande.png-5fca9aff3cf68897b508572e3b1c0c12.stex"
+path="res://.import/tarefa grande.png-727934110beeb688c46a51d6aadfd387.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tarefa grande.png"
-dest_files=[ "res://.import/tarefa grande.png-5fca9aff3cf68897b508572e3b1c0c12.stex" ]
+source_file="res://assets/tutorial/office_sprites/tarefa grande.png"
+dest_files=[ "res://.import/tarefa grande.png-727934110beeb688c46a51d6aadfd387.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pasta_Arquivo_Pequeno Copy2.png-1c1f24232ba69bbea95d55a7e838edb3.stex"
+path="res://.import/Pasta_Arquivo_Pequeno Copy2.png-63475e82a89fb2899cae2a994f4549fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mapa/Pasta_Arquivo_Pequeno Copy2.png"
-dest_files=[ "res://.import/Pasta_Arquivo_Pequeno Copy2.png-1c1f24232ba69bbea95d55a7e838edb3.stex" ]
+source_file="res://assets/tutorial/Mapa/Pasta_Arquivo_Pequeno Copy2.png"
+dest_files=[ "res://.import/Pasta_Arquivo_Pequeno Copy2.png-63475e82a89fb2899cae2a994f4549fd.stex" ]
 
 [params]
 

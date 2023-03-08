@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/computardorApagado.png-26d6c8c651bd2ec172f87a5c23fd5685.stex"
+path="res://.import/computardorApagado.png-de401548b6ce450c1434e77e0bb6e0a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/computardorApagado.png"
-dest_files=[ "res://.import/computardorApagado.png-26d6c8c651bd2ec172f87a5c23fd5685.stex" ]
+source_file="res://assets/tutorial/office_sprites/computardorApagado.png"
+dest_files=[ "res://.import/computardorApagado.png-de401548b6ce450c1434e77e0bb6e0a8.stex" ]
 
 [params]
 

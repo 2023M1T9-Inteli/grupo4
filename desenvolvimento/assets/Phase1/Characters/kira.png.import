@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<<< HEAD:desenvolvimento/assets/ProcessTasks/relogio.png.import
-path="res://.import/relogio.png-b04d1a4cdaeb454276f9bc1c24d9c5cb.stex"
-========
 path="res://.import/kira.png-84e377f6a4194a21d69573d2044140cf.stex"
->>>>>>>> main:desenvolvimento/assets/Phase1/Characters/kira.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:desenvolvimento/assets/ProcessTasks/relogio.png.import
-source_file="res://assets/ProcessTasks/relogio.png"
-dest_files=[ "res://.import/relogio.png-b04d1a4cdaeb454276f9bc1c24d9c5cb.stex" ]
-========
 source_file="res://assets/Phase1/Characters/kira.png"
 dest_files=[ "res://.import/kira.png-84e377f6a4194a21d69573d2044140cf.stex" ]
->>>>>>>> main:desenvolvimento/assets/Phase1/Characters/kira.png.import
 
 [params]
 

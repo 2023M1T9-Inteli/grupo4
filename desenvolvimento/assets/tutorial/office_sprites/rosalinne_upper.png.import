@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rosalinne_upper.png-6a4fd458384d080f6ece395ba64e56c6.stex"
+path="res://.import/rosalinne_upper.png-ad058ea25bafcb554c76c6062ab71c9b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/rosalinne_upper.png"
-dest_files=[ "res://.import/rosalinne_upper.png-6a4fd458384d080f6ece395ba64e56c6.stex" ]
+source_file="res://assets/tutorial/office_sprites/rosalinne_upper.png"
+dest_files=[ "res://.import/rosalinne_upper.png-ad058ea25bafcb554c76c6062ab71c9b.stex" ]
 
 [params]
 

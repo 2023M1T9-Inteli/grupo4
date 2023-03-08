@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mesa.png-1d290302cdcacff0df904be26ca64cd1.stex"
+path="res://.import/mesa.png-6ffa269056e4c07c3431b3a750f8e841.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mesa.png"
-dest_files=[ "res://.import/mesa.png-1d290302cdcacff0df904be26ca64cd1.stex" ]
+source_file="res://assets/tutorial/office_sprites/mesa.png"
+dest_files=[ "res://.import/mesa.png-6ffa269056e4c07c3431b3a750f8e841.stex" ]
 
 [params]
 

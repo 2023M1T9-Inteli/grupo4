@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image.png-f58f32ae6d86cd9857cef020598a001c.stex"
+path="res://.import/image.png-9d7070adcda5fa2ca7613438c14fac49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Gifs/Timer/image.png"
-dest_files=[ "res://.import/image.png-f58f32ae6d86cd9857cef020598a001c.stex" ]
+source_file="res://assets/tutorial/gifs/Timer/image.png"
+dest_files=[ "res://.import/image.png-9d7070adcda5fa2ca7613438c14fac49.stex" ]
 
 [params]
 

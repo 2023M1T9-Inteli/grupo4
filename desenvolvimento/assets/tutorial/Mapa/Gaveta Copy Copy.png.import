@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gaveta Copy Copy.png-24a1e2bcd071e510c14a3f2e81e3744a.stex"
+path="res://.import/Gaveta Copy Copy.png-408bbcf4f082349318d3d5e20df087f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mapa/Gaveta Copy Copy.png"
-dest_files=[ "res://.import/Gaveta Copy Copy.png-24a1e2bcd071e510c14a3f2e81e3744a.stex" ]
+source_file="res://assets/tutorial/Mapa/Gaveta Copy Copy.png"
+dest_files=[ "res://.import/Gaveta Copy Copy.png-408bbcf4f082349318d3d5e20df087f2.stex" ]
 
 [params]
 

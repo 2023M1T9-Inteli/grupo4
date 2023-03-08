@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ana.png-58f309dab2cd218f3cc02cb0c0dabad9.stex"
+path="res://.import/ana.png-15d010addc5e8d14a6f3cce46bdc5dbe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personagens/ana.png"
-dest_files=[ "res://.import/ana.png-58f309dab2cd218f3cc02cb0c0dabad9.stex" ]
+source_file="res://assets/tutorial/characters/ana.png"
+dest_files=[ "res://.import/ana.png-15d010addc5e8d14a6f3cce46bdc5dbe.stex" ]
 
 [params]
 

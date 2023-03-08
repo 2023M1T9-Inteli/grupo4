@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botaoleft.png-f2f2c0eccf5676e3030a91b3e233657e.stex"
+path="res://.import/botaoleft.png-b61fe59942a1f2a2120a2285b34a1e59.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/botaoleft.png"
-dest_files=[ "res://.import/botaoleft.png-f2f2c0eccf5676e3030a91b3e233657e.stex" ]
+source_file="res://assets/tutorial/office_sprites/botaoleft.png"
+dest_files=[ "res://.import/botaoleft.png-b61fe59942a1f2a2120a2285b34a1e59.stex" ]
 
 [params]
 

@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/MenuScreen/hover_about_button.png" type="Texture" id=13]
 [ext_resource path="res://assets/MenuScreen/hover_exit_button.png" type="Texture" id=14]
 
-
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
 

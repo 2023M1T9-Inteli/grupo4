@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kira.png-26aefa355be90fcedead1e7ff3a8aa20.stex"
+path="res://.import/kira.png-b6e6e01ac997b8eb05fd6ac03272b0f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Personagens/kira.png"
-dest_files=[ "res://.import/kira.png-26aefa355be90fcedead1e7ff3a8aa20.stex" ]
+source_file="res://assets/tutorial/characters/kira.png"
+dest_files=[ "res://.import/kira.png-b6e6e01ac997b8eb05fd6ac03272b0f9.stex" ]
 
 [params]
 

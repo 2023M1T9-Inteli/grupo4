@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image (3).png-1630a362f007632d080d42204ff4d1a1.stex"
+path="res://.import/image (3).png-206fc0e1d7060761383ffe5a2d517f23.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Gifs/Progresso/image (3).png"
-dest_files=[ "res://.import/image (3).png-1630a362f007632d080d42204ff4d1a1.stex" ]
+source_file="res://assets/tutorial/gifs/Progresso/image (3).png"
+dest_files=[ "res://.import/image (3).png-206fc0e1d7060761383ffe5a2d517f23.stex" ]
 
 [params]
 

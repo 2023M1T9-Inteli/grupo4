@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/back_ground_tutorial.png-e29c8d48cd42818a73080ad83558afcb.stex"
+path="res://.import/back_ground_tutorial.png-ab8cfddf5a72f0cd81d4f50c1d5cc3fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mapa/back_ground_tutorial.png"
-dest_files=[ "res://.import/back_ground_tutorial.png-e29c8d48cd42818a73080ad83558afcb.stex" ]
+source_file="res://assets/tutorial/Mapa/back_ground_tutorial.png"
+dest_files=[ "res://.import/back_ground_tutorial.png-ab8cfddf5a72f0cd81d4f50c1d5cc3fe.stex" ]
 
 [params]
 
