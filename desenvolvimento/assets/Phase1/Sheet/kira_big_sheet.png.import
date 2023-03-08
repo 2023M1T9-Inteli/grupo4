@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tarefa grande.png-3e095a7a318a6b8b53b81306bd568895.stex"
+path="res://.import/kira_big_sheet.png-aa4b9d8f7d4a2345d8d0fcd2b09e3ac0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/phase1/tarefa grande.png"
-dest_files=[ "res://.import/tarefa grande.png-3e095a7a318a6b8b53b81306bd568895.stex" ]
+source_file="res://assets/Phase1/Sheet/kira_big_sheet.png"
+dest_files=[ "res://.import/kira_big_sheet.png-aa4b9d8f7d4a2345d8d0fcd2b09e3ac0.stex" ]
 
 [params]
 

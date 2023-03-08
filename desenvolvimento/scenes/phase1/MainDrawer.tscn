@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Drawer.gd" type="Script" id=2]
 [ext_resource path="res://assets/BossTable/Tasks/task_teste.png" type="Texture" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/phase1/tarefa grande.png" type="Texture" id=5]
+[ext_resource path="res://assets/Phase1/Task/big_task.png" type="Texture" id=5]
 [ext_resource path="res://assets/Phase1/Task/small_task.png" type="Texture" id=6]
 
 [sub_resource type="TileSet" id=1]

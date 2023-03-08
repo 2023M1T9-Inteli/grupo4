@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ficha_grande_kira.png-36d31e0a6e33dfd287b637f9d78a986d.stex"
+path="res://.import/big_task.png-1da8593e3c3a89d219ab512b7d14b5b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/phase1/Ficha_grande_kira.png"
-dest_files=[ "res://.import/Ficha_grande_kira.png-36d31e0a6e33dfd287b637f9d78a986d.stex" ]
+source_file="res://assets/Phase1/Task/big_task.png"
+dest_files=[ "res://.import/big_task.png-1da8593e3c3a89d219ab512b7d14b5b2.stex" ]
 
 [params]
 
