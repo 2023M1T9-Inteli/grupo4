@@ -97,6 +97,7 @@ var is_dragging: bool = false
 
 # PT_BR: Funções setGet
 # EN_US: setGet Functions
+
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($Qtd).get_ref():
@@ -188,6 +189,7 @@ func _input(event) -> void:
 			is_dragging = false
 
 
+
 # PT_BR: Uma função para resetar o slote
 # EN_US: A function to reset the slot
 func _clearSlot() -> void:
@@ -199,7 +201,6 @@ func _clearSlot() -> void:
 	$DrawerImage.texture = null
 	$BossTableImage.texture = null
 	$Qtd.text = str(qtd)
-
 
 func _get_location_node():
 	if location == LOCATIONS.TABLE:

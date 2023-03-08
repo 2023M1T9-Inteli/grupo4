@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<<< HEAD:desenvolvimento/assets/Dialog/rosalinne_braco (1).png.import
+path="res://.import/rosalinne_braco (1).png-c9848fac0ba238aaab7115fb049c3dab.stex"
+========
 path="res://.import/palette_plant2.png-989705ef02fc92987f0330b139dfc9d5.stex"
+>>>>>>>> main:desenvolvimento/assets/Phase1/Office_items/palette_plant2.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:desenvolvimento/assets/Dialog/rosalinne_braco (1).png.import
+source_file="res://assets/Dialog/rosalinne_braco (1).png"
+dest_files=[ "res://.import/rosalinne_braco (1).png-c9848fac0ba238aaab7115fb049c3dab.stex" ]
+========
 source_file="res://assets/Phase1/Office_items/palette_plant2.png"
 dest_files=[ "res://.import/palette_plant2.png-989705ef02fc92987f0330b139dfc9d5.stex" ]
+>>>>>>>> main:desenvolvimento/assets/Phase1/Office_items/palette_plant2.png.import
 
 [params]
 
