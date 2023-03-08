@@ -53,6 +53,7 @@ images_size = Vector2( 64, 64 )
 [node name="testeTarefa3" parent="HBoxContainer" instance=ExtResource( 4 )]
 margin_right = 64.0
 margin_bottom = 64.0
+mouse_filter = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 uid = "gerivaldo"
@@ -67,6 +68,7 @@ boss_table_image = ExtResource( 5 )
 margin_left = 64.0
 margin_right = 128.0
 margin_bottom = 64.0
+mouse_filter = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 uid = "gerivaldo"
