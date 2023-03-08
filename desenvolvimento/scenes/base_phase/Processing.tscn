@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/base_phase/Process2.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/chairman.png" type="Texture" id=2]
+[ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/base_phase/TextureProgress.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 6 )
+
+[node name="BasePhase" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 948.0
+margin_top = 58.0
+margin_right = 1189.0
+margin_bottom = 119.0
+
+[node name="Worker" parent="." instance=ExtResource( 4 )]
+position = Vector2( 761, 370 )
+worker_image = ExtResource( 2 )
+
+[node name="PhaseProgress" parent="." instance=ExtResource( 5 )]
+margin_left = 90.0
+margin_top = 254.0
+margin_right = 436.0
+margin_bottom = 608.0
+
+[node name="TimeDisplayer" parent="." instance=ExtResource( 3 )]
+margin_left = 434.0
+margin_top = 91.0
+margin_right = 553.0
+margin_bottom = 154.0
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 42.0
+margin_right = 379.0
+margin_bottom = 148.0
+custom_fonts/font = SubResource( 1 )
+text = "Score: 000000"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button2_pressed"]
+[connection signal="finished_task" from="Worker" to="." method="_on_Worker_finished_task"]
+[connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
