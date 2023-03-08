@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/levels/background.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/prefabs/WorkerTableTextureRect.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=8]
 [ext_resource path="res://scripts/ConceptScene.gd" type="Script" id=9]
+[ext_resource path="res://scenes/slots/VSlotCollection.tscn" type="PackedScene" id=10]
 
 [node name="ConceptScene" type="Node2D"]
 position = Vector2( 164, 70 )
@@ -27,18 +28,19 @@ position = Vector2( 431, 250 )
 texture = ExtResource( 5 )
 
 [node name="bossTableControl1" parent="." instance=ExtResource( 6 )]
-margin_left = 383.0
-margin_top = 230.0
-margin_right = 415.0
-margin_bottom = 262.0
-rect_min_size = Vector2( 32, 32 )
+margin_left = 195.0
+margin_top = 109.0
+margin_right = 323.0
+margin_bottom = 237.0
+rect_min_size = Vector2( 128, 128 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
-uid = "task"
-group = "work"
 qtd = 1
-size = Vector2( 32, 32 )
-image = ExtResource( 3 )
+slot_size = Vector2( 128, 128 )
+images_size = Vector2( 128, 128 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 3 )
 
 [node name="Chairman" type="Sprite" parent="."]
 position = Vector2( 618, 304 )
@@ -79,5 +81,26 @@ margin_right = -22.0
 margin_bottom = 33.0
 icon = ExtResource( 8 )
 flat = true
+
+[node name="SlotCollectioVBoxContainer" parent="." instance=ExtResource( 10 )]
+margin_left = 305.0
+margin_top = 122.0
+margin_right = 369.0
+margin_bottom = 186.0
+rect_min_size = Vector2( 32, 64 )
+custom_constants/separation = 1
+collection_size = Vector2( 32, 64 )
+
+[node name="bossTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+
+[node name="bossTableControl3" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
+margin_top = 33.0
+margin_bottom = 65.0
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
