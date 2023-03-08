@@ -28,17 +28,18 @@
 
 [node name="SlotExpansor" parent="." instance=ExtResource( 7 )]
 margin_right = 512.0
+grow_horizontal = 0
+grow_vertical = 0
 rect_min_size = Vector2( 512, 64 )
-collection_size = Vector2( 512, 64 )
+rect_clip_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SlotExpansor"]
 margin_left = 4.0
-margin_right = 132.0
+margin_right = 452.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 128, 64 )
+rect_min_size = Vector2( 64, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
-collection_size = Vector2( 128, 64 )
 
 [node name="root" type="Node2D" parent="SlotExpansor/HBoxContainer"]
 visible = false
@@ -46,6 +47,7 @@ visible = false
 [node name="SlotExample" parent="SlotExpansor/HBoxContainer/root" instance=ExtResource( 4 )]
 margin_right = 64.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
 size_flags_horizontal = 5
 size_flags_vertical = 5
 location = 1
@@ -54,32 +56,156 @@ attributes = {
 "LOGIC_RAC": 0,
 "MANUAL_WORK": 0
 }
+slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 
-[node name="testeTarefa3" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+[node name="testeTarefa01" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
 margin_right = 64.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
 mouse_filter = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
 drawer_image = ExtResource( 3 )
 boss_table_image = ExtResource( 5 )
 
-[node name="testeTarefa2" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+[node name="testeTarefa02" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
 margin_left = 64.0
 margin_right = 128.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
 mouse_filter = 2
 size_flags_horizontal = 5
 size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa03" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 128.0
+margin_right = 192.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa04" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 192.0
+margin_right = 256.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa05" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 256.0
+margin_right = 320.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa06" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 320.0
+margin_right = 384.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa07" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 384.0
+margin_right = 448.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa08" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 448.0
+margin_right = 512.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 3 )
+boss_table_image = ExtResource( 5 )
+
+[node name="testeTarefa09" parent="SlotExpansor/HBoxContainer" instance=ExtResource( 4 )]
+margin_left = 512.0
+margin_right = 576.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "gerivaldo"
+qtd = 1
+location = 1
+slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
 drawer_image = ExtResource( 3 )
@@ -92,3 +218,13 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 2621527, 0, 0 )
+
+[node name="testeTarefa9" parent="." instance=ExtResource( 4 )]
+margin_left = 2.0
+margin_top = 102.0
+margin_right = 66.0
+margin_bottom = 166.0
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+images_size = Vector2( 64, 64 )

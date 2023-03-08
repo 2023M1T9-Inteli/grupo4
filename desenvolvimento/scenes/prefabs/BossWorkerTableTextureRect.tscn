@@ -18,6 +18,8 @@ margin_bottom = 264.0
 texture = SubResource( 1 )
 
 [node name="SlotCollectioVBoxContainer" parent="." instance=ExtResource( 4 )]
+margin_right = 517.0
+margin_bottom = 624.0
 rect_min_size = Vector2( 517, 624 )
 custom_constants/separation = 1
 collection_size = Vector2( 517, 624 )
@@ -31,7 +33,7 @@ mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 location = 2
-slot_type = 2
+slot_type = 1
 slot_size = Vector2( 517, 312 )
 images_size = Vector2( 300, 300 )
 

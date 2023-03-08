@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/phase_assets/BaseAssets/Room_Builder_Office_32x32.png" type="Texture" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/palette_plant2.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://assets/characters/bento.png" type="Texture" id=13]
 [ext_resource path="res://assets/phase_assets/OfficeItems/empty_open_trash.png" type="Texture" id=14]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=15]
+[ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scripts/Phase1/Map.gd" type="Script" id=17]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=18]
 [ext_resource path="res://assets/phase_assets/OfficeItems/bigger_chair.png" type="Texture" id=19]
 
@@ -310,83 +312,6 @@ flags = 4
 15/shapes = [  ]
 15/z_index = 0
 
-[sub_resource type="StreamTexture" id=15]
-load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
-
-[sub_resource type="StreamTexture" id=13]
-
-[sub_resource type="TileSet" id=9]
-0/name = "asiatico.png 0"
-0/texture = ExtResource( 11 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 32, 64 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "Cópia Cadeirante.png 1"
-1/texture = SubResource( 15 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 64, 64 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "idoso.png 2"
-2/texture = ExtResource( 13 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 32, 64 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "Personagem primeirosprite.png 3"
-3/texture = SubResource( 13 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 32, 64 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "Personagem primeirosprite.png 4"
-4/texture = ExtResource( 3 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 32, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-
 [sub_resource type="TileSet" id=6]
 0/name = "Modern_Office_48x48.png 0"
 0/texture = ExtResource( 15 )
@@ -465,6 +390,83 @@ load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
+
+[sub_resource type="StreamTexture" id=15]
+load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
+
+[sub_resource type="StreamTexture" id=13]
+
+[sub_resource type="TileSet" id=9]
+0/name = "asiatico.png 0"
+0/texture = ExtResource( 11 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Cópia Cadeirante.png 1"
+1/texture = SubResource( 15 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "idoso.png 2"
+2/texture = ExtResource( 13 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Personagem primeirosprite.png 3"
+3/texture = SubResource( 13 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 32, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Personagem primeirosprite.png 4"
+4/texture = ExtResource( 3 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
 
 [sub_resource type="TileSet" id=10]
 0/name = "Platinha_2_semipaletada.png 0"
@@ -828,6 +830,7 @@ load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
 2/z_index = 0
 
 [node name="Map" type="Node2D"]
+script = ExtResource( 17 )
 
 [node name="Parede e Chão" type="TileMap" parent="."]
 tile_set = SubResource( 4 )
@@ -841,36 +844,31 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 21, 0, 0, 65556, 2, 0, 196622, 14, 0, 524297, 15, 0, 917512, 15, 0, 917518, 15, 0 )
 
-[node name="Roger" type="Sprite" parent="Cadeiras"]
-position = Vector2( 504, 293 )
-scale = Vector2( 1.3, 1.3 )
-texture = ExtResource( 10 )
-
-[node name="Kira" type="Sprite" parent="Cadeiras"]
-position = Vector2( 312, 288 )
-scale = Vector2( 1.3, 1.3 )
-texture = ExtResource( 11 )
-
-[node name="Bento" type="Sprite" parent="Cadeiras"]
-position = Vector2( 472, 480 )
-scale = Vector2( 1.3, 1.3 )
-texture = ExtResource( 13 )
-
-[node name="Ana" type="Sprite" parent="Cadeiras"]
-position = Vector2( 280, 480 )
-scale = Vector2( 1.3, 1.3 )
-texture = ExtResource( 3 )
-
-[node name="Personagens" type="TileMap" parent="."]
-tile_set = SubResource( 9 )
-cell_size = Vector2( 32, 32 )
-format = 1
-
 [node name="Mesas" type="TileMap" parent="."]
 tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 262152, 11, 0, 262153, 11, 1, 262154, 11, 1, 262155, 11, 1, 262156, 11, 1, 262157, 11, 1, 262158, 11, 1, 262159, 11, 2, 262164, 12, 0, 262165, 12, 2, 262166, 12, 2, 262167, 12, 4, 327688, 11, 65536, 327689, 11, 65537, 327690, 11, 65537, 327691, 11, 65537, 327692, 11, 65537, 327693, 11, 65537, 327694, 11, 65537, 327695, 11, 65538, 327700, 12, 65536, 327701, 12, 65537, 327702, 12, 65538, 327703, 12, 65540, 393224, 11, 131072, 393225, 11, 131073, 393226, 11, 131073, 393227, 11, 131073, 393228, 11, 131073, 393229, 11, 131073, 393230, 11, 131073, 393231, 11, 131074, 393236, 12, 65536, 393237, 12, 65537, 393238, 12, 65538, 393239, 12, 65540, 458772, 12, 131072, 458773, 12, 131073, 458774, 12, 131074, 458775, 12, 131076, 589827, 0, 0, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 1, 589834, 0, 3, 589837, 0, 0, 589838, 0, 2, 589839, 0, 2, 589840, 0, 2, 589841, 0, 2, 589842, 0, 2, 589843, 0, 2, 589844, 0, 3, 655363, 0, 65536, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65539, 655373, 0, 65536, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65539, 720899, 0, 65536, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65539, 720909, 0, 65536, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65537, 720916, 0, 65539, 786435, 0, 131072, 786436, 0, 131073, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 131075, 786445, 0, 131072, 786446, 0, 131073, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 131073, 786452, 0, 131075, 983043, 0, 0, 983044, 0, 1, 983045, 0, 1, 983046, 0, 1, 983047, 0, 1, 983048, 0, 1, 983049, 0, 1, 983050, 0, 3, 983053, 0, 0, 983054, 0, 1, 983055, 0, 1, 983056, 0, 1, 983057, 0, 1, 983058, 0, 1, 983059, 0, 1, 983060, 0, 3, 1048579, 0, 65536, 1048580, 0, 65538, 1048581, 0, 65538, 1048582, 0, 65538, 1048583, 0, 65538, 1048584, 0, 65538, 1048585, 0, 65538, 1048586, 0, 65539, 1048589, 0, 65536, 1048590, 0, 65537, 1048591, 0, 65537, 1048592, 0, 65537, 1048593, 0, 65537, 1048594, 0, 65537, 1048595, 0, 65537, 1048596, 0, 65539, 1114115, 0, 65536, 1114116, 0, 65538, 1114117, 0, 65538, 1114118, 0, 65538, 1114119, 0, 65538, 1114120, 0, 65538, 1114121, 0, 65538, 1114122, 0, 65539, 1114125, 0, 65536, 1114126, 0, 65538, 1114127, 0, 65538, 1114128, 0, 65538, 1114129, 0, 65538, 1114130, 0, 65538, 1114131, 0, 65538, 1114132, 0, 65539, 1179651, 0, 131072, 1179652, 0, 131073, 1179653, 0, 131073, 1179654, 0, 131073, 1179655, 0, 131073, 1179656, 0, 131073, 1179657, 0, 131073, 1179658, 0, 131075, 1179661, 0, 131072, 1179662, 0, 131073, 1179663, 0, 131073, 1179664, 0, 131073, 1179665, 0, 131073, 1179666, 0, 131073, 1179667, 0, 131073, 1179668, 0, 131075 )
+
+[node name="Kira" parent="." instance=ExtResource( 16 )]
+position = Vector2( 278, 265 )
+worker_size = Vector2( 64, 64 )
+worker_image = ExtResource( 11 )
+
+[node name="Roger" parent="." instance=ExtResource( 16 )]
+position = Vector2( 472, 260 )
+worker_size = Vector2( 64, 64 )
+worker_image = ExtResource( 10 )
+
+[node name="Bento" parent="." instance=ExtResource( 16 )]
+position = Vector2( 440, 450 )
+worker_size = Vector2( 64, 64 )
+worker_image = ExtResource( 13 )
+
+[node name="Ana" parent="." instance=ExtResource( 16 )]
+position = Vector2( 252, 459 )
+worker_size = Vector2( 55, 55 )
+worker_image = ExtResource( 3 )
 
 [node name="KitMouseAndKeyboard2" type="Sprite" parent="."]
 position = Vector2( 296, 456 )
@@ -879,6 +877,11 @@ texture = ExtResource( 9 )
 [node name="KitMouseAndKeyboard" type="Sprite" parent="."]
 position = Vector2( 528, 272 )
 texture = ExtResource( 9 )
+
+[node name="Personagens" type="TileMap" parent="."]
+tile_set = SubResource( 9 )
+cell_size = Vector2( 32, 32 )
+format = 1
 
 [node name="Decoracao" type="TileMap" parent="."]
 tile_set = SubResource( 10 )
@@ -891,3 +894,8 @@ tile_set = SubResource( 5 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 2, 23, 1, 131072, 65536, 0, 65538, 65559, 1, 2, 131072, 0, 65538, 131095, 1, 2, 196608, 0, 65538, 196631, 1, 2, 262144, 0, 65538, 262167, 1, 2, 327680, 0, 65538, 327701, 2, 0, 327703, 1, 2, 393216, 0, 65538, 393239, 1, 2, 458752, 0, 65538, 458775, 1, 2, 524288, 0, 65538, 524311, 1, 2, 589824, 0, 65538, 589847, 1, 2, 655360, 0, 65538, 655383, 1, 2, 720896, 0, 65538, 720919, 1, 2, 786432, 0, 65538, 786455, 1, 2, 851968, 0, 65538, 851991, 1, 2, 917504, 0, 65538, 917527, 1, 2, 983040, 0, 65538, 983063, 1, 2, 1048576, 0, 65538, 1048599, 1, 2, 1114112, 0, 65538, 1114135, 1, 2, 1179648, 0, 65538, 1179671, 1, 2, 1245184, 0, 65538, 1245207, 1, 2, 1310720, 0, 65538, 1310743, 1, 2, 1376256, 0, 65538, 1376279, 1, 2, 1441792, 1, 65537, 1441793, 1, 196615, 1441794, 1, 196615, 1441795, 1, 196615, 1441796, 1, 196615, 1441797, 1, 196615, 1441798, 1, 196615, 1441799, 1, 196615, 1441800, 1, 196615, 1441801, 1, 196615, 1441802, 1, 196615, 1441803, 1, 196615, 1441804, 1, 196615, 1441805, 1, 196615, 1441806, 1, 196615, 1441807, 1, 196615, 1441808, 1, 196615, 1441809, 1, 196615, 1441810, 1, 196615, 1441811, 1, 196615, 1441812, 1, 196615, 1441813, 1, 196615, 1441814, 1, 196615, 1441815, 1, 65536 )
+
+[connection signal="finished_task" from="Kira" to="." method="_on_Kira_finished_task"]
+[connection signal="finished_task" from="Roger" to="." method="_on_Roger_finished_task"]
+[connection signal="finished_task" from="Bento" to="." method="_on_Bento_finished_task"]
+[connection signal="finished_task" from="Ana" to="." method="_on_Ana_finished_task"]

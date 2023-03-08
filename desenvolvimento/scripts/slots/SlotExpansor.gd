@@ -1,22 +1,6 @@
 tool
 extends Control
 
-"""
-# PT_BR: Variaveis exportadas
-# EN_US: Exported variables
-"""
-
-# PT_BR: Tamanho da coleção de slote
-# EN_US: Slot Collection size
-export(Vector2) var collection_size: Vector2 = Vector2(64, 64) setget _set_collection_size
-
-# PT_BR: Funções para definir as variáveis
-# EN_US: Functions to set variables
-func _set_collection_size(newValue) -> void:
-	collection_size = newValue
-	self.rect_min_size = collection_size
-	self.rect_size = collection_size
-
 """ 
 DRAG AND DROP
 """

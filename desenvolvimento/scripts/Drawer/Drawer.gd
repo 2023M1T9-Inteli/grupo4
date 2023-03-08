@@ -15,7 +15,7 @@ enum ORIENTATION_DIRECTION {
 
 # PT_BR: Tamanho da coleção de slote
 # EN_US: Slot Collection size
-export(Vector2) var collection_size: Vector2 = Vector2(64, 64) setget _set_collection_size
+export(Vector2) var drawer_size: Vector2 = Vector2(64, 64) setget _set_drawer_size
 
 # PT_BR: Ativar o espaçamento entre os itens
 # EN_US: Enable spacing between items
@@ -23,10 +23,10 @@ export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
 
 # PT_BR: Funções para definir as variáveis
 # EN_US: Functions to set variables
-func _set_collection_size(new_value) -> void:
-	collection_size = new_value
-	self.rect_min_size = collection_size
-	self.rect_size = collection_size
+func _set_drawer_size(new_value) -> void:
+	drawer_size = new_value
+	self.rect_min_size = drawer_size
+	self.rect_size = drawer_size
 
 # PT_BR: Inicializa as variáveis locais
 # EN_US: Initialize local variables
@@ -40,12 +40,16 @@ func _ready():
 	# EN_US (1): It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
 	# EN_US (3): Saves the amount of Controls inside the node
+	var total_children_size = 0
 	for child in get_children():
 		if "mouse_filter" in child:
 			child.mouse_filter = MOUSE_FILTER_IGNORE
 		if child.is_in_group("slot"):
 			qtd_control_children += 1
-			child.connect("dropped_task", self, "_delete_slot")
+			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
+			if child.connect("dropped_item", self, "_delete_slot") != OK:
+				print("erro ;-; no connect: ", self)
+	drawer_size.x = total_children_size
 
 
 # PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos
@@ -56,9 +60,10 @@ func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
 func _set_slot_collection_size_x(size_variation):
-	var new_x = abs(int(collection_size.x + size_variation))
-	self.rect_min_size = Vector2(new_x, collection_size.y) 
-	self.rect_size = Vector2(new_x, collection_size.y) 
+	
+	var new_x = abs(int(drawer_size.x + size_variation))
+	self.rect_min_size = Vector2(new_x, drawer_size.y) 
+	self.rect_size = Vector2(new_x, drawer_size.y) 
 
 # PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
 # PT_BR (2): Não retorna um valor
@@ -74,6 +79,7 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 
 
 func _delete_slot(node) -> void:
+	print("apagou o ", node.to_string(), '\n')
 	self._set_slot_collection_size_x(-node.rect_size.x)
 	node.queue_free()
 	_count_control_childs()
@@ -82,7 +88,7 @@ func _delete_slot(node) -> void:
 func _duplicate_slot():
 	var new_slot = $root/SlotExample.duplicate()
 	self._set_slot_collection_size_x(+new_slot.rect_size.x)
-	new_slot.connect("dropped_task", self, "_delete_slot")
+	new_slot.connect("dropped_item", self, "_delete_slot")
 	return new_slot
 
 
@@ -107,9 +113,9 @@ func get_drag_data(position):
 	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
 		if child.is_in_group("slot"):
-			var min_position = _calc_slot_size(_get_object_property_orientation(orientation, collection_size), 
+			var min_position = _calc_slot_size(_get_object_property_orientation(orientation, drawer_size), 
 												qtd_control_children) * (actual_child)
-			var max_position = _calc_slot_size(_get_object_property_orientation(orientation, collection_size), 
+			var max_position = _calc_slot_size(_get_object_property_orientation(orientation, drawer_size), 
 												qtd_control_children) * (actual_child + 1)
 			if min_position <= orientation_position and orientation_position <= max_position:
 				return child.get_drag_data(position)

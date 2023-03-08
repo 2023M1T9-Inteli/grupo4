@@ -22,15 +22,13 @@ enum ATTRIBUTES_TYPE {
 
 enum SLOTS_TYPE {
 	WORK,
-	ANA_PROFILE,
-	BENTO_PROFILE,
-	KIRA_PROFILE,
-	ROGER_PROFILE,	
+	PROFILE,	
 }
 
 # PT_BR: Inicializa os sinais
 # EN_US: Initialize the signals
-signal dropped_task(slot)
+signal dropped_item(slot)
+signal get_item(slot)
 
 # PT_BR: ID único para o slote, para o item arrastado ou para o slote aceitar somente outros slotes desse ID
 # EN_US: Unique ID for the slot, for the dragged item, or for the slot to accept only other slots of that ID
@@ -97,7 +95,6 @@ export(Texture) var boss_table_image: Texture = null setget _set_boss_table_imag
 # EN_US: Local variables
 var _mouse_right_button: bool = false
 var is_dragging: bool = false
-
 # PT_BR: Funções setGet
 # EN_US: setGet Functions
 
@@ -272,7 +269,7 @@ func can_drop_data(_position, data) -> bool:
 	# EN_US: If the slot has a maximum limit, and is already fully occupied
 	if max_qtd != 0 and max_qtd == qtd:
 		return false
-	
+			
 	# PT_BR: Se origem e destino não são do mesmo grupo
 	# EN_US: If origin and destination are not from the same group
 	if data["slot_type"] != slot_type:
@@ -338,7 +335,7 @@ func drop_data(_position, data) -> void:
 	
 	# PT_BR: Decrementa a quantidade dropada
 	# EN_US: Decreases the amount dropped
-	data["qtd"] -= qtd_drop 
+	data["qtd"] -= qtd_drop 	
 	
 	# PT_BR: Se a quantidade for 0, limpa o slote de origem
 	# EN_US: If the quantity is 0, clean the original slot
@@ -349,11 +346,13 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the quantity label
 	data.get_node("Qtd").text = str(data["qtd"])
 	
+	self.emit_signal("get_item", self)
+	data.emit_signal("dropped_item", data)
+	
 	# PT_BR: Atualiza a variável no objeto dropado (origem)
 	# EN_US: Updates the variable in the dropped object (source)
 	data.is_dragging = false
-	
-	data.emit_signal("dropped_task", data)
+
 
 # PT_BR: Código baseado no seguinte repositório:
 # EN_US: Code based on the following repository:
