@@ -97,7 +97,7 @@ margin_right = 1088.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="back_button" type="Button" parent="Local_tutorial"]
+[node name="back_button2" type="Button" parent="Local_tutorial"]
 margin_left = 56.0
 margin_top = 504.0
 margin_right = 116.0
@@ -106,7 +106,7 @@ custom_styles/hover = SubResource( 7 )
 icon = ExtResource( 7 )
 flat = true
 
-[node name="next_button" type="Button" parent="Local_tutorial"]
+[node name="next_button2" type="Button" parent="Local_tutorial"]
 margin_left = 784.0
 margin_top = 504.0
 margin_right = 844.0
@@ -185,5 +185,5 @@ bbcode_text = " Delegação: [color=#EE222B]arraste[/color] a tarefa da [color=#
 text = " Delegação: arraste a tarefa da mesa de expansão para a mesa de algum funcionário e ele a executará automaticamente
   Dica: Identifique a habilidade exigida pela tarefa (a partir de sua leitura do texto) e a associe com aquele colaborador com mais aptidão na área, para ganhar mais pontos."
 
-[connection signal="pressed" from="Local_tutorial/back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Local_tutorial/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Local_tutorial/back_button2" to="." method="_on_back_button2_pressed"]
+[connection signal="pressed" from="Local_tutorial/next_button2" to="." method="_on_next_button2_pressed"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/tutorial/office_sprites/botaoright.png" type="Texture" id=2]
 [ext_resource path="res://Assets/tutorial/office_sprites/botaoleft.png" type="Texture" id=3]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://scripts/tutorial/introduction_to_files.gd" type="Script" id=5]
+[ext_resource path="res://scripts/tutorial/introduction_to_file.gd" type="Script" id=5]
 [ext_resource path="res://assets/tutorial/characters/kira.png" type="Texture" id=6]
 [ext_resource path="res://assets/tutorial/characters/roger.png" type="Texture" id=7]
 [ext_resource path="res://assets/tutorial/characters/bento.png" type="Texture" id=8]
@@ -140,7 +140,7 @@ position = Vector2( 40, 64 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
 
-[node name="back_button" type="Button" parent="Local_tutorial"]
+[node name="back_button1" type="Button" parent="Local_tutorial"]
 margin_left = 56.0
 margin_top = 504.0
 margin_right = 116.0
@@ -149,7 +149,7 @@ custom_styles/hover = SubResource( 4 )
 icon = ExtResource( 3 )
 flat = true
 
-[node name="next_button" type="Button" parent="Local_tutorial"]
+[node name="next_button1" type="Button" parent="Local_tutorial"]
 margin_left = 784.0
 margin_top = 504.0
 margin_right = 844.0
@@ -202,5 +202,5 @@ text = "Colaboradores: Esses são os colaboradores da sua equipe e cada um deles
 
 Arraste cada ficha para a mesa de expansão para analisar seus pontos fortes e fracos."
 
-[connection signal="pressed" from="Local_tutorial/back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Local_tutorial/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Local_tutorial/back_button1" to="." method="_on_back_button1_pressed"]
+[connection signal="pressed" from="Local_tutorial/next_button1" to="." method="_on_next_button1_pressed"]
