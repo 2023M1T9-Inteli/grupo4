@@ -19,5 +19,7 @@ func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
 
 
+# PT_BR: Abre a cena de tutorial
+# EN_US: Opens the tutorial scene
 func _on_TutorialButton_pressed():
 	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
