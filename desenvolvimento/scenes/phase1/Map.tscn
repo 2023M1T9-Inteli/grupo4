@@ -1,15 +1,15 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://assets/Phase1/Base_assets/Room_Builder_Office_32x32.png" type="Texture" id=1]
 [ext_resource path="res://assets/Phase1/Office_items/palette_plant2.png" type="Texture" id=2]
 [ext_resource path="res://assets/Phase1/Characters/ana.png" type="Texture" id=3]
-[ext_resource path="res://assets/Phase1/Office_items/lamp.png" type="Texture" id=4]
-[ext_resource path="res://assets/Phase1/Office_items/laptop.png" type="Texture" id=5]
+[ext_resource path="res://assets/Phase1/Office_items/left_lamp.png" type="Texture" id=4]
+[ext_resource path="res://assets/Phase1/Office_items/red_chair.png" type="Texture" id=5]
 [ext_resource path="res://assets/Phase1/Office_items/chair.png" type="Texture" id=6]
 [ext_resource path="res://assets/Phase1/Office_items/pallet_plant1.png" type="Texture" id=7]
 [ext_resource path="res://assets/Phase1/Base_assets/Modern_Office_32x32.png" type="Texture" id=8]
-[ext_resource path="res://assets/Phase1/Office_items/photograph.png" type="Texture" id=9]
-[ext_resource path="res://assets/Phase1/Characters/roger.png" type="Texture" id=10]
+[ext_resource path="res://assets/Phase1/Office_items/kit_mouse_and_keyboard.png" type="Texture" id=9]
+[ext_resource path="res://assets/Phase1/Characters/Roger.png" type="Texture" id=10]
 [ext_resource path="res://assets/Phase1/Characters/kira.png" type="Texture" id=11]
 [ext_resource path="res://assets/Phase1/Office_items/full_open_trash.png" type="Texture" id=12]
 [ext_resource path="res://assets/Phase1/Characters/bento.png" type="Texture" id=13]
@@ -17,6 +17,8 @@
 [ext_resource path="res://assets/Phase1/Base_assets/Modern_Office_48x48.png" type="Texture" id=15]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/Phase1/Office_items/monitor.png" type="Texture" id=18]
+[ext_resource path="res://assets/Phase1/Office_items/bigger_chair.png" type="Texture" id=19]
 
 [sub_resource type="PluginScript" id=11]
 
@@ -180,6 +182,8 @@ script = SubResource( 11 )
 [sub_resource type="StreamTexture" id=12]
 flags = 4
 
+[sub_resource type="StreamTexture" id=14]
+
 [sub_resource type="TileSet" id=8]
 0/name = "Modern_Office_MV_2_TILESETS_B-C-D-E.png 0"
 0/texture = SubResource( 12 )
@@ -209,62 +213,6 @@ flags = 4
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "Modern_Office_32x32.png 2"
-2/texture = ExtResource( 8 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 384, 480, 32, 96 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "Modern_Office_32x32.png 3"
-3/texture = ExtResource( 8 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 224, 1184, 32, 96 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "Modern_Office_32x32.png 4"
-4/texture = ExtResource( 8 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 224, 1184, 32, 96 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "Modern_Office_32x32.png 5"
-5/texture = ExtResource( 8 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 448, 320, 32, 64 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
 6/name = "Modern_Office_Singles_32x32_169.png 6"
 6/texture = ExtResource( 12 )
 6/tex_offset = Vector2( 0, 0 )
@@ -307,48 +255,6 @@ flags = 4
 8/shape_one_way_margin = 0.0
 8/shapes = [  ]
 8/z_index = 0
-9/name = "Modern_Office_Singles_32x32_160.png 9"
-9/texture = ExtResource( 9 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 0, 64, 32, 32 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
-10/name = "Modern_Office_Singles_32x32_144.png 10"
-10/texture = ExtResource( 4 )
-10/tex_offset = Vector2( 0, 0 )
-10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 0, 32, 32, 64 )
-10/tile_mode = 0
-10/occluder_offset = Vector2( 0, 0 )
-10/navigation_offset = Vector2( 0, 0 )
-10/shape_offset = Vector2( 0, 0 )
-10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape_one_way = false
-10/shape_one_way_margin = 0.0
-10/shapes = [  ]
-10/z_index = 0
-11/name = "Modern_Office_Singles_32x32_135.png 11"
-11/texture = ExtResource( 5 )
-11/tex_offset = Vector2( 0, 0 )
-11/modulate = Color( 1, 1, 1, 1 )
-11/region = Rect2( 0, 32, 32, 64 )
-11/tile_mode = 0
-11/occluder_offset = Vector2( 0, 0 )
-11/navigation_offset = Vector2( 0, 0 )
-11/shape_offset = Vector2( 0, 0 )
-11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape_one_way = false
-11/shape_one_way_margin = 0.0
-11/shapes = [  ]
-11/z_index = 0
 12/name = "Modern_Office_Singles_32x32_101.png 12"
 12/texture = ExtResource( 6 )
 12/tex_offset = Vector2( 0, 0 )
@@ -363,6 +269,51 @@ flags = 4
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
+13/name = "Modern_Office_Singles_48x48_102.png 13"
+13/texture = SubResource( 14 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 64, 64, 96 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "red_chair.png 14"
+14/texture = ExtResource( 5 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 64, 64, 96 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "bigger_chair.png 15"
+15/texture = ExtResource( 19 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 64, 64, 96 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+
+[sub_resource type="StreamTexture" id=15]
+load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
 
 [sub_resource type="StreamTexture" id=13]
 
@@ -382,7 +333,7 @@ flags = 4
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Cópia Cadeirante.png 1"
-1/texture = ExtResource( 10 )
+1/texture = SubResource( 15 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
@@ -474,139 +425,48 @@ flags = 4
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "Modern_Office_48x48.png 2"
-2/texture = ExtResource( 15 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 448, 2240, 32, 32 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "Modern_Office_32x32.png 3"
-3/texture = ExtResource( 8 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 288, 1504, 32, 64 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "Modern_Office_32x32.png 4"
-4/texture = ExtResource( 8 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 288, 1504, 32, 64 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "Modern_Office_48x48.png 5"
-5/texture = ExtResource( 15 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 320, 1440, 160, 96 )
-5/tile_mode = 2
-5/autotile/icon_coordinate = Vector2( 0, 0 )
-5/autotile/tile_size = Vector2( 32, 32 )
-5/autotile/spacing = 0
-5/autotile/occluder_map = [  ]
-5/autotile/navpoly_map = [  ]
-5/autotile/priority_map = [  ]
-5/autotile/z_index_map = [  ]
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
-6/name = "Modern_Office_32x32.png 6"
-6/texture = ExtResource( 8 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 224, 960, 96, 64 )
-6/tile_mode = 2
-6/autotile/icon_coordinate = Vector2( 0, 0 )
-6/autotile/tile_size = Vector2( 32, 32 )
-6/autotile/spacing = 0
-6/autotile/occluder_map = [  ]
-6/autotile/navpoly_map = [  ]
-6/autotile/priority_map = [  ]
-6/autotile/z_index_map = [  ]
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-7/name = "Modern_Office_32x32.png 7"
-7/texture = ExtResource( 8 )
-7/tex_offset = Vector2( 0, 0 )
-7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 320, 896, 96, 64 )
-7/tile_mode = 2
-7/autotile/icon_coordinate = Vector2( 0, 0 )
-7/autotile/tile_size = Vector2( 32, 32 )
-7/autotile/spacing = 0
-7/autotile/occluder_map = [  ]
-7/autotile/navpoly_map = [  ]
-7/autotile/priority_map = [  ]
-7/autotile/z_index_map = [  ]
-7/occluder_offset = Vector2( 0, 0 )
-7/navigation_offset = Vector2( 0, 0 )
-7/shape_offset = Vector2( 0, 0 )
-7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape_one_way = false
-7/shape_one_way_margin = 0.0
-7/shapes = [  ]
-7/z_index = 0
-8/name = "Modern_Office_32x32.png 8"
-8/texture = ExtResource( 8 )
-8/tex_offset = Vector2( 0, 0 )
-8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 416, 992, 32, 32 )
-8/tile_mode = 0
-8/occluder_offset = Vector2( 0, 0 )
-8/navigation_offset = Vector2( 0, 0 )
-8/shape_offset = Vector2( 0, 0 )
-8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
-8/z_index = 0
-9/name = "Modern_Office_32x32.png 9"
-9/texture = ExtResource( 8 )
-9/tex_offset = Vector2( 0, 0 )
-9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 192, 640, 64, 64 )
-9/tile_mode = 0
-9/occluder_offset = Vector2( 0, 0 )
-9/navigation_offset = Vector2( 0, 0 )
-9/shape_offset = Vector2( 0, 0 )
-9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
-9/z_index = 0
+11/name = "Modern_Office_32x32.png 11"
+11/texture = ExtResource( 8 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 32, 128, 96, 96 )
+11/tile_mode = 2
+11/autotile/icon_coordinate = Vector2( 0, 0 )
+11/autotile/tile_size = Vector2( 32, 32 )
+11/autotile/spacing = 0
+11/autotile/occluder_map = [  ]
+11/autotile/navpoly_map = [  ]
+11/autotile/priority_map = [  ]
+11/autotile/z_index_map = [  ]
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Modern_Office_48x48.png 12"
+12/texture = ExtResource( 15 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 32, 1440, 160, 96 )
+12/tile_mode = 2
+12/autotile/icon_coordinate = Vector2( 0, 0 )
+12/autotile/tile_size = Vector2( 32, 32 )
+12/autotile/spacing = 0
+12/autotile/occluder_map = [  ]
+12/autotile/navpoly_map = [  ]
+12/autotile/priority_map = [  ]
+12/autotile/z_index_map = [  ]
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
 
 [sub_resource type="TileSet" id=10]
 0/name = "Platinha_2_semipaletada.png 0"
@@ -714,20 +574,6 @@ flags = 4
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
-6/name = "Modern_Office_32x32.png 6"
-6/texture = ExtResource( 8 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 448, 320, 32, 64 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
 7/name = "Modern_Office_32x32.png 7"
 7/texture = ExtResource( 8 )
 7/tex_offset = Vector2( 0, 0 )
@@ -812,20 +658,6 @@ flags = 4
 12/shape_one_way_margin = 0.0
 12/shapes = [  ]
 12/z_index = 0
-13/name = "Modern_Office_32x32.png 13"
-13/texture = ExtResource( 8 )
-13/tex_offset = Vector2( 0, 0 )
-13/modulate = Color( 1, 1, 1, 1 )
-13/region = Rect2( 416, 320, 32, 32 )
-13/tile_mode = 0
-13/occluder_offset = Vector2( 0, 0 )
-13/navigation_offset = Vector2( 0, 0 )
-13/shape_offset = Vector2( 0, 0 )
-13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-13/shape_one_way = false
-13/shape_one_way_margin = 0.0
-13/shapes = [  ]
-13/z_index = 0
 14/name = "Modern_Office_32x32.png 14"
 14/texture = ExtResource( 8 )
 14/tex_offset = Vector2( 0, 0 )
@@ -896,6 +728,48 @@ flags = 4
 18/shape_one_way_margin = 0.0
 18/shapes = [  ]
 18/z_index = 0
+22/name = "left_lamp.png 22"
+22/texture = ExtResource( 4 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 0, 32, 64, 96 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Modern_Office_48x48.png 23"
+23/texture = ExtResource( 15 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 288, 1056, 96, 64 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "monitor.png 24"
+24/texture = ExtResource( 18 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 0, 64, 64, 64 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
 
 [sub_resource type="TileSet" id=5]
 0/name = "Room_Builder_Office_32x32.png 0"
@@ -940,6 +814,20 @@ flags = 4
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
+2/name = "Modern_Office_48x48.png 2"
+2/texture = ExtResource( 15 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 384, 896, 96, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
 
 [node name="Map" type="Node2D"]
 
@@ -953,31 +841,58 @@ tile_data = PoolIntArray( 0, 6, 0, 1, 6, 1, 2, 6, 1, 3, 6, 1, 4, 6, 1, 5, 6, 1, 
 tile_set = SubResource( 8 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 21, 0, 0, 65556, 2, 0, 327687, 12, 0, 589832, 12, 0, 655368, 5, 0, 655374, 11, 0, 655377, 5, 0, 720899, 8, 0, 720916, 7, 0, 917512, 12, 0, 917521, 12, 0, 983048, 5, 0, 983056, 5, 0, 1048579, 8, 0, 1048596, 7, 0 )
+tile_data = PoolIntArray( 21, 0, 0, 65556, 2, 0, 196622, 14, 0, 524297, 15, 0, 917512, 15, 0, 917518, 15, 0 )
+
+[node name="Roger" type="Sprite" parent="Cadeiras"]
+position = Vector2( 504, 293 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 10 )
+
+[node name="Kira" type="Sprite" parent="Cadeiras"]
+position = Vector2( 312, 288 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 11 )
+
+[node name="Bento" type="Sprite" parent="Cadeiras"]
+position = Vector2( 472, 480 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 13 )
+
+[node name="Ana" type="Sprite" parent="Cadeiras"]
+position = Vector2( 280, 480 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 3 )
 
 [node name="Personagens" type="TileMap" parent="."]
 tile_set = SubResource( 9 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 589832, 0, 0, 589841, 1, 0, 917512, 4, 0, 917521, 2, 0 )
 
 [node name="Mesas" type="TileMap" parent="."]
 tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 393220, 6, 0, 393221, 6, 1, 393222, 6, 1, 393223, 6, 1, 393224, 6, 1, 393225, 6, 2, 458756, 6, 65536, 458757, 6, 65537, 458758, 6, 65537, 458759, 6, 65537, 458760, 6, 65537, 458761, 6, 65538, 655364, 7, 0, 655365, 7, 1, 655366, 7, 1, 655367, 7, 1, 655368, 7, 1, 655369, 7, 2, 655374, 7, 0, 655375, 7, 1, 655376, 7, 1, 655377, 7, 1, 655378, 7, 1, 655379, 7, 2, 720900, 7, 65536, 720901, 7, 65537, 720902, 7, 65537, 720903, 7, 65537, 720904, 7, 65537, 720905, 7, 65538, 720910, 7, 65536, 720911, 7, 65537, 720912, 7, 65537, 720913, 7, 65537, 720914, 7, 65537, 720915, 7, 65538, 983044, 7, 0, 983045, 7, 1, 983046, 7, 1, 983047, 7, 1, 983048, 7, 1, 983049, 7, 2, 983054, 7, 0, 983055, 7, 1, 983056, 7, 1, 983057, 7, 1, 983058, 7, 1, 983059, 7, 2, 1048580, 7, 65536, 1048581, 7, 65537, 1048582, 7, 65537, 1048583, 7, 65537, 1048584, 7, 65537, 1048585, 7, 65538, 1048590, 7, 65536, 1048591, 7, 65537, 1048592, 7, 65537, 1048593, 7, 65537, 1048594, 7, 65537, 1048595, 7, 65538 )
+tile_data = PoolIntArray( 262152, 11, 0, 262153, 11, 1, 262154, 11, 1, 262155, 11, 1, 262156, 11, 1, 262157, 11, 1, 262158, 11, 1, 262159, 11, 2, 262164, 12, 0, 262165, 12, 2, 262166, 12, 2, 262167, 12, 4, 327688, 11, 65536, 327689, 11, 65537, 327690, 11, 65537, 327691, 11, 65537, 327692, 11, 65537, 327693, 11, 65537, 327694, 11, 65537, 327695, 11, 65538, 327700, 12, 65536, 327701, 12, 65537, 327702, 12, 65538, 327703, 12, 65540, 393224, 11, 131072, 393225, 11, 131073, 393226, 11, 131073, 393227, 11, 131073, 393228, 11, 131073, 393229, 11, 131073, 393230, 11, 131073, 393231, 11, 131074, 393236, 12, 65536, 393237, 12, 65537, 393238, 12, 65538, 393239, 12, 65540, 458772, 12, 131072, 458773, 12, 131073, 458774, 12, 131074, 458775, 12, 131076, 589827, 0, 0, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 1, 589834, 0, 3, 589837, 0, 0, 589838, 0, 2, 589839, 0, 2, 589840, 0, 2, 589841, 0, 2, 589842, 0, 2, 589843, 0, 2, 589844, 0, 3, 655363, 0, 65536, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65539, 655373, 0, 65536, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65539, 720899, 0, 65536, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65539, 720909, 0, 65536, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65537, 720916, 0, 65539, 786435, 0, 131072, 786436, 0, 131073, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 131075, 786445, 0, 131072, 786446, 0, 131073, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 131073, 786452, 0, 131075, 983043, 0, 0, 983044, 0, 1, 983045, 0, 1, 983046, 0, 1, 983047, 0, 1, 983048, 0, 1, 983049, 0, 1, 983050, 0, 3, 983053, 0, 0, 983054, 0, 1, 983055, 0, 1, 983056, 0, 1, 983057, 0, 1, 983058, 0, 1, 983059, 0, 1, 983060, 0, 3, 1048579, 0, 65536, 1048580, 0, 65538, 1048581, 0, 65538, 1048582, 0, 65538, 1048583, 0, 65538, 1048584, 0, 65538, 1048585, 0, 65538, 1048586, 0, 65539, 1048589, 0, 65536, 1048590, 0, 65537, 1048591, 0, 65537, 1048592, 0, 65537, 1048593, 0, 65537, 1048594, 0, 65537, 1048595, 0, 65537, 1048596, 0, 65539, 1114115, 0, 65536, 1114116, 0, 65538, 1114117, 0, 65538, 1114118, 0, 65538, 1114119, 0, 65538, 1114120, 0, 65538, 1114121, 0, 65538, 1114122, 0, 65539, 1114125, 0, 65536, 1114126, 0, 65538, 1114127, 0, 65538, 1114128, 0, 65538, 1114129, 0, 65538, 1114130, 0, 65538, 1114131, 0, 65538, 1114132, 0, 65539, 1179651, 0, 131072, 1179652, 0, 131073, 1179653, 0, 131073, 1179654, 0, 131073, 1179655, 0, 131073, 1179656, 0, 131073, 1179657, 0, 131073, 1179658, 0, 131075, 1179661, 0, 131072, 1179662, 0, 131073, 1179663, 0, 131073, 1179664, 0, 131073, 1179665, 0, 131073, 1179666, 0, 131073, 1179667, 0, 131073, 1179668, 0, 131075 )
+
+[node name="KitMouseAndKeyboard2" type="Sprite" parent="."]
+position = Vector2( 296, 456 )
+texture = ExtResource( 9 )
+
+[node name="KitMouseAndKeyboard" type="Sprite" parent="."]
+position = Vector2( 528, 272 )
+texture = ExtResource( 9 )
 
 [node name="Decoracao" type="TileMap" parent="."]
 tile_set = SubResource( 10 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 65540, 8, 0, 65542, 7, 0, 65544, 9, 0, 65554, 3, 0, 65555, 2, 1, 65557, 11, 0, 131072, 0, 0, 131073, 0, 1, 131090, 2, 65536, 131091, 2, 65537, 131094, 4, 0, 196608, 0, 65536, 196609, 0, 65537, 196626, 2, 131072, 196627, 2, 131073, 327680, 15, 0, 393223, 6, 0, 393224, 14, 0, 458760, 18, 0, 655367, 5, 0, 655368, 6, 0, 655376, 5, 0, 655377, 6, 0, 655378, 6, 0, 720900, 4, 0, 720909, 4, 0, 720915, 3, 0, 983047, 5, 0, 983048, 6, 0, 983057, 6, 0, 983058, 10, 0, 1048576, 3, 0, 1048585, 3, 0, 1048591, 3, 0, 1310720, 4, 0 )
+tile_data = PoolIntArray( 65540, 8, 0, 65542, 7, 0, 65544, 9, 0, 65557, 11, 0, 131092, 4, 0, 262144, 15, 0, 262157, 12, 0, 262158, 24, 0, 327701, 18, 0, 589831, 22, 0, 589833, 24, 0, 589838, 24, 0, 589840, 24, 0, 786435, 3, 0, 786451, 3, 0, 983047, 22, 0, 983049, 24, 0, 983054, 24, 0, 983056, 20, 0, 1179667, 3, 0 )
 
 [node name="Bordas" type="TileMap" parent="."]
 tile_set = SubResource( 5 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 0, 0, 2, 23, 1, 131072, 65536, 0, 65538, 65559, 1, 2, 131072, 0, 65538, 131095, 1, 2, 196608, 0, 65538, 196631, 1, 2, 262144, 0, 65538, 262167, 1, 2, 327680, 0, 65538, 327703, 1, 2, 393216, 0, 65538, 393239, 1, 2, 458752, 0, 65538, 458775, 1, 2, 524288, 0, 65538, 524311, 1, 2, 589824, 0, 65538, 589847, 1, 2, 655360, 0, 65538, 655383, 1, 2, 720896, 0, 65538, 720919, 1, 2, 786432, 0, 65538, 786455, 1, 2, 851968, 0, 65538, 851991, 1, 2, 917504, 0, 65538, 917527, 1, 2, 983040, 0, 65538, 983063, 1, 2, 1048576, 0, 65538, 1048599, 1, 2, 1114112, 0, 65538, 1114135, 1, 2, 1179648, 0, 65538, 1179671, 1, 2, 1245184, 0, 65538, 1245207, 1, 2, 1310720, 0, 65538, 1310743, 1, 2, 1376256, 0, 65538, 1376279, 1, 2, 1441792, 1, 65537, 1441793, 1, 196615, 1441794, 1, 196615, 1441795, 1, 196615, 1441796, 1, 196615, 1441797, 1, 196615, 1441798, 1, 196615, 1441799, 1, 196615, 1441800, 1, 196615, 1441801, 1, 196615, 1441802, 1, 196615, 1441803, 1, 196615, 1441804, 1, 196615, 1441805, 1, 196615, 1441806, 1, 196615, 1441807, 1, 196615, 1441808, 1, 196615, 1441809, 1, 196615, 1441810, 1, 196615, 1441811, 1, 196615, 1441812, 1, 196615, 1441813, 1, 196615, 1441814, 1, 196615, 1441815, 1, 65536 )
+tile_data = PoolIntArray( 0, 0, 2, 23, 1, 131072, 65536, 0, 65538, 65559, 1, 2, 131072, 0, 65538, 131095, 1, 2, 196608, 0, 65538, 196631, 1, 2, 262144, 0, 65538, 262167, 1, 2, 327680, 0, 65538, 327701, 2, 0, 327703, 1, 2, 393216, 0, 65538, 393239, 1, 2, 458752, 0, 65538, 458775, 1, 2, 524288, 0, 65538, 524311, 1, 2, 589824, 0, 65538, 589847, 1, 2, 655360, 0, 65538, 655383, 1, 2, 720896, 0, 65538, 720919, 1, 2, 786432, 0, 65538, 786455, 1, 2, 851968, 0, 65538, 851991, 1, 2, 917504, 0, 65538, 917527, 1, 2, 983040, 0, 65538, 983063, 1, 2, 1048576, 0, 65538, 1048599, 1, 2, 1114112, 0, 65538, 1114135, 1, 2, 1179648, 0, 65538, 1179671, 1, 2, 1245184, 0, 65538, 1245207, 1, 2, 1310720, 0, 65538, 1310743, 1, 2, 1376256, 0, 65538, 1376279, 1, 2, 1441792, 1, 65537, 1441793, 1, 196615, 1441794, 1, 196615, 1441795, 1, 196615, 1441796, 1, 196615, 1441797, 1, 196615, 1441798, 1, 196615, 1441799, 1, 196615, 1441800, 1, 196615, 1441801, 1, 196615, 1441802, 1, 196615, 1441803, 1, 196615, 1441804, 1, 196615, 1441805, 1, 196615, 1441806, 1, 196615, 1441807, 1, 196615, 1441808, 1, 196615, 1441809, 1, 196615, 1441810, 1, 196615, 1441811, 1, 196615, 1441812, 1, 196615, 1441813, 1, 196615, 1441814, 1, 196615, 1441815, 1, 65536 )
 
 [node name="HSlotCollectionVBoxContainer" parent="." instance=ExtResource( 17 )]
 rect_min_size = Vector2( 192, 32 )
