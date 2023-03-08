@@ -2,17 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD
 <<<<<<<< HEAD:desenvolvimento/assets/Dialog/rosalinne_braco (2).png.import
 path="res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex"
 ========
 path="res://.import/full_open_trash.png-841e151652f26e5c6cdd51fdca0d71b2.stex"
 >>>>>>>> main:desenvolvimento/assets/Phase1/Office_items/full_open_trash.png.import
+=======
+path="res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex"
+>>>>>>> main
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 <<<<<<<< HEAD:desenvolvimento/assets/Dialog/rosalinne_braco (2).png.import
 source_file="res://assets/Dialog/rosalinne_braco (2).png"
 dest_files=[ "res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex" ]
@@ -20,6 +25,10 @@ dest_files=[ "res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da1
 source_file="res://assets/Phase1/Office_items/full_open_trash.png"
 dest_files=[ "res://.import/full_open_trash.png-841e151652f26e5c6cdd51fdca0d71b2.stex" ]
 >>>>>>>> main:desenvolvimento/assets/Phase1/Office_items/full_open_trash.png.import
+=======
+source_file="res://assets/Dialog/rosalinne_braco (2).png"
+dest_files=[ "res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex" ]
+>>>>>>> main
 
 [params]
 
