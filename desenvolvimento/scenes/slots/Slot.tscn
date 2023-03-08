@@ -10,21 +10,15 @@ margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
 script = ExtResource( 1 )
-show_qtd = true
 
-[node name="image" type="TextureRect" parent="."]
-margin_right = 32.0
-margin_bottom = 32.0
-rect_min_size = Vector2( 32, 32 )
-mouse_filter = 2
-expand = true
-stretch_mode = 6
+[node name="Unit" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.968627, 1, 0, 1 )
+scale = Vector2( 0.4, 0.4 )
+centered = false
 
-[node name="touch" type="TouchScreenButton" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-scale = Vector2( 1.024, 1.024 )
-
-[node name="qtd" type="Label" parent="."]
+[node name="Qtd" type="Label" parent="."]
+visible = false
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 16.0
@@ -38,8 +32,7 @@ custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 2
 
-[node name="preview" type="TextureRect" parent="."]
-visible = false
+[node name="TableImage" type="TextureRect" parent="."]
 margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
@@ -50,10 +43,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="unit" type="Sprite" parent="."]
+[node name="DrawerImage" type="TextureRect" parent="."]
 visible = false
-modulate = Color( 0.968627, 1, 0, 1 )
-scale = Vector2( 0.4, 0.4 )
-centered = false
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[connection signal="pressed" from="touch" to="." method="_on_touch_pressed"]
+[node name="BossTableImage" type="TextureRect" parent="."]
+visible = false
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+mouse_filter = 2
