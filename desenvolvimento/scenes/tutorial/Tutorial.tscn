@@ -5,7 +5,6 @@
 [ext_resource path="res://scripts/tutorial/Tutorial.gd" type="Script" id=3]
 [ext_resource path="res://Assets/tutorial/office_sprites/botaoright.png" type="Texture" id=4]
 
-
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0.666667 )
 

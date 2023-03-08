@@ -17,3 +17,7 @@ func _on_OptionsButton_pressed():
 # EN_US: Opens the credits scene
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
+
+
+func _on_TutorialButton_pressed():
+	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
