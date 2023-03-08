@@ -5,4 +5,4 @@ func _on_back_button5_pressed():
 	
 
 func _on_start_button5_pressed():
-	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	get_tree().change_scene("res://scenes/Phases.tscn")

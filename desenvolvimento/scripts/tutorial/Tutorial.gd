@@ -5,4 +5,4 @@ func _on_next_button_pressed():
 	get_tree().change_scene("res://scenes/tutorial/introduction_to_file.tscn")
 
 func _on_Skip_button_pressed():
-	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	get_tree().change_scene("res://scenes/Phases.tscn")
