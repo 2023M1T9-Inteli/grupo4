@@ -1,17 +1,17 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Mapa/back_ground_tutorial.png" type="Texture" id=1]
-[ext_resource path="res://joystix_monospace_font.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/botaoright.png" type="Texture" id=3]
-[ext_resource path="res://Assets/botaoleft.png" type="Texture" id=4]
-[ext_resource path="res://Script/Tempo.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Gifs/Timer/image.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Gifs/Timer/image (3).png" type="Texture" id=7]
-[ext_resource path="res://Assets/Gifs/Timer/image (4).png" type="Texture" id=8]
-[ext_resource path="res://Assets/Gifs/Timer/image (1).png" type="Texture" id=9]
-[ext_resource path="res://Assets/Gifs/Timer/image (2).png" type="Texture" id=10]
-[ext_resource path="res://Assets/Gifs/Timer/image (5).png" type="Texture" id=11]
-[ext_resource path="res://Assets/Gifs/Timer/image (6).png" type="Texture" id=12]
+[ext_resource path="res://assets/tutorial/Mapa/back_ground_tutorial.png" type="Texture" id=1]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/tutorial/office_sprites/botaoright.png" type="Texture" id=3]
+[ext_resource path="res://Assets/tutorial/office_sprites/botaoleft.png" type="Texture" id=4]
+[ext_resource path="res://scripts/tutorial/Tempo.gd" type="Script" id=5]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image.png" type="Texture" id=6]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (3).png" type="Texture" id=7]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (4).png" type="Texture" id=8]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (1).png" type="Texture" id=9]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (2).png" type="Texture" id=10]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (5).png" type="Texture" id=11]
+[ext_resource path="res://assets/tutorial/gifs/Timer/image (6).png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 0.666667 )
@@ -69,7 +69,7 @@ margin_bottom = 656.0
 rect_pivot_offset = Vector2( 232, 200 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="back_button" type="Button" parent="Local_tutorial"]
+[node name="back_button4" type="Button" parent="Local_tutorial"]
 margin_left = 56.0
 margin_top = 504.0
 margin_right = 116.0
@@ -78,7 +78,7 @@ custom_styles/hover = SubResource( 2 )
 icon = ExtResource( 4 )
 flat = true
 
-[node name="next_button" type="Button" parent="Local_tutorial"]
+[node name="next_button4" type="Button" parent="Local_tutorial"]
 margin_left = 784.0
 margin_top = 504.0
 margin_right = 844.0
@@ -98,6 +98,7 @@ custom_styles/panel = SubResource( 5 )
 position = Vector2( 160, 124 )
 scale = Vector2( 1.85714, 2.18182 )
 frames = SubResource( 6 )
+frame = 3
 playing = true
 
 [node name="Text" type="RichTextLabel" parent="."]
@@ -112,5 +113,5 @@ bbcode_enabled = true
 bbcode_text = "Tempo: fique de olho no [color=#EE222B]contador[/color] do tempo. [color=#267ba6]Não deixe[/color] que ele se esgote antes de concluir todas as tarefas."
 text = "Tempo: fique de olho no contador do tempo. Não deixe que ele se esgote antes de concluir todas as tarefas."
 
-[connection signal="pressed" from="Local_tutorial/back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Local_tutorial/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Local_tutorial/back_button4" to="." method="_on_back_button4_pressed"]
+[connection signal="pressed" from="Local_tutorial/next_button4" to="." method="_on_next_button4_pressed"]

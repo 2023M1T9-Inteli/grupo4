@@ -1,17 +1,17 @@
 [gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://Assets/botaoleft.png" type="Texture" id=2]
-[ext_resource path="res://Script/Progress.gd" type="Script" id=3]
-[ext_resource path="res://Assets/Gifs/Progresso/image (7).png" type="Texture" id=4]
-[ext_resource path="res://Assets/Gifs/Progresso/image (6).png" type="Texture" id=5]
-[ext_resource path="res://Assets/Gifs/Progresso/image (3).png" type="Texture" id=6]
-[ext_resource path="res://Assets/Gifs/Progresso/image (4).png" type="Texture" id=7]
-[ext_resource path="res://Assets/Gifs/Progresso/image (5).png" type="Texture" id=8]
-[ext_resource path="res://Assets/Gifs/Progresso/image (2).png" type="Texture" id=9]
-[ext_resource path="res://Assets/Gifs/Progresso/image.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Gifs/Progresso/image (1).png" type="Texture" id=11]
-[ext_resource path="res://joystix_monospace_font.ttf" type="DynamicFontData" id=12]
-[ext_resource path="res://Mapa/back_ground_tutorial.png" type="Texture" id=13]
+[ext_resource path="res://Assets/tutorial/office_sprites/botaoleft.png" type="Texture" id=2]
+[ext_resource path="res://scripts/tutorial/Progress.gd" type="Script" id=3]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (7).png" type="Texture" id=4]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (6).png" type="Texture" id=5]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (3).png" type="Texture" id=6]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (4).png" type="Texture" id=7]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (5).png" type="Texture" id=8]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (2).png" type="Texture" id=9]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image.png" type="Texture" id=10]
+[ext_resource path="res://assets/tutorial/gifs/Progresso/image (1).png" type="Texture" id=11]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://assets/tutorial/Mapa/back_ground_tutorial.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0, 0, 0, 0.666667 )
@@ -92,7 +92,7 @@ margin_bottom = 656.0
 rect_pivot_offset = Vector2( 232, 200 )
 custom_styles/panel = SubResource( 1 )
 
-[node name="back_button" type="Button" parent="Local_tutorial"]
+[node name="back_button5" type="Button" parent="Local_tutorial"]
 margin_left = 56.0
 margin_top = 504.0
 margin_right = 116.0
@@ -101,7 +101,7 @@ custom_styles/hover = SubResource( 2 )
 icon = ExtResource( 2 )
 flat = true
 
-[node name="start_button" type="Button" parent="Local_tutorial"]
+[node name="start_button5" type="Button" parent="Local_tutorial"]
 margin_left = 712.0
 margin_top = 504.0
 margin_right = 844.0
@@ -127,7 +127,7 @@ __meta__ = {
 position = Vector2( 200, 140 )
 scale = Vector2( 0.852174, 0.704663 )
 frames = SubResource( 5 )
-frame = 7
+frame = 6
 playing = true
 
 [node name="Text" type="RichTextLabel" parent="."]
@@ -141,5 +141,5 @@ bbcode_enabled = true
 bbcode_text = "Progresso: cada tarefa [color=#EE222B]é uma parte[/color] de um [color=#267ba6]projeto maior[/color]. Acompanhe o [color=#EE222B]progresso[/color] do projeto no ícone do canto superior esquerdo. Ele será [color=#267ba6]preenchido[/color] à medida que as tarefas forem sendo concluídas."
 text = "Progresso: cada tarefa é uma parte de um projeto maior. Acompanhe o progresso do projeto no ícone do canto superior esquerdo. Ele será preenchido à medida que as tarefas forem sendo concluídas."
 
-[connection signal="pressed" from="Local_tutorial/back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Local_tutorial/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Local_tutorial/back_button5" to="." method="_on_back_button5_pressed"]
+[connection signal="pressed" from="Local_tutorial/start_button5" to="." method="_on_start_button5_pressed"]

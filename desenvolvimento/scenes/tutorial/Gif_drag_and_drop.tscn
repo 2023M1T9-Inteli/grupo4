@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/tutorial/Mapa/back_ground_tutorial.png" type="Texture" id=1]
 [ext_resource path="res://scripts/tutorial/Gif_drag_and_drop.gd" type="Script" id=2]
@@ -8,10 +8,8 @@
 [ext_resource path="res://Assets/tutorial/Mapa/Modern_Office_Singles_48x48_144.png" type="Texture" id=6]
 [ext_resource path="res://Assets/tutorial/Mapa/Monitor].png" type="Texture" id=7]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://assets/tutorial/Mapa/Modern_Office_32x32.png" type="Texture" id=9]
 [ext_resource path="res://assets/tutorial/Mapa/Modern_Office_32x32.png" type="Texture" id=10]
 [ext_resource path="res://assets/tutorial/Mapa/Modern_Office_48x48.png" type="Texture" id=11]
-
 
 [sub_resource type="StyleBoxFlat" id=17]
 bg_color = Color( 0, 0, 0, 0.666667 )
@@ -37,7 +35,7 @@ border_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="TileSet" id=11]
 0/name = "Room_Builder_Office_32x32.png 0"
-0/texture = ExtResource( 9 )
+0/texture = ExtResource( 10 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 320, 160, 96, 64 )
@@ -193,7 +191,7 @@ margin_right = 1088.0
 margin_bottom = 656.0
 custom_styles/panel = SubResource( 1 )
 
-[node name="back_button" type="Button" parent="Local_tutorial"]
+[node name="back_button3" type="Button" parent="Local_tutorial"]
 margin_left = 56.0
 margin_top = 504.0
 margin_right = 116.0
@@ -202,7 +200,7 @@ custom_styles/hover = SubResource( 7 )
 icon = ExtResource( 4 )
 flat = true
 
-[node name="next_button" type="Button" parent="Local_tutorial"]
+[node name="next_button3" type="Button" parent="Local_tutorial"]
 margin_left = 784.0
 margin_top = 504.0
 margin_right = 844.0
@@ -279,5 +277,5 @@ custom_fonts/normal_font = SubResource( 16 )
 text = "Aqui, à direita, temos um exemplo mais claro do que deve ser feito.
 "
 
-[connection signal="pressed" from="Local_tutorial/back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="Local_tutorial/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Local_tutorial/back_button3" to="." method="_on_back_button3_pressed"]
+[connection signal="pressed" from="Local_tutorial/next_button3" to="." method="_on_next_button3_pressed"]
