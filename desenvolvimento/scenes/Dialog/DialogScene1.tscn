@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/Dialog/DialogScene.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Dialog/DialogBox.gd" type="Script" id=2]
@@ -11,8 +11,13 @@
 [ext_resource path="res://assets/Dialog/Design_sem_nome__3_-removebg-preview.png" type="Texture" id=9]
 [ext_resource path="res://assets/Dialog/rosalinne_braco (2).png" type="Texture" id=10]
 [ext_resource path="res://assets/Dialog/idle2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Dialog/botaoright.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=18]
 size = 20
 font_data = ExtResource( 8 )
 
@@ -67,6 +72,12 @@ shader_param/height = 20.0
 shader_param/speed = 5.0
 shader_param/frequency = 5.0
 
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=20]
+
 [node name="DialogScene" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -98,6 +109,16 @@ visible_characters = 0
 
 [node name="Timer" type="Timer" parent="DialogBox"]
 wait_time = 0.05
+
+[node name="InitialText" type="Label" parent="DialogBox"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 38.0
+margin_top = 33.0
+margin_right = 852.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 18 )
+text = "Rosaline: Olá, tudo bem?"
 
 [node name="RosalinneAnimSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 299, 438 )
@@ -131,6 +152,18 @@ position = Vector2( 801, 265 )
 scale = Vector2( 2.40841, 2.58533 )
 texture = ExtResource( 9 )
 
+[node name="PassButton" type="Button" parent="."]
+margin_left = 1154.0
+margin_top = 629.0
+margin_right = 1214.0
+margin_bottom = 702.0
+custom_styles/hover = SubResource( 19 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 20 )
+icon = ExtResource( 12 )
+flat = true
+
 [connection signal="timeout" from="DialogBox/Timer" to="DialogBox" method="_on_Timer_timeout"]
 [connection signal="hide" from="RosalinneAnimSprite" to="DialogBox" method="_on_Rosalinne_Down_hide"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PassButton" to="DialogBox" method="_on_PassButton_pressed"]

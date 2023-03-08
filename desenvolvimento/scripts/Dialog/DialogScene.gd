@@ -20,3 +20,6 @@ func show_pc(show_pc):
 # EN_US: Function that definas that after the press of the button, the scene is changed
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
+
+
+
