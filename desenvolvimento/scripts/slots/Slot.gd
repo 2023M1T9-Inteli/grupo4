@@ -299,6 +299,7 @@ func drop_data(_position, data) -> void:
 	drawer_image = data["drawer_image"]
 	table_image = data["table_image"] 
 	boss_table_image = data["boss_table_image"]
+	attributes = data["attributes"]
 	$Qtd.text = str(qtd)
 	
 	# PT_BR: Se a imagem dropada tiver uma textura

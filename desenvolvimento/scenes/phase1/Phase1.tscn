@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/phase1/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase1/Map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/phase1/tarefa grande.png" type="Texture" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/phase1/Ficha_grande_kira.png" type="Texture" id=5]
 [ext_resource path="res://scenes/prefabs/WorkerTableTextureRect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Phase1/Sheet/kira_small_sheet.png" type="Texture" id=7]
 [ext_resource path="res://assets/Phase1/Task/small_task.png" type="Texture" id=8]
@@ -26,7 +28,7 @@ size_flags_vertical = 5
 qtd = 1
 table_image = ExtResource( 8 )
 drawer_image = ExtResource( 8 )
-boss_table_image = ExtResource( 8 )
+boss_table_image = ExtResource( 3 )
 
 [node name="workerTableKiraTextureRect" parent="." instance=ExtResource( 6 )]
 margin_left = 140.0
@@ -122,4 +124,4 @@ slot_type = 2
 slot_size = Vector2( 25, 25 )
 table_image = ExtResource( 11 )
 drawer_image = ExtResource( 11 )
-boss_table_image = ExtResource( 11 )
+boss_table_image = ExtResource( 5 )
