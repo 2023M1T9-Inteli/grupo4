@@ -1,15 +1,16 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Mapa/back_ground_tutorial.png" type="Texture" id=1]
-[ext_resource path="res://Assets/botaoright.png" type="Texture" id=2]
-[ext_resource path="res://Assets/botaoleft.png" type="Texture" id=3]
-[ext_resource path="res://joystix_monospace_font.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Script/introduction_to_file.gd" type="Script" id=5]
-[ext_resource path="res://Personagens/asiatico.png" type="Texture" id=6]
-[ext_resource path="res://Personagens/Cópia Cadeirante.png" type="Texture" id=7]
-[ext_resource path="res://Personagens/idoso.png" type="Texture" id=8]
-[ext_resource path="res://Personagens/Personagem primeirosprite.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Ficha_pequena_kira.png" type="Texture" id=10]
+[ext_resource path="res://assets/tutorial/Mapa/back_ground_tutorial.png" type="Texture" id=1]
+[ext_resource path="res://Assets/tutorial/office_sprites/botaoright.png" type="Texture" id=2]
+[ext_resource path="res://Assets/tutorial/office_sprites/botaoleft.png" type="Texture" id=3]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scripts/tutorial/introduction_to_files.gd" type="Script" id=5]
+[ext_resource path="res://assets/tutorial/characters/kira.png" type="Texture" id=6]
+[ext_resource path="res://assets/tutorial/characters/roger.png" type="Texture" id=7]
+[ext_resource path="res://assets/tutorial/characters/bento.png" type="Texture" id=8]
+[ext_resource path="res://assets/tutorial/characters/ana.png" type="Texture" id=9]
+[ext_resource path="res://Assets/tutorial/office_sprites/Ficha_pequena_kira.png" type="Texture" id=10]
+
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.666667 )
