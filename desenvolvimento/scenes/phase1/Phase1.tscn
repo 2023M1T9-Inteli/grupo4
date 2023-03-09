@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase1/Map.tscn" type="PackedScene" id=2]
@@ -17,6 +17,9 @@
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://scenes/phase1/Phase1Drawer.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/items/profile_sheet/bento_big_sheet.png" type="Texture" id=18]
+[ext_resource path="res://assets/items/profile_sheet/roger_big_sheet.png" type="Texture" id=19]
+[ext_resource path="res://assets/items/profile_sheet/ana_big_sheet.png" type="Texture" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -109,7 +112,7 @@ slot_type = 1
 slot_size = Vector2( 50, 32 )
 table_image = ExtResource( 9 )
 drawer_image = ExtResource( 8 )
-boss_table_image = ExtResource( 5 )
+boss_table_image = ExtResource( 19 )
 
 [node name="SlotExpansorAna" parent="." instance=ExtResource( 6 )]
 margin_left = 100.0
@@ -145,7 +148,7 @@ slot_type = 1
 slot_size = Vector2( 50, 32 )
 table_image = ExtResource( 10 )
 drawer_image = ExtResource( 8 )
-boss_table_image = ExtResource( 5 )
+boss_table_image = ExtResource( 20 )
 
 [node name="MainDrawer" parent="SlotExpansorAna" instance=ExtResource( 17 )]
 position = Vector2( 672, 173 )
@@ -184,7 +187,7 @@ slot_type = 1
 slot_size = Vector2( 50, 32 )
 table_image = ExtResource( 11 )
 drawer_image = ExtResource( 8 )
-boss_table_image = ExtResource( 5 )
+boss_table_image = ExtResource( 18 )
 
 [node name="TimeDisplayer" parent="." instance=ExtResource( 15 )]
 margin_left = 1045.0
