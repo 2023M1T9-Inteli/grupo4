@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=2]
 [ext_resource path="res://assets/Drawer/Tasks/task_teste.png" type="Texture" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/items/task/big_task.png" type="Texture" id=5]
+[ext_resource path="res://assets/items/task/detailed_task.png" type="Texture" id=5]
 [ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=6]
 [ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=7]
 
@@ -35,9 +35,9 @@ rect_clip_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SlotExpansor"]
 margin_left = 4.0
-margin_right = 452.0
+margin_right = 580.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 64, 64 )
+rect_min_size = Vector2( 576, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
 drawer_size = Vector2( 576, 64 )
