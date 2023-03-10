@@ -392,7 +392,6 @@ flags = 4
 12/z_index = 0
 
 [sub_resource type="StreamTexture" id=15]
-load_path = "res://.import/roger.png-cfaf8ac7e581a614dbc4afe60134ddbf.stex"
 
 [sub_resource type="StreamTexture" id=13]
 

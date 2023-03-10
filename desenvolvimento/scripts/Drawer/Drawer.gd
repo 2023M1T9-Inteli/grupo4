@@ -59,6 +59,8 @@ func _ready():
 func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
+# PT_BR: Função para definir o tamanho horizonta do slot collection
+# EN_US:
 func _set_slot_collection_size_x(size_variation):
 	
 	var new_x = abs(int(drawer_size.x + size_variation))
@@ -78,12 +80,16 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 		return object_property.y
 
 
+# PT_BR: Função para apagar o slot após 
+# EN_US:
 func _delete_slot(node) -> void:
 	self._set_slot_collection_size_x(-node.rect_size.x)
 	node.queue_free()
 	_count_control_childs()
 
 
+# PT_BR:
+# EN_US:
 func _duplicate_slot():
 	var new_slot = $root/SlotExample.duplicate()
 	self._set_slot_collection_size_x(+new_slot.rect_size.x)
@@ -91,6 +97,8 @@ func _duplicate_slot():
 	return new_slot
 
 
+# PT_BR:
+# EN_US:
 func _count_control_childs():
 	var new_qtd = 0
 	for child in self.get_children():
