@@ -40,7 +40,6 @@ margin_bottom = 64.0
 rect_min_size = Vector2( 448, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
-drawer_size = Vector2( 448, 64 )
 
 [node name="root" type="Node2D" parent="SlotExpansor/HBoxContainer"]
 visible = false
