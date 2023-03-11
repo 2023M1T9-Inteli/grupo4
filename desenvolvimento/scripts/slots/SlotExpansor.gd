@@ -11,14 +11,17 @@ func can_drop_data(position, data) -> bool:
 	var can_drop = false
 	for child in self.get_children():
 		if child is Control:
-			return child.can_drop_data(position, data)
+			can_drop = can_drop or child.can_drop_data(position, data)
+			if can_drop:
+				return can_drop
 	return can_drop
 
 
-# PT_BR: Checa qual dos Controls filhos aceita o objeto e, ao achar, o envia o objeto arrastado para o Control
-# EN_US: Checks which of the child Controls accepts the object and, when found, sends the dragged object to the Control
+# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
+# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
+# EN_US (1): Checks which of the child Controls accepts the object and
+# EN_US (2): When found, sends the dragged object to the Control
 func drop_data(position, data) -> void:
-	
 	for child in self.get_children():
 		if child is Control and child.can_drop_data(position, data):
 			child.drop_data(position, data)
