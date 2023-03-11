@@ -4,6 +4,6 @@
 
 [node name="SlotCollectioVBoxContainer" type="VBoxContainer"]
 rect_min_size = Vector2( 64, 64 )
+mouse_default_cursor_shape = 2
 custom_constants/separation = -64
 script = ExtResource( 1 )
-orientation = 1

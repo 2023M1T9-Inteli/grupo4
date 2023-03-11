@@ -21,8 +21,8 @@ export(Vector2) var collection_size: Vector2 = Vector2(64, 64) setget _set_colle
 # EN_US: Enable spacing between items
 export(bool) var active_space_between = true setget _set_active_space_between
 
-# PT_BR: Ativar o espaçamento entre os itens
-# EN_US: Enable spacing between items
+# PT_BR: Seleciona a orientação do objeto
+# EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
 
 # PT_BR: Funções para definir as variáveis
@@ -31,7 +31,6 @@ func _set_collection_size(newValue) -> void:
 	collection_size = newValue
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
-
 
 func _set_active_space_between(newValue) -> void:
 	active_space_between = newValue
@@ -43,25 +42,29 @@ var qtd_control_children = 0
 func _ready():	
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# PT_BR (2): Define todos os nós filhos como MOUSE_FILTER_IGNORE
-	# PT_BR (3): Salva a quantidade de Controls dentro do nó
 	
 	# EN_US (1): It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
-	# EN_US (3): Saves the amount of Controls inside the node
+	
 	var total_children_size = 0
 	
 	for child in get_children():
 		if "mouse_filter" in child:
 			child.mouse_filter = MOUSE_FILTER_IGNORE
+			
+		# PT_BR: Se o filho é do grupo slot
+		# EN_US: If child is in group slot
 		if child.is_in_group("slot"):
+			# PT_BR: Contabiliza a quantidade de filhos que são slots e o tamanho total deles
+			# EN_US: Counts the number of children that are slots and their total size
 			qtd_control_children += 1
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 	
-	# PT_BR (1): Se o space_between for verdadeiro
-	# PT_BR (2): Chama a função para mudar a separação do node
-	# EN_US (1): If the space_between is true
-	# EN_US (2): Calls the function to change the node separation 
+	# PT_BR: Se o space_between for verdadeiro
+	# EN_US: If the space_between is true
 	if active_space_between:
+		# PT_BR: Chama a função para mudar a separação do node
+		# EN_US: Calls the function to change the node separation 
 		_change_separation_to_space_between(qtd_control_children, 
 											total_children_size,
 											_get_object_property_orientation(orientation, collection_size) )
@@ -115,10 +118,8 @@ DRAG AND DROP
 
 # PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
 # PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
-# PT_BR (3): Ao final, é verificado se a posição horizontal clicada é a que o Control está
 # EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
-# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
-# EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
+# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 func get_drag_data(position):
 	var actual_child = 0
 	var orientation_position = _get_object_property_orientation(orientation, position)
@@ -128,6 +129,9 @@ func get_drag_data(position):
 												qtd_control_children) * (actual_child)
 			var max_position = _calc_slot_size(_get_object_property_orientation(orientation, collection_size), 
 												qtd_control_children) * (actual_child + 1)
+			
+			# PT_BR: Se posição horizontal clicada é a que o Control deveria estar
+			# EN_US: If clicked horizontal position is where the Control should be
 			if min_position <= orientation_position and orientation_position <= max_position:
 				return child.get_drag_data(position)
 			actual_child += 1
@@ -145,8 +149,10 @@ func can_drop_data(position, data) -> bool:
 	return can_drop
 
 
-# PT_BR: Checa qual dos Controls filhos aceita o objeto e, ao achar, o envia o objeto arrastado para o Control
-# EN_US: Checks which of the child Controls accepts the object and, when found, sends the dragged object to the Control
+# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
+# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
+# EN_US (1): Checks which of the child Controls accepts the object and
+# EN_US (2): When found, sends the dragged object to the Control
 func drop_data(position, data) -> void:
 	for child in self.get_children():
 		if child.is_in_group("slot") and child.can_drop_data(position, data):

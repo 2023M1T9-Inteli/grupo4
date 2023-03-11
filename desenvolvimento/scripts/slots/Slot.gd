@@ -30,8 +30,8 @@ enum SLOTS_TYPE {
 signal dropped_item(slot)
 signal get_item(slot)
 
-# PT_BR: ID único para o slote, para o item arrastado ou para o slote aceitar somente outros slotes desse ID
-# EN_US: Unique ID for the slot, for the dragged item, or for the slot to accept only other slots of that ID
+# PT_BR: ID único para o slote
+# EN_US: Unique ID for the slot
 export(String) var uid = ""
 
 # PT_BR: Quantidade do item, usar com a variável "increment"
@@ -48,7 +48,7 @@ export(bool) var show_qtd = false setget _set_show_qtd
 
 # PT_BR: Impede que tire o item do slot
 # EN_US: Prevents taking the item out of the slot
-export(bool) var can_give = true 
+export(bool) var can_drag = true 
 
 # PT_BR: Transparência do preview
 # EN_US: Preview transparency
@@ -74,8 +74,8 @@ export(Vector2) var slot_size: Vector2 = Vector2(32, 32) setget _set_slot_size
 # EN_US: Images size
 export(Vector2) var images_size: Vector2 = Vector2(32, 32) setget _set_image_size
 
-# PT_BR: Tamanho das imagens
-# EN_US: Images size
+# PT_BR: Tamanho do preview
+# EN_US: Preview size
 export(Vector2) var preview_size: Vector2 = Vector2(32, 32) setget _set_preview_size
 
 # PT_BR: Imagem do slot na mesa
@@ -95,9 +95,9 @@ export(Texture) var boss_table_image: Texture = null setget _set_boss_table_imag
 # EN_US: Local variables
 var _mouse_right_button: bool = false
 var is_dragging: bool = false
+
 # PT_BR: Funções setGet
 # EN_US: setGet Functions
-
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($Qtd).get_ref():
@@ -177,14 +177,12 @@ func _process(_delta):
 	self._get_location_node().set("visible", !is_dragging)
 
 
-# PT_BR (1): Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
-# PT_BR (2): Habilita / Desabilita a transferência unitária dos slotes que incrementams
-# EN_US (1): If the user clicks the right mouse button, or two fingers on the screen
-# EN_US (2): Enables / Disables unit transfer of slots that increment
 func _input(event) -> void:
 	# PT_BR: Se clicar com botão direito do mouse
 	# EN_US: If you right-click
 	if event is InputEventMouseButton:
+		# PT_BR: Se soltar o click
+	# EN_US: If released click
 		if event.is_action_released("click"):
 			is_dragging = false
 
@@ -202,13 +200,22 @@ func _clearSlot() -> void:
 	$BossTableImage.texture = null
 	$Qtd.text = str(qtd)
 	attributes = ATTRIBUTES_TYPE
-	
 
+# PT_BR: Não recebe parâmetros. Retorna um node com base na localização
+# EN_US: Dont receive parameters. Return a node based on location
 func _get_location_node():
+	# PT_BR: Se a localização é igual a mesa
+	# EN_US: If the location is equal to table
 	if location == LOCATIONS.TABLE:
 		return self.get_node("TableImage")
+		
+	# PT_BR: Senão, se a localização é igual a gaveta
+	# EN_US: Else if the location is equal to table
 	elif location == LOCATIONS.DRAWER:
 		return self.get_node("DrawerImage")
+	
+	# PT_BR: Senão, se a localização é igual a mesa do chefe
+	# EN_US: Else if the location is equal to boss table
 	elif location == LOCATIONS.BOSS_TABLE:
 		return self.get_node("BossTableImage")
 
@@ -219,7 +226,9 @@ DRAG AND DROP
 # PT_BR: Função chamada automaticamente assim que uma ação de drag é identificada
 # EN_US: Function called automatically as soon as a drag action is identified
 func get_drag_data(_position):
-	if !can_give: return self
+	# PT_BR: Se o item não pode ser tirado retorna falso
+	# EN_US: If item cannot by taked return false
+	if !can_drag: return self
 	is_dragging = true
 	var preview_pos = -(preview_size / 2)
 	
@@ -256,7 +265,7 @@ func get_drag_data(_position):
 # PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
 # EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(_position, data) -> bool:
-	if !data["can_give"]: return false
+	if !data["can_drag"]: return false
 	if data == self: return false
 	var ret = false		
 		
@@ -286,7 +295,6 @@ func can_drop_data(_position, data) -> bool:
 # PT_BR: Essa função captura o preview que estava sendo arrastado, e vem no parâmetro "data"
 # EN_US: This function captures the preview that was being dragged, and comes in the parameter "data"
 func drop_data(_position, data) -> void:
-	
 	var qtd_drop = 1
 	
 	# PT_BR: Incrementa a quantidade
@@ -305,30 +313,29 @@ func drop_data(_position, data) -> void:
 	attributes = data["attributes"]
 	$Qtd.text = str(qtd)
 	
-	# PT_BR: Se a imagem dropada tiver uma textura
-	# EN_US: If the dropped image has a texture
+	# PT_BR: Se a imagem da gaveta dropada tiver uma textura
+	# EN_US: If the dropped drawer image has a texture
 	if data["drawer_image"] is Texture:
-		# PT_BR: Atualiza a textura da imagem
-		# EN_US: Updates the image texture
+		# PT_BR: Atualiza a textura da imagem da gaveta
+		# EN_US: Updates the image drawer texture
 		$DrawerImage.texture = data["drawer_image"] 
 	else:
 		$DrawerImage.texture = null
 	
-	# PT_BR: Se a preview dropada tiver uma textura
-	# EN_US: If the dropped preview has a texture
-	
+	# PT_BR: Se a imagem da mesa dropada tiver uma textura
+	# EN_US: If the dropped table image has a texture
 	if data["table_image"] is Texture:
-		# PT_BR: Atualiza a textura do preview
-		# EN_US: Updates the preview texture
+		# PT_BR: Atualiza a textura da imagem da mesa
+		# EN_US: Updates the image table texture
 		$TableImage.texture = data["table_image"] 
 	else:
 		$TableImage.texture = null
 	
-	# PT_BR: Se a preview dropada tiver uma textura
-	# EN_US: If the dropped preview has a texture
+	# PT_BR: Se a imagem da mesa do chefe dropada tiver uma textura
+	# EN_US: If the boss table image has a texture
 	if data["boss_table_image"] is Texture:
-		# PT_BR: Atualiza a textura do preview
-		# EN_US: Updates the preview texture
+		# PT_BR: Atualiza a textura da imagem na mesa do chefe
+		# EN_US: Updates the boss table image texture
 		$BossTableImage.texture = data["boss_table_image"] 
 	else:
 		$BossTableImage.texture = null
@@ -346,6 +353,8 @@ func drop_data(_position, data) -> void:
 	# EN_US: Updates the quantity label
 	data.get_node("Qtd").text = str(data["qtd"])
 	
+	# PT_BR: Envia os sinais relativos ao envio e chegada do item
+	# EN_US: Sends the signals regarding the shipment and arrival of the item
 	self.emit_signal("get_item", self)
 	data.emit_signal("dropped_item", data)
 	
