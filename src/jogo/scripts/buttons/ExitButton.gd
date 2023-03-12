@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 # PT_BR: Ao clicar o jogo fechará
 # EN_US: By clicking the game will close
