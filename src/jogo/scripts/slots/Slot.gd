@@ -48,7 +48,7 @@ export(bool) var show_qtd = false setget _set_show_qtd
 
 # PT_BR: Impede que tire o item do slot
 # EN_US: Prevents taking the item out of the slot
-export(bool) var can_drag = true 
+export(bool) var can_give = true 
 
 # PT_BR: Transparência do preview
 # EN_US: Preview transparency
@@ -228,7 +228,7 @@ DRAG AND DROP
 func get_drag_data(_position):
 	# PT_BR: Se o item não pode ser tirado retorna falso
 	# EN_US: If item cannot by taked return false
-	if !can_drag: return self
+	if !can_give: return self
 	is_dragging = true
 	var preview_pos = -(preview_size / 2)
 	
@@ -257,15 +257,15 @@ func get_drag_data(_position):
 	# EN_US: Build the preview
 	set_drag_preview(drag_preview)
 	
-	# PR_BR: Retornar para o can_drag / drop
-	# EN_US: Return to can_drag / drop
+	# PR_BR: Retornar para o can_drop_data / drop
+	# EN_US: Return to can_drop_data / drop
 	return self
 
 
 # PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
 # EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(_position, data) -> bool:
-	if !data["can_drag"]: return false
+	if !data["can_give"]: return false
 	if data == self: return false
 	var ret = false		
 		
