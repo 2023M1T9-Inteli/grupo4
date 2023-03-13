@@ -70,6 +70,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -87,6 +91,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -104,6 +112,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -121,6 +133,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -138,6 +154,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -155,6 +175,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -172,6 +196,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -189,6 +217,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
@@ -206,6 +238,10 @@ size_flags_vertical = 5
 uid = "gerivaldo"
 qtd = 1
 location = 1
+attributes = {
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 2
+}
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )

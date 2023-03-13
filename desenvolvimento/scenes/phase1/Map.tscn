@@ -853,21 +853,41 @@ tile_data = PoolIntArray( 262152, 11, 0, 262153, 11, 1, 262154, 11, 1, 262155, 1
 position = Vector2( 278, 265 )
 worker_size = Vector2( 64, 64 )
 worker_image = ExtResource( 11 )
+attributes = {
+"ART_THINK": 0,
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 3
+}
 
 [node name="Roger" parent="." instance=ExtResource( 16 )]
 position = Vector2( 472, 260 )
 worker_size = Vector2( 64, 64 )
 worker_image = ExtResource( 10 )
+attributes = {
+"ART_THINK": 1,
+"LOGIC_RAC": 3,
+"MANUAL_WORK": 0
+}
 
 [node name="Bento" parent="." instance=ExtResource( 16 )]
 position = Vector2( 440, 450 )
 worker_size = Vector2( 64, 64 )
 worker_image = ExtResource( 13 )
+attributes = {
+"ART_THINK": 3,
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 1
+}
 
 [node name="Ana" parent="." instance=ExtResource( 16 )]
 position = Vector2( 252, 459 )
 worker_size = Vector2( 55, 55 )
 worker_image = ExtResource( 3 )
+attributes = {
+"ART_THINK": 2,
+"LOGIC_RAC": 3,
+"MANUAL_WORK": 1
+}
 
 [node name="KitMouseAndKeyboard2" type="Sprite" parent="."]
 position = Vector2( 296, 456 )

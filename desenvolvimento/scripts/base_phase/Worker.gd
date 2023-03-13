@@ -51,14 +51,13 @@ signal finished_task(worker)
 # PT_BR: Função que iniciará a tarefa. Não retorna valor
 # EN_US: Function that initiate task. Doesn't return value
 func initiate_task(task):
-	_compare_attributes(task["attributes"])
-	
 	# PT_BR: Reseta os valores para iniciar o cronômetro
 	# EN_US: Resets the values to start the timer
 	score = 0
 	cronometer.value = 0
 	cronometer.show()
 	timer.start()
+	_compare_attributes(task["attributes"])
 
 
 # PT_BR: Compara os atributos da tarefa com os atributos do Worker. Não retorna valor
