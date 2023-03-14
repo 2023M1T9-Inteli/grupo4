@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/PhaseScreen/phase_background.png" type="Texture" id=1]
-[ext_resource path="res://assets/PhaseScreen/phase2.png" type="Texture" id=2]
-[ext_resource path="res://assets/PhaseScreen/phase3.png" type="Texture" id=3]
-[ext_resource path="res://assets/PhaseScreen/phase4.png" type="Texture" id=4]
-[ext_resource path="res://assets/PhaseScreen/phase1.png" type="Texture" id=5]
+[ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/PhasesScreen/phase2.png" type="Texture" id=2]
+[ext_resource path="res://assets/PhasesScreen/phase3.png" type="Texture" id=3]
+[ext_resource path="res://assets/PhasesScreen/phase4.png" type="Texture" id=4]
+[ext_resource path="res://assets/PhasesScreen/phase1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Fonts/vcr_osd_mono_font.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://scripts/buttons/Phase1Button.gd" type="Script" id=7]
 
