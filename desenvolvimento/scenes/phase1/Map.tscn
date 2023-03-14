@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://assets/phase_assets/BaseAssets/Room_Builder_Office_32x32.png" type="Texture" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/palette_plant2.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://scripts/Phase1/Map.gd" type="Script" id=17]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=18]
 [ext_resource path="res://assets/phase_assets/OfficeItems/bigger_chair.png" type="Texture" id=19]
+[ext_resource path="res://assets/characters/paula_sprite_sheet.png" type="Texture" id=20]
 
 [sub_resource type="PluginScript" id=11]
 
@@ -311,6 +312,132 @@ flags = 4
 15/shape_one_way_margin = 0.0
 15/shapes = [  ]
 15/z_index = 0
+
+[sub_resource type="Curve2D" id=16]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 544, 192, 0, 0, 0, 0, 608, 192, 0, 0, 0, 0, 608, 288 )
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "delivery_roger"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 20, 18, 20, 18, 12, 14, 12, 14, 6, 8, 6, 8, 6, 3, 5, 3 ]
+}
+
+[sub_resource type="Curve2D" id=19]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 544, 178, 0, 0, 0, 0, 544, 256, 0, 0, 0, 0, 224, 256, 0, 0, 0, 0, 224, 282 )
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "delivery_kira"
+length = 4.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1, 4.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PaulaKira:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 14, 12, 14, 12, 15, 17, 15, 17, 15, 17, 15, 17, 15, 17, 15, 17, 15, 17, 15, 17, 12, 6, 8, 9, 11, 9, 11, 9, 11, 9, 11, 9, 11, 9, 11, 9, 11, 9, 11, 6, 8, 6 ]
+}
+
+[sub_resource type="Curve2D" id=22]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 544, 192, 0, 0, 0, 0, 544.796, 199.308, 0, 0, 0, 0, 544, 264, 0, 0, 0, 0, 384, 264, 0, 0, 0, 0, 384, 480, 0, 0, 0, 0, 192, 480 )
+}
+
+[sub_resource type="Animation" id=27]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PaulaAna:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PaulaAna:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "delivery_ana"
+length = 6.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2, 6.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PaulaAna:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.1, 6.2, 6.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 14, 12, 14, 15, 17, 15, 17, 15, 17, 15, 17, 12, 14, 12, 14, 12, 14, 12, 14, 12, 14, 12, 15, 17, 15, 17, 15, 17, 15, 17, 14, 9, 11, 9, 11, 9, 11, 9, 11, 9, 11, 9, 6, 8, 6, 6, 8, 6, 8, 6, 8, 6, 9, 11, 9, 11, 9, 11, 9, 11, 9, 6, 8 ]
+}
 
 [sub_resource type="TileSet" id=6]
 0/name = "Modern_Office_48x48.png 0"
@@ -828,6 +955,39 @@ flags = 4
 2/shapes = [  ]
 2/z_index = 0
 
+[sub_resource type="Curve2D" id=25]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 544, 192, 0, 0, 0, 0, 608, 192, 0, 0, 0, 0, 608, 288, 0, 0, 0, 0, 712, 288, 0, 0, 0, 0, 712, 480, 0, 0, 0, 0, 552, 480, 0, 0, 0, 0, 552, 480 )
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "delivery_bento"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PaulaBento:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 18, 20, 18, 20, 12, 14, 12, 14, 18, 20, 18, 20, 18, 12, 14, 12, 14, 12, 14, 12, 14, 12, 14, 15, 17, 15, 17, 15, 17, 14, 9, 11, 9, 11, 9, 11, 9, 11, 9, 6, 8, 6, 8, 6, 8, 6, 8, 6, 3, 5, 3, 5, 3, 6, 8, 6, 8, 6, 3, 5 ]
+}
+
 [node name="Map" type="Node2D"]
 script = ExtResource( 17 )
 
@@ -842,6 +1002,70 @@ tile_set = SubResource( 8 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 21, 0, 0, 65556, 2, 0, 196622, 14, 0, 524297, 15, 0, 917512, 15, 0, 917518, 15, 0 )
+
+[node name="PathRoger" type="Path2D" parent="."]
+visible = false
+curve = SubResource( 16 )
+
+[node name="PathFollowRoger" type="PathFollow2D" parent="PathRoger"]
+position = Vector2( 544, 192 )
+rotate = false
+
+[node name="PaulaRoger" type="Sprite" parent="PathRoger/PathFollowRoger"]
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 20 )
+hframes = 3
+vframes = 7
+frame = 20
+
+[node name="PaulaAnimRoger" type="AnimationPlayer" parent="PathRoger/PathFollowRoger"]
+root_node = NodePath("../PaulaRoger")
+anims/delivery_roger = SubResource( 17 )
+
+[node name="PathKira" type="Path2D" parent="."]
+visible = false
+position = Vector2( 0, 27.6923 )
+scale = Vector2( 1, 0.923077 )
+curve = SubResource( 19 )
+
+[node name="PathFollowKira" type="PathFollow2D" parent="PathKira"]
+position = Vector2( 544, 178 )
+rotation = 1.5708
+rotate = false
+
+[node name="PaulaKira" type="Sprite" parent="PathKira/PathFollowKira"]
+position = Vector2( 2.03552, 2.42023 )
+rotation = -1.5708
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 20 )
+hframes = 3
+vframes = 7
+frame = 14
+
+[node name="PaulaAnimKira" type="AnimationPlayer" parent="PathKira/PathFollowKira"]
+anims/delivery_kira = SubResource( 20 )
+
+[node name="PathAna" type="Path2D" parent="."]
+visible = false
+position = Vector2( 8, 0 )
+curve = SubResource( 22 )
+
+[node name="PathFollowAna" type="PathFollow2D" parent="PathAna"]
+position = Vector2( 544, 192 )
+rotation = 1.57079
+rotate = false
+
+[node name="PaulaAna" type="Sprite" parent="PathAna/PathFollowAna"]
+rotation = -1.5708
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 20 )
+hframes = 3
+vframes = 7
+frame = 12
+
+[node name="PaulaAnimAna" type="AnimationPlayer" parent="PathAna/PathFollowAna"]
+anims/RESET = SubResource( 27 )
+anims/delivery_ana = SubResource( 23 )
 
 [node name="Mesas" type="TileMap" parent="."]
 tile_set = SubResource( 6 )
@@ -913,6 +1137,34 @@ tile_set = SubResource( 5 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 2, 23, 1, 131072, 65536, 0, 65538, 65559, 1, 2, 131072, 0, 65538, 131095, 1, 2, 196608, 0, 65538, 196631, 1, 2, 262144, 0, 65538, 262167, 1, 2, 327680, 0, 65538, 327701, 2, 0, 327703, 1, 2, 393216, 0, 65538, 393239, 1, 2, 458752, 0, 65538, 458775, 1, 2, 524288, 0, 65538, 524311, 1, 2, 589824, 0, 65538, 589847, 1, 2, 655360, 0, 65538, 655383, 1, 2, 720896, 0, 65538, 720919, 1, 2, 786432, 0, 65538, 786455, 1, 2, 851968, 0, 65538, 851991, 1, 2, 917504, 0, 65538, 917527, 1, 2, 983040, 0, 65538, 983063, 1, 2, 1048576, 0, 65538, 1048599, 1, 2, 1114112, 0, 65538, 1114135, 1, 2, 1179648, 0, 65538, 1179671, 1, 2, 1245184, 0, 65538, 1245207, 1, 2, 1310720, 0, 65538, 1310743, 1, 2, 1376256, 0, 65538, 1376279, 1, 2, 1441792, 1, 65537, 1441793, 1, 196615, 1441794, 1, 196615, 1441795, 1, 196615, 1441796, 1, 196615, 1441797, 1, 196615, 1441798, 1, 196615, 1441799, 1, 196615, 1441800, 1, 196615, 1441801, 1, 196615, 1441802, 1, 196615, 1441803, 1, 196615, 1441804, 1, 196615, 1441805, 1, 196615, 1441806, 1, 196615, 1441807, 1, 196615, 1441808, 1, 196615, 1441809, 1, 196615, 1441810, 1, 196615, 1441811, 1, 196615, 1441812, 1, 196615, 1441813, 1, 196615, 1441814, 1, 196615, 1441815, 1, 65536 )
+
+[node name="PathBento" type="Path2D" parent="."]
+visible = false
+curve = SubResource( 25 )
+
+[node name="PathFollowBento" type="PathFollow2D" parent="PathBento"]
+position = Vector2( 544, 192 )
+rotation = 1.5708
+rotate = false
+
+[node name="PaulaBento" type="Sprite" parent="PathBento/PathFollowBento"]
+rotation = -1.5708
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 20 )
+hframes = 3
+vframes = 7
+frame = 18
+
+[node name="PaulaAnimBento" type="AnimationPlayer" parent="PathBento/PathFollowBento"]
+anims/delivery_bento = SubResource( 26 )
+
+[node name="PaulaSprite" type="Sprite" parent="."]
+position = Vector2( 554, 195 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 20 )
+hframes = 3
+vframes = 7
+frame = 1
 
 [connection signal="finished_task" from="Kira" to="." method="_on_Kira_finished_task"]
 [connection signal="finished_task" from="Roger" to="." method="_on_Roger_finished_task"]
