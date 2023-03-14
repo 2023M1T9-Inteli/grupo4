@@ -1,3 +1,4 @@
+tool
 extends Node2D
 
 # PT_BR: Define uma constante para padronizar os atributos que o Worker terá
