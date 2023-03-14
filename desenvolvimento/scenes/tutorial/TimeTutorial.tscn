@@ -98,6 +98,7 @@ custom_styles/panel = SubResource( 5 )
 position = Vector2( 160, 124 )
 scale = Vector2( 1.85714, 2.18182 )
 frames = SubResource( 6 )
+frame = 3
 playing = true
 
 [node name="Text" type="RichTextLabel" parent="."]
