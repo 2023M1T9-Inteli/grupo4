@@ -9,8 +9,12 @@ size = 30
 margin_right = 32.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
-mouse_default_cursor_shape = 2
 script = ExtResource( 1 )
+attributes = {
+"ART_THINK": 3,
+"LOGIC_RAC": 2,
+"MANUAL_WORK": 1
+}
 
 [node name="Unit" type="Sprite" parent="."]
 visible = false

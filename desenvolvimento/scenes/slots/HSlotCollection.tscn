@@ -6,6 +6,5 @@
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
-mouse_default_cursor_shape = 2
 custom_constants/separation = -64
 script = ExtResource( 1 )

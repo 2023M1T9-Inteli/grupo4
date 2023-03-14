@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://assets/ScreenAbout/screen_about.png" type="Texture" id=1]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=2]
@@ -137,16 +137,6 @@ shader_param/height = 30.0
 shader_param/speed = 5.0
 shader_param/frequency = 20.0
 
-[sub_resource type="StyleBoxEmpty" id=19]
-
-[sub_resource type="StyleBoxEmpty" id=20]
-
-[sub_resource type="StyleBoxEmpty" id=21]
-
-[sub_resource type="StyleBoxEmpty" id=22]
-
-[sub_resource type="StyleBoxEmpty" id=23]
-
 [node name="Credits" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -235,15 +225,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Enrico Pasmanik"
 
 [node name="BackButton" type="Button" parent="."]
-margin_left = 1147.0
-margin_top = 19.0
-margin_right = 1229.0
-margin_bottom = 94.0
-custom_styles/hover = SubResource( 19 )
-custom_styles/pressed = SubResource( 20 )
-custom_styles/focus = SubResource( 21 )
-custom_styles/disabled = SubResource( 22 )
-custom_styles/normal = SubResource( 23 )
+margin_left = 36.0
+margin_top = 24.0
+margin_right = 118.0
+margin_bottom = 99.0
 icon = ExtResource( 2 )
 flat = true
 
