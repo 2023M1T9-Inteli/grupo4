@@ -1,0 +1,145 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://assets/buttons/left_button.png" type="Texture" id=2]
+[ext_resource path="res://scripts/tutorial/ProgressTutorial.gd" type="Script" id=3]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress08.png" type="Texture" id=4]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress07.png" type="Texture" id=5]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress04.png" type="Texture" id=6]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress05.png" type="Texture" id=7]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress06.png" type="Texture" id=8]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress03.png" type="Texture" id=9]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress01.png" type="Texture" id=10]
+[ext_resource path="res://assets/tutorial/gifs/Progress/progress02.png" type="Texture" id=11]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://assets/tutorial/map/background_tutorial.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 0.666667 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.988235, 0.972549, 0.898039, 1 )
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=8]
+size = 18
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.14902, 0.482353, 0.65098, 1 )
+corner_detail = 3
+shadow_color = Color( 0.466667, 0.72549, 0.858824, 1 )
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.207843, 0.192157, 0.192157, 1 )
+shadow_color = Color( 0.0666667, 0.0666667, 0.0666667, 0.823529 )
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.466667, 0.72549, 0.858824, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 12 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BackgroundTutoral" type="Sprite" parent="."]
+position = Vector2( 640.75, 360.25 )
+scale = Vector2( 0.727661, 0.750261 )
+texture = ExtResource( 13 )
+
+[node name="OpaquePanel" type="Panel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="TutorialArea" type="Panel" parent="."]
+modulate = Color( 0.886275, 0.858824, 0.858824, 1 )
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 1088.0
+margin_bottom = 656.0
+rect_pivot_offset = Vector2( 232, 200 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="BackButton5" type="Button" parent="TutorialArea"]
+margin_left = 56.0
+margin_top = 504.0
+margin_right = 116.0
+margin_bottom = 558.0
+custom_styles/hover = SubResource( 2 )
+icon = ExtResource( 2 )
+flat = true
+
+[node name="StartButton5" type="Button" parent="TutorialArea"]
+margin_left = 712.0
+margin_top = 504.0
+margin_right = 844.0
+margin_bottom = 558.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/normal = SubResource( 10 )
+text = "Jogar"
+
+[node name="ProgressArea" type="Panel" parent="."]
+margin_left = 624.0
+margin_top = 184.0
+margin_right = 1024.0
+margin_bottom = 464.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ProgressAnim" type="AnimatedSprite" parent="ProgressArea"]
+position = Vector2( 200, 140 )
+scale = Vector2( 0.852174, 0.704663 )
+frames = SubResource( 5 )
+frame = 5
+playing = true
+
+[node name="TutorialText" type="RichTextLabel" parent="."]
+margin_left = 256.0
+margin_top = 112.0
+margin_right = 608.0
+margin_bottom = 568.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+bbcode_enabled = true
+bbcode_text = "Progresso: cada tarefa [color=#EE222B]é uma parte[/color] de um [color=#267ba6]projeto maior[/color]. Acompanhe o [color=#EE222B]progresso[/color] do projeto no ícone do canto superior esquerdo. Ele será [color=#267ba6]preenchido[/color] à medida que as tarefas forem sendo concluídas."
+text = "Progresso: cada tarefa é uma parte de um projeto maior. Acompanhe o progresso do projeto no ícone do canto superior esquerdo. Ele será preenchido à medida que as tarefas forem sendo concluídas."
+
+[connection signal="pressed" from="TutorialArea/BackButton5" to="." method="_on_back_button5_pressed"]
+[connection signal="pressed" from="TutorialArea/StartButton5" to="." method="_on_start_button5_pressed"]
