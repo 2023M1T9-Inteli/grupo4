@@ -32,6 +32,11 @@ func _set_worker_size(new_value) -> void:
 	worker_size = new_value
 	$Worker.rect_min_size = worker_size
 	$Worker.rect_size = worker_size
+	if weakref($Collision).get_ref():
+		$Collision.shape.extents.x = worker_size.x / 2
+		$Collision.shape.extents.y = worker_size.y / 2
+		$Collision.position.x = worker_size.x / 2
+		$Collision.position.y = worker_size.y / 2
 
 # PT_BR: Declara a variável da pontuação
 # EN_US: Declares the score variable
