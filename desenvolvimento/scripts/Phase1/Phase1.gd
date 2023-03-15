@@ -37,11 +37,6 @@ func _on_PhaseProgress_completed_change():
 	get_tree().change_scene("res://scenes/Victory.tscn")
 
 
-# PT_BR: Função para mudar a cena quando o botão de menu é pressionado
-# EN_US:
-func _on_TextureButton_pressed():
-	get_tree().change_scene("res://scenes/Menu.tscn")
-
 
 # PT_BR: Sinal que é emitido quando o personagem finaliza uma tarefa
 # PT_BR: Recebe o objeto worker como parâmetro para ser emitido
@@ -95,3 +90,5 @@ func _on_workSlotBento_get_item(slot):
 func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
+
+
