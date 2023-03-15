@@ -7,7 +7,6 @@
 [ext_resource path="res://scripts/Options.gd" type="Script" id=5]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=6]
 
-
 [sub_resource type="DynamicFont" id=5]
 size = 60
 font_data = ExtResource( 6 )
@@ -20,21 +19,26 @@ region_rect = Rect2( 0, 0, 452, 83 )
 
 [sub_resource type="StyleBoxEmpty" id=4]
 
-[node name="Options" type="Control"]
+[node name="Options" type="PopupMenu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 195.0
+margin_top = 136.0
+margin_right = -276.0
+margin_bottom = -146.0
 script = ExtResource( 5 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 641.875, 361.875 )
-scale = Vector2( 0.851599, 0.759969 )
+position = Vector2( 404.438, 219.937 )
+scale = Vector2( 0.537725, 0.457634 )
 texture = ExtResource( 1 )
 
 [node name="VolumeGrid" type="GridContainer" parent="."]
-margin_left = 105.0
-margin_top = 211.0
-margin_right = 1190.0
-margin_bottom = 296.0
+margin_left = 74.0
+margin_top = 134.0
+margin_right = 1126.0
+margin_bottom = 219.0
+rect_scale = Vector2( 0.6, 0.6 )
 custom_constants/hseparation = 250
 columns = 2
 
@@ -58,10 +62,11 @@ min_value = -40.0
 max_value = 0.0
 
 [node name="BackButton" type="Button" parent="."]
-margin_left = 1138.0
-margin_top = 23.0
-margin_right = 1220.0
-margin_bottom = 98.0
+margin_left = 723.0
+margin_top = 16.0
+margin_right = 805.0
+margin_bottom = 91.0
+rect_scale = Vector2( 0.7, 0.7 )
 icon = ExtResource( 3 )
 flat = true
 

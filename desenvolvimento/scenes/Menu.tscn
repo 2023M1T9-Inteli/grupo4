@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/MenuScreen/background.png" type="Texture" id=4]
 [ext_resource path="res://assets/MenuScreen/start_button.png" type="Texture" id=5]
 [ext_resource path="res://assets/MenuScreen/options_button.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/MenuScreen/exit_button.png" type="Texture" id=8]
 [ext_resource path="res://assets/MenuScreen/about_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/MenuScreen/hover_start_button.png" type="Texture" id=10]
@@ -92,6 +93,8 @@ margin_bottom = 267.0
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
 script = ExtResource( 3 )
+
+[node name="Options" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
