@@ -1,4 +1,4 @@
-extends Control
+extends PopupMenu
 
 # PT_BR: Obtém o controlador da música
 # EN_US: Get the music control
@@ -23,4 +23,4 @@ func _on_SliderMusic_value_changed(value):
 # PT_BR: Abre a cena do menu
 # EN_US: Open the menu scene
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	self.hide()
