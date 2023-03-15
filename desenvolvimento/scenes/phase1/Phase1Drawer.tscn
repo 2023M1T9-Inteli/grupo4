@@ -36,6 +36,7 @@ script = ExtResource( 8 )
 drawer_size = Vector2( 512, 80 )
 
 [node name="DrawerHBox" type="HBoxContainer" parent="HSlotExpansor"]
+margin_left = -64.0
 margin_right = 512.0
 margin_bottom = 85.0
 rect_min_size = Vector2( 576, 85 )
