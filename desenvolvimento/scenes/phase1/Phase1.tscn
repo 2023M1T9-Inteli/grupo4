@@ -151,7 +151,7 @@ drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 20 )
 
 [node name="MainDrawer" parent="SlotExpansorAna" instance=ExtResource( 17 )]
-position = Vector2( 672, 173 )
+position = Vector2( 672, 170 )
 
 [node name="SlotExpansorBento" parent="." instance=ExtResource( 6 )]
 margin_left = 425.0

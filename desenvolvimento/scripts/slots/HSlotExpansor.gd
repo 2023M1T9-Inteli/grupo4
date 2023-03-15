@@ -1,4 +1,13 @@
-extends Control
+extends ScrollContainer
+
+export(Vector2) var drawer_size: Vector2 = Vector2(64, 64) setget _set_drawer_size
+
+# PT_BR: Funções para definir as variáveis
+# EN_US: Functions to set variables
+func _set_drawer_size(new_value) -> void:
+	drawer_size = new_value
+	self.rect_min_size = drawer_size
+	self.rect_size = drawer_size
 
 """ 
 DRAG AND DROP
