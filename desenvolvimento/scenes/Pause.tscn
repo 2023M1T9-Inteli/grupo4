@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/buttons/button_exit.png" type="Texture" id=10]
 
 [node name="Control" type="CanvasLayer"]
+pause_mode = 2
 visible = false
 script = ExtResource( 1 )
 
