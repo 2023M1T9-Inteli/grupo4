@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/items/profile_sheet/roger_small_sheet.png" type="Texture" id=9]
 [ext_resource path="res://assets/items/profile_sheet/ana_small_sheet.png" type="Texture" id=10]
 [ext_resource path="res://assets/items/profile_sheet/bento_small_sheet.png" type="Texture" id=11]
-[ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=12]
+[ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scripts/Phase1/Phase1.gd" type="Script" id=14]
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
@@ -39,8 +39,8 @@ position = Vector2( 772, 0 )
 [node name="ExitButton" type="TextureButton" parent="."]
 margin_left = 15.0
 margin_top = 13.0
-margin_right = 55.0
-margin_bottom = 49.0
+margin_right = 75.0
+margin_bottom = 73.0
 texture_normal = ExtResource( 12 )
 expand = true
 
