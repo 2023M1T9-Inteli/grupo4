@@ -277,6 +277,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 7 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:unit_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=23]
 resource_name = "delivery_ana"
@@ -1055,8 +1067,9 @@ position = Vector2( 8, 0 )
 curve = SubResource( 22 )
 
 [node name="PathFollowAna" type="PathFollow2D" parent="PathAna"]
-position = Vector2( 544, 192 )
+position = Vector2( 192, 480 )
 rotation = 1.57079
+offset = 637.12
 rotate = false
 
 [node name="PaulaAna" type="Sprite" parent="PathAna/PathFollowAna"]
@@ -1065,7 +1078,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 20 )
 hframes = 3
 vframes = 7
-frame = 12
+frame = 9
 
 [node name="PaulaAnimAna" type="AnimationPlayer" parent="PathAna/PathFollowAna"]
 anims/RESET = SubResource( 27 )
