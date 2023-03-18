@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/characters/roger.png" type="Texture" id=7]
 [ext_resource path="res://assets/characters/bento.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/ana.png" type="Texture" id=9]
-[ext_resource path="res://assets/items/profile_sheet/kira_small_sheet.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/profile_sheets/kira_small_sheet.png" type="Texture" id=10]
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0, 0, 0, 0.666667 )
