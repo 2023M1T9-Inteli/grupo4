@@ -55,7 +55,6 @@ func _receive_task_order(task_info):
 # EN_US (1): Store the task informations in the wait list
 # EN_US (2): Call the function to check the wait list
 	task_wait_list.append(task_info)
-	print(task_wait_list)
 	if len(task_wait_list) == 1:
 		_check_task_wait_list()
 		
