@@ -32,6 +32,7 @@ window/stretch/aspect="keep"
 [global]
 
 janela=false
+mouse=false
 
 [gui]
 
