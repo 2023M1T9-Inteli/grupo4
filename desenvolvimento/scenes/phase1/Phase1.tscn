@@ -34,10 +34,10 @@ font_data = ExtResource( 16 )
 [node name="Phase1" type="Node2D"]
 script = ExtResource( 14 )
 
-[node name="Map" parent="." instance=ExtResource( 2 )]
-
 [node name="Table" parent="." instance=ExtResource( 1 )]
 position = Vector2( 772, 0 )
+
+[node name="Map" parent="." instance=ExtResource( 2 )]
 
 [node name="ExitButton" type="TextureButton" parent="."]
 margin_left = 15.0
@@ -47,13 +47,17 @@ margin_bottom = 73.0
 texture_normal = ExtResource( 12 )
 expand = true
 
-[node name="SlotExpansorKira" parent="." instance=ExtResource( 6 )]
-margin_left = 106.0
-margin_top = 262.0
-margin_right = 351.0
-margin_bottom = 407.0
+[node name="Slots" type="Node2D" parent="."]
+scale = Vector2( 0.9, 0.9 )
+z_index = 6
 
-[node name="SlotCollectionKira" parent="SlotExpansorKira" instance=ExtResource( 13 )]
+[node name="SlotExpansorKira" parent="Slots" instance=ExtResource( 6 )]
+margin_left = 117.778
+margin_top = 291.111
+margin_right = 362.778
+margin_bottom = 436.111
+
+[node name="SlotCollectionKira" parent="Slots/SlotExpansorKira" instance=ExtResource( 13 )]
 margin_left = 3.0
 margin_top = 94.0
 margin_right = 131.0
@@ -62,14 +66,14 @@ rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
-[node name="WorkSlotKira" parent="SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
+[node name="WorkSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_right = 50.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
 
-[node name="ProfileSlotKira" parent="SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
+[node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
 margin_bottom = 40.0
@@ -83,13 +87,13 @@ table_image = ExtResource( 7 )
 drawer_image = ExtResource( 5 )
 boss_table_image = ExtResource( 19 )
 
-[node name="SlotExpansorRoger" parent="." instance=ExtResource( 6 )]
-margin_left = 427.0
-margin_top = 256.0
-margin_right = 672.0
-margin_bottom = 401.0
+[node name="SlotExpansorRoger" parent="Slots" instance=ExtResource( 6 )]
+margin_left = 474.444
+margin_top = 284.444
+margin_right = 719.444
+margin_bottom = 429.444
 
-[node name="SlotCollectionRoger" parent="SlotExpansorRoger" instance=ExtResource( 13 )]
+[node name="SlotCollectionRoger" parent="Slots/SlotExpansorRoger" instance=ExtResource( 13 )]
 margin_left = 107.0
 margin_top = 98.0
 margin_right = 235.0
@@ -98,14 +102,14 @@ rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
-[node name="WorkSlotRoger" parent="SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
+[node name="WorkSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_right = 50.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
 
-[node name="ProfileSlotRoger" parent="SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
+[node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
 margin_bottom = 40.0
@@ -119,13 +123,13 @@ table_image = ExtResource( 9 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 18 )
 
-[node name="SlotExpansorAna" parent="." instance=ExtResource( 6 )]
-margin_left = 100.0
-margin_top = 453.0
-margin_right = 345.0
-margin_bottom = 598.0
+[node name="SlotExpansorAna" parent="Slots" instance=ExtResource( 6 )]
+margin_left = 111.111
+margin_top = 503.333
+margin_right = 356.111
+margin_bottom = 648.333
 
-[node name="SlotCollectionAna" parent="SlotExpansorAna" instance=ExtResource( 13 )]
+[node name="SlotCollectionAna" parent="Slots/SlotExpansorAna" instance=ExtResource( 13 )]
 margin_left = 5.0
 margin_top = 91.0
 margin_right = 133.0
@@ -134,14 +138,14 @@ rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
-[node name="WorkSlotAna" parent="SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
+[node name="WorkSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_right = 50.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
 
-[node name="ProfileSlotAna" parent="SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
+[node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
 margin_bottom = 40.0
@@ -155,16 +159,13 @@ table_image = ExtResource( 10 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 24 )
 
-[node name="MainDrawer" parent="SlotExpansorAna" instance=ExtResource( 17 )]
-position = Vector2( 672, 170 )
+[node name="SlotExpansorBento" parent="Slots" instance=ExtResource( 6 )]
+margin_left = 472.222
+margin_top = 508.889
+margin_right = 717.222
+margin_bottom = 653.889
 
-[node name="SlotExpansorBento" parent="." instance=ExtResource( 6 )]
-margin_left = 425.0
-margin_top = 458.0
-margin_right = 670.0
-margin_bottom = 603.0
-
-[node name="SlotCollectionBento" parent="SlotExpansorBento" instance=ExtResource( 13 )]
+[node name="SlotCollectionBento" parent="Slots/SlotExpansorBento" instance=ExtResource( 13 )]
 margin_left = 99.0
 margin_top = 73.0
 margin_right = 227.0
@@ -173,14 +174,14 @@ rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
-[node name="WorkSlotBento" parent="SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
+[node name="WorkSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_right = 50.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
 
-[node name="ProfileSlotBento" parent="SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
+[node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
 margin_bottom = 40.0
@@ -199,6 +200,9 @@ margin_left = 1045.0
 margin_top = 10.0
 margin_right = 1164.0
 margin_bottom = 73.0
+
+[node name="MainDrawer" parent="." instance=ExtResource( 17 )]
+position = Vector2( 772, 623 )
 
 [node name="PhaseProgress" parent="." instance=ExtResource( 3 )]
 margin_left = 4.0
@@ -250,9 +254,9 @@ texture_progress = ExtResource( 23 )
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
 [connection signal="pressed" from="ExitButton" to="Pause" method="_on_ExitButton_pressed"]
-[connection signal="get_item" from="SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
-[connection signal="get_item" from="SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
-[connection signal="get_item" from="SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
-[connection signal="get_item" from="SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
 [connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
 [connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]
