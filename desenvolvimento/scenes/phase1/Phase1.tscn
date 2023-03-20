@@ -40,8 +40,8 @@ position = Vector2( 772, 0 )
 [node name="ExitButton" type="TextureButton" parent="."]
 margin_left = 15.0
 margin_top = 13.0
-margin_right = 55.0
-margin_bottom = 49.0
+margin_right = 75.0
+margin_bottom = 73.0
 texture_normal = ExtResource( 12 )
 expand = true
 

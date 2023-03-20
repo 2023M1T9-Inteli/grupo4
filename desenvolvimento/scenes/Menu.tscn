@@ -31,6 +31,7 @@ shader_param/speed = 10.0
 shader_param/frequency = 5.0
 
 [node name="Menu" type="Control"]
+pause_mode = 2
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
