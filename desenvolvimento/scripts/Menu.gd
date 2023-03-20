@@ -4,7 +4,7 @@ extends Control
 # PT_BR: Inicia o jogo
 # EN_US: Start the game
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
+	$TutorialPopup.show()
 
 
 # PT_BR: Abre a cena de opções
