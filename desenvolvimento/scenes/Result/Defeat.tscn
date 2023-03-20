@@ -125,7 +125,7 @@ margin_top = 409.0
 margin_right = 941.0
 margin_bottom = 662.0
 custom_fonts/normal_font = SubResource( 2 )
-text = "Você está com dificuldades para identificar o nível de competência, motivação e preparo das pessoas da equipe para delegar tarefas de acordo com essas referências. Sem isso, além de não ter as tarefas executadas adequadamente, pode não estar desenvolvendo o time. :("
+text = "Que pena! Infelizmente você não conseguiu delegar todas as tarefas a tempo. Tente não acumular tarefas para apenas um funcionário, enquanto exitem outros disponíveis. Com isso, sua delegação de tarefas pode se tornar mais eficiente e você poderá obter melhores resultados!"
 
 [node name="StarEmpty" type="Sprite" parent="."]
 position = Vector2( 107, 372 )

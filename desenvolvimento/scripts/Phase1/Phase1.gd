@@ -3,7 +3,6 @@ extends Node2D
 # PT_BR: Inicializa variáveis de cenas importantes da fase
 # EN_US: Initialize variables of important scenes of the phase
 onready var phase_progress = $PhaseProgress
-onready var score_label = $ScoreLabel
 onready var map = $Map
 
 # PT_BR: Define a variável que armazena a pontuação do jogador
@@ -33,19 +32,13 @@ func _change_score(new_value):
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
 # EN_US: Function to change the scene when the game time is over
 func _on_TimeDisplayer_timer_is_over():
-	get_tree().change_scene("res://scenes/Defeat.tscn")
+	get_tree().change_scene("res://scenes/Result/Result.tscn")
 
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
 # EN_US: Function to change the scene when the player concludes all tasks
 func _on_PhaseProgress_completed_change():
-	if Globals.score_phase_1 < 850:
-		get_tree().change_scene("res://scenes/Feedbacks/Defeat.tscn")
-	elif Globals.score_phase_1 >= 850 and Globals.score_phase_1 < 1100:
-		get_tree().change_scene("res://scenes/Feedbacks/VictoryLow.tscn")
-	elif Globals.score_phase_1 >= 1100 and Globals.score_phase_1 < 1500:
-		get_tree().change_scene("res://scenes/Feedbacks/VictoryMedium.tscn")
-	
+	get_tree().change_scene("res://scenes/Result/Result.tscn")
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem finaliza uma tarefa
