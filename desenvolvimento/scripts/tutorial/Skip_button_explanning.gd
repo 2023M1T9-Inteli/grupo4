@@ -1,13 +1,15 @@
 extends Node2D
 
-func _on_skip_button_pressed():
-	get_tree().change_scene("res://scenes/Phases.tscn")
+signal next_tutorial()
+signal end_tutorial()
 
-func _on_back_button_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Introduction_tutorial.tscn")
+func _on_skip_button_pressed():
+	emit_signal("end_tutorial")
+
 
 func _on_next_button_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Paula_introduction.tscn")
+	emit_signal("next_tutorial")
+
 
 
 
