@@ -11,10 +11,10 @@ var score = 0
 
 # PT_BR: Inicializa variáveis responsáveis por armazenar as tarefas atribuídas a cada personagem
 # EN_US: Initialize variables responsible for storing the tasks attributed to each character
-onready var slot_kira = $SlotExpansorKira/SlotCollectionKira/WorkSlotKira
-onready var slot_roger = $SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger
-onready var slot_ana = $SlotExpansorAna/SlotCollectionAna/WorkSlotAna
-onready var slot_bento = $SlotExpansorBento/SlotCollectionBento/WorkSlotBento
+onready var slot_kira = $Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira
+onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger
+onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
+onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
