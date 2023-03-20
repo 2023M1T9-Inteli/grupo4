@@ -277,6 +277,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 7 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:unit_offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=23]
 resource_name = "delivery_ana"
@@ -1055,8 +1067,9 @@ position = Vector2( 8, 0 )
 curve = SubResource( 22 )
 
 [node name="PathFollowAna" type="PathFollow2D" parent="PathAna"]
-position = Vector2( 544, 192 )
+position = Vector2( 192, 480 )
 rotation = 1.57079
+offset = 637.12
 rotate = false
 
 [node name="PaulaAna" type="Sprite" parent="PathAna/PathFollowAna"]
@@ -1065,7 +1078,7 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 20 )
 hframes = 3
 vframes = 7
-frame = 12
+frame = 9
 
 [node name="PaulaAnimAna" type="AnimationPlayer" parent="PathAna/PathFollowAna"]
 anims/RESET = SubResource( 27 )
@@ -1087,21 +1100,41 @@ tile_data = PoolIntArray( 262152, 11, 0, 262153, 11, 1, 262154, 11, 1, 262155, 1
 position = Vector2( 266, 250 )
 worker_size = Vector2( 48, 96 )
 worker_image = ExtResource( 11 )
+attributes = {
+"ART_THINK": 3,
+"LOGIC_RAC": 2,
+"MANUAL_WORK": 1
+}
 
 [node name="Roger" parent="." instance=ExtResource( 16 )]
 position = Vector2( 459, 248 )
 worker_size = Vector2( 96, 96 )
 worker_image = ExtResource( 10 )
+attributes = {
+"ART_THINK": 2,
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 3
+}
 
 [node name="Bento" parent="." instance=ExtResource( 16 )]
 position = Vector2( 459, 437 )
 worker_size = Vector2( 48, 96 )
 worker_image = ExtResource( 13 )
+attributes = {
+"ART_THINK": 2,
+"LOGIC_RAC": 2,
+"MANUAL_WORK": 2
+}
 
 [node name="Ana" parent="." instance=ExtResource( 16 )]
 position = Vector2( 267, 439 )
 worker_size = Vector2( 48, 96 )
 worker_image = ExtResource( 3 )
+attributes = {
+"ART_THINK": 1,
+"LOGIC_RAC": 3,
+"MANUAL_WORK": 2
+}
 
 [node name="KitMouseAndKeyboard2" type="Sprite" parent="."]
 position = Vector2( 296, 456 )

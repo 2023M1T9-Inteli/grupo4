@@ -4,7 +4,7 @@
 [ext_resource path="res://scripts/Dialog/DialogBox.gd" type="Script" id=2]
 [ext_resource path="res://assets/Dialog/New Piskel.png" type="Texture" id=3]
 [ext_resource path="res://assets/Dialog/idle1.png" type="Texture" id=4]
-[ext_resource path="res://assets/MenuScreen/menu_background.png" type="Texture" id=5]
+[ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=5]
 [ext_resource path="res://assets/Dialog/rosalinne_braco (1).png" type="Texture" id=6]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=7]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=8]
@@ -125,6 +125,7 @@ position = Vector2( 299, 438 )
 scale = Vector2( 4.88194, 4.90086 )
 frames = SubResource( 12 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 
