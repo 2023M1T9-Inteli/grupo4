@@ -48,14 +48,12 @@
 margin_right = 512.0
 margin_bottom = 100.0
 follow_focus = true
-scroll_horizontal = 65
 scroll_vertical_enabled = false
 script = ExtResource( 8 )
 drawer_size = Vector2( 510, 95 )
 
 [node name="DrawerHBox" type="HBoxContainer" parent="HSlotExpansor"]
-margin_left = -65.0
-margin_right = 575.0
+margin_right = 640.0
 margin_bottom = 64.0
 grow_vertical = 0
 rect_min_size = Vector2( 640, 64 )
