@@ -38,14 +38,10 @@ func _set_worker_size(new_value) -> void:
 		$Collision.position.x = worker_size.x / 2
 		$Collision.position.y = worker_size.y / 2
 
-# PT_BR: Declara a variável da pontuação
-# EN_US: Declares the score variable
-var score = 0
-
 # PT_BR: Armazena a cena Timer
 # EN_US: Stores the Timer scene
 onready var timer = $Timer
-
+var score = 0
 # PT_BR: Armazena a cena Cronometer
 # EN_US: Stores the Cronometer scene
 onready var cronometer = $Cronometer
@@ -59,7 +55,6 @@ signal finished_task(worker)
 func initiate_task(task):
 	# PT_BR: Reseta os valores para iniciar o cronômetro
 	# EN_US: Resets the values to start the timer
-	score = 0
 	cronometer.value = 0
 	cronometer.show()
 	timer.start()
@@ -75,7 +70,7 @@ func _compare_attributes(task_attributes: Dictionary):
 
 	# PT_BR: Atualiza a pontuação com a diferença entre os atributos do worker e os da tarefa
 	# EN_US: Updates the score with the difference between worker and task attributes
-	score = 100 + comparedAttr * 10
+	score = 100 + comparedAttr * 50
 
 
 func _on_Timer_timeout():
