@@ -62,7 +62,6 @@ func _calc_slot_size(slot_collection_size, qtd_child):
 # PT_BR: Função para definir o tamanho horizonta do slot collection
 # EN_US:
 func _set_slot_collection_size_x(size_variation):
-	
 	var new_x = abs(int(drawer_size.x + size_variation))
 	self.rect_min_size = Vector2(new_x, drawer_size.y) 
 	self.rect_size = Vector2(new_x, drawer_size.y) 

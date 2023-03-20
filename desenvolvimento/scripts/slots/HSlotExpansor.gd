@@ -33,4 +33,3 @@ func drop_data(position, data) -> void:
 	for child in self.get_children():
 		if child is Control and child.can_drop_data(position, data):
 			child.drop_data(position, data)
-			return
