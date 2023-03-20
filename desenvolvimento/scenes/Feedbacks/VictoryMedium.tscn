@@ -1,0 +1,147 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scripts/Victory/VictoryMedium.gd" type="Script" id=1]
+[ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/Feedbacks/paula logo (1).png" type="Texture" id=3]
+[ext_resource path="res://assets/Feedbacks/background_feedback.png" type="Texture" id=4]
+[ext_resource path="res://assets/Feedbacks/line.png" type="Texture" id=5]
+[ext_resource path="res://assets/Feedbacks/division.png" type="Texture" id=6]
+[ext_resource path="res://assets/Feedbacks/progress_bar_empty (1).png" type="Texture" id=7]
+[ext_resource path="res://assets/Feedbacks/star_full (1).png" type="Texture" id=8]
+[ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=9]
+[ext_resource path="res://assets/Feedbacks/progress_bar_full (1).png" type="Texture" id=10]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+uniform float height = 20.0;
+uniform float speed = 10.0;
+uniform float frequency = 5.0;
+void vertex() {
+	VERTEX.y += sin((frequency * UV.x) + (speed * TIME));
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+shader_param/height = 20.0
+shader_param/speed = 10.0
+shader_param/frequency = 5.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 2 )
+
+[node name="VictoryMedium" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 640.25, 357.5 )
+scale = Vector2( 2.21057, 2.46918 )
+texture = ExtResource( 4 )
+
+[node name="ScoreBar" type="TextureProgress" parent="."]
+margin_left = 56.0
+margin_top = 121.0
+margin_right = 888.0
+margin_bottom = 237.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 10 )
+
+[node name="Division" type="Sprite" parent="ScoreBar"]
+position = Vector2( 744, 58 )
+texture = ExtResource( 6 )
+
+[node name="PaulaSprite" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 1058, 478 )
+scale = Vector2( 1.8, 1.77 )
+texture = ExtResource( 3 )
+
+[node name="FinalScore" type="Label" parent="."]
+margin_left = 974.0
+margin_top = 145.0
+margin_right = 1161.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="Result" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 41.0
+margin_right = 513.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 1 )
+text = "REsultado:"
+align = 1
+valign = 1
+
+[node name="FeedbackText" type="RichTextLabel" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 43.0
+margin_top = 371.0
+margin_right = 916.0
+margin_bottom = 694.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Yes! Você mostrou-se um líder capaz de identificar o nível de competência, motivação e preparo de várias pessoas da equipe para delegar tarefas de acordo com essas referências! As tarefas da área tendem a ser entregues dentro dos padrões de qualidade esperados e, com isso, você desenvolve o time para que consiga atender demandas cada vez mais complexas."
+
+[node name="Line" type="Sprite" parent="."]
+position = Vector2( 472, 289 )
+scale = Vector2( 0.768902, 1 )
+texture = ExtResource( 5 )
+
+[node name="StarFull1" type="Sprite" parent="."]
+position = Vector2( 91, 334 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 8 )
+
+[node name="StarFull2" type="Sprite" parent="."]
+position = Vector2( 152, 335 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 8 )
+
+[node name="StarEmpty" type="Sprite" parent="."]
+position = Vector2( 211, 335 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 9 )
+
+[node name="Division" type="Sprite" parent="."]
+position = Vector2( 476, 145 )
+texture = ExtResource( 6 )
+
+[node name="Division2" type="Sprite" parent="."]
+position = Vector2( 476, 179 )
+texture = ExtResource( 6 )
+
+[node name="Division3" type="Sprite" parent="."]
+position = Vector2( 604, 145 )
+texture = ExtResource( 6 )
+
+[node name="Division4" type="Sprite" parent="."]
+position = Vector2( 604, 179 )
+texture = ExtResource( 6 )
+
+[node name="Division5" type="Sprite" parent="."]
+position = Vector2( 800.5, 168.25 )
+scale = Vector2( 0.916667, 0.98 )
+texture = ExtResource( 6 )
+
+[node name="StarFull3" type="Sprite" parent="."]
+position = Vector2( 476, 225 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 8 )
+
+[node name="StarFull4" type="Sprite" parent="."]
+position = Vector2( 604, 225 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 8 )
+
+[node name="StarFull5" type="Sprite" parent="."]
+position = Vector2( 800, 225 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 8 )

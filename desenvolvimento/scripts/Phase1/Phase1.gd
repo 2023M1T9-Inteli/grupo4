@@ -17,12 +17,17 @@ onready var slot_roger = $SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger
 onready var slot_ana = $SlotExpansorAna/SlotCollectionAna/WorkSlotAna
 onready var slot_bento = $SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
-
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
+
 func _change_score(new_value): 
-	score += new_value
-	score_label.text = "Score: %0000006d" % score
+	Globals.score_phase_1 += new_value
+	if Globals.score_phase_1 >= 850 and Globals.score_phase_1 < 1100:
+		$StarProgress.value += 100
+	elif Globals.score_phase_1 >= 1100 and Globals.score_phase_1 < 1500:
+		$StarProgress2.value += 100
+	elif Globals.score_phase_1 == 1500:
+		$StarProgress3.value += 100
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
@@ -34,8 +39,13 @@ func _on_TimeDisplayer_timer_is_over():
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
 # EN_US: Function to change the scene when the player concludes all tasks
 func _on_PhaseProgress_completed_change():
-	get_tree().change_scene("res://scenes/Victory.tscn")
-
+	if Globals.score_phase_1 < 850:
+		get_tree().change_scene("res://scenes/Feedbacks/Defeat.tscn")
+	elif Globals.score_phase_1 >= 850 and Globals.score_phase_1 < 1100:
+		get_tree().change_scene("res://scenes/Feedbacks/VictoryLow.tscn")
+	elif Globals.score_phase_1 >= 1100 and Globals.score_phase_1 < 1500:
+		get_tree().change_scene("res://scenes/Feedbacks/VictoryMedium.tscn")
+	
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem finaliza uma tarefa

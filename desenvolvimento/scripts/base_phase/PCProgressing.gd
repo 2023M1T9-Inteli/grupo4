@@ -18,12 +18,12 @@ func _set_qtd_task(new_value) -> void:
 # PT_BR: Função para aumentar o valor da barra de progresso
 # EN_US: Function to increase progress bar value
 func increase_value():
-	# PT_BR: Aumenta o valor da propriedade value da barra de progresso em 9 unidades.
-	# EN_US: Increases the value of the progress bar's value property by 9
+	# PT_BR: Aumenta o valor da propriedade value da barra de progresso.
+	# EN_US: Increases the value of the progress bar's value property
 	self.value += value_to_increase
 	
-	# PT_BR: Se o valor atual da barra de progresso é igual a 81.
-	# EN_US: If the current progress bar value is equal to 81.
+	# PT_BR: Se o valor atual da barra de progresso é igual ao valor máximo.
+	# EN_US: If the current progress bar value is equal to max value.
 	if self.value == self.max_value:
 		# PT_BR: Emite o sinal que a barra de progresso atingiu 100%.
 		# EN_US: Emit the signal that the progress bar has reached 100%.
