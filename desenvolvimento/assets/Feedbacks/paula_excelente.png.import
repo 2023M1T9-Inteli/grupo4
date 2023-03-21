@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paula logo (1).png-32e80717cae0ce6326a08128be354bd1.stex"
+path="res://.import/paula_excelente.png-3a657baa09d6f037d4759fadc3ef4e68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Feedbacks/paula logo (1).png"
-dest_files=[ "res://.import/paula logo (1).png-32e80717cae0ce6326a08128be354bd1.stex" ]
+source_file="res://assets/Feedbacks/paula_excelente.png"
+dest_files=[ "res://.import/paula_excelente.png-3a657baa09d6f037d4759fadc3ef4e68.stex" ]
 
 [params]
 
