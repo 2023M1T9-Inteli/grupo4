@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rosalineidle2.png-bcd770839beba8947e5fbff8180170fc.stex"
+path="res://.import/computer_dark.png-d5199cff0c893591258d1e535e635b51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/Rosalineidle2.png"
-dest_files=[ "res://.import/Rosalineidle2.png-bcd770839beba8947e5fbff8180170fc.stex" ]
+source_file="res://assets/Dialog/computer_dark.png"
+dest_files=[ "res://.import/computer_dark.png-d5199cff0c893591258d1e535e635b51.stex" ]
 
 [params]
 
