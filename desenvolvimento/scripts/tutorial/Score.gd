@@ -1,9 +1,9 @@
 extends Node2D
-
+signal next_tutorial()
+signal back_tutorial()
 
 func _on_next_button_pressed():
-	get_tree().change_scene("res://scenes/Phases.tscn")
-
+	emit_signal("next_tutorial")
 
 func _on_back_button_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Task_introduction.tscn")
+	emit_signal("back_tutorial")

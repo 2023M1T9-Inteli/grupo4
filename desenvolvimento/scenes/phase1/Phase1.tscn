@@ -221,6 +221,7 @@ margin_right = 365.0
 margin_bottom = 955.0
 
 [node name="Pause" parent="." instance=ExtResource( 21 )]
+visible = false
 
 [node name="ScorePhase" type="Label" parent="."]
 margin_left = 206.0

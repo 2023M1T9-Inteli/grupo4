@@ -1,4 +1,6 @@
 extends Node2D
+signal next_tutorial(file)
+signal back_tutorial(file)
 
 #PT_BR: Variável que será usada para a movimentação da animação da ficha do funcionário da mesa dela para a mesa de expansão.
 var run_file1 = 0
@@ -31,7 +33,7 @@ func _process(delta):
 	
 	#PT_BR: Caso cont seja igual a -1 a cena do jogo é trocada para a cena anterior.
 	if cont == -1:
-		get_tree().change_scene("res://scenes/tutorial/Paula_introduction.tscn")
+		emit_signal("back_tutorial")
 		
 	#PT_BR: Caso cont seja igual a 0 o ghost da ficha pequena do trabalhador ficará visível, mas o ghost da ficha grande ficará invisível. Além disso, a velocidade de movimentação do pathfollow da ficha pequena torna e ser positiva. 
 	elif cont == 0:
@@ -53,7 +55,7 @@ func _process(delta):
 		
 	#PT_BR: Mas se cont for 3 a cena do jogo vai ser trocada a a seguinte.
 	elif cont == 3:
-		get_tree().change_scene("res://scenes/tutorial/Task_introduction.tscn")
+		emit_signal("next_tutorial")
 	
 #PT_BR: Funcção que detécta quando a ficha pequena é solta na mesa do funcionário, ao acontecer isso conto é acrescentado com + 1
 func _on_Slot_dropped_item(slot):	
@@ -63,7 +65,7 @@ func _on_Slot_get_item(slot):
 	cont += 1
 
 func _on_back_button_pressed():
-	cont -= 1
+	emit_signal("back_tutorial", self)
 
 func _on_next_button_pressed():
-	cont+=1
+	emit_signal("next_tutorial", self)
