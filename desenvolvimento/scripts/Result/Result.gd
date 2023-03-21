@@ -10,24 +10,9 @@ const results_texts: Dictionary = {
 }
 func _ready():
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
+	print(result)
 	$ScoreBar.value = result
 	$FinalScore.text = ("%00.0f" % result) + "%"
-	
-	
-	if result < 56:
-		result_description.bbcode_text = results_texts[0]
-	elif result < 73:
-		result_description.bbcode_text = results_texts[1]
-		$StarEmpty1.value = 100
-	elif result < 85:
-		result_description.bbcode_text = results_texts[2]
-		$StarEmpty1.value = 100
-		$StarEmpty2.value = 100
-	elif result < 100:
-		result_description.bbcode_text = results_texts[3]
-		$StarEmpty1.value = 100
-		$StarEmpty2.value = 100
-		$StarEmpty3.value = 100
 
 
 # PT_BR: Abre a cena de Fases
