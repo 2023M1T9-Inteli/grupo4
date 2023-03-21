@@ -64,5 +64,8 @@ location = 2
 slot_size = Vector2( 517, 250 )
 images_size = Vector2( 420, 250 )
 
+[node name="Task_soud" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -3, 375 )
+
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
