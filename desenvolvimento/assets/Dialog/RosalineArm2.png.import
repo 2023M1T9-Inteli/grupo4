@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle2.png-e3faff96f4530e1c3fee256f8707f5a9.stex"
+path="res://.import/RosalineArm2.png-cd9bf104c40976e02be88f397dedc76d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/idle2.png"
-dest_files=[ "res://.import/idle2.png-e3faff96f4530e1c3fee256f8707f5a9.stex" ]
+source_file="res://assets/Dialog/RosalineArm2.png"
+dest_files=[ "res://.import/RosalineArm2.png-cd9bf104c40976e02be88f397dedc76d.stex" ]
 
 [params]
 

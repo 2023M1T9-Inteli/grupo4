@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Design_sem_nome__3_-removebg-preview.png-9c0761a55dfab1e511f70d0ba4252d80.stex"
+path="res://.import/RosalineAnim.png-c95cbd2a57fe031c8dcbefa45555f3f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/Design_sem_nome__3_-removebg-preview.png"
-dest_files=[ "res://.import/Design_sem_nome__3_-removebg-preview.png-9c0761a55dfab1e511f70d0ba4252d80.stex" ]
+source_file="res://assets/Dialog/RosalineAnim.png"
+dest_files=[ "res://.import/RosalineAnim.png-c95cbd2a57fe031c8dcbefa45555f3f5.stex" ]
 
 [params]
 

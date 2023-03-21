@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PCApagado.png-60a57f55da66ad8d9faab6ffc313c4e7.stex"
+path="res://.import/RosalineArm1.png-80c82e92efe6c59422127566b70e0c8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/PCApagado.png"
-dest_files=[ "res://.import/PCApagado.png-60a57f55da66ad8d9faab6ffc313c4e7.stex" ]
+source_file="res://assets/Dialog/RosalineArm1.png"
+dest_files=[ "res://.import/RosalineArm1.png-80c82e92efe6c59422127566b70e0c8c.stex" ]
 
 [params]
 
