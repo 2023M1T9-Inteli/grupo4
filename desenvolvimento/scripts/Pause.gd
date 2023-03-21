@@ -25,3 +25,8 @@ func _on_QuitButton_pressed():
 func _on_ExitButton_pressed():
 	self.is_paused = !is_paused	
 	pass # Replace with function body.
+
+
+func _on_TutorialButton_pressed():
+	$PopupMenu.open_tutorial()
+	pass # Replace with function body.

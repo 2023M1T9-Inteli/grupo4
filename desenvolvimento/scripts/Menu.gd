@@ -4,7 +4,7 @@ extends Control
 # PT_BR: Inicia o jogo
 # EN_US: Start the game
 func _on_StartButton_pressed():
-	$TutorialPopup.show()
+	$TutorialPopup.open_tutorial()
 
 
 # PT_BR: Abre a cena de opções

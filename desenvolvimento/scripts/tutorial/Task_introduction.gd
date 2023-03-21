@@ -1,5 +1,6 @@
 extends Node2D
-
+signal next_tutorial(task)
+signal back_tutorial(task)
 var run_task1 = 0
 var run_task2 = 0
 var cont = 0 
@@ -34,7 +35,7 @@ func _process(delta):
 	path_table_worker.set_offset(path_table_worker.get_offset()+run_task2)
 	
 	if cont == -1:
-		get_tree().change_scene("res://scenes/tutorial/File_explanning.tscn")
+		emit_signal("back_tutorial")
 
 	elif cont == 0:
 		$Path2D/path_table_worker/SmallTask.visible = false
@@ -80,7 +81,7 @@ func _process(delta):
 		clock.visible = false
 		
 	elif cont == 5:
-		get_tree().change_scene("res://scenes/tutorial/Score.tscn")
+		emit_signal("next_tutorial")
 
 func _on_testeTarefa02_dropped_item(slot):
 	cont += 1
@@ -89,7 +90,7 @@ func _on_WorkSlotKira_get_item(slot):
 	cont += 1
 	
 func _on_next_button_pressed():
-	cont += 1
+	emit_signal("next_tutorial",self)
 
 func _on_back_button_pressed():
-	cont -=1 
+	emit_signal("back_tutorial",self)
