@@ -6,11 +6,11 @@
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=5]
 [ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/items/profile_sheets/kira_small_sheet.png" type="Texture" id=7]
+[ext_resource path="res://assets/items/profile_sheets/bento_light_sheet.png" type="Texture" id=7]
 [ext_resource path="res://assets/Drawer/Tasks/task_teste.png" type="Texture" id=8]
-[ext_resource path="res://assets/items/profile_sheets/roger_small_sheet.png" type="Texture" id=9]
-[ext_resource path="res://assets/items/profile_sheets/ana_small_sheet.png" type="Texture" id=10]
-[ext_resource path="res://assets/items/profile_sheets/bento_small_sheet.png" type="Texture" id=11]
+[ext_resource path="res://assets/items/profile_sheets/roger_light_sheet.png" type="Texture" id=9]
+[ext_resource path="res://assets/items/profile_sheets/kira_light_sheet.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/profile_sheets/ana_light_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scripts/Phase1/Phase1.gd" type="Script" id=14]
@@ -88,7 +88,7 @@ uid = "kira_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
-table_image = ExtResource( 7 )
+table_image = ExtResource( 10 )
 drawer_image = ExtResource( 5 )
 boss_table_image = ExtResource( 19 )
 
@@ -160,7 +160,7 @@ uid = "ana_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
-table_image = ExtResource( 10 )
+table_image = ExtResource( 11 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 24 )
 
@@ -196,7 +196,7 @@ uid = "bento_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
-table_image = ExtResource( 11 )
+table_image = ExtResource( 7 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 20 )
 
