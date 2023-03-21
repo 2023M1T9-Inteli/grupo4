@@ -23,14 +23,11 @@ func _change_score(new_value):
 	Globals.score_phase_1 += new_value
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	if result > 56:
-		$StarProgress.value += 100
-	elif result >= 73:
-		$StarProgress.value += 100
-		$StarProgress2.value += 100
+		$StarProgress.value = 100
+	elif result > 73:
+		$StarProgress2.value = 100
 	elif result > 85:
-		$StarProgress.value += 100
-		$StarProgress2.value += 100
-		$StarProgress3.value += 100
+		$StarProgress3.value = 100
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
