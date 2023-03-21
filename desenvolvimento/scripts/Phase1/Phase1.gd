@@ -21,11 +21,12 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 
 func _change_score(new_value): 
 	Globals.score_phase_1 += new_value
-	if Globals.score_phase_1 >= 850 and Globals.score_phase_1 < 1100:
+	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
+	if result > 56:
 		$StarProgress.value += 100
-	elif Globals.score_phase_1 >= 1100 and Globals.score_phase_1 < 1500:
+	elif Globals.score_phase_1 >= 73:
 		$StarProgress2.value += 100
-	elif Globals.score_phase_1 == 1500:
+	elif Globals.score_phase_1 > 85:
 		$StarProgress3.value += 100
 
 

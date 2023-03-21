@@ -9,8 +9,6 @@ const results_texts: Dictionary = {
 	3: 'Parabéns! Seu grau de acerto em identificar o nível de competência, motivação e preparo das pessoas da equipe para delegar tarefas de acordo com essas referências é excelente! Você está promovendo excelência nas entregas do time, desenvolvendo as habilidades deles. O proximo passo é delegar tarefas que desafiem as competências atuais de forma que as pessoas possam ir além. O nível de motivação de cada pessoa pode ser um bom indicativo.'
 }
 func _ready():
-	print(Globals.score_phase_1)
-	print(Globals.max_score_phase_1)
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$ScoreBar.value = result
 	$FinalScore.text = ("%00.0f" % result) + "%"
