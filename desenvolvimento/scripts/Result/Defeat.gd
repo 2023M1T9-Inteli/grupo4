@@ -5,3 +5,8 @@ func _ready():
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$FinalScore.text = ("%00.0f" % result) + "%"
 
+
+# PT_BR: Abre a cena de Fases
+# EN_US: Open the phases scene
+func _on_BackButton_pressed():
+	get_tree().change_scene("res://scenes/Phases.tscn")
