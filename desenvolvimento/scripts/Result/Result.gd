@@ -30,3 +30,9 @@ func _ready():
 		$StarEmpty1.value = 100
 		$StarEmpty2.value = 100
 		$StarEmpty3.value = 100
+
+
+# PT_BR: Abre a cena de Fases
+# EN_US: Open the phases scene
+func _on_BackButton_pressed():
+	get_tree().change_scene("res://scenes/Phases.tscn")
