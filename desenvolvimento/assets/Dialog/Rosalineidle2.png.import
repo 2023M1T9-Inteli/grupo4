@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/text_box-removebg-preview.png-07d89f5518356a24061d6a7bceefad75.stex"
+path="res://.import/Rosalineidle2.png-bcd770839beba8947e5fbff8180170fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/text_box-removebg-preview.png"
-dest_files=[ "res://.import/text_box-removebg-preview.png-07d89f5518356a24061d6a7bceefad75.stex" ]
+source_file="res://assets/Dialog/Rosalineidle2.png"
+dest_files=[ "res://.import/Rosalineidle2.png-bcd770839beba8947e5fbff8180170fc.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

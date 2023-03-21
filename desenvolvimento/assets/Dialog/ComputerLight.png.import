@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex"
+path="res://.import/ComputerLight.png-7c5a198c7721892e1b22275b9d55efea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/rosalinne_braco (2).png"
-dest_files=[ "res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex" ]
+source_file="res://assets/Dialog/ComputerLight.png"
+dest_files=[ "res://.import/ComputerLight.png-7c5a198c7721892e1b22275b9d55efea.stex" ]
 
 [params]
 

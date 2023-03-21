@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle1.png-c6aef607f3a766312c6b7602ce367a4b.stex"
+path="res://.import/DialogBox.png-8b0c9d9800301052106b02bf050582a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/idle1.png"
-dest_files=[ "res://.import/idle1.png-c6aef607f3a766312c6b7602ce367a4b.stex" ]
+source_file="res://assets/Dialog/DialogBox.png"
+dest_files=[ "res://.import/DialogBox.png-8b0c9d9800301052106b02bf050582a5.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
