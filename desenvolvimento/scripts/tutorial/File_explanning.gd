@@ -11,7 +11,7 @@ var cont = 0
 #PT_BR: Lista de textos que serão exibidos no Lavel.
 var text = [
 	"""Você deve [color=#EE222B]conhecer o time[/color].
-Para isso, tente [color=#3a87ae]arrasta a ficha[/color] que está na mesa de cada colaborador para a mesa de expansão, a fim de analisar as suas habilidades.""" ,
+Para isso, tente [color=#3a87ae]arrastar a ficha[/color] que está na mesa de cada colaborador para a mesa de expansão, a fim de analisar as suas habilidades.""" ,
 	"""Muito bem!!!
 Agora, para [color=#EE222B]devolver[/color] a ficha da pessoa colaboradora em sua respectiva mesa, [color=#3a87ae]basta arrastá-la de volta[/color].""",
 	"""Parabéns! Essa etapa do jogo foi concluída!

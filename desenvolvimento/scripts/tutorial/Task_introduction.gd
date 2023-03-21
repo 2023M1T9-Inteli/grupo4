@@ -5,7 +5,7 @@ var run_task1 = 0
 var run_task2 = 0
 var cont = 0 
 var text = [
-	"""Agora, é preciso [color=#EE222B]ler as atividades[/color].
+	"""Agora, é preciso [color=#EE222B]ler as tarefas[/color].
 Para isso, tente arrastar a pasta do arquivo para a mesa de expansão, como demonstra o exemplo.""",
 	"""Agora que a tarefa está expandida, é preciso que [color=#EE222B]você interprete as suas demandas[/color].
 Após isso, [color=#3a87ae]leve-a para o personagem compatível[/color] com as suas demandas""",

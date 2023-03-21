@@ -99,8 +99,8 @@ margin_bottom = 680.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = true
-bbcode_text = "Durante o jogo, [color=#EE222B]você será a Paula[/color] e a sua equipe precisa que você delgue as tarefas corretamente, a fim de concluir o projeto do cliente."
-text = "Durante o jogo, você será a Paula e a sua equipe precisa que você delgue as tarefas corretamente, a fim de concluir o projeto do cliente."
+bbcode_text = "Durante o jogo, [color=#EE222B]você será a Paula[/color] e a sua equipe precisa que você delegue as tarefas corretamente, a fim de concluir o projeto do cliente."
+text = "Durante o jogo, você será a Paula e a sua equipe precisa que você delegue as tarefas corretamente, a fim de concluir o projeto do cliente."
 
 [connection signal="button_up" from="back_button" to="." method="_on_back_button_button_up"]
 [connection signal="pressed" from="next_button" to="." method="_on_next_button_pressed"]
