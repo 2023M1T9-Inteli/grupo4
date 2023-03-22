@@ -1,8 +1,9 @@
 extends Node2D
 
+onready var phase_1_musica = preload ("res://assets/Audio/music_phase_1.mp3")
 
 func _ready():
-	pass
+	Audio.change_music(phase_1_musica)
 # PT_BR: Abre a cena do level 1
 # EN_US: Opens the level 1 scene
 func _on_Phase1Button_pressed():
