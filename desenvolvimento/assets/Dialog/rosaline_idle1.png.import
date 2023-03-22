@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RosalineAnim.png-c95cbd2a57fe031c8dcbefa45555f3f5.stex"
+path="res://.import/rosaline_idle1.png-65f8ac5d126450a3275e83648da419ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/RosalineAnim.png"
-dest_files=[ "res://.import/RosalineAnim.png-c95cbd2a57fe031c8dcbefa45555f3f5.stex" ]
+source_file="res://assets/Dialog/rosaline_idle1.png"
+dest_files=[ "res://.import/rosaline_idle1.png-65f8ac5d126450a3275e83648da419ad.stex" ]
 
 [params]
 

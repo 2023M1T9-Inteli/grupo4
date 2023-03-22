@@ -41,5 +41,6 @@ func _ready():
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
+	Globals.player_score_phase_1 = Globals.score_phase_1
 	Globals.score_phase_1 = 0
 	get_tree().change_scene("res://scenes/Phases.tscn")
