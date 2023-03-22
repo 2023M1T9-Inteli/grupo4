@@ -201,10 +201,10 @@ drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 20 )
 
 [node name="TimeDisplayer" parent="." instance=ExtResource( 15 )]
-margin_left = 1045.0
-margin_top = 10.0
-margin_right = 1164.0
-margin_bottom = 73.0
+margin_left = 1019.0
+margin_top = 14.0
+margin_right = 1172.0
+margin_bottom = 111.0
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
