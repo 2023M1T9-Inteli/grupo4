@@ -1,6 +1,13 @@
 extends Node2D
 
 onready var result_description = $ResultDescription
+onready var score_bar = $ScoreBar
+onready var star1 = $ScoreBar/StarFull1
+onready var star2 = $ScoreBar/StarFull2
+onready var star3 = $ScoreBar/StarFull3
+
+var green_bar = preload("res://assets/Feedbacks/progress_bars/progress_bar_full_green.png")
+var yellow_bar = preload("res://assets/Feedbacks/progress_bars/progress_bar_full_yellow.png")
 
 var paula_bad = preload("res://assets/Feedbacks/paula_bad.png")
 var paula_low = preload("res://assets/Feedbacks/paula low.png")
@@ -17,6 +24,7 @@ const results_texts: Dictionary = {
 	3: 'Parabéns! Seu grau de acerto em identificar o nível de competência, motivação e preparo da equipe para delegar tarefas de acordo com essas referências é excelente! Você está promovendo excelência nas entregas do time, desenvolvendo as habilidades deles. O proximo passo é delegar tarefas que desafiem as competências atuais de forma que as pessoas possam ir além. O nível de motivação de cada pessoa pode ser um bom indicativo.'
 }
 func _ready():
+	Globals.score_phase_1 = 1270
 	result = float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$FinalScore.text = ("%00.0f" % result) + "%"	
 	
@@ -37,11 +45,11 @@ func _process(delta):
 	if count <= result:
 		$ScoreBar.value = count
 		if count > 53:
-			$ScoreBar/StarFull1.change_value(clamp((result - 53), 0, 3)) 
+			star1.change_value(clamp((result - 53), 0, 3)) 
 		if count > 69:
-			$ScoreBar/StarFull2.change_value(clamp((result - 69), 0, 4))
+			star2.change_value(clamp((result - 69), 0, 4))
 		if count > 81:
-			$ScoreBar/StarFull3.change_value(clamp((result - 81), 0, 4))
+			star3.change_value(clamp((result - 81), 0, 4))
 		count += 1
 
 
@@ -51,3 +59,15 @@ func _on_BackButton_pressed():
 	Globals.player_score_phase_1 = Globals.score_phase_1
 	Globals.score_phase_1 = 0
 	get_tree().change_scene("res://scenes/Phases.tscn")
+
+
+func _on_StarFull1_completed_change(texture_progress_node):
+	pass 
+
+
+func _on_StarFull2_completed_change(texture_progress_node):
+	score_bar.texture_progress = yellow_bar
+
+
+func _on_StarFull3_completed_change(texture_progress_node):
+	score_bar.texture_progress = green_bar
