@@ -2,6 +2,8 @@ extends CanvasLayer
 
 var is_paused = false setget set_is_paused
 
+var phase_1_music = preload("res://assets/Audio/music_phase_1.mp3")
+
 func set_is_paused(value):
 	is_paused = value
 	get_tree().paused = is_paused
@@ -12,6 +14,8 @@ func _on_ContinueButton_pressed():
 	self.is_paused = false
 	self.hide()
 	$Depaused_sound.play()
+	Audio.change_music(phase_1_music)
+	
 
 func _on_OptionsButton_pressed():
 	$Options.show()
