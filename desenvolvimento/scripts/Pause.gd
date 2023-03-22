@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 var is_paused = false setget set_is_paused
-var theme_music = preload("res://assets/Audio/main_music.mp3")
 
 func set_is_paused(value):
 	is_paused = value
@@ -21,7 +20,7 @@ func _on_OptionsButton_pressed():
 func _on_QuitButton_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
 	self.is_paused = false
-	Audio.change_music(theme_music)
+	
 
 
 func _on_ExitButton_pressed():

@@ -16,3 +16,14 @@ func _on_TextureButton_mouse_entered():
 # EN_US: Change mouse cursor when leaving "TextureButton"
 func _on_TextureButton_mouse_exited():
 	Input.set_custom_mouse_cursor(normal_cursor, 0, Vector2(16,16))
+
+
+
+
+func _on_WorkerTableControl2_get_item(slot):
+	$Task_soud.play()
+
+
+
+func _on_ProfileControl2_get_item(slot):
+	$Task_soud.play()

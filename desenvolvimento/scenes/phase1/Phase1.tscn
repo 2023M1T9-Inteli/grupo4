@@ -268,10 +268,6 @@ stream = ExtResource( 27 )
 [node name="Conclued_task" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 28 )
 
-[node name="Pause_sound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 15, 13 )
-scale = Vector2( 1.2, 1.2 )
-
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]

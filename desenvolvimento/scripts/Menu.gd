@@ -1,5 +1,8 @@
 extends Control
 
+# PT_BR: Variável que carrega a música do jogo
+# EN_US: Variable that loads the game's music
+var theme_music = preload("res://assets/Audio/main_music.mp3")
 
 # PT_BR: Inicia o jogo
 # EN_US: Start the game
@@ -18,3 +21,6 @@ func _on_OptionsButton_pressed():
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
 
+
+func _ready():
+	Audio.change_music(theme_music)
