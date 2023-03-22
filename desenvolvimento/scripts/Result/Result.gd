@@ -24,7 +24,6 @@ const results_texts: Dictionary = {
 	3: 'Parabéns! Seu grau de acerto em identificar o nível de competência, motivação e preparo da equipe para delegar tarefas de acordo com essas referências é excelente! Você está promovendo excelência nas entregas do time, desenvolvendo as habilidades deles. O proximo passo é delegar tarefas que desafiem as competências atuais de forma que as pessoas possam ir além. O nível de motivação de cada pessoa pode ser um bom indicativo.'
 }
 func _ready():
-	Globals.score_phase_1 = 1270
 	result = float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$FinalScore.text = ("%00.0f" % result) + "%"	
 	
@@ -37,13 +36,19 @@ func _ready():
 	elif result < 85:
 		result_description.bbcode_text = results_texts[2]
 		$PaulaSprite.texture = paula_medium
-	elif result < 100:
+	else:
 		result_description.bbcode_text = results_texts[3]
 		$PaulaSprite.texture = paula_execelent
 
 func _process(delta):
-	if count <= result:
-		$ScoreBar.value = count
+	if count < 1:
+		_change_bar()
+		count += 1
+
+
+func _change_bar():
+	while count <= result:
+		score_bar.value = count
 		if count > 53:
 			star1.change_value(clamp((result - 53), 0, 3)) 
 		if count > 69:
@@ -51,7 +56,7 @@ func _process(delta):
 		if count > 81:
 			star3.change_value(clamp((result - 81), 0, 4))
 		count += 1
-
+		yield(get_tree().create_timer(0.01), "timeout")
 
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
@@ -62,11 +67,11 @@ func _on_BackButton_pressed():
 
 
 func _on_StarFull1_completed_change(texture_progress_node):
-	pass 
+	score_bar.texture_progress = yellow_bar
 
 
 func _on_StarFull2_completed_change(texture_progress_node):
-	score_bar.texture_progress = yellow_bar
+	pass
 
 
 func _on_StarFull3_completed_change(texture_progress_node):
