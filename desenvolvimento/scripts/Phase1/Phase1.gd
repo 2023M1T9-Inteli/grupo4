@@ -14,8 +14,7 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 
 # PT_BR: Resetar a variável de pontos 
 # EN_US:
-func _ready():
-	Globals.score_phase_1 = 0
+
 
 #PT_BR: A musica do jogo será trocada para essa.
 # EN_US:
@@ -118,7 +117,7 @@ func _input(event):
 #PT_BR: Função que irá iniciar a nova música da fase.
 func _ready():
 	Audio.change_music(music_phase_1)
-
+	Globals.score_phase_1 = 0
 
 
 func _on_Pause_button_pressed():

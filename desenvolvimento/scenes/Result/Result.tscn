@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Feedbacks/progress_bars/progress_bar_full_red..png" type="Texture" id=1]
 [ext_resource path="res://assets/Feedbacks/division.png" type="Texture" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=11]
 [ext_resource path="res://scripts/Result/StarFull.gd" type="Script" id=12]
+[ext_resource path="res://assets/Audio/2_Star.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/3_Star.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/Audio/1_Star.wav" type="AudioStream" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -98,6 +101,11 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
+[node name="Audio_1_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
+position = Vector2( -11075, -3025 )
+scale = Vector2( 25, 25 )
+stream = ExtResource( 15 )
+
 [node name="StarFull2" type="TextureProgress" parent="ScoreBar"]
 margin_left = 517.0
 margin_top = -10.0
@@ -109,6 +117,9 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
+[node name="Audio_2_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
+stream = ExtResource( 13 )
+
 [node name="StarFull3" type="TextureProgress" parent="ScoreBar"]
 margin_left = 606.0
 margin_top = -10.0
@@ -119,6 +130,9 @@ max_value = 4.0
 texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
+
+[node name="Audio_3_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
+stream = ExtResource( 14 )
 
 [node name="Result" type="Label" parent="ScoreBar"]
 margin_left = -2.0
