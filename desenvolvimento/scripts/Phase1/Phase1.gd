@@ -17,6 +17,13 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 func _ready():
 	Globals.score_phase_1 = 0
 
+#PT_BR: A musica do jogo será trocada para essa.
+# EN_US:
+var music_phase_1 = preload("res://assets/Audio/music_phase_1.mp3")
+
+var paused_sound = preload("res://assets/Audio/Pause.wav")
+
+
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
 func _change_score(new_value): 
@@ -55,6 +62,7 @@ func _on_Map_ana_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_ana._clearSlot()
 	slot_ana.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_bento_fineshed_task(worker):
@@ -62,6 +70,7 @@ func _on_Map_bento_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_bento._clearSlot()
 	slot_bento.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_kira_fineshed_task(worker):
@@ -69,6 +78,7 @@ func _on_Map_kira_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_kira._clearSlot()
 	slot_kira.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_roger_fineshed_task(worker):
@@ -76,6 +86,7 @@ func _on_Map_roger_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_roger._clearSlot()
 	slot_roger.can_give = true
+	$Conclued_task.play()
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem
@@ -99,4 +110,16 @@ func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
+#PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é precionado.
+func _input(event):
+	if event.is_action_pressed("click"):
+		$Click_sound.play()
 
+#PT_BR: Função que irá iniciar a nova música da fase.
+func _ready():
+	Audio.change_music(music_phase_1)
+
+
+
+func _on_Pause_button_pressed():
+	Audio.change_music(paused_sound)
