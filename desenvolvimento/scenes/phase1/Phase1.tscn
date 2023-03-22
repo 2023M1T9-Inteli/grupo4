@@ -21,8 +21,8 @@
 [ext_resource path="res://assets/items/profile_sheets/kira_big_sheet.png" type="Texture" id=19]
 [ext_resource path="res://assets/items/profile_sheets/bento_big_sheet.png" type="Texture" id=20]
 [ext_resource path="res://scenes/Pause.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=22]
-[ext_resource path="res://assets/Feedbacks/star_full (1).png" type="Texture" id=23]
+[ext_resource path="res://assets/Feedbacks/little_star_full.png" type="Texture" id=22]
+[ext_resource path="res://assets/Feedbacks/little_star_empty.png" type="Texture" id=23]
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Timer/circulo.png" type="Texture" id=25]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
@@ -223,42 +223,51 @@ margin_bottom = 955.0
 [node name="Pause" parent="." instance=ExtResource( 21 )]
 visible = false
 
-[node name="ScorePhase" type="Label" parent="."]
-margin_left = 206.0
-margin_top = 21.0
-margin_right = 575.0
-margin_bottom = 85.0
+[node name="Scores" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Scores"]
+margin_left = 289.0
+margin_top = 24.0
+margin_right = 646.0
+margin_bottom = 79.0
+color = Color( 0.894118, 0.894118, 0.894118, 0.647059 )
+
+[node name="ScorePhase" type="Label" parent="Scores"]
+margin_left = 291.0
+margin_top = 18.0
+margin_right = 487.0
+margin_bottom = 82.0
 custom_fonts/font = SubResource( 1 )
 text = "Score:"
 align = 1
 valign = 1
 
-[node name="StarProgress" type="TextureProgress" parent="."]
+[node name="StarProgress1" type="TextureProgress" parent="Scores"]
 margin_left = 477.0
 margin_top = 28.0
-margin_right = 2057.0
-margin_bottom = 1556.0
-rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+margin_right = 525.0
+margin_bottom = 74.0
+max_value = 56.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
 
-[node name="StarProgress2" type="TextureProgress" parent="."]
-margin_left = 538.0
-margin_top = 29.0
-margin_right = 2118.0
-margin_bottom = 1557.0
-rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+[node name="StarProgress2" type="TextureProgress" parent="Scores"]
+margin_left = 534.0
+margin_top = 28.0
+margin_right = 582.0
+margin_bottom = 74.0
+max_value = 17.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
 
-[node name="StarProgress3" type="TextureProgress" parent="."]
-margin_left = 594.0
-margin_top = 29.0
-margin_right = 2174.0
-margin_bottom = 1557.0
-rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+[node name="StarProgress3" type="TextureProgress" parent="Scores"]
+margin_left = 587.0
+margin_top = 28.0
+margin_right = 635.0
+margin_bottom = 74.0
+max_value = 12.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
 
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
