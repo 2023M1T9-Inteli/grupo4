@@ -1,6 +1,10 @@
 extends Node2D
 
 onready var result_description = $ResultDescription
+var paula_bad = preload("res://assets/Feedbacks/paula_bad.png")
+var paula_low = preload("res://assets/Feedbacks/paula low.png")
+var paula_medium = preload("res://assets/Feedbacks/paula_médio.png")
+var paula_execelent = preload("res://assets/Feedbacks/paula_excelente.png")
 
 const results_texts: Dictionary = {
 	0: 'Você está com dificuldades para identificar o nível de competência, motivação e preparo das pessoas da equipe para delegar tarefas de acordo com essas referências. Sem isso, além de não ter as tarefas executadas adequadamente, pode não estar desenvolvendo o time. :(',
@@ -12,10 +16,26 @@ func _ready():
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	print(result)
 	$ScoreBar.value = result
-	$FinalScore.text = ("%00.0f" % result) + "%"
+	$FinalScore.text = ("%00.0f" % result) + "%"	
+	
+	if result < 56 :
+		result_description.bbcode_text = results_texts[0]
+		$PaulaSprite.texture = paula_bad
+	elif result < 73:
+		result_description.bbcode_text = results_texts[1]
+		$PaulaSprite.texture = paula_low
+	elif result < 85:
+		result_description.bbcode_text = results_texts[2]
+		$PaulaSprite.texture = paula_medium
+	elif result < 100:
+		result_description.bbcode_text = results_texts[3]
+		$PaulaSprite.texture = paula_execelent
+
 
 
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
+	Globals.player_score_phase_1 = Globals.score_phase_1
+	Globals.score_phase_1 = 0
 	get_tree().change_scene("res://scenes/Phases.tscn")

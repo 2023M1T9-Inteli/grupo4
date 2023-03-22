@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex"
+path="res://.import/paula_time.png-46062a5a798edbdfe2b9d49a01e9eca5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/rosalinne_braco (2).png"
-dest_files=[ "res://.import/rosalinne_braco (2).png-7093306fadff801d10c0f8aa4da17451.stex" ]
+source_file="res://assets/Feedbacks/paula_time.png"
+dest_files=[ "res://.import/paula_time.png-46062a5a798edbdfe2b9d49a01e9eca5.stex" ]
 
 [params]
 

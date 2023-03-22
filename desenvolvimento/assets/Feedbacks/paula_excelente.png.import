@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Design_sem_nome__3_-removebg-preview.png-9c0761a55dfab1e511f70d0ba4252d80.stex"
+path="res://.import/paula_excelente.png-3a657baa09d6f037d4759fadc3ef4e68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/Design_sem_nome__3_-removebg-preview.png"
-dest_files=[ "res://.import/Design_sem_nome__3_-removebg-preview.png-9c0761a55dfab1e511f70d0ba4252d80.stex" ]
+source_file="res://assets/Feedbacks/paula_excelente.png"
+dest_files=[ "res://.import/paula_excelente.png-3a657baa09d6f037d4759fadc3ef4e68.stex" ]
 
 [params]
 

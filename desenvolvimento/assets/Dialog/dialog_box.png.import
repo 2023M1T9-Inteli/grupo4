@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/text_box-removebg-preview.png-07d89f5518356a24061d6a7bceefad75.stex"
+path="res://.import/dialog_box.png-04a91cf202427c0eca97aef981f15bff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/text_box-removebg-preview.png"
-dest_files=[ "res://.import/text_box-removebg-preview.png-07d89f5518356a24061d6a7bceefad75.stex" ]
+source_file="res://assets/Dialog/dialog_box.png"
+dest_files=[ "res://.import/dialog_box.png-04a91cf202427c0eca97aef981f15bff.stex" ]
 
 [params]
 

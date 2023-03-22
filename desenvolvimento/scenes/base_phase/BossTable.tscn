@@ -55,14 +55,14 @@ images_size = Vector2( 420, 230 )
 [node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
 margin_top = 280.0
 margin_right = 517.0
-margin_bottom = 530.0
+margin_bottom = 544.0
 rect_min_size = Vector2( 517, 250 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 location = 2
 slot_size = Vector2( 517, 250 )
-images_size = Vector2( 420, 250 )
+images_size = Vector2( 436, 264 )
 
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]

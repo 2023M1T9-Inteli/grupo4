@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rosalinneAnimacao.png-dc985021307395d7967b815a2e1e2cb7.stex"
+path="res://.import/rosaline_anim.png-b9683fe2185b6ff8a9d0c59f95568b8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/rosalinneAnimacao.png"
-dest_files=[ "res://.import/rosalinneAnimacao.png-dc985021307395d7967b815a2e1e2cb7.stex" ]
+source_file="res://assets/Dialog/rosaline_anim.png"
+dest_files=[ "res://.import/rosaline_anim.png-b9683fe2185b6ff8a9d0c59f95568b8a.stex" ]
 
 [params]
 

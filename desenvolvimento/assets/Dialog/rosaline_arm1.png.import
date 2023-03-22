@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PCNormal.png-ea2765923ce7ccd5bc74995e8dc5db71.stex"
+path="res://.import/rosaline_arm1.png-b13f7db82bc15dabeed5191024fb7751.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/PCNormal.png"
-dest_files=[ "res://.import/PCNormal.png-ea2765923ce7ccd5bc74995e8dc5db71.stex" ]
+source_file="res://assets/Dialog/rosaline_arm1.png"
+dest_files=[ "res://.import/rosaline_arm1.png-b13f7db82bc15dabeed5191024fb7751.stex" ]
 
 [params]
 
