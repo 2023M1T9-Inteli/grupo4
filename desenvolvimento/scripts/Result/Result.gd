@@ -1,10 +1,14 @@
 extends Node2D
 
 onready var result_description = $ResultDescription
+
 var paula_bad = preload("res://assets/Feedbacks/paula_bad.png")
 var paula_low = preload("res://assets/Feedbacks/paula low.png")
 var paula_medium = preload("res://assets/Feedbacks/paula_médio.png")
 var paula_execelent = preload("res://assets/Feedbacks/paula_excelente.png")
+
+var result := 0.0
+var count = 0
 
 const results_texts: Dictionary = {
 	0: 'Você está com dificuldades para identificar o nível de competência, motivação e preparo das pessoas da equipe para delegar tarefas de acordo com essas referências. Sem isso, além de não ter as tarefas executadas adequadamente, pode não estar desenvolvendo o time. :(',
@@ -13,9 +17,7 @@ const results_texts: Dictionary = {
 	3: 'Parabéns! Seu grau de acerto em identificar o nível de competência, motivação e preparo das pessoas da equipe para delegar tarefas de acordo com essas referências é excelente! Você está promovendo excelência nas entregas do time, desenvolvendo as habilidades deles. O proximo passo é delegar tarefas que desafiem as competências atuais de forma que as pessoas possam ir além. O nível de motivação de cada pessoa pode ser um bom indicativo.'
 }
 func _ready():
-	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
-	print(result)
-	$ScoreBar.value = result
+	result = float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$FinalScore.text = ("%00.0f" % result) + "%"	
 	
 	if result < 56 :
@@ -31,6 +33,16 @@ func _ready():
 		result_description.bbcode_text = results_texts[3]
 		$PaulaSprite.texture = paula_execelent
 
+func _process(delta):
+	if count <= result:
+		$ScoreBar.value = count
+		if count > 53:
+			$ScoreBar/StarFull1.change_value(clamp((result - 53), 0, 3)) 
+		if count > 69:
+			$ScoreBar/StarFull2.change_value(clamp((result - 69), 0, 4))
+		if count > 81:
+			$ScoreBar/StarFull3.change_value(clamp((result - 81), 0, 4))
+		count += 1
 
 
 # PT_BR: Abre a cena de Fases
