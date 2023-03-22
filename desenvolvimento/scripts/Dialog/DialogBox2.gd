@@ -1,4 +1,5 @@
 extends NinePatchRect
+
 # PT_BR: Variáveis locais
 # EN_US: Local variables
 onready var text_element := $Text
@@ -8,34 +9,34 @@ var counter = 0
 signal finished_dialog()
 
 func _ready():
-	$InitialText.bbcode_text = "[color=#d69856]Rosaline[/color]: Olá, tudo bem?"
+	$InitialText.bbcode_text = "[color=#78859c]Chico[/color]: E lasqueira, Tudo bão?"
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "[color=#d69856]Rosaline[/color]: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência!",
+			"text": "[color=#78859c]Chico[/color]: Meu nome é Chico, sou prefeito da cidade chicolândia e tenho inúmeros deveres para cumprir. Uma das área que sou responsável e pela organização e planejamento de eventos da cidade.",
 			"anim": "idle",
-			"showPC": false,
+			"showTent": false,
 		},
 	1: {
-			"text": "[color=#d69856]Rosaline[/color]: Minha empresa está trabalhando no desenvolvimento de novos hardwares para comercialização, e nossos investidores estão nos pressionando para que o projeto saia o mais rápido possível. ",
+			"text": "[color=#78859c]Chico[/color]: Com a data da festa junina chegando, tenho que organizar a maior festa junina da história de chocolândia, porém como estou muito sobrecarregado nas outras áreas da prefeitura e tenho pouco tempo, preciso de vocês.",
 			"anim": "arm_up",
-			"showPC": true,
+			"showTent": true,
 		}, 
 	2: {
-			"text": "[color=#d69856]Rosaline[/color]:Mesmo com bom ritmo de trabalho, estamos atrasados e acreditamos que a sua empresa poderá nos auxiliar em acelerar esse processo, pois sua equipe possui os profissionais mais qualificados do mercado. ",
+			"text": "[color=#78859c]Chico[/color]: Contamos com sua ajuda e de seu time para conseguirmos montar a festa!",
 			"anim": "idle",
-			"showPC": false,
+			"showTent": false,
 		},
 	3: {
-			"text": "[color=#d69856]Rosaline[/color]: Então, chega de conversa fiada e vamos ao trabalho! ",
+			"text": "[color=#78859c]Chico[/color]: Vamos logo trabaiar uai!",
 			"anim": "idle",
-			"showPC": false,
+			"showTent": false,
 		},
 	4: {
 			"text": "",
 			"anim": "idle",
-			"showPC": false,
+			"showTent": false,
 		},
 	}
 
@@ -72,9 +73,9 @@ func show_message() -> void:
 		# EN_US(2): the list
 		var write_text = message_queue[counter]["text"]
 		var anim = message_queue[counter]["anim"]
-		var show_pc = message_queue[counter]["showPC"]
+		var show_tent = message_queue[counter]["showTent"]
 		change_speech(write_text, anim)
-		self.get_parent().show_pc(show_pc)
+		self.get_parent().show_tent(show_tent)
 		timer.start()
 		counter += 1
 
@@ -88,6 +89,3 @@ func _on_Timer_timeout():
 		# PT_BR: Aumenta o numero de caracteres visíveis na tela
 		# EN_US: Raises the number of charactesr visible on the screen
 	text_element.visible_characters += 2
-
-
-

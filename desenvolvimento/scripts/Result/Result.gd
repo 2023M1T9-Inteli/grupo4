@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var result_description = $ResultDescription
+var paula_bad = preload("res://assets/Feedbacks/paula_bad.png")
 var paula_low = preload("res://assets/Feedbacks/paula low.png")
 var paula_medium = preload("res://assets/Feedbacks/paula_médio.png")
 var paula_execelent = preload("res://assets/Feedbacks/paula_excelente.png")
@@ -17,8 +18,9 @@ func _ready():
 	$FinalScore.text = ("%00.0f" % result) + "%"
 	
 	
-	if result < 56:
+	if result < 56 :
 		result_description.bbcode_text = results_texts[0]
+		$PaulaSprite.texture = paula_bad
 	elif result < 73:
 		result_description.bbcode_text = results_texts[1]
 		$StarEmpty1.value = 100

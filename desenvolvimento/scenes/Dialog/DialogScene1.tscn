@@ -17,7 +17,7 @@
 size = 20
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="DynamicFont" id=22]
 size = 20
 font_data = ExtResource( 8 )
 
@@ -105,26 +105,27 @@ margin_right = 402.5
 margin_bottom = 69.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
 visible_characters = 0
 
 [node name="Timer" type="Timer" parent="DialogBox"]
 wait_time = 0.05
 
-[node name="InitialText" type="Label" parent="DialogBox"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 38.0
-margin_top = 33.0
-margin_right = 852.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 18 )
-text = "Rosaline: Olá, tudo bem?"
+[node name="InitialText" type="RichTextLabel" parent="DialogBox"]
+margin_left = 35.0
+margin_top = 22.0
+margin_right = 835.0
+margin_bottom = 62.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 22 )
+bbcode_enabled = true
 
 [node name="RosalinneAnimSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 299, 438 )
 scale = Vector2( 4.88194, 4.90086 )
 frames = SubResource( 12 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 
