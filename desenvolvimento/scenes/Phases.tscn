@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/PhasesScreen/phase3.png" type="Texture" id=3]
 [ext_resource path="res://assets/PhasesScreen/phase1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Fonts/vcr_osd_mono_font.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://scripts/buttons/Phase1Button.gd" type="Script" id=7]
+[ext_resource path="res://scripts/PhaseSelector.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -15,6 +15,7 @@ font_data = ExtResource( 6 )
 
 [node name="Phases" type="Node2D"]
 position = Vector2( 1, -7 )
+script = ExtResource( 7 )
 
 [node name="PhaseBackground" type="Sprite" parent="."]
 position = Vector2( 641, 361 )
@@ -47,7 +48,6 @@ size_flags_vertical = 4
 icon = ExtResource( 5 )
 flat = true
 icon_align = 1
-script = ExtResource( 7 )
 
 [node name="Phase2Button" type="Button" parent="PhasesGridContainer"]
 margin_left = 412.0
@@ -71,4 +71,5 @@ icon = ExtResource( 3 )
 flat = true
 icon_align = 1
 
-[connection signal="pressed" from="PhasesGridContainer/Phase1Button" to="PhasesGridContainer/Phase1Button" method="_on_Phase1Button_pressed"]
+[connection signal="pressed" from="PhasesGridContainer/Phase1Button" to="." method="_on_Phase1Button_pressed"]
+[connection signal="pressed" from="PhasesGridContainer/Phase2Button" to="." method="_on_Phase2Button_pressed"]

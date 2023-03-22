@@ -1131,9 +1131,9 @@ position = Vector2( 459, 248 )
 worker_size = Vector2( 96, 96 )
 worker_image = ExtResource( 10 )
 attributes = {
-"ART_THINK": 2,
-"LOGIC_RAC": 1,
-"MANUAL_WORK": 3
+"ART_THINK": 1,
+"LOGIC_RAC": 3,
+"MANUAL_WORK": 2
 }
 
 [node name="Mesas Kira e Roger" type="TileMap" parent="."]
@@ -1157,9 +1157,9 @@ position = Vector2( 267, 439 )
 worker_size = Vector2( 48, 96 )
 worker_image = ExtResource( 3 )
 attributes = {
-"ART_THINK": 1,
-"LOGIC_RAC": 3,
-"MANUAL_WORK": 2
+"ART_THINK": 2,
+"LOGIC_RAC": 1,
+"MANUAL_WORK": 3
 }
 
 [node name="Mesas Ana e Bento" type="TileMap" parent="."]

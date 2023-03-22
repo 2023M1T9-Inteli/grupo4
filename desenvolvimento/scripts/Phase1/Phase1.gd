@@ -5,10 +5,6 @@ extends Node2D
 onready var phase_progress = $PhaseProgress
 onready var map = $Map
 
-# PT_BR: Define a variável que armazena a pontuação do jogador
-# EN_US: Defines the variable that stores the player's score
-var score = 0
-
 # PT_BR: Inicializa variáveis responsáveis por armazenar as tarefas atribuídas a cada personagem
 # EN_US: Initialize variables responsible for storing the tasks attributed to each character
 onready var slot_kira = $Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira
@@ -23,21 +19,23 @@ var paused_sound = preload("res://assets/Audio/Pause.wav")
 
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
-
 func _change_score(new_value): 
 	Globals.score_phase_1 += new_value
-	if Globals.score_phase_1 >= 850 and Globals.score_phase_1 < 1100:
-		$StarProgress.value += 100
-	elif Globals.score_phase_1 >= 1100 and Globals.score_phase_1 < 1500:
-		$StarProgress2.value += 100
-	elif Globals.score_phase_1 == 1500:
-		$StarProgress3.value += 100
+	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
+
+	if result > 73:
+		$Scores/StarProgress3.value = clamp((result - 73), 0, 12)
+		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
+	elif result > 56: 
+		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
+	
+	$Scores/StarProgress1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
 # EN_US: Function to change the scene when the game time is over
 func _on_TimeDisplayer_timer_is_over():
-	get_tree().change_scene("res://scenes/Result/Result.tscn")
+	get_tree().change_scene("res://scenes/Result/Defeat.tscn")
 
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
