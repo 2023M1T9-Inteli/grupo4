@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/digital_clock.png-dcc2dac81e56aa7ad4a6ef2eace9fa5c.stex"
+path="res://.import/tend (1).png-6ff41e41aa9aa6800c54b3161a4695f0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Timer/digital_clock.png"
-dest_files=[ "res://.import/digital_clock.png-dcc2dac81e56aa7ad4a6ef2eace9fa5c.stex" ]
+source_file="res://assets/Phase2/tend (1).png"
+dest_files=[ "res://.import/tend (1).png-6ff41e41aa9aa6800c54b3161a4695f0.stex" ]
 
 [params]
 
