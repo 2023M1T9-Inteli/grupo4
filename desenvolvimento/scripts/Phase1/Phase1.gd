@@ -12,10 +12,17 @@ onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRo
 onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
 onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
+# PT_BR: Resetar a variável de pontos 
+# EN_US:
+func _ready():
+	Globals.score_phase_1 = 0
+
 #PT_BR: A musica do jogo será trocada para essa.
+# EN_US:
 var music_phase_1 = preload("res://assets/Audio/music_phase_1.mp3")
 
 var paused_sound = preload("res://assets/Audio/Pause.wav")
+
 
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
