@@ -13,7 +13,8 @@ Após isso, [color=#3a87ae]leve-a para o personagem compatível[/color] com as s
 Assim que for concluída, você pode [color=#3a87ae]atribuir mais uma tarefa para ele(a)[/color].""",
 	"""É preciso ter [color=#EE222B]atenção ao cronômetro da fase[/color]. Se o tempo acabar, [color=#3a87ae]a partida se encerra[/color].""",
 	"""Além disso, para você ter o [color=#EE222B]controle do andamento do projeto[/color], acompanhe o [color=#3a87ae]ícone do projeto da fase se preenchendo[/color].""",
-	"d"
+	"",
+	""
 ]
 onready var clock = $TimeDisplayer
 onready var progress = $back_progress
@@ -35,7 +36,7 @@ func _process(delta):
 	path_table_worker.set_offset(path_table_worker.get_offset()+run_task2)
 	
 	if cont == -1:
-		emit_signal("back_tutorial")
+		emit_signal("back_tutorial",self)
 
 	elif cont == 0:
 		$Path2D/path_table_worker/SmallTask.visible = false
@@ -57,6 +58,7 @@ func _process(delta):
 		$Path2D/path_table_worker/SmallTask.visible = false
 		chronometer.visible = true
 		$back_timer.visible = false
+		$SlotExpansorKira/WorkSlotKira.visible = true
 		run_task2 = 0
 		chronometer.value += (0.5)
 		clock.visible = false
@@ -81,7 +83,7 @@ func _process(delta):
 		clock.visible = false
 		
 	elif cont == 5:
-		emit_signal("next_tutorial")
+		emit_signal("next_tutorial",self)
 
 func _on_testeTarefa02_dropped_item(slot):
 	cont += 1
@@ -90,7 +92,7 @@ func _on_WorkSlotKira_get_item(slot):
 	cont += 1
 	
 func _on_next_button_pressed():
-	emit_signal("next_tutorial",self)
+	cont += 1
 
 func _on_back_button_pressed():
-	emit_signal("back_tutorial",self)
+	cont -= 1
