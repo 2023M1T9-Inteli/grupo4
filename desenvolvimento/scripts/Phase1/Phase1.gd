@@ -46,8 +46,7 @@ func _change_score(new_value):
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
 	elif result > 56: 
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
-	
-	$Scores/StarProgress1.value = clamp(result, 0, 56)
+		$Scores/StarProgress1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
