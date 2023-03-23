@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Result/Defeat.gd" type="Script" id=2]
@@ -7,10 +7,14 @@
 [ext_resource path="res://assets/Feedbacks/star_full.png" type="Texture" id=5]
 [ext_resource path="res://assets/Feedbacks/line.png" type="Texture" id=6]
 [ext_resource path="res://assets/Feedbacks/progress_bar_empty (1).png" type="Texture" id=7]
-[ext_resource path="res://assets/Feedbacks/progress_bar_full (1).png" type="Texture" id=8]
-[ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=9]
+[ext_resource path="res://scripts/Result/StarFull.gd" type="Script" id=8]
 [ext_resource path="res://assets/Feedbacks/division.png" type="Texture" id=10]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=11]
+[ext_resource path="res://assets/Audio/2_Star.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets/Audio/3_Star.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/1_Star.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/Feedbacks/star_empty_feedback.png" type="Texture" id=15]
+[ext_resource path="res://assets/Feedbacks/progress_bars/progress_bar_full_red..png" type="Texture" id=16]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -46,50 +50,6 @@ position = Vector2( 638.125, 361.25 )
 scale = Vector2( 2.22227, 2.48801 )
 texture = ExtResource( 4 )
 
-[node name="ScoreBar" type="TextureProgress" parent="."]
-margin_left = 46.0
-margin_top = 125.0
-margin_right = 878.0
-margin_bottom = 241.0
-texture_under = ExtResource( 7 )
-texture_progress = ExtResource( 8 )
-
-[node name="Division" type="Sprite" parent="ScoreBar"]
-position = Vector2( 420, 24 )
-texture = ExtResource( 10 )
-
-[node name="Division2" type="Sprite" parent="ScoreBar"]
-position = Vector2( 420, 58 )
-texture = ExtResource( 10 )
-
-[node name="Division3" type="Sprite" parent="ScoreBar"]
-position = Vector2( 548, 24 )
-texture = ExtResource( 10 )
-
-[node name="Division4" type="Sprite" parent="ScoreBar"]
-position = Vector2( 548, 58 )
-texture = ExtResource( 10 )
-
-[node name="Division5" type="Sprite" parent="ScoreBar"]
-position = Vector2( 638, 23 )
-scale = Vector2( 0.916667, 0.98 )
-texture = ExtResource( 10 )
-
-[node name="Starfull1" type="Sprite" parent="ScoreBar"]
-position = Vector2( 420, 114 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 5 )
-
-[node name="StarFull2" type="Sprite" parent="ScoreBar"]
-position = Vector2( 548, 115 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 5 )
-
-[node name="StarFull3" type="Sprite" parent="ScoreBar"]
-position = Vector2( 637, 115 )
-scale = Vector2( 0.05, 0.05 )
-texture = ExtResource( 5 )
-
 [node name="Line" type="Sprite" parent="."]
 position = Vector2( 468, 320 )
 scale = Vector2( 0.779388, 0.950005 )
@@ -124,31 +84,11 @@ valign = 1
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 51.0
-margin_top = 409.0
+margin_top = 345.0
 margin_right = 941.0
 margin_bottom = 662.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Que pena! Infelizmente você não conseguiu delegar todas as tarefas a tempo. Tente não acumular tarefas para apenas um funcionário, enquanto exitem outros disponíveis. Com isso, sua delegação de tarefas pode se tornar mais eficiente e você poderá obter melhores resultados!"
-
-[node name="StarEmpty" type="Sprite" parent="."]
-position = Vector2( 107, 372 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
-
-[node name="StarEmpty2" type="Sprite" parent="."]
-position = Vector2( 169, 372 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
-
-[node name="StarEmpty3" type="Sprite" parent="."]
-position = Vector2( 231, 373 )
-scale = Vector2( 0.03, 0.03 )
-texture = ExtResource( 9 )
-
-[node name="Division6" type="Sprite" parent="."]
-position = Vector2( 684, 183 )
-scale = Vector2( 0.958325, 0.98 )
-texture = ExtResource( 10 )
 
 [node name="BackButton" type="Button" parent="."]
 margin_left = 1219.0
@@ -158,5 +98,88 @@ margin_bottom = 77.0
 rect_scale = Vector2( 0.7, 0.7 )
 icon = ExtResource( 11 )
 flat = true
+
+[node name="ScoreBar" type="TextureProgress" parent="."]
+margin_left = 54.0
+margin_top = 131.0
+margin_right = 804.0
+margin_bottom = 177.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 16 )
+
+[node name="Division" type="Sprite" parent="ScoreBar"]
+visible = false
+position = Vector2( 420, 24 )
+texture = ExtResource( 10 )
+
+[node name="Division3" type="Sprite" parent="ScoreBar"]
+position = Vector2( 548, 24 )
+texture = ExtResource( 10 )
+
+[node name="Division5" type="Sprite" parent="ScoreBar"]
+visible = false
+position = Vector2( 637, 58 )
+scale = Vector2( 1, 0.98 )
+texture = ExtResource( 10 )
+
+[node name="Division6" type="Sprite" parent="ScoreBar"]
+visible = false
+position = Vector2( 637, 23 )
+scale = Vector2( 0.999997, 0.98 )
+texture = ExtResource( 10 )
+
+[node name="Division4" type="Sprite" parent="ScoreBar"]
+visible = false
+position = Vector2( 548, 58 )
+texture = ExtResource( 10 )
+
+[node name="Division2" type="Sprite" parent="ScoreBar"]
+visible = false
+position = Vector2( 420, 58 )
+texture = ExtResource( 10 )
+
+[node name="StarFull1" type="TextureProgress" parent="ScoreBar"]
+margin_left = 389.0
+margin_top = -10.0
+margin_right = 1969.0
+margin_bottom = 1518.0
+rect_scale = Vector2( 0.04, 0.04 )
+max_value = 3.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 5 )
+script = ExtResource( 8 )
+
+[node name="Audio_1_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
+position = Vector2( -11075, -3025 )
+scale = Vector2( 25, 25 )
+stream = ExtResource( 14 )
+
+[node name="StarFull2" type="TextureProgress" parent="ScoreBar"]
+margin_left = 517.0
+margin_top = -10.0
+margin_right = 2097.0
+margin_bottom = 1518.0
+rect_scale = Vector2( 0.04, 0.04 )
+max_value = 4.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 5 )
+script = ExtResource( 8 )
+
+[node name="Audio_2_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
+stream = ExtResource( 12 )
+
+[node name="StarFull3" type="TextureProgress" parent="ScoreBar"]
+margin_left = 606.0
+margin_top = -10.0
+margin_right = 2186.0
+margin_bottom = 1518.0
+rect_scale = Vector2( 0.04, 0.04 )
+max_value = 4.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 5 )
+script = ExtResource( 8 )
+
+[node name="Audio_3_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
+stream = ExtResource( 13 )
 
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
