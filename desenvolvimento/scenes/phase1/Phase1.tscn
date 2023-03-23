@@ -66,10 +66,10 @@ margin_right = 360.556
 margin_bottom = 438.333
 
 [node name="SlotCollectionKira" parent="Slots/SlotExpansorKira" instance=ExtResource( 13 )]
-margin_left = 3.0
-margin_top = 94.0
-margin_right = 131.0
-margin_bottom = 134.0
+margin_left = -0.000442505
+margin_top = 97.7781
+margin_right = 128.0
+margin_bottom = 145.778
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -80,6 +80,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -103,10 +104,10 @@ margin_right = 719.444
 margin_bottom = 429.444
 
 [node name="SlotCollectionRoger" parent="Slots/SlotExpansorRoger" instance=ExtResource( 13 )]
-margin_left = 107.0
-margin_top = 98.0
-margin_right = 235.0
-margin_bottom = 138.0
+margin_left = 138.889
+margin_top = 106.667
+margin_right = 266.889
+margin_bottom = 154.667
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -117,6 +118,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -140,10 +142,10 @@ margin_right = 356.111
 margin_bottom = 648.333
 
 [node name="SlotCollectionAna" parent="Slots/SlotExpansorAna" instance=ExtResource( 13 )]
-margin_left = 5.0
-margin_top = 91.0
-margin_right = 133.0
-margin_bottom = 131.0
+margin_left = 4.44455
+margin_top = 101.111
+margin_right = 132.445
+margin_bottom = 149.111
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -154,6 +156,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -177,10 +180,10 @@ margin_right = 725.0
 margin_bottom = 660.556
 
 [node name="SlotCollectionBento" parent="Slots/SlotExpansorBento" instance=ExtResource( 13 )]
-margin_left = 99.0
-margin_top = 73.0
-margin_right = 227.0
-margin_bottom = 113.0
+margin_left = 133.333
+margin_top = 88.8884
+margin_right = 261.333
+margin_bottom = 136.888
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -191,6 +194,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
