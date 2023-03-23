@@ -4,8 +4,8 @@ extends Control
 # EN_US: Variable that loads the game's music
 var theme_music = preload("res://assets/Audio/main_music.mp3")
 
-# PT_BR: Inicia o jogo
-# EN_US: Start the game
+# PT_BR: Inicia o tutorial
+# EN_US: Start the tutorial
 func _on_StartButton_pressed():
 	$TutorialPopup.open_tutorial()
 
