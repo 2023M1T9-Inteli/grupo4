@@ -12,14 +12,9 @@ onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRo
 onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
 onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
-# PT_BR: Resetar a variável de pontos 
+
+#PT_BR: Importa o som de pause.
 # EN_US:
-
-
-#PT_BR: A musica do jogo será trocada para essa.
-# EN_US:
-#var music_phase_1 = preload("res://assets/Audio/music_phase_1.mp3")
-
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
 
@@ -110,15 +105,15 @@ func _on_workSlotAna_get_item(slot):
 	map.Ana_initiate_task(slot)
 
 #PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é precionado.
+# EN_US:
 func _input(event):
 	if event.is_action_pressed("click"):
 		$Click_sound.play()
 
-#PT_BR: Função que irá iniciar a nova música da fase.
 func _ready():
-	#Audio.change_music(music_phase_1)
+  # PT_BR: Resetar a variável de pontos
+  # EN_US:
 	Globals.score_phase_1 = 0
-
 
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)
