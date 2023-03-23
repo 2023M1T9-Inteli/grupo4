@@ -12,7 +12,7 @@ Para avançar ou voltar, clique nas [color=#3a87ae]setas[/color] ao lado.""",
 
 ]
 
-func _process(delta):
+func _process(_delta):
 	if cont == -1:
 		emit_signal("back_tutorial")
 	

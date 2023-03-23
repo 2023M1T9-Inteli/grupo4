@@ -9,10 +9,10 @@ var text = [
 Para isso, tente arrastar a pasta do arquivo para a mesa de expansão, como demonstra o exemplo.""",
 	"""Agora que a tarefa está expandida, é preciso que [color=#EE222B]você interprete as suas demandas[/color].
 Após isso, [color=#3a87ae]leve-a para o personagem compatível[/color] com as suas demandas""",
-	"""Depois de entregar a tarefa, uma [color=#EE222B]barra de progresso aparecerá[/color] logo acima de quem a recebeu.
+	"""Depois de entregar a tarefa, uma [color=#EE222B]barra de progresso aparecerá[/color]logo acima de quem a recebeu.
 Assim que for concluída, você pode [color=#3a87ae]atribuir mais uma tarefa para ele(a)[/color].""",
 	"""É preciso ter [color=#EE222B]atenção ao cronômetro da fase[/color]. Se o tempo acabar, [color=#3a87ae]a partida se encerra[/color].""",
-	"""Além disso, para você ter o [color=#EE222B]controle do andamento do projeto[/color], acompanhe o [color=#3a87ae]ícone do projeto da fase se preenchendo[/color].""",
+	"""Além disso, para você ter o [color=#EE222B]controle do andamento do projeto[/color]acompanhe o [color=#3a87ae]ícone do projeto da fase se preenchendo[/color].""",
 	"",
 	""
 ]
@@ -26,7 +26,7 @@ func _ready():
 	progress.visible = false
 	chronometer.visible = false
 
-func _process(delta):
+func _process(_delta):
 	$text_box/text.bbcode_text = text[cont]
 	
 	var path_drawer_table = $Path2D2/path_drawer_table
@@ -85,10 +85,10 @@ func _process(delta):
 	elif cont == 5:
 		emit_signal("next_tutorial",self)
 
-func _on_testeTarefa02_dropped_item(slot):
+func _on_testeTarefa02_dropped_item(_slot):
 	cont += 1
 	
-func _on_WorkSlotKira_get_item(slot):
+func _on_WorkSlotKira_get_item(_slot):
 	cont += 1
 	
 func _on_next_button_pressed():

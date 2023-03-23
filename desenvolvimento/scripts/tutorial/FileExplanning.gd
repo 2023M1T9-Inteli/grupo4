@@ -21,7 +21,7 @@ Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 ]
 
 #PT_BR: Funcção que servira para ficar checando condicionais do programa enquanto estiver nessa cena.
-func _process(delta):
+func _process(_delta):
 	#PT_BR: O texto que será exibido no label é o que está dentro da a lista text e muda de acordo com a variável cont
 	$text_box/text.bbcode_text = text[cont]
 	
@@ -58,10 +58,10 @@ func _process(delta):
 		emit_signal("next_tutorial",self)
 	
 #PT_BR: Funcção que detécta quando a ficha pequena é solta na mesa do funcionário, ao acontecer isso conto é acrescentado com + 1
-func _on_Slot_dropped_item(slot):	
+func _on_Slot_dropped_item(_slot):	
 	cont += 1
 
-func _on_Slot_get_item(slot):
+func _on_Slot_get_item(_slot):
 	cont += 1
 
 func _on_back_button_pressed():

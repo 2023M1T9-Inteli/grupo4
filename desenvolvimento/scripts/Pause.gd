@@ -22,7 +22,7 @@ func _on_OptionsButton_pressed():
 	
 
 func _on_QuitButton_pressed():
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
 	self.is_paused = false
 	
 

@@ -58,20 +58,18 @@ size_flags_vertical = 4
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
-[node name="Phase2Button" type="Button" parent="PhasesGridContainer"]
+[node name="Phase2Button" type="TextureButton" parent="PhasesGridContainer"]
 margin_left = 400.0
-margin_top = 1.0
-margin_right = 712.0
-margin_bottom = 177.0
+margin_top = 4.0
+margin_right = 700.0
+margin_bottom = 174.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-icon = ExtResource( 2 )
-flat = true
-icon_align = 1
+texture_normal = ExtResource( 2 )
 
 [node name="Phase3Button" type="Button" parent="PhasesGridContainer"]
-margin_left = 812.0
-margin_right = 1124.0
+margin_left = 800.0
+margin_right = 1112.0
 margin_bottom = 178.0
 size_flags_horizontal = 4
 size_flags_vertical = 4

@@ -7,7 +7,7 @@ var task_scene = preload("res://scenes/tutorial/Task_introduction.tscn")
 
 func end_tutorial():
 	if is_in_menu:
-		get_tree().change_scene("res://scenes/Phases.tscn")
+		var __ = get_tree().change_scene("res://scenes/Phases.tscn")
 	else:
 		for child in self.get_children():
 			child.hide()
