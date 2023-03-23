@@ -5,7 +5,6 @@
 [ext_resource path="res://scripts/tutorial/SkipButtonExplanning.gd" type="Script" id=3]
 [ext_resource path="res://assets/buttons/right_button.png" type="Texture" id=4]
 
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.964706, 0.941176, 0.858824, 1 )
 border_width_left = 5
@@ -79,8 +78,8 @@ margin_bottom = 220.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "Caso você já tenha jogado e saiba o funcionamento do jogo, [color=#3a87ae]clique no botão \"Pular Tutorial\"[/color] para começar o jogo."
-text = "Caso você já tenha jogado e saiba o funcionamento do jogo, clique no botão \"Pular Tutorial\" para começar o jogo."
+bbcode_text = "Caso você já tenha jogado e saiba o funcionamento do jogo, [color=#3a87ae]clique no botão \"Pular\"[/color] para começar o jogo."
+text = "Caso você já tenha jogado e saiba o funcionamento do jogo, clique no botão \"Pular\" para começar o jogo."
 
 [node name="skip_button" type="Button" parent="."]
 margin_left = 928.0
