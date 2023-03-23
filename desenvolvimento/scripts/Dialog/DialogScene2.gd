@@ -24,7 +24,7 @@ func _on_Button_pressed():
 
 
 func _on_DialogBox_finished_dialog():
-	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	get_tree().change_scene("res://scenes/phase2/Phase2.tscn")
 
 
 
