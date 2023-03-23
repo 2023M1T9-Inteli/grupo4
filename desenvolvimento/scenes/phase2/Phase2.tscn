@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/items/profile_sheets/ana_light_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scripts/Phase1/Phase1.gd" type="Script" id=14]
+[ext_resource path="res://scenes/phase2/Phase2.gd" type="Script" id=14]
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://scenes/phase2/Phase2Drawer.tscn" type="PackedScene" id=17]
@@ -78,7 +78,7 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -86,13 +86,14 @@ slot_size = Vector2( 50, 32 )
 [node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "kira_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 10 )
 drawer_image = ExtResource( 5 )
 boss_table_image = ExtResource( 19 )
@@ -114,7 +115,7 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -122,13 +123,14 @@ slot_size = Vector2( 50, 32 )
 [node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "roger_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 9 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 18 )
@@ -150,7 +152,7 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -158,13 +160,14 @@ slot_size = Vector2( 50, 32 )
 [node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "ana_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 11 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 24 )
@@ -186,7 +189,7 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -194,22 +197,23 @@ slot_size = Vector2( 50, 32 )
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "bento_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 7 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 20 )
 
 [node name="TimeDisplayer" parent="." instance=ExtResource( 15 )]
-margin_left = 1019.0
-margin_top = 14.0
-margin_right = 1172.0
-margin_bottom = 111.0
+margin_left = 1016.0
+margin_top = 4.0
+margin_right = 1169.0
+margin_bottom = 101.0
 seconds = 45
 minutes = 3
 
@@ -227,8 +231,10 @@ margin_top = 607.0
 margin_right = 173.0
 margin_bottom = 797.0
 rect_scale = Vector2( 0.5, 0.5 )
+max_value = 144.0
 texture_under = ExtResource( 30 )
 texture_progress = ExtResource( 31 )
+qtd_task = 12
 
 [node name="Pause" parent="." instance=ExtResource( 21 )]
 visible = false

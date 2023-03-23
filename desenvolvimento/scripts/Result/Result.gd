@@ -68,7 +68,7 @@ func _on_BackButton_pressed():
 
 func _on_StarFull1_completed_change(texture_progress_node):
 	score_bar.texture_progress = yellow_bar
-  $ScoreBar/StarFull1/Audio_1_star.play()
+	$ScoreBar/StarFull1/Audio_1_star.play()
 
 
 func _on_StarFull2_completed_change(texture_progress_node):

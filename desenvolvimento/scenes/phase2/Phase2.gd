@@ -21,9 +21,8 @@ var paused_sound = preload("res://assets/Audio/Pause.wav")
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
 func _change_score(new_value): 
-	Globals.score_phase_1 += new_value
-	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
-
+	Globals.score_phase_2 += new_value
+	var result := float(Globals.score_phase_2 * 100) / float(Globals.max_score_phase_2)
 	if result > 73:
 		$Scores/StarProgress3.value = clamp((result - 73), 0, 12)
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
@@ -36,7 +35,7 @@ func _change_score(new_value):
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
 # EN_US: Function to change the scene when the game time is over
 func _on_TimeDisplayer_timer_is_over():
-	get_tree().change_scene("res://scenes/Result/Result.tscn")
+	get_tree().change_scene("res://scenes/Result/Defeat.tscn")
 
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
@@ -113,7 +112,7 @@ func _input(event):
 func _ready():
   # PT_BR: Resetar a variável de pontos
   # EN_US:
-	Globals.score_phase_1 = 0
+	Globals.score_phase_2 = 0
 
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)

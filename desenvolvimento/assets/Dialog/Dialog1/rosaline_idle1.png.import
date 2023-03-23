@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dialog_box.png-04a91cf202427c0eca97aef981f15bff.stex"
+path="res://.import/rosaline_idle1.png-e4a5648abf090495dba49b3d2d5ee1b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/dialog_box.png"
-dest_files=[ "res://.import/dialog_box.png-04a91cf202427c0eca97aef981f15bff.stex" ]
+source_file="res://assets/Dialog/Dialog1/rosaline_idle1.png"
+dest_files=[ "res://.import/rosaline_idle1.png-e4a5648abf090495dba49b3d2d5ee1b3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

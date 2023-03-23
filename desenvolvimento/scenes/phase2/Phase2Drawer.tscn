@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://assets/Phase1/detailed_task/big_task04.png" type="Texture" id=23]
 [ext_resource path="res://assets/Phase1/detailed_task/big_task05.png" type="Texture" id=24]
 [ext_resource path="res://assets/Phase1/detailed_task/big_task07.png" type="Texture" id=25]
+[ext_resource path="res://assets/items/drawers_task/task12.png" type="Texture" id=26]
+[ext_resource path="res://assets/items/drawers_task/task11.png" type="Texture" id=27]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Gaveta Copy Copy.png 0"
@@ -53,13 +55,13 @@ script = ExtResource( 8 )
 drawer_size = Vector2( 510, 95 )
 
 [node name="DrawerHBox" type="HBoxContainer" parent="HSlotExpansor"]
-margin_right = 640.0
+margin_right = 768.0
 margin_bottom = 64.0
 grow_vertical = 0
 rect_min_size = Vector2( 640, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
-drawer_size = Vector2( 640, 64 )
+drawer_size = Vector2( 768, 64 )
 
 [node name="root" type="Node2D" parent="HSlotExpansor/DrawerHBox"]
 visible = false
@@ -110,7 +112,6 @@ uid = "physics"
 qtd = 1
 location = 1
 attributes = {
-"LOGIC_RAC": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -130,7 +131,7 @@ uid = "projArq"
 qtd = 1
 location = 1
 attributes = {
-"ART_THINK": 2
+"LOGIC_RAC": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -150,7 +151,7 @@ uid = "colours"
 qtd = 1
 location = 1
 attributes = {
-"ART_THINK": 2
+"MANUAL_WORK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -190,7 +191,7 @@ uid = "os"
 qtd = 1
 location = 1
 attributes = {
-"LOGIC_RAC": 2
+"ART_THINK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -210,7 +211,7 @@ uid = "fit"
 qtd = 1
 location = 1
 attributes = {
-"MANUAL_WORK": 2
+"LOGIC_RAC": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -230,7 +231,6 @@ uid = "connection"
 qtd = 1
 location = 1
 attributes = {
-"MANUAL_WORK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -250,7 +250,7 @@ uid = "construct"
 qtd = 1
 location = 1
 attributes = {
-"MANUAL_WORK": 2
+"ART_THINK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -270,12 +270,51 @@ uid = "id"
 qtd = 1
 location = 1
 attributes = {
-"ART_THINK": 2
+"MANUAL_WORK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 table_image = ExtResource( 6 )
 drawer_image = ExtResource( 9 )
+boss_table_image = ExtResource( 22 )
+
+[node name="task11Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+margin_left = 640.0
+margin_right = 704.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "id"
+qtd = 1
+location = 1
+attributes = {
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 27 )
+boss_table_image = ExtResource( 22 )
+
+[node name="task12Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+margin_left = 704.0
+margin_right = 768.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "id"
+qtd = 1
+location = 1
+attributes = {
+"ART_THINK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 6 )
+drawer_image = ExtResource( 26 )
 boss_table_image = ExtResource( 22 )
 
 [node name="drawer" type="TileMap" parent="HSlotExpansor"]

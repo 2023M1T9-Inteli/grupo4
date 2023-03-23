@@ -5,11 +5,11 @@ onready var phase_1_musica = preload ("res://assets/Audio/music_phase_1.mp3")
 var result = 0
 
 func _ready():
-  result = float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
+	result = float(Globals.player_score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	if result >= 56:
 		$PhasesGridContainer/Phase2Button.icon = load("res://assets/PhasesScreen/button_phase_2.png")
   
-  Audio.change_music(phase_1_musica)
+		Audio.change_music(phase_1_musica)
 
 # PT_BR: Abre a cena do level 1
 # EN_US: Opens the level 1 scene
@@ -22,3 +22,8 @@ func _on_Phase1Button_pressed():
 func _on_Phase2Button_pressed():
 	if result >= 56:
 		get_tree().change_scene("res://scenes/Dialog/DialogScene2.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://scenes/Menu.tscn")
+

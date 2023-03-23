@@ -12,7 +12,6 @@
 [ext_resource path="res://assets/Feedbacks/division.png" type="Texture" id=10]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=11]
 
-
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 

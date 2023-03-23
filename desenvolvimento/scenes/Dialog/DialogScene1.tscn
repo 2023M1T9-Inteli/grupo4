@@ -2,17 +2,16 @@
 
 [ext_resource path="res://scripts/Dialog/DialogScene.gd" type="Script" id=1]
 [ext_resource path="res://scripts/Dialog/DialogBox.gd" type="Script" id=2]
-[ext_resource path="res://assets/Dialog/dialog_box.png" type="Texture" id=3]
-[ext_resource path="res://assets/Dialog/rosaline_idle1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Dialog/Dialog1/dialog_box.png" type="Texture" id=3]
+[ext_resource path="res://assets/Dialog/Dialog1/rosaline_idle1.png" type="Texture" id=4]
 [ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=5]
-[ext_resource path="res://assets/Dialog/rosaline_arm1.png" type="Texture" id=6]
+[ext_resource path="res://assets/Dialog/Dialog1/rosaline_arm1.png" type="Texture" id=6]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=7]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://assets/Dialog/computer_light.png" type="Texture" id=9]
-[ext_resource path="res://assets/Dialog/rosaline_arm2.png" type="Texture" id=10]
-[ext_resource path="res://assets/Dialog/rosaline_idle2.png" type="Texture" id=11]
-[ext_resource path="res://assets/Dialog/button_right.png" type="Texture" id=12]
-
+[ext_resource path="res://assets/Dialog/Dialog1/computer_light.png" type="Texture" id=9]
+[ext_resource path="res://assets/Dialog/Dialog1/rosaline_arm2.png" type="Texture" id=10]
+[ext_resource path="res://assets/Dialog/Dialog1/rosaline_idle2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Dialog/Dialog1/button_right.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20

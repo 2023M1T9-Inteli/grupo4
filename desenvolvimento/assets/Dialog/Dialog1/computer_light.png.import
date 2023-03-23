@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rosaline_arm1.png-b13f7db82bc15dabeed5191024fb7751.stex"
+path="res://.import/computer_light.png-da289d487db8754e9629fede01c023fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Dialog/rosaline_arm1.png"
-dest_files=[ "res://.import/rosaline_arm1.png-b13f7db82bc15dabeed5191024fb7751.stex" ]
+source_file="res://assets/Dialog/Dialog1/computer_light.png"
+dest_files=[ "res://.import/computer_light.png-da289d487db8754e9629fede01c023fa.stex" ]
 
 [params]
 
