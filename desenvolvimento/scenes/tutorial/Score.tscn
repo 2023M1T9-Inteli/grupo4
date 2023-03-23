@@ -117,8 +117,8 @@ margin_bottom = 184.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "Ademais, você pode [color=#EE222B]acompanhar a sua pontuação[/color], a qual será contada de acordo com as atribuições das tarefas."
-text = "Ademais, você pode acompanhar a sua pontuação, a qual será contada de acordo com as atribuições das tarefas."
+bbcode_text = "Você pode [color=#EE222B]acompanhar a sua pontuação[/color], a qual será contada de acordo com as atribuições das tarefas."
+text = "Você pode acompanhar a sua pontuação, a qual será contada de acordo com as atribuições das tarefas."
 
 [node name="next_button" type="TextureButton" parent="."]
 margin_left = 1232.0
