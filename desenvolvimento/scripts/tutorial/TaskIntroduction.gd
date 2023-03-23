@@ -26,7 +26,7 @@ func _ready():
 	progress.visible = false
 	chronometer.visible = false
 
-func _process(delta):
+func _process(_delta):
 	$text_box/text.bbcode_text = text[cont]
 	
 	var path_drawer_table = $Path2D2/path_drawer_table
@@ -85,10 +85,10 @@ func _process(delta):
 	elif cont == 5:
 		emit_signal("next_tutorial",self)
 
-func _on_testeTarefa02_dropped_item(slot):
+func _on_testeTarefa02_dropped_item(_slot):
 	cont += 1
 	
-func _on_WorkSlotKira_get_item(slot):
+func _on_WorkSlotKira_get_item(_slot):
 	cont += 1
 	
 func _on_next_button_pressed():
