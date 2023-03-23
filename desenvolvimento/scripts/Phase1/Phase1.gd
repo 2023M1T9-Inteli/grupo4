@@ -18,7 +18,7 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 
 #PT_BR: A musica do jogo será trocada para essa.
 # EN_US:
-var music_phase_1 = preload("res://assets/Audio/music_phase_1.mp3")
+#var music_phase_1 = preload("res://assets/Audio/music_phase_1.mp3")
 
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
@@ -116,7 +116,7 @@ func _input(event):
 
 #PT_BR: Função que irá iniciar a nova música da fase.
 func _ready():
-	Audio.change_music(music_phase_1)
+	#Audio.change_music(music_phase_1)
 	Globals.score_phase_1 = 0
 
 
