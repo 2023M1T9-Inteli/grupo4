@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/table/boss_table.png" type="Texture" id=1]
+[ext_resource path="res://assets/Audio/Paper.mp3" type="AudioStream" id=2]
 [ext_resource path="res://scenes/slots/VSlotCollection.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Drawer/Tasks/task_no_hover.png" type="Texture" id=7]
@@ -55,14 +56,20 @@ images_size = Vector2( 420, 230 )
 [node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
 margin_top = 280.0
 margin_right = 517.0
-margin_bottom = 530.0
+margin_bottom = 544.0
 rect_min_size = Vector2( 517, 250 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 location = 2
 slot_size = Vector2( 517, 250 )
-images_size = Vector2( 420, 250 )
+images_size = Vector2( 436, 264 )
+
+[node name="Task_soud" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -3, 375 )
+stream = ExtResource( 2 )
 
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]
+[connection signal="get_item" from="SlotCollectioVBoxContainer/ProfileControl2" to="." method="_on_ProfileControl2_get_item"]
+[connection signal="get_item" from="SlotCollectioVBoxContainer/WorkerTableControl2" to="." method="_on_WorkerTableControl2_get_item"]

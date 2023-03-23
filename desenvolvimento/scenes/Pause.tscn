@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/Pause.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://assets/buttons/button_exit.png" type="Texture" id=10]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://scenes/tutorial/TutorialPopup.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Audio/Pause.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/Depause.wav" type="AudioStream" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -93,6 +95,12 @@ valign = 1
 
 [node name="PopupMenu" parent="." instance=ExtResource( 12 )]
 is_in_menu = false
+
+[node name="Paused_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Depaused_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="TutorialButton" to="." method="_on_TutorialButton_pressed"]

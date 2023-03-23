@@ -5,10 +5,6 @@ extends Node2D
 onready var phase_progress = $PhaseProgress
 onready var map = $Map
 
-# PT_BR: Define a variável que armazena a pontuação do jogador
-# EN_US: Defines the variable that stores the player's score
-var score = 0
-
 # PT_BR: Inicializa variáveis responsáveis por armazenar as tarefas atribuídas a cada personagem
 # EN_US: Initialize variables responsible for storing the tasks attributed to each character
 onready var slot_kira = $Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira
@@ -16,27 +12,31 @@ onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRo
 onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
 onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
+
+#PT_BR: Importa o som de pause.
+# EN_US:
+var paused_sound = preload("res://assets/Audio/Pause.wav")
+
+
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
-
 func _change_score(new_value): 
 	Globals.score_phase_1 += new_value
 	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
-	if result > 56:
-		$StarProgress.value += 100
-	elif result >= 73:
-		$StarProgress.value += 100
-		$StarProgress2.value += 100
-	elif result > 85:
-		$StarProgress.value += 100
-		$StarProgress2.value += 100
-		$StarProgress3.value += 100
+
+	if result > 73:
+		$Scores/StarProgress3.value = clamp((result - 73), 0, 12)
+		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
+	elif result > 56: 
+		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
+	
+	$Scores/StarProgress1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
 # EN_US: Function to change the scene when the game time is over
 func _on_TimeDisplayer_timer_is_over():
-	get_tree().change_scene("res://scenes/Result/Result.tscn")
+	get_tree().change_scene("res://scenes/Result/Defeat.tscn")
 
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
@@ -56,6 +56,7 @@ func _on_Map_ana_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_ana._clearSlot()
 	slot_ana.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_bento_fineshed_task(worker):
@@ -63,6 +64,7 @@ func _on_Map_bento_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_bento._clearSlot()
 	slot_bento.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_kira_fineshed_task(worker):
@@ -70,6 +72,7 @@ func _on_Map_kira_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_kira._clearSlot()
 	slot_kira.can_give = true
+	$Conclued_task.play()
 
 
 func _on_Map_roger_fineshed_task(worker):
@@ -77,6 +80,7 @@ func _on_Map_roger_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_roger._clearSlot()
 	slot_roger.can_give = true
+	$Conclued_task.play()
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem
@@ -100,4 +104,16 @@ func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
+#PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é precionado.
+# EN_US:
+func _input(event):
+	if event.is_action_pressed("click"):
+		$Click_sound.play()
 
+func _ready():
+  # PT_BR: Resetar a variável de pontos
+  # EN_US:
+	Globals.score_phase_1 = 0
+
+func _on_Pause_button_pressed():
+	Audio.change_music(paused_sound)

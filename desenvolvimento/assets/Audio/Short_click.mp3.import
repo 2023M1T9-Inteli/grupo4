@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Short_click.mp3-6ed8c5ea9023790803bce4fa8930896a.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/Short_click.mp3"
+dest_files=[ "res://.import/Short_click.mp3-6ed8c5ea9023790803bce4fa8930896a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
