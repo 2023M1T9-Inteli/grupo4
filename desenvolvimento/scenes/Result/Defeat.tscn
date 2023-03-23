@@ -4,13 +4,14 @@
 [ext_resource path="res://scripts/Result/Defeat.gd" type="Script" id=2]
 [ext_resource path="res://assets/Feedbacks/paula_time.png" type="Texture" id=3]
 [ext_resource path="res://assets/Feedbacks/background_feedback.png" type="Texture" id=4]
-[ext_resource path="res://assets/Feedbacks/star_full (1).png" type="Texture" id=5]
+[ext_resource path="res://assets/Feedbacks/star_full.png" type="Texture" id=5]
 [ext_resource path="res://assets/Feedbacks/line.png" type="Texture" id=6]
 [ext_resource path="res://assets/Feedbacks/progress_bar_empty (1).png" type="Texture" id=7]
 [ext_resource path="res://assets/Feedbacks/progress_bar_full (1).png" type="Texture" id=8]
 [ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=9]
 [ext_resource path="res://assets/Feedbacks/division.png" type="Texture" id=10]
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=11]
+
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
