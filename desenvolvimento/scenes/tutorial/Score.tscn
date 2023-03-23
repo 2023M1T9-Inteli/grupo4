@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/buttons/left_button.png" type="Texture" id=6]
 [ext_resource path="res://scripts/tutorial/Score.gd" type="Script" id=7]
 
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.466667, 0.72549, 0.858824, 1 )
 border_width_left = 3
