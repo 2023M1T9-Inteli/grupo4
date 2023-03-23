@@ -9,7 +9,6 @@
 [ext_resource path="res://assets/buttons/right_button.png" type="Texture" id=7]
 [ext_resource path="res://assets/items/profile_sheets/kira_big_sheet.png" type="Texture" id=8]
 
-
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.466667, 0.72549, 0.858824, 1 )
 border_width_left = 3
