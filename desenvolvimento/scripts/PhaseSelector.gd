@@ -20,3 +20,8 @@ func _on_Phase1Button_pressed():
 func _on_Phase2Button_pressed():
 	if Globals.player_score_phase_1 >= 56:
 		get_tree().change_scene("res://scenes/Dialog/DialogScene2.tscn")
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://scenes/Menu.tscn")
+
