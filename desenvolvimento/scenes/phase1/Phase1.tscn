@@ -63,10 +63,17 @@ margin_right = 362.778
 margin_bottom = 436.111
 
 [node name="SlotCollectionKira" parent="Slots/SlotExpansorKira" instance=ExtResource( 13 )]
+<<<<<<< Updated upstream
 margin_left = 3.0
 margin_top = 94.0
 margin_right = 131.0
 margin_bottom = 134.0
+=======
+margin_left = -0.000442505
+margin_top = 97.7781
+margin_right = 128.0
+margin_bottom = 137.778
+>>>>>>> Stashed changes
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -99,10 +106,17 @@ margin_right = 719.444
 margin_bottom = 429.444
 
 [node name="SlotCollectionRoger" parent="Slots/SlotExpansorRoger" instance=ExtResource( 13 )]
+<<<<<<< Updated upstream
 margin_left = 107.0
 margin_top = 98.0
 margin_right = 235.0
 margin_bottom = 138.0
+=======
+margin_left = 138.889
+margin_top = 106.667
+margin_right = 266.889
+margin_bottom = 146.667
+>>>>>>> Stashed changes
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -135,10 +149,17 @@ margin_right = 356.111
 margin_bottom = 648.333
 
 [node name="SlotCollectionAna" parent="Slots/SlotExpansorAna" instance=ExtResource( 13 )]
+<<<<<<< Updated upstream
 margin_left = 5.0
 margin_top = 91.0
 margin_right = 133.0
 margin_bottom = 131.0
+=======
+margin_left = 4.44455
+margin_top = 101.111
+margin_right = 132.445
+margin_bottom = 141.111
+>>>>>>> Stashed changes
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -171,10 +192,17 @@ margin_right = 717.222
 margin_bottom = 653.889
 
 [node name="SlotCollectionBento" parent="Slots/SlotExpansorBento" instance=ExtResource( 13 )]
+<<<<<<< Updated upstream
 margin_left = 99.0
 margin_top = 73.0
 margin_right = 227.0
 margin_bottom = 113.0
+=======
+margin_left = 133.333
+margin_top = 88.8884
+margin_right = 261.333
+margin_bottom = 128.888
+>>>>>>> Stashed changes
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -264,7 +292,12 @@ texture_progress = ExtResource( 23 )
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
+<<<<<<< Updated upstream
 [connection signal="pressed" from="ExitButton" to="Pause" method="_on_ExitButton_pressed"]
+=======
+[connection signal="pressed" from="Pause_button" to="." method="_on_Pause_button_pressed"]
+[connection signal="pressed" from="Pause_button" to="Pause" method="_on_Pause_button_pressed"]
+>>>>>>> Stashed changes
 [connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
