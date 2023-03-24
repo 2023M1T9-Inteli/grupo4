@@ -23,7 +23,7 @@ export(bool) var active_space_between = true setget _set_active_space_between
 
 # PT_BR: Seleciona a orientação do objeto
 # EN_US: Selected object orientation
-export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
+export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.Y
 
 # PT_BR: Funções para definir as variáveis. Recebe o novo valor. Não retorna nada
 # EN_US: Functions to set variables. Receives the new value. Dont return value
