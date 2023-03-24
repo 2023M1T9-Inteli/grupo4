@@ -53,7 +53,7 @@ font_data = ExtResource( 10 )
 [sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="DynamicFont" id=7]
-size = 12
+size = 10
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
@@ -209,7 +209,6 @@ margin_right = 99.0
 margin_bottom = 44.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Continue"
 align = 1
 valign = 1
 

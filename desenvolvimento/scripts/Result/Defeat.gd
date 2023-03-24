@@ -13,3 +13,8 @@ func _ready():
 func _on_BackButton_pressed():
 	Globals.score_phase_1 = 0
 	get_tree().change_scene("res://scenes/Phases.tscn")
+
+
+func _on_TextureButton_pressed():
+	Globals.score_phase_1 = 0
+	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")

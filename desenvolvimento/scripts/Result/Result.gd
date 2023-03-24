@@ -33,6 +33,10 @@ func _ready():
 	#EN/US: Defines a variable "result" as the result of a operation between the phase scores
 	result = float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
 	$FinalScore.text = ("%00.0f" % result) + "%"	
+	if result < 56:
+		$BackButton/ButtonLabel.text = "Recomeçar"
+	elif result >= 56:
+		$BackButton/ButtonLabel.text = "Continuar"
 	
 	#PT/BR: Defina qual texto e sprite irá aparecer de acordo com o valor da variável "result"
 	#EN/US: Defines which text and sprite will show according to the value os the variable "result"
@@ -76,9 +80,13 @@ func _change_bar():
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
-	Globals.player_score_phase_1 = Globals.score_phase_1
-	Globals.score_phase_1 = 0
-	get_tree().change_scene("res://scenes/Phases.tscn")
+	if result < 56:
+		Globals.score_phase_1 = 0
+		get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	if result >= 56:
+		Globals.player_score_phase_1 = Globals.score_phase_1
+		Globals.score_phase_1 = 0
+		get_tree().change_scene("res://scenes/Phases.tscn")
 
 #PT/BR: Função da "StarFull1" que troca a cor da barra e toca um audio
 #EN/US: Function from "StarFull1" that changes the bar color and plays an audio
