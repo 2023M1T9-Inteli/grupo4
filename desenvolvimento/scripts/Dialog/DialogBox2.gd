@@ -9,27 +9,27 @@ var counter = 0
 signal finished_dialog()
 
 func _ready():
-	$InitialText.bbcode_text = "[color=#78859c]Chico[/color]: E lasqueira, Tudo bão?"
+	$InitialText.bbcode_text = "[color=#78859c]Chico[/color]: Ê lasqueira, tudo bão?"
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "[color=#78859c]Chico[/color]: Meu nome é Chico, sou prefeito da cidade chicolândia e tenho inúmeros deveres para cumprir. Uma das área que sou responsável e pela organização e planejamento de eventos da cidade.",
+			"text": "[color=#78859c]Chico[/color]: Meu nome é chico, sou prefeito da cidade Chicolândia e tenho inúmeros deveres para cumprir. Umas das áreas que sou responsável é a de organização e de planejamento dos eventos da cidade.",
 			"anim": "idle",
 			"showTent": false,
 		},
 	1: {
-			"text": "[color=#78859c]Chico[/color]: Com a data da festa junina chegando, tenho que organizar a maior festa junina da história de chocolândia, porém como estou muito sobrecarregado nas outras áreas da prefeitura e tenho pouco tempo, preciso de vocês.",
+			"text": "[color=#78859c]Chico[/color]: Com a data do evento chegando, tenho que organizar a maior festa junina da história da Chicolândia. Porém, como estou muito sobrecarregado nas outras áreas da prefeitura e tenho pouco tempo, preciso de vocês.",
 			"anim": "arm_up",
 			"showTent": true,
 		}, 
 	2: {
-			"text": "[color=#78859c]Chico[/color]: Contamos com sua ajuda e de seu time para conseguirmos montar a festa!",
+			"text": "[color=#78859c]Chico[/color]: Contamos com a sua ajuda e a do seu time para conseguirmos montar a festa!",
 			"anim": "idle",
 			"showTent": false,
 		},
 	3: {
-			"text": "[color=#78859c]Chico[/color]: Vamos logo trabaiar uai!",
+			"text": "[color=#78859c]Chico[/color]: Vamos logo trabaiar, uai!",
 			"anim": "idle",
 			"showTent": false,
 		},
