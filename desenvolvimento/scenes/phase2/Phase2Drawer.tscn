@@ -58,7 +58,7 @@ drawer_size = Vector2( 510, 95 )
 margin_right = 768.0
 margin_bottom = 64.0
 grow_vertical = 0
-rect_min_size = Vector2( 640, 64 )
+rect_min_size = Vector2( 768, 64 )
 custom_constants/separation = 0
 script = ExtResource( 2 )
 drawer_size = Vector2( 768, 64 )
@@ -112,6 +112,7 @@ uid = "physics"
 qtd = 1
 location = 1
 attributes = {
+"ART_THINK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )

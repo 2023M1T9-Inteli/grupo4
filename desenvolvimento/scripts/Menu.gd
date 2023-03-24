@@ -2,7 +2,7 @@ extends Control
 
 # PT_BR: Variável que carrega a música do jogo
 # EN_US: Variable that loads the game's music
-var theme_music = preload("res://assets/Audio/main_music.mp3")
+var theme_music = preload("res://assets/Audio/main_music.wav")
 
 # PT_BR: Inicia o tutorial
 # EN_US: Start the tutorial

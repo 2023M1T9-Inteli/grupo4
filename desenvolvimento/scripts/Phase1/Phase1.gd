@@ -18,6 +18,23 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
 
+#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
+#EN_US: This funcction observes the mouse position and applies the hover on the files 
+func _process(delta):
+	# PT_BR: As variáveis baixo armazenam o nó que será usado na função
+	# EN_US: The variables below stores a node which will be used by the function
+	var profile_kira = $Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira
+	hover_file(184,232,344,392,profile_kira)
+
+	var profile_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger
+	hover_file(584,632,344,392,profile_roger)
+
+	var profile_ana = $Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna
+	hover_file(184,232,536,584,profile_ana)
+	
+	var profile_bento = $Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento
+	hover_file(584,632,536,584,profile_bento)
+
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
 func _change_score(new_value): 
@@ -29,8 +46,7 @@ func _change_score(new_value):
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
 	elif result > 56: 
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
-	
-	$Scores/StarProgress1.value = clamp(result, 0, 56)
+		$Scores/StarProgress1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
@@ -110,10 +126,36 @@ func _input(event):
 	if event.is_action_pressed("click"):
 		$Click_sound.play()
 
+
+# PT_BR: Resetar a variável de pontos
+ # EN_US:
 func _ready():
-  # PT_BR: Resetar a variável de pontos
-  # EN_US:
+  
 	Globals.score_phase_1 = 0
+	
+
 
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)
+
+
+# PT_BR(1): Essa função aplica o hover nas fichas
+# PT_BR(2): Recebe: x1, que é o limite inferior em x da zona de entrada do mouse
+# PT_BR(3): Recebe: x2, que é o limite superior em x da zona de entrada do mouse
+# PT_BR(4): Recebe: y1, que é o limite inferior em y da zona de entrada do mouse
+# PT_BR(5): Recebe: y2, que é o limite superior em x da zona de entrada do mouse
+# PT_BR(6): Recebe: slot, que é um nó da cena
+
+# EN_US(1): This function applies the hover to the files
+# EN_US(2): Receive: x1, wich is the lower limit on x of the mouse input zone
+# EN_US(3): Receive: x2, wich is the upper limit on x of the mouse input zone
+# EN_US(4): Receive: y1, wich is the lower limit on y of the mouse input zone
+# EN_US(5): Receive: y2, wich is the upper limit on y of the mouse input zone
+# EN_US(6): Receive: slot, wich is a node in the scene
+func hover_file(x1,x2,y1,y2,slot:CenterContainer):
+	var mouse = get_global_mouse_position()
+	if mouse.x >= x1 and mouse.x <= x2 and mouse.y >= y1 and mouse.y <= y2:
+		slot.rect_scale  = Vector2(1.25,1.25)
+	else:
+		slot.rect_scale = Vector2(1,1)
+

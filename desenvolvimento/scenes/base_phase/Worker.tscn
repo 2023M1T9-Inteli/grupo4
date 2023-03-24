@@ -15,7 +15,7 @@ position = Vector2( 16, 16 )
 shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.01
+wait_time = 0.45
 
 [node name="Cronometer" type="TextureProgress" parent="."]
 visible = false
