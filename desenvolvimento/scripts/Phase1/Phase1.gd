@@ -63,10 +63,10 @@ func _on_PhaseProgress_completed_change():
 	var __ = get_tree().change_scene("res://scenes/Result/Result.tscn")
 
 
-# PT_BR (1): Sinal que é emitido quando o personagem finaliza uma tarefa
+# PT_BR (1): Sinal que é emitido quando o personagem "Ana" finaliza uma tarefa
 # PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
 # PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
-# EN_US (1): Signal that is sent when the character ends a task
+# EN_US (1): Signal that is sent when the character "Ana" ends a task
 # EN_US (2): Receives the worker object as parameter to be sent
 # EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_ana_fineshed_task(worker):
@@ -76,7 +76,12 @@ func _on_Map_ana_fineshed_task(worker):
 	slot_ana.can_give = true
 	$Conclued_task.play()
 
-
+# PT_BR (1): Sinal que é emitido quando o personagem "Bento" finaliza uma tarefa
+# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
+# EN_US (1): Signal that is sent when the character "Bento" ends a task
+# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_bento_fineshed_task(worker):
 	phase_progress.increase_value()
 	_change_score(worker.score)
@@ -84,7 +89,12 @@ func _on_Map_bento_fineshed_task(worker):
 	slot_bento.can_give = true
 	$Conclued_task.play()
 
-
+# PT_BR (1): Sinal que é emitido quando o personagem "Kira" finaliza uma tarefa
+# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
+# EN_US (1): Signal that is sent when the character "Kira" ends a task
+# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_kira_fineshed_task(worker):
 	phase_progress.increase_value()
 	_change_score(worker.score)
@@ -92,7 +102,12 @@ func _on_Map_kira_fineshed_task(worker):
 	slot_kira.can_give = true
 	$Conclued_task.play()
 
-
+# PT_BR (1): Sinal que é emitido quando o personagem "Roger" finaliza uma tarefa
+# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
+# EN_US (1): Signal that is sent when the character "Roger" ends a task
+# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_roger_fineshed_task(worker):
 	phase_progress.increase_value()
 	_change_score(worker.score)
@@ -101,42 +116,45 @@ func _on_Map_roger_fineshed_task(worker):
 	$Conclued_task.play()
 
 
-# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem
-# EN_US: Calls the map function to iniciate the character's task
+# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Kira"
+# EN_US: Calls the map function to iniciate the character's "Kira" task
 func _on_workSlotKira_get_item(slot):
 	slot.can_give = false
 	map.Kira_initiate_task(slot)
 
-
+# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Roger"
+# EN_US: Calls the map function to iniciate the character's "Roger" task
 func _on_workSlotRoger_get_item(slot):
 	slot.can_give = false
 	map.Roger_initiate_task(slot)
 
-
+# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Bento"
+# EN_US: Calls the map function to iniciate the character's "Bento" task
 func _on_workSlotBento_get_item(slot):
 	slot.can_give = false
 	map.Bento_initiate_task(slot)
 
-
+# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Ana"
+# EN_US: Calls the map function to iniciate the character's "Ana" task
 func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
-#PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é pressionado.
-# EN_US:
+#PT_BR: Dá o comando de emitir o som assim que o mouse é pressionado.
+# EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
 	if event.is_action_pressed("click"):
 		$Click_sound.play()
 
 
-# PT_BR: Resetar a variável de pontos
-# EN_US:
+# PT_BR: Reseta a variável de pontos.
+# EN_US: Reset the points variable.
 func _ready():
 	Globals.score_phase_1 = 0
 	
 
-# PT_BR: Põem o som de pause
-# EN_US:
+# PT_BR: Põe o som de pause.
+# EN_US: Put the pause sound.
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)
 

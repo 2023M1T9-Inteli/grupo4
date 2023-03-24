@@ -39,14 +39,14 @@ func _process(_delta):
 	elif cont == 0:
 		$path2d_worker_table/pathfollow_worker_table/kira_worker.visible = true
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
-		run_file1 = 6
+		run_file1 = 4
 		
 	#PT_BR: Caso cont seja igual a 1 o ghost da ficha pequena torna a ficarinvisível e o da ficha grande fica visível. A movimentação do pathfollow da ficha pequena 
 	elif cont == 1:
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = true
 		$path2d_worker_table/pathfollow_worker_table/kira_worker.visible = false
 		run_file1 = 0
-		run_file2 = 8
+		run_file2 = 6
 		
 	#PT_BR: Caso cont seja igual a 2 o ghost da ficha grande fica invisível e a sua velocaidade fica igual a 0.
 	elif cont == 2:

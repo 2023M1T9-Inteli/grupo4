@@ -21,6 +21,7 @@ func show_pc(show_pc):
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
 
-
+# PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia.
+# EN_US: Function that defines that when the dialog scene ends, the game start.
 func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
