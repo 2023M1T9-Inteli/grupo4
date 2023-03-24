@@ -68,10 +68,10 @@ scale = Vector2( 1.8, 1.8 )
 texture = ExtResource( 3 )
 
 [node name="FinalScore" type="Label" parent="."]
-margin_left = 946.0
-margin_top = 132.0
-margin_right = 1232.0
-margin_bottom = 210.0
+margin_left = 950.0
+margin_top = 99.0
+margin_right = 1236.0
+margin_bottom = 177.0
 custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
