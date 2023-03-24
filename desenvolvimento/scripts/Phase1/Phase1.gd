@@ -47,6 +47,8 @@ func _change_score(new_value):
 	elif result > 56: 
 		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
 		$Scores/StarProgress1.value = clamp(result, 0, 56)
+		
+	$Scores/StarProgress1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
@@ -120,7 +122,7 @@ func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
-#PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é precionado.
+#PT_BR: Essa função servirá para dar o comando de emitir o som assim que o mouse é pressionado.
 # EN_US:
 func _input(event):
 	if event.is_action_pressed("click"):
@@ -128,13 +130,13 @@ func _input(event):
 
 
 # PT_BR: Resetar a variável de pontos
- # EN_US:
+# EN_US:
 func _ready():
-  
 	Globals.score_phase_1 = 0
 	
 
-
+# PT_BR: Põem o som de pause
+# EN_US:
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)
 
