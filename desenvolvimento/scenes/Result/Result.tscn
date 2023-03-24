@@ -194,6 +194,7 @@ margin_top = 531.0
 margin_right = 1083.0
 margin_bottom = 600.0
 rect_scale = Vector2( 2, 2 )
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 11 )

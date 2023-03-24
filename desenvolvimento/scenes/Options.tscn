@@ -39,6 +39,7 @@ margin_top = 134.0
 margin_right = 1126.0
 margin_bottom = 219.0
 rect_scale = Vector2( 0.6, 0.6 )
+mouse_default_cursor_shape = 2
 custom_constants/hseparation = 250
 columns = 2
 
