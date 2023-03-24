@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://assets/phase_assets/BaseAssets/Room_Builder_Office_32x32.png" type="Texture" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/palette_plant2.png" type="Texture" id=2]
@@ -20,6 +20,10 @@
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=18]
 [ext_resource path="res://assets/phase_assets/OfficeItems/bigger_chair.png" type="Texture" id=19]
 [ext_resource path="res://assets/characters/paula_sprite_sheet.png" type="Texture" id=20]
+[ext_resource path="res://assets/characters/kira2.png" type="Texture" id=21]
+[ext_resource path="res://assets/characters/roger2.png" type="Texture" id=22]
+[ext_resource path="res://assets/characters/bento2.png" type="Texture" id=23]
+[ext_resource path="res://assets/characters/ana2.png" type="Texture" id=24]
 
 [sub_resource type="PluginScript" id=11]
 
@@ -573,6 +577,34 @@ points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 } ]
 16/z_index = 0
 
+[sub_resource type="AnimatedTexture" id=29]
+frames = 2
+fps = 3.0
+frame_0/texture = ExtResource( 11 )
+frame_1/texture = ExtResource( 21 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=30]
+frames = 2
+fps = 3.0
+frame_0/texture = ExtResource( 10 )
+frame_1/texture = ExtResource( 22 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=31]
+frames = 2
+fps = 3.0
+frame_0/texture = ExtResource( 13 )
+frame_1/texture = ExtResource( 23 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=32]
+frames = 2
+fps = 3.0
+frame_0/texture = ExtResource( 3 )
+frame_1/texture = ExtResource( 24 )
+frame_1/delay_sec = 0.0
+
 [sub_resource type="StreamTexture" id=15]
 
 [sub_resource type="StreamTexture" id=13]
@@ -1117,9 +1149,9 @@ format = 1
 tile_data = PoolIntArray( 21, 0, 0, 65556, 2, 0, 196622, 14, 0, 524296, 16, 0, 524297, 15, 0, 917512, 16, 0, 917518, 16, 0 )
 
 [node name="Kira" parent="." instance=ExtResource( 16 )]
-position = Vector2( 266, 250 )
-worker_size = Vector2( 48, 96 )
-worker_image = ExtResource( 11 )
+position = Vector2( 266, 240 )
+worker_size = Vector2( 48, 100 )
+worker_image = SubResource( 29 )
 attributes = {
 "ART_THINK": 3,
 "LOGIC_RAC": 2,
@@ -1127,9 +1159,9 @@ attributes = {
 }
 
 [node name="Roger" parent="." instance=ExtResource( 16 )]
-position = Vector2( 459, 248 )
-worker_size = Vector2( 96, 96 )
-worker_image = ExtResource( 10 )
+position = Vector2( 455, 250 )
+worker_size = Vector2( 94, 90 )
+worker_image = SubResource( 30 )
 attributes = {
 "ART_THINK": 1,
 "LOGIC_RAC": 3,
@@ -1144,8 +1176,8 @@ tile_data = PoolIntArray( 589827, 0, 0, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1
 
 [node name="Bento" parent="." instance=ExtResource( 16 )]
 position = Vector2( 459, 437 )
-worker_size = Vector2( 48, 96 )
-worker_image = ExtResource( 13 )
+worker_size = Vector2( 50, 96 )
+worker_image = SubResource( 31 )
 attributes = {
 "ART_THINK": 2,
 "LOGIC_RAC": 2,
@@ -1154,8 +1186,8 @@ attributes = {
 
 [node name="Ana" parent="." instance=ExtResource( 16 )]
 position = Vector2( 267, 439 )
-worker_size = Vector2( 48, 96 )
-worker_image = ExtResource( 3 )
+worker_size = Vector2( 50, 96 )
+worker_image = SubResource( 32 )
 attributes = {
 "ART_THINK": 2,
 "LOGIC_RAC": 1,
