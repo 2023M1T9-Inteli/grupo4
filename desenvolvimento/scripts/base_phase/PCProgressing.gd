@@ -1,14 +1,17 @@
 tool
 extends TextureProgress
 
-# PT_BR: Sinal para quando avisar completar a barra de progresso
-# EN_US: Signal emitted when the progress bar is completed
+# PT_BR: Sinal personalizado para avisar quando completar a barra de progresso
+# EN_US: Custome signal emitted when the progress bar is completed
 signal completed_change()
 
 var value_to_increase = 10
 
+
 export var qtd_task = 10 setget _set_qtd_task
 
+# PT_BR: Funções setters
+# EN_US: Set Functions
 func _set_qtd_task(new_value) -> void:
 	qtd_task = new_value
 	self.max_value = float(qtd_task * qtd_task)

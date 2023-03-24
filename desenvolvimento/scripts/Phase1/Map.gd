@@ -59,8 +59,10 @@ func _receive_task_order(task_info):
 		_check_task_wait_list()
 		
 		
-# PT_BR: Funções para receberem as informações das tarefas de cada funcionário e chamar a função para armazenar na lista de espera
-# EN_US: Functions to receive the task informations from each character and call the function to put in the wait list
+# PT_BR (1): Funções para receberem as informações das tarefas de cada funcionário 
+# PT_BR (2): E chamar a função para armazenar na lista de espera
+# EN_US (1): Functions to receive the task informations from each character
+# EN_US(2): And call the function to put in the wait list
 func Kira_initiate_task(task):
 	var task_info = {
 		"path": $PathKira,
