@@ -5,13 +5,17 @@ extends TextureProgress
 # EN_US: Custome signal emitted when the progress bar is completed
 signal completed_change()
 
+# PT_BR: Variável que armazena o valor padrão usado para aumentar a barra de progresso.
+# EN_US: Variable that stores the default value used to increase the progress bar. 
 var value_to_increase = 10
 
 
+# PT_BR: Variável que armazena a quantidade de tarefas na fase.
+# EN_US: Variable that stores the quantity of tasks in the phase.
 export var qtd_task = 10 setget _set_qtd_task
 
-# PT_BR: Funções setters
-# EN_US: Set Functions
+# PT_BR: Atualiza o valor máximo da barra de progresso de acordo com a quantidade de tarefas.
+# EN_US: Updates the maximum value of the progress bar according to the quantity of tasks.
 func _set_qtd_task(new_value) -> void:
 	qtd_task = new_value
 	self.max_value = float(qtd_task * qtd_task)
