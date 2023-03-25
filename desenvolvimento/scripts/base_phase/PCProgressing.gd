@@ -1,13 +1,14 @@
 tool
 extends TextureProgress
 
-# PT_BR: Sinal para quando avisar completar a barra de progresso
-# EN_US: Signal emitted when the progress bar is completed
+# PT_BR: Sinal personalizado para avisar quando completar a barra de progresso
+# EN_US: Custome signal emitted when the progress bar is completed
 signal completed_change()
 
 # PT_BR: Variável que armazena o valor padrão usado para aumentar a barra de progresso.
 # EN_US: Variable that stores the default value used to increase the progress bar. 
 var value_to_increase = 10
+
 
 # PT_BR: Variável que armazena a quantidade de tarefas na fase.
 # EN_US: Variable that stores the quantity of tasks in the phase.

@@ -59,8 +59,10 @@ func _receive_task_order(task_info):
 		_check_task_wait_list()
 		
 		
-# PT_BR: Funções para receberem as informações das tarefas de cada funcionário e chamar a função para armazenar na lista de espera
-# EN_US: Functions to receive the task informations from each character and call the function to put in the wait list
+# PT_BR (1): Função para receber as informações das tarefas do personagem "Kira"
+# PT_BR (2): E chamar a função para armazenar na lista de espera
+# EN_US (1): Function to receives the task informations from the character "Kira"
+# EN_US (2): And call the function to put in the wait list
 func Kira_initiate_task(task):
 	var task_info = {
 		"path": $PathKira,
@@ -72,7 +74,10 @@ func Kira_initiate_task(task):
 	}
 	_receive_task_order(task_info)
 
-
+# PT_BR (1): Função para receber as informações das tarefas do personagem "Roger"
+# PT_BR (2): E chamar a função para armazenar na lista de espera
+# EN_US (1): Function to receives the task informations from the character "Roger"
+# EN_US (2): And call the function to put in the wait list
 func Roger_initiate_task(task):
 	var task_info = {
 		"path": $PathRoger, 
@@ -83,7 +88,11 @@ func Roger_initiate_task(task):
 		"task_node": task
 	}
 	_receive_task_order(task_info)
-	
+
+# PT_BR (1): Função para receber as informações das tarefas do personagem "Bento"
+# PT_BR (2): E chamar a função para armazenar na lista de espera
+# EN_US (1): Function to receives the task informations from the character "Bento"
+# EN_US (2): And call the function to put in the wait list
 func Bento_initiate_task(task):
 	var task_info = {
 		"path": $PathBento, 
@@ -95,6 +104,10 @@ func Bento_initiate_task(task):
 	}
 	_receive_task_order(task_info)
 
+# PT_BR (1): Função para receber as informações das tarefas do personagem "Ana"
+# PT_BR (2): E chamar a função para armazenar na lista de espera
+# EN_US (1): Function to receives the task informations from the character "Ana"
+# EN_US (2): And call the function to put in the wait list
 func Ana_initiate_task(task):
 	var task_info = {
 		"path": $PathAna, 
@@ -107,16 +120,22 @@ func Ana_initiate_task(task):
 	_receive_task_order(task_info)
 
 
-# PT_BR: Funções para emitir o sinal de conclusão de tarefa de cada personagem
-# EN_US: Functions to emit each character's task conclusion signal
+# PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Kira"
+# EN_US: Function to emit the task conclusion signal from the character "Kira"
 func _on_Kira_finished_task(worker):
 	emit_signal("kira_fineshed_task", worker)
 
+# PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Roger"
+# EN_US: Function to emit the task conclusion signal from the character "Roger"
 func _on_Roger_finished_task(worker):
 	emit_signal("roger_fineshed_task", worker)
 
+# PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Bento"
+# EN_US: Function to emit the task conclusion signal from the character "Bento"
 func _on_Bento_finished_task(worker):
 	emit_signal("bento_fineshed_task", worker)
 
+# PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Ana"
+# EN_US: Function to emit the task conclusion signal from the character "Ana"
 func _on_Ana_finished_task(worker):
 	emit_signal("ana_fineshed_task", worker)

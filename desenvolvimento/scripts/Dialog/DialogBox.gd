@@ -7,26 +7,28 @@ var counter = 0
 
 signal finished_dialog()
 
+func _ready():
+	$InitialText.bbcode_text = "[color=#d69856]Rosaline[/color]: Olá, tudo bem?"
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "Rosaline: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência!",
+			"text": "[color=#d69856]Rosaline[/color]: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência!",
 			"anim": "idle",
 			"showPC": false,
 		},
 	1: {
-			"text": "Rosaline: Minha empresa está trabalhando no desenvolvimento de novos hardwares para comercialização, e nossos investidores estão nos pressionando para que o projeto saia o mais rápido possível. ",
+			"text": "[color=#d69856]Rosaline[/color]: Minha empresa está trabalhando no desenvolvimento de novos hardwares para comercialização, e nossos investidores estão nos pressionando para que o projeto saia o mais rápido possível. ",
 			"anim": "arm_up",
 			"showPC": true,
 		}, 
 	2: {
-			"text": "Rosaline:Mesmo com bom ritmo de trabalho, estamos atrasados e acreditamos que a sua empresa poderá nos auxiliar em acelerar esse processo, pois sua equipe possui os profissionais mais qualificados do mercado. ",
+			"text": "[color=#d69856]Rosaline[/color]:Mesmo com bom ritmo de trabalho, estamos atrasados e acreditamos que a sua empresa poderá nos auxiliar em acelerar esse processo, pois sua equipe possui os profissionais mais qualificados do mercado. ",
 			"anim": "idle",
 			"showPC": false,
 		},
 	3: {
-			"text": "Rosaline: Então, chega de conversa fiada e vamos ao trabalho! ",
+			"text": "[color=#d69856]Rosaline[/color]: Então, chega de conversa fiada e vamos ao trabalho! ",
 			"anim": "idle",
 			"showPC": false,
 		},

@@ -13,7 +13,7 @@ var task_scene = preload("res://scenes/tutorial/Task_introduction.tscn")
 # EN_US: Function used to end the tutorial and define wheter to open the phases scee or hide the popup.
 func end_tutorial():
 	if is_in_menu:
-		get_tree().change_scene("res://scenes/Phases.tscn")
+		var __ = get_tree().change_scene("res://scenes/Phases.tscn")
 	else:
 		for child in self.get_children():
 			child.hide()

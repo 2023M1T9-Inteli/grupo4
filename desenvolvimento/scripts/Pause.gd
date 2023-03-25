@@ -21,6 +21,8 @@ func set_is_paused(value):
 func _on_ContinueButton_pressed():
 	self.is_paused = false
 	self.hide()
+	$Depaused_sound.play()
+	Audio.change_music(phase_1_music)
 	
 
 # PT_BR: Função executada quando o botão opções é apertado para mostrar o objeto Options.
@@ -32,13 +34,15 @@ func _on_OptionsButton_pressed():
 # PT_BR: Função executada quando o botão sair é apertado que volta ao menu do jogo.
 # EN_US: Function executed when the exit button is pressed which returns to the game menu.
 func _on_QuitButton_pressed():
-	get_tree().change_scene("res://scenes/Menu.tscn")
+	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
 	self.is_paused = false
+	
 
 # PT_BR: Função executada quando o botão pause é apertado que define a variável is paused.
 # EN_US: Function executed when the pause button is pressed that defines the variable is paused.
 func _on_Pause_button_pressed():
 	self.is_paused = !is_paused	
+
 
 # PT_BR: Função executada quando o botão tutorial é apertado que abre o popup do tutorial.
 # EN_US: Function executed when the tutorial button is pressed to open the tutorial popup.

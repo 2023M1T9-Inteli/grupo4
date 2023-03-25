@@ -1,6 +1,7 @@
 extends Control
 
 # PT_BR: Variável que carrega a música do jogo
+<<<<<<< HEAD
 # EN_US: Variable that loads the game music
 var theme_music = preload("res://assets/Audio/main_music.mp3")
 

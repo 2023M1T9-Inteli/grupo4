@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=1]
 [ext_resource path="res://assets/PhasesScreen/phase2.png" type="Texture" id=2]
 [ext_resource path="res://assets/PhasesScreen/phase3.png" type="Texture" id=3]
+[ext_resource path="res://assets/PhasesScreen/phase1_dark.png" type="Texture" id=4]
 [ext_resource path="res://assets/PhasesScreen/phase1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Fonts/vcr_osd_mono_font.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://scripts/buttons/Phase1Button.gd" type="Script" id=7]
+[ext_resource path="res://scripts/PhaseSelector.gd" type="Script" id=7]
+[ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80
@@ -13,11 +15,18 @@ outline_size = 2
 outline_color = Color( 0.47451, 0.317647, 0.356863, 1 )
 font_data = ExtResource( 6 )
 
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
 [node name="Phases" type="Node2D"]
 position = Vector2( 1, -7 )
+script = ExtResource( 7 )
 
 [node name="PhaseBackground" type="Sprite" parent="."]
-position = Vector2( 641, 361 )
+position = Vector2( 641, 368 )
 scale = Vector2( 0.667593, 0.667593 )
 texture = ExtResource( 1 )
 
@@ -39,36 +48,46 @@ custom_constants/vseparation = 60
 custom_constants/hseparation = 100
 columns = 3
 
-[node name="Phase1Button" type="Button" parent="PhasesGridContainer"]
-margin_right = 312.0
-margin_bottom = 182.0
+[node name="Phase1Button" type="TextureButton" parent="PhasesGridContainer"]
+margin_top = 1.0
+margin_right = 300.0
+margin_bottom = 177.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-icon = ExtResource( 5 )
-flat = true
-icon_align = 1
-script = ExtResource( 7 )
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
 
-[node name="Phase2Button" type="Button" parent="PhasesGridContainer"]
-margin_left = 412.0
-margin_top = 3.0
-margin_right = 724.0
-margin_bottom = 179.0
+[node name="Phase2Button" type="TextureButton" parent="PhasesGridContainer"]
+margin_left = 400.0
+margin_top = 4.0
+margin_right = 700.0
+margin_bottom = 174.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-icon = ExtResource( 2 )
-flat = true
-icon_align = 1
+texture_normal = ExtResource( 2 )
 
 [node name="Phase3Button" type="Button" parent="PhasesGridContainer"]
-margin_left = 824.0
-margin_top = 2.0
-margin_right = 1136.0
-margin_bottom = 180.0
+margin_left = 800.0
+margin_right = 1112.0
+margin_bottom = 178.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 icon = ExtResource( 3 )
 flat = true
 icon_align = 1
 
-[connection signal="pressed" from="PhasesGridContainer/Phase1Button" to="PhasesGridContainer/Phase1Button" method="_on_Phase1Button_pressed"]
+[node name="TextureButton" type="Button" parent="."]
+margin_left = 1191.0
+margin_top = 18.0
+margin_right = 1261.0
+margin_bottom = 87.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 8 )
+
+[connection signal="pressed" from="PhasesGridContainer/Phase1Button" to="." method="_on_Phase1Button_pressed"]
+[connection signal="pressed" from="PhasesGridContainer/Phase2Button" to="." method="_on_Phase2Button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

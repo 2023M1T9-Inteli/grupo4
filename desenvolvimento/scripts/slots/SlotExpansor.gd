@@ -4,9 +4,10 @@ extends Control
 DRAG AND DROP
 """
 
-# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
-# EN_US: Checks if any child Control accepts the object being dragged and returns the result
+
 func can_drop_data(position, data) -> bool:
+	# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
+	# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 	var can_drop = false
 	for child in self.get_children():
 		if child is Control:
@@ -16,11 +17,11 @@ func can_drop_data(position, data) -> bool:
 	return can_drop
 
 
-# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
-# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
-# EN_US (1): Checks which of the child Controls accepts the object and
-# EN_US (2): When found, sends the dragged object to the Control
 func drop_data(position, data) -> void:
+	# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
+	# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
+	# EN_US (1): Checks which of the child Controls accepts the object and
+	# EN_US (2): When found, sends the dragged object to the Control
 	for child in self.get_children():
 		if child is Control and child.can_drop_data(position, data):
 			child.drop_data(position, data)

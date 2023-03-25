@@ -25,19 +25,20 @@ export(bool) var active_space_between = true setget _set_active_space_between
 # EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.Y
 
-# PT_BR: Funções para definir as variáveis
-# EN_US: Functions to set variables
-func _set_collection_size(newValue) -> void:
-	collection_size = newValue
+# PT_BR: Funções para definir as variáveis. Recebe o novo valor. Não retorna nada
+# EN_US: Functions to set variables. Receives the new value. Dont return value
+func _set_collection_size(new_value) -> void:
+	collection_size = new_value
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
 
-func _set_active_space_between(newValue) -> void:
-	active_space_between = newValue
+func _set_active_space_between(new_value) -> void:
+	active_space_between = new_value
 
 # PT_BR: Inicializa as variáveis locais
 # EN_US: Initialize local variables
 var qtd_control_children = 0
+
 
 func _ready():	
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
@@ -45,7 +46,6 @@ func _ready():
 	
 	# EN_US (1): It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
-	
 	var total_children_size = 0
 	
 	for child in get_children():
@@ -116,11 +116,11 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 DRAG AND DROP
 """
 
-# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
-# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
-# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
-# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 func get_drag_data(position):
+	# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
+	# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
+	# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
+	# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 	var actual_child = 0
 	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
@@ -137,9 +137,9 @@ func get_drag_data(position):
 			actual_child += 1
 
 
-# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
-# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 func can_drop_data(position, data) -> bool:
+	# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
+	# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 	var can_drop = false
 	for child in self.get_children():
 		if child.is_in_group("slot"):
@@ -148,12 +148,11 @@ func can_drop_data(position, data) -> bool:
 				return can_drop
 	return can_drop
 
-
-# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
-# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
-# EN_US (1): Checks which of the child Controls accepts the object and
-# EN_US (2): When found, sends the dragged object to the Control
 func drop_data(position, data) -> void:
+	# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
+	# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
+	# EN_US (1): Checks which of the child Controls accepts the object and
+	# EN_US (2): When found, sends the dragged object to the Control
 	for child in self.get_children():
 		if child.is_in_group("slot") and child.can_drop_data(position, data):
 			child.drop_data(position, data)

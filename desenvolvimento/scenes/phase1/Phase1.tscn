@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase1/Map.tscn" type="PackedScene" id=2]
@@ -21,11 +21,14 @@
 [ext_resource path="res://assets/items/profile_sheets/kira_big_sheet.png" type="Texture" id=19]
 [ext_resource path="res://assets/items/profile_sheets/bento_big_sheet.png" type="Texture" id=20]
 [ext_resource path="res://scenes/Pause.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=22]
-[ext_resource path="res://assets/Feedbacks/star_full (1).png" type="Texture" id=23]
+[ext_resource path="res://assets/Feedbacks/star_full.png" type="Texture" id=22]
+[ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=23]
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Timer/circulo.png" type="Texture" id=25]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
+[ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
+[ext_resource path="res://assets/Audio/Conclued_task.wav" type="AudioStream" id=28]
+[ext_resource path="res://assets/Audio/Pause.wav" type="AudioStream" id=29]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -41,7 +44,7 @@ position = Vector2( 772, 0 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
-[node name="ExitButton" type="TextureButton" parent="."]
+[node name="Pause_button" type="TextureButton" parent="."]
 margin_left = 15.0
 margin_top = 13.0
 margin_right = 75.0
@@ -57,44 +60,39 @@ scale = Vector2( 0.9, 0.9 )
 z_index = 6
 
 [node name="SlotExpansorKira" parent="Slots" instance=ExtResource( 6 )]
-margin_left = 117.778
-margin_top = 291.111
-margin_right = 362.778
-margin_bottom = 436.111
+margin_left = 115.556
+margin_top = 293.333
+margin_right = 360.556
+margin_bottom = 438.333
 
 [node name="SlotCollectionKira" parent="Slots/SlotExpansorKira" instance=ExtResource( 13 )]
-<<<<<<< Updated upstream
-margin_left = 3.0
-margin_top = 94.0
-margin_right = 131.0
-margin_bottom = 134.0
-=======
-margin_left = -0.000442505
-margin_top = 97.7781
-margin_right = 128.0
-margin_bottom = 137.778
->>>>>>> Stashed changes
+margin_left = 8.88845
+margin_top = 88.8892
+margin_right = 136.888
+margin_bottom = 128.889
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "kira_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 10 )
 drawer_image = ExtResource( 5 )
 boss_table_image = ExtResource( 19 )
@@ -106,38 +104,33 @@ margin_right = 719.444
 margin_bottom = 429.444
 
 [node name="SlotCollectionRoger" parent="Slots/SlotExpansorRoger" instance=ExtResource( 13 )]
-<<<<<<< Updated upstream
-margin_left = 107.0
-margin_top = 98.0
-margin_right = 235.0
-margin_bottom = 138.0
-=======
-margin_left = 138.889
-margin_top = 106.667
-margin_right = 266.889
-margin_bottom = 146.667
->>>>>>> Stashed changes
+margin_left = 103.334
+margin_top = 97.7782
+margin_right = 231.334
+margin_bottom = 137.778
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "roger_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 9 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 18 )
@@ -149,90 +142,80 @@ margin_right = 356.111
 margin_bottom = 648.333
 
 [node name="SlotCollectionAna" parent="Slots/SlotExpansorAna" instance=ExtResource( 13 )]
-<<<<<<< Updated upstream
-margin_left = 5.0
-margin_top = 91.0
-margin_right = 133.0
-margin_bottom = 131.0
-=======
-margin_left = 4.44455
-margin_top = 101.111
-margin_right = 132.445
-margin_bottom = 141.111
->>>>>>> Stashed changes
+margin_left = 13.3335
+margin_top = 92.2226
+margin_right = 141.333
+margin_bottom = 132.223
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "ana_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 11 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 24 )
 
 [node name="SlotExpansorBento" parent="Slots" instance=ExtResource( 6 )]
-margin_left = 472.222
-margin_top = 508.889
-margin_right = 717.222
-margin_bottom = 653.889
+margin_left = 480.0
+margin_top = 515.556
+margin_right = 725.0
+margin_bottom = 660.556
 
 [node name="SlotCollectionBento" parent="Slots/SlotExpansorBento" instance=ExtResource( 13 )]
-<<<<<<< Updated upstream
-margin_left = 99.0
-margin_top = 73.0
-margin_right = 227.0
-margin_bottom = 113.0
-=======
-margin_left = 133.333
-margin_top = 88.8884
-margin_right = 261.333
-margin_bottom = 128.888
->>>>>>> Stashed changes
+margin_left = 88.8889
+margin_top = 79.9995
+margin_right = 216.889
+margin_bottom = 119.999
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 40.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "bento_profile"
 qtd = 1
 slot_type = 1
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 table_image = ExtResource( 7 )
 drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 20 )
 
 [node name="TimeDisplayer" parent="." instance=ExtResource( 15 )]
-margin_left = 1045.0
-margin_top = 10.0
-margin_right = 1164.0
-margin_bottom = 73.0
+margin_left = 1015.0
+margin_top = 5.0
+margin_right = 1168.0
+margin_bottom = 102.0
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
@@ -251,53 +234,63 @@ margin_bottom = 955.0
 [node name="Pause" parent="." instance=ExtResource( 21 )]
 visible = false
 
-[node name="ScorePhase" type="Label" parent="."]
-margin_left = 206.0
-margin_top = 21.0
-margin_right = 575.0
-margin_bottom = 85.0
+[node name="Scores" type="Node2D" parent="."]
+
+[node name="ScorePhase" type="Label" parent="Scores"]
+margin_left = 291.0
+margin_top = 18.0
+margin_right = 487.0
+margin_bottom = 82.0
 custom_fonts/font = SubResource( 1 )
 text = "Score:"
 align = 1
 valign = 1
 
-[node name="StarProgress" type="TextureProgress" parent="."]
+[node name="StarProgress1" type="TextureProgress" parent="Scores"]
 margin_left = 477.0
 margin_top = 28.0
-margin_right = 2057.0
-margin_bottom = 1556.0
+margin_right = 525.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+max_value = 56.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
 
-[node name="StarProgress2" type="TextureProgress" parent="."]
-margin_left = 538.0
-margin_top = 29.0
-margin_right = 2118.0
-margin_bottom = 1557.0
+[node name="StarProgress2" type="TextureProgress" parent="Scores"]
+margin_left = 534.0
+margin_top = 28.0
+margin_right = 582.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+max_value = 17.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
 
-[node name="StarProgress3" type="TextureProgress" parent="."]
-margin_left = 594.0
-margin_top = 29.0
-margin_right = 2174.0
-margin_bottom = 1557.0
+[node name="StarProgress3" type="TextureProgress" parent="Scores"]
+margin_left = 587.0
+margin_top = 28.0
+margin_right = 635.0
+margin_bottom = 74.0
 rect_scale = Vector2( 0.03, 0.03 )
-texture_under = ExtResource( 22 )
-texture_progress = ExtResource( 23 )
+max_value = 12.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 22 )
+
+[node name="Click_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 27 )
+
+[node name="Conclued_task" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 28 )
+
+[node name="Paused_audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 29 )
 
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
-<<<<<<< Updated upstream
-[connection signal="pressed" from="ExitButton" to="Pause" method="_on_ExitButton_pressed"]
-=======
 [connection signal="pressed" from="Pause_button" to="." method="_on_Pause_button_pressed"]
-[connection signal="pressed" from="Pause_button" to="Pause" method="_on_Pause_button_pressed"]
->>>>>>> Stashed changes
+[connection signal="pressed" from="Pause_button" to="Pause" method="_on_ExitButton_pressed"]
 [connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]

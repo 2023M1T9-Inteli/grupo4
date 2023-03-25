@@ -25,9 +25,10 @@ func _on_Button2_pressed():
 	# EN_US: When you click the button the npc will start the task
 	$Worker.initiate_task(self)
 
+
+# PT_BR: Sinal que aumenta a pontuação quando o npc acabar a tarefa
+# EN_US: Signal which increases the score when the npc finishes the task
 func _on_Worker_finished_task(worker):
-	# PT_BR: Sinal que aumenta a pontuação quando o npc acabar a tarefa
-	# EN_US: Signal which increases the score when the npc finishes the task
 	phase_progress.increase_value()
 	_change_score(worker.score)
 
@@ -42,7 +43,8 @@ func _on_TimeDisplayer_timer_is_over():
 	# EN_US: CHanges to Defeat Scene
 	get_tree().change_scene("res://scenes/base_phase/Defeat.tscn")
 
-
+# PT_BR: Sinal personalizado que é enviado quando o progresso da fase chegar ao valor máximo
+# EN_US: Custom signal that is sent when stage progress reaches the maximum value  
 func _on_PhaseProgress_completed_change():
 	# PT_BR: Muda para cena de vitória
 	# EN_US: CHanges to Victory Scene

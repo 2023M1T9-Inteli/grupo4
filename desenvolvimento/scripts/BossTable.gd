@@ -17,7 +17,6 @@ func _on_TextureButton_mouse_entered():
 func _on_TextureButton_mouse_exited():
 	Input.set_custom_mouse_cursor(normal_cursor, 0, Vector2(16,16))
 
-
 # PT_BR (1): Função para tocar música quando a tarefa é colocada na mesa do funcionário.
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Function to play music when the task is dropped on the worker table.
