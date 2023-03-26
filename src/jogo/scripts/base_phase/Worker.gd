@@ -1,3 +1,4 @@
+tool
 extends Node2D
 
 # PT_BR: Define uma constante para padronizar os atributos que o Worker terá
@@ -31,15 +32,16 @@ func _set_worker_size(new_value) -> void:
 	worker_size = new_value
 	$Worker.rect_min_size = worker_size
 	$Worker.rect_size = worker_size
-
-# PT_BR: Declara a variável da pontuação
-# EN_US: Declares the score variable
-var score = 0
+	if weakref($Collision).get_ref():
+		$Collision.shape.extents.x = worker_size.x / 2
+		$Collision.shape.extents.y = worker_size.y / 2
+		$Collision.position.x = worker_size.x / 2
+		$Collision.position.y = worker_size.y / 2
 
 # PT_BR: Armazena a cena Timer
 # EN_US: Stores the Timer scene
 onready var timer = $Timer
-
+var score = 0
 # PT_BR: Armazena a cena Cronometer
 # EN_US: Stores the Cronometer scene
 onready var cronometer = $Cronometer
@@ -51,14 +53,12 @@ signal finished_task(worker)
 # PT_BR: Função que iniciará a tarefa. Não retorna valor
 # EN_US: Function that initiate task. Doesn't return value
 func initiate_task(task):
-	_compare_attributes(task["attributes"])
-	
 	# PT_BR: Reseta os valores para iniciar o cronômetro
 	# EN_US: Resets the values to start the timer
-	score = 0
 	cronometer.value = 0
 	cronometer.show()
 	timer.start()
+	_compare_attributes(task["attributes"])
 
 
 # PT_BR: Compara os atributos da tarefa com os atributos do Worker. Não retorna valor
@@ -70,7 +70,7 @@ func _compare_attributes(task_attributes: Dictionary):
 
 	# PT_BR: Atualiza a pontuação com a diferença entre os atributos do worker e os da tarefa
 	# EN_US: Updates the score with the difference between worker and task attributes
-	score = 100 + comparedAttr * 10
+	score = 100 + comparedAttr * 50
 
 
 func _on_Timer_timeout():

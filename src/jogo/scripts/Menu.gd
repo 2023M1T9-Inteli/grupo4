@@ -1,16 +1,19 @@
 extends Control
 
+# PT_BR: Variável que carrega a música do jogo
+# EN_US: Variable that loads the game's music
+var theme_music = preload("res://assets/Audio/main_music.wav")
 
 # PT_BR: Inicia o jogo
 # EN_US: Start the game
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/tutorial/Tutorial.tscn")
+	$TutorialPopup.open_tutorial()
 
 
 # PT_BR: Abre a cena de opções
 # EN_US: Open the options scene
 func _on_OptionsButton_pressed():
-	get_tree().change_scene("res://scenes/Options.tscn")
+	$Options.show()
 
 
 # PT_BR: Abre a cena de créditos
@@ -18,3 +21,6 @@ func _on_OptionsButton_pressed():
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://scenes/Credits.tscn")
 
+
+func _ready():
+	Audio.change_music(theme_music)

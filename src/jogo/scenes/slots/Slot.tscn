@@ -61,3 +61,12 @@ rect_min_size = Vector2( 32, 32 )
 mouse_filter = 2
 expand = true
 stretch_mode = 6
+
+[node name="Preview" type="TextureRect" parent="."]
+visible = false
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+mouse_filter = 2
+expand = true
+stretch_mode = 6

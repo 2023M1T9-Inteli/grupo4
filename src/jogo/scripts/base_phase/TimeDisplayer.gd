@@ -9,6 +9,7 @@ export var  minutes = 4
 # EN_US: Signal sended when the time runs out.
 signal timer_is_over()
 
+
 func _on_Timer_timeout():
 	seconds -= 1
 	
