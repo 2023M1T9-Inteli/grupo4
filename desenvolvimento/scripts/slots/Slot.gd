@@ -93,11 +93,10 @@ export(Texture) var boss_table_image: Texture = null setget _set_boss_table_imag
 
 # PT_BR: Variaveis locais
 # EN_US: Local variables
-var _mouse_right_button: bool = false
 var is_dragging: bool = false
 
-# PT_BR: Funções setGet
-# EN_US: setGet Functions
+# PT_BR: Funções setters
+# EN_US: Set Functions
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($Qtd).get_ref():
@@ -182,7 +181,7 @@ func _input(event) -> void:
 	# EN_US: If you right-click
 	if event is InputEventMouseButton:
 		# PT_BR: Se soltar o click
-	# EN_US: If released click
+		# EN_US: If released click
 		if event.is_action_released("click"):
 			is_dragging = false
 
@@ -200,6 +199,7 @@ func _clearSlot() -> void:
 	$BossTableImage.texture = null
 	$Qtd.text = str(qtd)
 	attributes = ATTRIBUTES_TYPE
+
 
 # PT_BR: Não recebe parâmetros. Retorna um node com base na localização
 # EN_US: Dont receive parameters. Return a node based on location

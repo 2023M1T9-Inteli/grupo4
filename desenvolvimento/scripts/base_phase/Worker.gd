@@ -28,6 +28,9 @@ func _set_worker_image(new_value) -> void:
 	if weakref($Worker).get_ref():
 		$Worker.texture = worker_image
 
+
+# PT_BR: Define o tamanho de cada colaborador(a) no jogo
+# EN_US: Sets the size of each worker in the game.
 func _set_worker_size(new_value) -> void:
 	worker_size = new_value
 	$Worker.rect_min_size = worker_size

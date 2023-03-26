@@ -53,7 +53,7 @@ font_data = ExtResource( 10 )
 [sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="DynamicFont" id=7]
-size = 12
+size = 10
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
@@ -194,6 +194,7 @@ margin_top = 531.0
 margin_right = 1083.0
 margin_bottom = 600.0
 rect_scale = Vector2( 2, 2 )
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 11 )
@@ -209,7 +210,6 @@ margin_right = 99.0
 margin_bottom = 44.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Continue"
 align = 1
 valign = 1
 

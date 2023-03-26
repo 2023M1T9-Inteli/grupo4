@@ -71,6 +71,7 @@ alignment = 1
 margin_top = 35.0
 margin_right = 225.0
 margin_bottom = 90.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 10 )
 
@@ -78,6 +79,7 @@ texture_hover = ExtResource( 10 )
 margin_top = 94.0
 margin_right = 225.0
 margin_bottom = 149.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 12 )
 
@@ -85,6 +87,7 @@ texture_hover = ExtResource( 12 )
 margin_top = 153.0
 margin_right = 225.0
 margin_bottom = 208.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 13 )
 
@@ -92,6 +95,7 @@ texture_hover = ExtResource( 13 )
 margin_top = 212.0
 margin_right = 225.0
 margin_bottom = 267.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
 script = ExtResource( 3 )
