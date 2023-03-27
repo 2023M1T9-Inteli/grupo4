@@ -12,10 +12,10 @@ func _ready():
 # EN_US: Open the phases scene and resets the variable "Global.score_phase_1"
 func _on_BackButton_pressed():
 	Globals.score_phase_1 = 0
-	get_tree().change_scene("res://scenes/Phases.tscn")
+	var __ = get_tree().change_scene("res://scenes/Phases.tscn")
 
 # PT_BR: Ao pressionar o botão, a fase recomeça.
 # EN_US: When the button is pressed, the phase reset.
 func _on_TextureButton_pressed():
 	Globals.score_phase_1 = 0
-	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	var __ = get_tree().change_scene("res://scenes/phase1/Phase1.tscn")

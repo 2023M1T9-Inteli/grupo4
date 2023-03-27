@@ -69,7 +69,7 @@ func _process(_delta):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the file is dropped on the expansion table.
 # EN_US (2): Parameter: slot - CenterContainer. 
-func _on_Slot_dropped_item(slot):	
+func _on_Slot_dropped_item(_slot):	
 	cont += 1
 
 
@@ -77,7 +77,7 @@ func _on_Slot_dropped_item(slot):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the file is placed on the worker table.
 # EN_US (2): Parâmetro: slot - CenterContainer.
-func _on_Slot_get_item(slot):
+func _on_Slot_get_item(_slot):
 	cont += 1
 
 

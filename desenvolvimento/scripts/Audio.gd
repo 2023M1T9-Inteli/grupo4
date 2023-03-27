@@ -1,5 +1,7 @@
 extends Node
 
+var temp = 0
+
 # PT_BR (1): Função que define a música e coloca para tocar. 
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Set the music and play.
@@ -17,8 +19,13 @@ func change_music(music):
 		$Music.stop()
 		play_music(music)
 
-func pause_music():
+func stop_music():
+	temp = 0
 	$Music.stop()
 
-func continue_music():
-	$Music.play()
+func pause():
+	temp = $Music.get_playback_position()
+	$Music.stop()
+
+func resume():
+	$Music.play(temp)

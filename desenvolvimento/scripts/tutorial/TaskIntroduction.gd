@@ -111,7 +111,7 @@ func _process(_delta):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the task is dropped on the table.
 # EN_US (2): Parameter: slot - CenterContainer.
-func _on_testeTarefa02_dropped_item(slot):
+func _on_testeTarefa02_dropped_item(_slot):
 	cont += 1
 
 

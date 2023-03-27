@@ -31,14 +31,13 @@ func _on_ContinueButton_pressed():
 	self.is_paused = false
 	self.hide()
 	depaused_sound.play()
-	Audio.continue_music()
+	Audio.resume()
 	
 
 # PT_BR: Função executada quando o botão opções é apertado para mostrar o objeto Options.
 # EN_US: Function executed when the options button is pressed to show the Options object.
 func open_pause_scene():
-	options.show()
-	Audio.pause_music()
+	Audio.pause()
 	paused_sound.play()
 	self.is_paused = true
 	
@@ -47,11 +46,11 @@ func open_pause_scene():
 # EN_US: Function executed when the exit button is pressed which returns to the game menu.
 func _on_QuitButton_pressed():
 	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
-	Audio.continue_music()
+	Audio.resume()
 	self.is_paused = false
 
 
 # PT_BR: Função executada quando o botão tutorial é apertado que abre o popup do tutorial.
 # EN_US: Function executed when the tutorial button is pressed to open the tutorial popup.
 func _on_TutorialButton_pressed():
-	$PopupMenu.open_tutorial()
+	tutorial.open_tutorial()

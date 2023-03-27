@@ -1,10 +1,16 @@
 extends Node
 
 enum PHASES {
-	PHASE_1 = 1,
-	PHASE_2 = 2,
+	PHASE_1 = 0,
+	PHASE_2 = 1,
 	PHASE_3 = 3,
 }
+
+const phases_keys = [
+	"phase1",
+	"phase2",
+	"phase3",
+]
 
 const phases_max_score = {
 	"phase1": 1500,
@@ -20,6 +26,8 @@ var player_phase_score = {
 
 var actual_score = 0
 var actual_phase = PHASES.PHASE_1
+
+var lose_by_time = false
 
 var music_volume
 var effects_volume

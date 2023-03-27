@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
-"class": "Phase",
+"class": "BasePhase",
 "language": "GDScript",
-"path": "res://scripts/Phase1/Phase1.gd"
+"path": "res://scripts/base_phase/BasePhase.gd"
 } ]
 _global_script_class_icons={
-"Phase": ""
+"BasePhase": ""
 }
 
 [application]

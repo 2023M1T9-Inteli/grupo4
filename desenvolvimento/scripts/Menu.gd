@@ -20,7 +20,7 @@ func _on_OptionsButton_pressed():
 # PT_BR: Abre a cena de créditos.
 # EN_US: Opens the credits scene.
 func _on_CreditsButton_pressed():
-	get_tree().change_scene("res://scenes/Credits.tscn")
+	var __ = get_tree().change_scene("res://scenes/Credits.tscn")
 
 
 # PT_BR: Chama a função change_music assim que a cena é iniciada.
