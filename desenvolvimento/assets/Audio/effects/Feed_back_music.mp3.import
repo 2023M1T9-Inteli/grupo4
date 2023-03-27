@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Feed_back_music.mp3-857845f80797e146d75f93d0d09f0d1b.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/effects/Feed_back_music.mp3"
+dest_files=[ "res://.import/Feed_back_music.mp3-857845f80797e146d75f93d0d09f0d1b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
