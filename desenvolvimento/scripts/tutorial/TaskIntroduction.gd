@@ -34,8 +34,9 @@ Assim que for concluída, você pode [color=#3a87ae]atribuir mais uma tarefa par
 # PT_BR: Variáveis que guardam referências do objeto no tempo de execução.
 # EN_US: Variables that store object references at runtime.
 onready var clock = $TimeDisplayer
-onready var progress = $back_progress
+onready var progress = $PhaseProgress
 onready var chronometer = $Cronometer
+onready var text_position = $text_box.rect_global_position
 
 # PT_BR: Função usada para definir a visibilidade do clock, progress e chronometer.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
@@ -43,6 +44,13 @@ func _ready():
 	clock.visible = false
 	progress.visible = false
 	chronometer.visible = false
+	$text_box/next_button.visible = false
+	$text_box/back_button.visible = false
+	$Circulo.visible = false
+	print(text_position)
+	
+
+
 
 # PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
@@ -77,12 +85,13 @@ func _process(_delta):
 
 	elif cont == 2:
 		$Path2D/path_table_worker/SmallTask.visible = false
-		chronometer.visible = true
 		$back_timer.visible = false
 		$SlotExpansorKira/WorkSlotKira.visible = true
+		$back_task.visible = true
+		chronometer.visible = true
+		clock.visible = false
 		run_task2 = 0
 		chronometer.value += (0.5)
-		clock.visible = false
 		if chronometer.value == 750:
 			chronometer.value = 0
 			cont += 1
@@ -92,15 +101,20 @@ func _process(_delta):
 		clock.visible = true
 		progress.visible = false
 		
+		$text_box/next_button.visible = true
+		$text_box/back_button.visible = true
 		$SlotExpansorKira/WorkSlotKira.visible = false
 		$back_task.visible = false
-		
 		$BossTable.visible = false
 		$back_timer.visible = true
+		$Circulo.visible = false
+		$text_box.rect_position = text_position
 		
 	elif cont == 4:
-		progress.visible = true
+		$text_box.rect_position = Vector2(152,424)
 		$back_timer.visible = false
+		$Circulo.visible = true
+		progress.visible = true
 		clock.visible = false
 		
 	elif cont == 5:
