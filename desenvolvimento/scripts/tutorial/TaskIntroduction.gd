@@ -114,12 +114,6 @@ func _process(_delta):
 func _on_testeTarefa02_dropped_item(slot):
 	cont += 1
 
-# PT_BR (1): Sinal customizado que detecta quando a ficha é retirada da mesa.
-# PT_BR (2): Parâmetro: slot - CenterContainer.
-# EN_US (1): Custom signal that detects when the task is taken from the table.
-# EN_US (2): Parameter: slot - CenterContainer.
-func _on_testeTarefa02_dropped_item(_slot):
-	cont += 1
 
 # PT_BR (1): Sinal customizado que detecta quando a ficha é retirada do slot do Kira
 # PT_BR (2): Parâmetro: slot - CenterContainer.

@@ -25,7 +25,6 @@ func _on_Phase1Button_pressed():
 	get_tree().change_scene("res://scenes/Dialog/DialogScene1.tscn")
 
 
-<<<<<<< HEAD
 # PT_BR: Abre a cena da segunda fase se o score é maior que 56%.
 # EN_US: Opens the phase two scene if score is bigger than 56%.
 func _on_Phase2Button_pressed():
