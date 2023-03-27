@@ -1,21 +1,52 @@
 extends Node2D
-
+class_name Phase
 # PT_BR: Inicializa variáveis de cenas importantes da fase
 # EN_US: Initialize variables of important scenes of the phase
 onready var phase_progress = $PhaseProgress
 onready var map = $Map
 
-# PT_BR: Inicializa variáveis responsáveis por armazenar as tarefas atribuídas a cada personagem
-# EN_US: Initialize variables responsible for storing the tasks attributed to each character
+# PT_BR: Inicializa variáveis responsáveis por armazenar os slots das tarefas de cada personagem
+# EN_US: Initialize variables responsible for storing the tasks slots of each character
 onready var slot_kira = $Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira
 onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger
 onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
 onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
 
+# PT_BR: Inicializa variáveis responsáveis por armazenar os slots das fichas de perfil de cada personagem
+# EN_US: Initialize variables responsible for storing the profile sheets slots of each character
+onready var profile_kira = $Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira
+onready var profile_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger
+onready var profile_ana = $Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna
+onready var profile_bento = $Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento
 
-#PT_BR: Importa o som de pause.
-# EN_US:
+# PT_BR: Inicializa variáveis que armazenam os as estrelas da pontuação
+# EN_US: Initialize variables that stores the progress stars
+onready var star1 = $Scores/StarProgress1
+onready var star2 = $Scores/StarProgress2
+onready var star3 = $Scores/StarProgress3
+
+# PT_BR: Armazena a referência do objeto ClickAudio
+# EN_US: Stores the ClickAudio object reference
+onready var click_audio = $ClickAudio
+
+# PT_BR: Armazena a referência do objeto ClickAudio
+# EN_US: Stores the ClickAudio object reference
+onready var pause_scene = $Pause
+
+# PT_BR: Armazena o score máximo da fase
+# EN_US: Stores the phase max score
+onready var max_score = Globals.phases_max_score["phase1"]
+
+# PT_BR: Importa o som de pause.
+# EN_US: Imports the pause sound.
 var paused_sound = preload("res://assets/Audio/Pause.wav")
+
+
+# PT_BR: Reseta a variável de pontos.
+# EN_US: Reset the points variable.
+func _ready():
+	Globals.set_actual_score(0)
+	Globals.set_actual_phase(Globals.PHASES.PHASE_1)
 
 
 #PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
@@ -23,32 +54,27 @@ var paused_sound = preload("res://assets/Audio/Pause.wav")
 func _process(delta):
 	# PT_BR: As variáveis baixo armazenam o nó que será usado na função
 	# EN_US: The variables below stores a node which will be used by the function
-	var profile_kira = $Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira
-	hover_file(184,232,344,392,profile_kira)
+	_send_hover_effect_in_file(profile_kira)
+	_send_hover_effect_in_file(profile_roger)
+	_send_hover_effect_in_file(profile_ana)
+	_send_hover_effect_in_file(profile_bento)
 
-	var profile_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger
-	hover_file(584,632,344,392,profile_roger)
-
-	var profile_ana = $Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna
-	hover_file(184,232,536,584,profile_ana)
-	
-	var profile_bento = $Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento
-	hover_file(584,632,536,584,profile_bento)
 
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
 func _change_score(new_value): 
-	Globals.score_phase_1 += new_value
-	var result := float(Globals.score_phase_1 * 100) / float(Globals.max_score_phase_1)
+	Globals.set_actual_score(Globals.actual_score + new_value)
+	var actual_score = Globals.actual_score
+	var result := float(actual_score * 100) / float(max_score)
 
 	if result > 73:
-		$Scores/StarProgress3.value = clamp((result - 73), 0, 12)
-		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
+		star3.value = clamp((result - 73), 0, 12)
+		star2.value = clamp((result - 56), 0, 17)
 	elif result > 56: 
-		$Scores/StarProgress2.value = clamp((result - 56), 0, 17)
-		$Scores/StarProgress1.value = clamp(result, 0, 56)
+		star2.value = clamp((result - 56), 0, 17)
+		star1.value = clamp(result, 0, 56)
 		
-	$Scores/StarProgress1.value = clamp(result, 0, 56)
+	star1.value = clamp(result, 0, 56)
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
@@ -74,7 +100,7 @@ func _on_Map_ana_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_ana._clearSlot()
 	slot_ana.can_give = true
-	$Conclued_task.play()
+
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Bento" finaliza uma tarefa
 # PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
@@ -87,7 +113,7 @@ func _on_Map_bento_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_bento._clearSlot()
 	slot_bento.can_give = true
-	$Conclued_task.play()
+
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Kira" finaliza uma tarefa
 # PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
@@ -100,7 +126,7 @@ func _on_Map_kira_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_kira._clearSlot()
 	slot_kira.can_give = true
-	$Conclued_task.play()
+
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Roger" finaliza uma tarefa
 # PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
@@ -113,7 +139,6 @@ func _on_Map_roger_fineshed_task(worker):
 	_change_score(worker.score)
 	slot_roger._clearSlot()
 	slot_roger.can_give = true
-	$Conclued_task.play()
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Kira"
@@ -122,11 +147,13 @@ func _on_workSlotKira_get_item(slot):
 	slot.can_give = false
 	map.Kira_initiate_task(slot)
 
+
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Roger"
 # EN_US: Calls the map function to iniciate the character's "Roger" task
 func _on_workSlotRoger_get_item(slot):
 	slot.can_give = false
 	map.Roger_initiate_task(slot)
+
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Bento"
 # EN_US: Calls the map function to iniciate the character's "Bento" task
@@ -134,48 +161,51 @@ func _on_workSlotBento_get_item(slot):
 	slot.can_give = false
 	map.Bento_initiate_task(slot)
 
+
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Ana"
 # EN_US: Calls the map function to iniciate the character's "Ana" task
 func _on_workSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
-#PT_BR: Dá o comando de emitir o som assim que o mouse é pressionado.
+
+# PT_BR: Dá o comando de emitir o som assim que o mouse é pressionado.
 # EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
 	if event.is_action_pressed("click"):
-		$Click_sound.play()
+		click_audio.play()
 
-
-# PT_BR: Reseta a variável de pontos.
-# EN_US: Reset the points variable.
-func _ready():
-	Globals.score_phase_1 = 0
-	
 
 # PT_BR: Põe o som de pause.
 # EN_US: Put the pause sound.
-func _on_Pause_button_pressed():
+func _on_PauseButton_pressed():
 	Audio.change_music(paused_sound)
+	pause_scene.open_pause_scene()
 
 
-# PT_BR(1): Essa função aplica o hover nas fichas
-# PT_BR(2): Recebe: x1, que é o limite inferior em x da zona de entrada do mouse
-# PT_BR(3): Recebe: x2, que é o limite superior em x da zona de entrada do mouse
-# PT_BR(4): Recebe: y1, que é o limite inferior em y da zona de entrada do mouse
-# PT_BR(5): Recebe: y2, que é o limite superior em x da zona de entrada do mouse
-# PT_BR(6): Recebe: slot, que é um nó da cena
-
-# EN_US(1): This function applies the hover to the files
-# EN_US(2): Receive: x1, wich is the lower limit on x of the mouse input zone
-# EN_US(3): Receive: x2, wich is the upper limit on x of the mouse input zone
-# EN_US(4): Receive: y1, wich is the lower limit on y of the mouse input zone
-# EN_US(5): Receive: y2, wich is the upper limit on y of the mouse input zone
-# EN_US(6): Receive: slot, wich is a node in the scene
-func hover_file(x1,x2,y1,y2,slot:CenterContainer):
+# PT_BR (1): Essa função aplica o hover nas fichas
+# PT_BR (2): Recebe: begin, que é o limite inferior da zona de entrada do mouse: Vector2
+# PT_BR (3): Recebe: end, que é o limite superior da zona de entrada do mouse: Vector2
+# PT_BR (4): Recebe: slot, que é um nó da cena
+# EN_US (1): This function applies the hover to the files
+# EN_US (2): Receive: begin, which is the lower limit of the mouse input zone: Vector2
+# EN_US (3): Receive: end, which is the higher limit of the mouse input zone: Vector2
+# EN_US (4): Receive: slot, which is a node in the scene
+func _hover_file(begin: Vector2, end: Vector2, slot:CenterContainer):
 	var mouse = get_global_mouse_position()
-	if mouse.x >= x1 and mouse.x <= x2 and mouse.y >= y1 and mouse.y <= y2:
+	
+	if mouse.x >= begin.x and mouse.x <= end.x and mouse.y >= begin.y and mouse.y <= end.y:
 		slot.rect_scale  = Vector2(1.25,1.25)
 	else:
 		slot.rect_scale = Vector2(1,1)
 
+
+# PT_BR (1): Essa função simplifica a chamada da função hover file
+# PT_BR (2): Recebe o perfil: Center Container
+# EN_US (1): This function simplifies calling the hover file function
+# EN_US (2): Receives the profile: Center Container
+func _send_hover_effect_in_file(profile):
+	var begin = profile.rect_global_position
+	var end = begin + profile.rect_size
+	
+	_hover_file(begin, end, profile)

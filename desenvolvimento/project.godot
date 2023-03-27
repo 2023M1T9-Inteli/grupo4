@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Phase",
+"language": "GDScript",
+"path": "res://scripts/Phase1/Phase1.gd"
+} ]
+_global_script_class_icons={
+"Phase": ""
+}
+
 [application]
 
 config/name="Desenvolvimento: O Talento de Delegar"

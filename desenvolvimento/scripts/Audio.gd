@@ -13,5 +13,12 @@ func play_music(music):
 # EN_US (1): Function to change the music. Receives music as parameter.
 # EN_US (2): Parameter: music - arquivo de música.
 func change_music(music):
+	if $Music.stream != music:
+		$Music.stop()
+		play_music(music)
+
+func pause_music():
 	$Music.stop()
-	play_music(music)
+
+func continue_music():
+	$Music.play()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scripts/CanvasLayer.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Pause.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=2]
 
 [node name="Pause" type="CanvasLayer"]
