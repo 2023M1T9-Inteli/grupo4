@@ -28,6 +28,8 @@ Agora, para [color=#EE222B]devolver[/color] a ficha da pessoa colaboradora em su
 Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 	""
 ]
+func _ready():
+	$next_button.hide()
 
 # PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
@@ -58,6 +60,7 @@ func _process(_delta):
 		run_file2 = 6
 		
 	elif cont == 2:
+		$next_button.show()
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
 		run_file2 = 0
 		

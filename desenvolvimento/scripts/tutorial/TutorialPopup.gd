@@ -86,6 +86,7 @@ func _on_paula_back_tutorial():
 func _on_file_next_tutorial(file):
 	file.queue_free()
 	create_task()
+	$task.show()
 
 # PT_BR (1): Sinal customizado para deletar a ficha e mostrar a Paula.
 # PT_BR (2): Parâmetro: file - node2D.
