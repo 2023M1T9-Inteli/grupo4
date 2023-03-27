@@ -68,7 +68,7 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="BackgroundDialog" type="Sprite" parent="."]
-position = Vector2( 643, 400 )
+position = Vector2( 640, 400 )
 scale = Vector2( 1.26, 1.26 )
 texture = ExtResource( 12 )
 
@@ -106,6 +106,7 @@ position = Vector2( 268, 481 )
 scale = Vector2( 4.5, 4.5 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 

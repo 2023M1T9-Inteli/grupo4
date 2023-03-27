@@ -26,7 +26,7 @@ position = Vector2( 1, -7 )
 script = ExtResource( 7 )
 
 [node name="PhaseBackground" type="Sprite" parent="."]
-position = Vector2( 643, 400 )
+position = Vector2( 640, 400 )
 scale = Vector2( 1.26, 1.26 )
 texture = ExtResource( 1 )
 
