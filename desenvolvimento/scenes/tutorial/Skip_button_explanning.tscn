@@ -78,7 +78,7 @@ margin_bottom = 220.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "Caso você já tenha jogado e saiba o funcionamento do jogo, [color=#3a87ae]clique no botão \"Pular\"[/color] para começar o jogo."
+bbcode_text = "Caso você já tenha jogado e saiba o funcionamento do jogo, clique no botão [color=#3a87ae]\"Pular\"[/color] para começar o jogo."
 text = "Caso você já tenha jogado e saiba o funcionamento do jogo, clique no botão \"Pular\" para começar o jogo."
 
 [node name="back_button" type="TextureButton" parent="text_box"]
