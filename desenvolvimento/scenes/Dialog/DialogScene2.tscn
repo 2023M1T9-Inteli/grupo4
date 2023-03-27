@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/Dialog/Dialog 2/chico_pointing2.png" type="Texture" id=10]
 [ext_resource path="res://assets/Dialog/Dialog 2/tend_circle (2).png" type="Texture" id=11]
-[ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=12]
+[ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=8]
 size = 20
@@ -68,8 +68,8 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="BackgroundDialog" type="Sprite" parent="."]
-position = Vector2( 639.5, 360 )
-scale = Vector2( 0.669271, 0.672222 )
+position = Vector2( 640, 400 )
+scale = Vector2( 1.26, 1.26 )
 texture = ExtResource( 12 )
 
 [node name="DialogBox" type="NinePatchRect" parent="."]
@@ -106,6 +106,7 @@ position = Vector2( 268, 481 )
 scale = Vector2( 4.5, 4.5 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 
