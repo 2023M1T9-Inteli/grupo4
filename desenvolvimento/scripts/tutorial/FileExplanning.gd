@@ -28,6 +28,8 @@ Agora, para [color=#EE222B]devolver[/color] a ficha da pessoa colaboradora em su
 Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 	""
 ]
+func _ready():
+	$next_button.hide()
 
 func _ready():
 	$text_box/back_button.visible = false
@@ -65,6 +67,7 @@ func _process(_delta):
 	elif cont == 2:
 		$text_box/back_button.visible = true
 		$text_box/next_button.visible = true
+
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
 		run_file2 = 0
 		

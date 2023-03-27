@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big_task01.png-f82aa3f7e2cc3424ff0603c8e1dfcc85.stex"
+path="res://.import/baloon.png-b85a73068065f6bf821cea0f937600c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase1/detailed_task/big_task01.png"
-dest_files=[ "res://.import/big_task01.png-f82aa3f7e2cc3424ff0603c8e1dfcc85.stex" ]
+source_file="res://assets/phase_assets/Phase2Assets/baloon.png"
+dest_files=[ "res://.import/baloon.png-b85a73068065f6bf821cea0f937600c1.stex" ]
 
 [params]
 
