@@ -32,7 +32,6 @@
 [ext_resource path="res://assets/Phase2/tend_dark.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase2/tend (1).png" type="Texture" id=31]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 35
 outline_size = 2
