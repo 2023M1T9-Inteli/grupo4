@@ -53,11 +53,18 @@ func _ready():
 #EN_US: This funcction observes the mouse position and applies the hover on the files 
 func _process(_delta):
 	# PT_BR: As variáveis baixo armazenam o nó que será usado na função
-	# EN_US: The variables below stores a node which will be used by the function
-	_send_hover_effect_in_file(profile_kira)
-	_send_hover_effect_in_file(profile_roger)
-	_send_hover_effect_in_file(profile_ana)
-	_send_hover_effect_in_file(profile_bento)
+	# EN_US: The variables below stores a node which will be used by the function	
+	if self.has_node(profile_kira.get_path()):
+		_send_hover_effect_in_file(profile_kira)
+	
+	if self.has_node(profile_roger.get_path()):
+		_send_hover_effect_in_file(profile_roger)
+	
+	if self.has_node(profile_ana.get_path()):
+		_send_hover_effect_in_file(profile_ana)
+		
+	if self.has_node(profile_bento.get_path()):
+		_send_hover_effect_in_file(profile_bento)
 
 
 # PT_BR: Função para atualizar a pontuação do jogador
