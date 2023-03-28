@@ -8,8 +8,12 @@ var counter = 0
 
 signal finished_dialog()
 signal exit_dialog()
+
+
 func _ready():
 	show_message(0)
+	
+	
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
@@ -45,6 +49,7 @@ var message_queue: Dictionary = {
 		},
 	}
 
+
 # PT_BR: Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
 # EN_US: Function that erases the anterior text and executes the function of sprite change for the character
 func change_speech(speech, anim):
@@ -52,10 +57,12 @@ func change_speech(speech, anim):
 	text_element.bbcode_text = speech
 	self.get_parent().change_anim(anim)
 
+
 # PT_BR: Função que define que após pressionado o botão esquerdo do mouse, a função "show_message" é executada
 # EN_US: Function that defines that after the button of the mouse is pressed, the function "show_message" is executed
 func _on_PassButton_pressed():
 		show_message(1)
+
 
 # PT_BR: Função que verifica se o texto exibido na tela é o mesmo que o dentro do item do dicionário.
 # EN_US: Function that verifies if the text on screen is the same as the inside the dictionary item.
@@ -86,6 +93,7 @@ func show_message(update_counter) -> void:
 		self.get_parent().show_tent(show_tent)
 		timer.start()
 
+
 # PT_BR: Função que define a exibição do texto caracter por caracter e para o timer
 # EN_US: Function that defines the text exibition character per character and stops the timer
 func _on_Timer_timeout():
@@ -96,6 +104,7 @@ func _on_Timer_timeout():
 		# PT_BR: Aumenta o numero de caracteres visíveis na tela
 		# EN_US: Raises the number of charactesr visible on the screen
 	text_element.visible_characters += 2
+	
 
 func _on_BackButton_pressed():
 	show_message(-1)
