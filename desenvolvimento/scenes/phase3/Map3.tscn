@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/left_lamp.png" type="Texture" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/phase_assets/OfficeItems/chair.png" type="Texture" id=6]
 [ext_resource path="res://assets/phase_assets/OfficeItems/full_open_trash.png" type="Texture" id=7]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=8]
-[ext_resource path="res://assets/characters/Characters_Phase_2/bento_phase2.png" type="Texture" id=9]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=10]
 [ext_resource path="res://assets/characters/kira.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3.png" type="Texture" id=12]
@@ -18,7 +17,6 @@
 [ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3(1).png" type="Texture" id=16]
 [ext_resource path="res://assets/phase_assets/OfficeItems/empty_open_trash.png" type="Texture" id=17]
 [ext_resource path="res://assets/characters/Characters_Phase_3/roger_phase3(1).png" type="Texture" id=18]
-[ext_resource path="res://assets/characters/Characters_Phase_2/bento_phase2(2).png" type="Texture" id=19]
 [ext_resource path="res://assets/characters/Characters_Phase_3/roger_phase3.png" type="Texture" id=20]
 [ext_resource path="res://assets/characters/ana.png" type="Texture" id=21]
 [ext_resource path="res://assets/phase_assets/OfficeItems/red_chair.png" type="Texture" id=22]
@@ -992,12 +990,6 @@ frame_0/texture = ExtResource( 20 )
 frame_1/texture = ExtResource( 18 )
 frame_1/delay_sec = 0.0
 
-[sub_resource type="AnimatedTexture" id=57]
-frames = 2
-frame_0/texture = ExtResource( 9 )
-frame_1/texture = ExtResource( 19 )
-frame_1/delay_sec = 0.0
-
 [sub_resource type="AnimatedTexture" id=58]
 frames = 2
 frame_0/texture = ExtResource( 12 )
@@ -1802,16 +1794,6 @@ tile_set = SubResource( 41 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 589827, 0, 0, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 1, 589834, 0, 3, 589837, 0, 0, 589838, 0, 2, 589839, 0, 2, 589840, 0, 2, 589841, 0, 2, 589842, 0, 2, 589843, 0, 2, 589844, 0, 3, 655363, 0, 65536, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 65537, 655367, 0, 65537, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65539, 655373, 0, 65536, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65539, 720899, 0, 65536, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65539, 720909, 0, 65536, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65537, 720916, 0, 65539, 786435, 0, 131072, 786436, 0, 131073, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 131075, 786445, 0, 131072, 786446, 0, 131073, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 131073, 786451, 0, 131073, 786452, 0, 131075 )
-
-[node name="Bento" parent="." instance=ExtResource( 1 )]
-position = Vector2( 439, 437 )
-worker_size = Vector2( 90, 90 )
-worker_image = SubResource( 57 )
-attributes = {
-"ART_THINK": 2,
-"LOGIC_RAC": 2,
-"MANUAL_WORK": 2
-}
 
 [node name="Ana" parent="." instance=ExtResource( 1 )]
 position = Vector2( 244, 440 )
