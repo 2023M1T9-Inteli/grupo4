@@ -177,12 +177,6 @@ func _input(event):
 		click_audio.play()
 
 
-# PT_BR: Põe o som de pause.
-# EN_US: Put the pause sound.
-func _on_PauseButton_pressed():
-	pause_scene.open_pause_scene()
-
-
 # PT_BR (1): Essa função aplica o hover nas fichas
 # PT_BR (2): Recebe: begin, que é o limite inferior da zona de entrada do mouse: Vector2
 # PT_BR (3): Recebe: end, que é o limite superior da zona de entrada do mouse: Vector2
@@ -210,3 +204,6 @@ func _send_hover_effect_in_file(profile):
 	
 	_hover_file(begin, end, profile)
 
+
+func _on_Pause_button_pressed():
+	pause_scene.open_pause_scene()

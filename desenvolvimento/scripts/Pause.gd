@@ -58,3 +58,8 @@ func _on_TutorialButton_pressed():
 
 func _on_OptionsButton_pressed():
 	$Options.show()
+
+
+func _on_PauseButton_pressed():
+	self.is_paused = !is_paused
+	open_pause_scene()

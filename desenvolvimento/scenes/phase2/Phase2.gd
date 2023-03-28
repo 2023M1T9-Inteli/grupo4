@@ -17,8 +17,6 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 # EN_US:
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
-func _ready():
-	Globals.score_phase_2 = 0
 
 	
 # PT_BR: Função para atualizar a pontuação do jogador
