@@ -31,5 +31,7 @@ func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase2/Phase2.tscn")
 
 
+# PT_BR: Função que quando o botão de voltar do primeiro diálogo é clicado, volta para a tela de fases
+# EN_US: Function that when the back button of the first dialog is clicked, it goes back to the stages screen
 func _on_DialogBox_exit_dialog():
 	get_tree().change_scene("res://scenes/Phases.tscn")
