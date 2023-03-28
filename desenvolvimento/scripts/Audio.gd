@@ -29,5 +29,5 @@ func pause():
 	temp = $Music.get_playback_position()
 	$Music.stop()
 
-func pause_music(music):
+func pause_music():
 	$Music.stop()
