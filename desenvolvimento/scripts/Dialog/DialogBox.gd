@@ -1,10 +1,13 @@
 extends NinePatchRect
+
 # PT_BR: Variáveis locais
 # EN_US: Local variables
 onready var text_element := $Text
 onready var timer := $Timer
 var counter = 0
 
+# PT_BR: Inicializa os sinais usados para passar de cena do diálogo
+# EN_US: Initializes signals used to step through dialog scenes
 signal finished_dialog()
 signal exit_dialog()
 
@@ -106,5 +109,7 @@ func _on_Timer_timeout():
 	text_element.visible_characters += 2
 
 
+# PT_BR: Função que volta para o diálogo anterior 
+# EN_US: Function that returns to the previous dialog
 func _on_BackButton_pressed():
 	show_message(-1)
