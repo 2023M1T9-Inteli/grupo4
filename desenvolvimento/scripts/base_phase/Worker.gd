@@ -41,19 +41,13 @@ func _set_worker_size(new_value) -> void:
 		$Collision.position.x = worker_size.x / 2
 		$Collision.position.y = worker_size.y / 2
 
-# PT_BR: Armazena o objeto Timer
-# EN_US: Stores the Timer object
+# PT_BR: Armazena a cena Timer
+# EN_US: Stores the Timer scene
 onready var timer = $Timer
-
-# PT_BR: Armazena o objeto Cronometer
-# EN_US: Stores the Cronometer object
-onready var cronometer = $Cronometer
-
-# PT_BR: Armazena o objeto FinishedTask
-# EN_US: Stores the FinishedTask object
-onready var audio_finished_task = $FinishedTask
-
 var score = 0
+# PT_BR: Armazena a cena Cronometer
+# EN_US: Stores the Cronometer scene
+onready var cronometer = $Cronometer
 
 # PT_BR: Declara o sinal que será emitido quando o Worker terminar a tarefa
 # EN_US: Declares the signal that will be emitted when Worker finished the task
@@ -91,9 +85,8 @@ func _on_Timer_timeout():
 		# EN_US: Increments the timer value by 1 more
 		cronometer.value += 1
 	else:
-		# PT_BR: Reseta o valor do timer, esconde o cronômetro, toca o som e emite o sinal da task finalizada.
-		# EN_US: Resets the timer value, hides the stopwatch, play the sound and emits the finished task signal.
+		# PT_BR: Reseta o valor do timer, esconde o cronômetro e emite o sinal da task finalizada.
+		# EN_US: Resets the timer value, hides the stopwatch and emits the finished task signal.
 		timer.stop()
 		cronometer.hide()
-		audio_finished_task.play()
 		emit_signal("finished_task", self)

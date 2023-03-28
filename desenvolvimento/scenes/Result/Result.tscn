@@ -117,7 +117,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="AudioStar1" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
+[node name="Audio_1_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
 position = Vector2( -11075, -3025 )
 scale = Vector2( 25, 25 )
 stream = ExtResource( 15 )
@@ -133,7 +133,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="AudioStar2" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
+[node name="Audio_2_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
 stream = ExtResource( 13 )
 
 [node name="StarFull3" type="TextureProgress" parent="ScoreBar"]
@@ -147,7 +147,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="AudioStar3" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
+[node name="Audio_3_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
 stream = ExtResource( 14 )
 
 [node name="Result" type="Label" parent="ScoreBar"]
@@ -185,7 +185,6 @@ margin_top = 84.0
 margin_right = 1240.0
 margin_bottom = 172.0
 custom_fonts/font = SubResource( 1 )
-text = "00%"
 align = 1
 valign = 1
 

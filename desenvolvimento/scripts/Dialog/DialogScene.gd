@@ -19,9 +19,9 @@ func show_pc(show_pc):
 # PT_BR: Função que define que após o pressionar do botão, a cena é mudada
 # EN_US: Function that definas that after the press of the button, the scene is changed
 func _on_Button_pressed():
-	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
+	get_tree().change_scene("res://scenes/Menu.tscn")
 
 # PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia.
 # EN_US: Function that defines that when the dialog scene ends, the game start.
 func _on_DialogBox_finished_dialog():
-	var __ = get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
