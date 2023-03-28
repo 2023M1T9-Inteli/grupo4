@@ -29,6 +29,10 @@ Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 	""
 ]
 
+func _ready():
+	$text_box/back_button.visible = false
+	$text_box/next_button.visible = false
+
 # PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
 func _process(_delta):
@@ -47,6 +51,7 @@ func _process(_delta):
 		emit_signal("back_tutorial",self)
 		
 	elif cont == 0:
+		
 		$path2d_worker_table/pathfollow_worker_table/kira_worker.visible = true
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
 		run_file1 = 4
@@ -58,6 +63,8 @@ func _process(_delta):
 		run_file2 = 6
 		
 	elif cont == 2:
+		$text_box/back_button.visible = true
+		$text_box/next_button.visible = true
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
 		run_file2 = 0
 		

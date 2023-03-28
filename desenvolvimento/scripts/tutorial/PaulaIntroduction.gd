@@ -8,7 +8,7 @@ signal back_tutorial()
 
 # PT_BR: Sinal customizado que detecta quando o botão de voltar é pressionado.
 # EN_US: Custom signal that detects when the back button is pressed.
-func _on_back_button_button_up():
+func _on_back_button_pressed():
 	emit_signal("back_tutorial")
 	
 # PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado.
