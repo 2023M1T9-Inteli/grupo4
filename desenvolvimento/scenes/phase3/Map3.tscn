@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/left_lamp.png" type="Texture" id=2]
@@ -11,20 +11,20 @@
 [ext_resource path="res://assets/characters/Characters_Phase_2/bento_phase2.png" type="Texture" id=9]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=10]
 [ext_resource path="res://assets/characters/kira.png" type="Texture" id=11]
-[ext_resource path="res://assets/characters/Characters_Phase_2/ana_phase2.png" type="Texture" id=12]
-[ext_resource path="res://assets/characters/Characters_Phase_2/ana_phase2(2).png" type="Texture" id=13]
+[ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3.png" type="Texture" id=12]
+[ext_resource path="res://assets/Phase3/candy.png" type="Texture" id=13]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Room_Builder_Office_32x32.png" type="Texture" id=14]
 [ext_resource path="res://assets/phase_assets/OfficeItems/bigger_chair.png" type="Texture" id=15]
-[ext_resource path="res://assets/characters/Characters_Phase_2/kira_phase2.png" type="Texture" id=16]
+[ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3(1).png" type="Texture" id=16]
 [ext_resource path="res://assets/phase_assets/OfficeItems/empty_open_trash.png" type="Texture" id=17]
-[ext_resource path="res://assets/characters/Characters_Phase_2/roger_phase2(2).png" type="Texture" id=18]
+[ext_resource path="res://assets/characters/Characters_Phase_3/roger_phase3(1).png" type="Texture" id=18]
 [ext_resource path="res://assets/characters/Characters_Phase_2/bento_phase2(2).png" type="Texture" id=19]
-[ext_resource path="res://assets/characters/Characters_Phase_2/roger_phase2.png" type="Texture" id=20]
+[ext_resource path="res://assets/characters/Characters_Phase_3/roger_phase3.png" type="Texture" id=20]
 [ext_resource path="res://assets/characters/ana.png" type="Texture" id=21]
 [ext_resource path="res://assets/phase_assets/OfficeItems/red_chair.png" type="Texture" id=22]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_32x32.png" type="Texture" id=23]
 [ext_resource path="res://assets/characters/paula_sprite_sheet.png" type="Texture" id=24]
-[ext_resource path="res://assets/characters/Characters_Phase_2/kira_phase2(2).png" type="Texture" id=25]
+[ext_resource path="res://assets/characters/Characters_Phase_3/kira_phase3.png" type="Texture" id=25]
 [ext_resource path="res://assets/characters/bento.png" type="Texture" id=26]
 [ext_resource path="res://assets/Phase3/christmas_tree.png" type="Texture" id=27]
 [ext_resource path="res://assets/Phase3/gift_5.png" type="Texture" id=28]
@@ -33,6 +33,7 @@
 [ext_resource path="res://assets/Phase3/gift_3.png" type="Texture" id=31]
 [ext_resource path="res://assets/Phase3/gift_4.png" type="Texture" id=32]
 [ext_resource path="res://assets/Phase3/decoration_christmas.png" type="Texture" id=33]
+[ext_resource path="res://assets/characters/Characters_Phase_3/kira_phase3(1).png" type="Texture" id=34]
 
 [sub_resource type="PluginScript" id=11]
 
@@ -981,8 +982,8 @@ points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 
 [sub_resource type="AnimatedTexture" id=55]
 frames = 2
-frame_0/texture = ExtResource( 16 )
-frame_1/texture = ExtResource( 25 )
+frame_0/texture = ExtResource( 25 )
+frame_1/texture = ExtResource( 34 )
 frame_1/delay_sec = 0.0
 
 [sub_resource type="AnimatedTexture" id=56]
@@ -1000,7 +1001,7 @@ frame_1/delay_sec = 0.0
 [sub_resource type="AnimatedTexture" id=58]
 frames = 2
 frame_0/texture = ExtResource( 12 )
-frame_1/texture = ExtResource( 13 )
+frame_1/texture = ExtResource( 16 )
 frame_1/delay_sec = 0.0
 
 [sub_resource type="StreamTexture" id=15]
@@ -1511,6 +1512,20 @@ frame_1/delay_sec = 0.0
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
+5/name = "candy.png 5"
+5/texture = ExtResource( 13 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 7, 0, 15, 30 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
 
 [sub_resource type="TileSet" id=62]
 0/name = "christmas_tree.png 0"
@@ -1851,7 +1866,7 @@ frame = 1
 tile_set = SubResource( 63 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 2, 4, 0, 18, 4, 0, 327685, 3, 0, 327687, 1, 0, 393221, 2, 0, 393223, 0, 0, 720898, 2, 0, 1114114, 3, 0 )
+tile_data = PoolIntArray( 2, 4, 0, 18, 4, 0, 327685, 3, 0, 327687, 1, 0, 327693, 5, 0, 393221, 2, 0, 393223, 0, 0, 655364, 5, 0, 655380, 5, 0, 720898, 2, 0, 720906, 5, 0, 720911, 5, 0, 1048582, 5, 0, 1048596, 5, 0, 1114114, 3, 0, 1114122, 5, 0, 1114127, 5, 0 )
 
 [node name="ChristmasTree" type="TileMap" parent="."]
 tile_set = SubResource( 62 )
