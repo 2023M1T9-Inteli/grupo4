@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/items/profile_sheets/ana_light_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/phase2/Phase2.gd" type="Script" id=14]
+[ext_resource path="res://scripts/base_phase/BasePhase.gd" type="Script" id=14]
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://scenes/phase2/Phase2Drawer.tscn" type="PackedScene" id=17]
@@ -40,6 +40,19 @@ font_data = ExtResource( 16 )
 
 [node name="Phase2" type="Node2D"]
 script = ExtResource( 14 )
+phase_progress = NodePath("PhaseProgress")
+map = NodePath("Map")
+slot_kira = NodePath("Slots/SlotExpansorKira")
+slot_roger = NodePath("Slots/SlotExpansorRoger")
+slot_ana = NodePath("Slots/SlotExpansorAna")
+slot_bento = NodePath("Slots/SlotExpansorBento")
+profile_kira = NodePath("Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira")
+profile_roger = NodePath("Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger")
+profile_ana = NodePath("Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna")
+profile_bento = NodePath("Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento")
+star1 = NodePath("Scores/StarProgress1")
+star2 = NodePath("Scores/StarProgress2")
+star3 = NodePath("Scores/StarProgress3")
 
 [node name="Table" parent="." instance=ExtResource( 1 )]
 position = Vector2( 772, 0 )
@@ -296,10 +309,9 @@ stream = ExtResource( 29 )
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
 [connection signal="pressed" from="Pause_button" to="." method="_on_Pause_button_pressed"]
-[connection signal="pressed" from="Pause_button" to="Pause" method="_on_ExitButton_pressed"]
-[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_WorkSlotBento_get_item"]
 [connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
 [connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]

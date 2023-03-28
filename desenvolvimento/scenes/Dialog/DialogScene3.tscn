@@ -175,6 +175,7 @@ visible = false
 position = Vector2( 798, 281 )
 scale = Vector2( 7, 7 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [connection signal="exit_dialog" from="DialogBox" to="." method="_on_DialogBox_exit_dialog"]

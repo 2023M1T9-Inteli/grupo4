@@ -174,13 +174,7 @@ func _on_WorkSlotAna_get_item(slot):
 # EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
 	if event.is_action_pressed("click"):
-		click_audio.play()
-
-
-# PT_BR: Põe o som de pause.
-# EN_US: Put the pause sound.
-func _on_PauseButton_pressed():
-	pause_scene.open_pause_scene()
+		$Click_sound.play()
 
 
 # PT_BR (1): Essa função aplica o hover nas fichas
@@ -209,4 +203,9 @@ func _send_hover_effect_in_file(profile):
 	var end = begin + profile.rect_size
 	
 	_hover_file(begin, end, profile)
+
+
+
+func _on_Pause_button_pressed():
+	pause_scene.open_pause_scene()
 
