@@ -11,6 +11,7 @@ signal back_tutorial()
 func _on_next_button_pressed():
 	emit_signal("next_tutorial")
 
+
 # PT_BR: Sinal customizado que detecta quando o botão de voltar é pressionado.
 # EN_US: Custom signal that detects when the back button is pressed.
 func _on_back_button_pressed():

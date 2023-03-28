@@ -93,13 +93,13 @@ valign = 1
 
 [node name="Options" parent="." instance=ExtResource( 2 )]
 
-[node name="PopupMenu" parent="." instance=ExtResource( 12 )]
+[node name="Tutorial" parent="." instance=ExtResource( 12 )]
 is_in_menu = false
 
-[node name="Paused_sound" type="AudioStreamPlayer2D" parent="."]
+[node name="PauseSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 13 )
 
-[node name="Depaused_sound" type="AudioStreamPlayer2D" parent="."]
+[node name="DepausedSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

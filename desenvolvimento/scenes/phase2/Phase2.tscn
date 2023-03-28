@@ -82,6 +82,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -119,6 +120,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -156,6 +158,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -193,6 +196,7 @@ margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
+images_size = Vector2( 48, 48 )
 
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
@@ -214,7 +218,8 @@ margin_left = 1016.0
 margin_top = 4.0
 margin_right = 1169.0
 margin_bottom = 101.0
-seconds = 0
+seconds = 45
+minutes = 3
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
@@ -241,12 +246,12 @@ visible = false
 [node name="Scores" type="Node2D" parent="."]
 
 [node name="ScorePhase" type="Label" parent="Scores"]
-margin_left = 283.0
+margin_left = 291.0
 margin_top = 18.0
-margin_right = 486.0
+margin_right = 487.0
 margin_bottom = 82.0
 custom_fonts/font = SubResource( 1 )
-text = "pontos:"
+text = "Score:"
 align = 1
 valign = 1
 

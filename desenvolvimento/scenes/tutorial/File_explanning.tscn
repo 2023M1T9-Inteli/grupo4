@@ -87,9 +87,9 @@ table_image = ExtResource( 5 )
 boss_table_image = ExtResource( 8 )
 
 [node name="text_box" type="Panel" parent="."]
-margin_left = 80.0
-margin_top = 456.0
-margin_right = 664.0
+margin_left = 88.0
+margin_top = 424.0
+margin_right = 672.0
 margin_bottom = 692.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
@@ -97,13 +97,28 @@ __meta__ = {
 }
 
 [node name="text" type="RichTextLabel" parent="text_box"]
-margin_left = 12.0
+margin_left = 16.0
 margin_top = 12.0
 margin_right = 572.0
 margin_bottom = 224.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
+
+[node name="back_button" type="TextureButton" parent="text_box"]
+margin_left = 44.0
+margin_top = 262.0
+margin_right = 80.0
+margin_bottom = 298.0
+rect_rotation = 180.0
+texture_normal = ExtResource( 7 )
+
+[node name="next_button" type="TextureButton" parent="text_box"]
+margin_left = 540.0
+margin_top = 226.0
+margin_right = 576.0
+margin_bottom = 262.0
+texture_normal = ExtResource( 7 )
 
 [node name="path2d_worker_table" type="Path2D" parent="."]
 position = Vector2( 215.111, 374.667 )
@@ -138,22 +153,7 @@ rotation = -2.9531
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
-[node name="back_button" type="TextureButton" parent="."]
-margin_left = 768.0
-margin_top = 696.0
-margin_right = 816.0
-margin_bottom = 744.0
-rect_rotation = 180.0
-texture_normal = ExtResource( 7 )
-
-[node name="next_button" type="TextureButton" parent="."]
-margin_left = 1205.0
-margin_top = 645.0
-margin_right = 1253.0
-margin_bottom = 693.0
-texture_normal = ExtResource( 7 )
-
 [connection signal="dropped_item" from="Slot" to="." method="_on_Slot_dropped_item"]
 [connection signal="get_item" from="Slot" to="." method="_on_Slot_get_item"]
-[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="next_button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="text_box/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="text_box/next_button" to="." method="_on_next_button_pressed"]

@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/tutorial/Score.tscn" type="PackedScene" id=7]
 
 [node name="PopupMenu" type="Node2D"]
+visible = false
 script = ExtResource( 6 )
 
 [node name="score" parent="." instance=ExtResource( 7 )]
@@ -31,6 +32,7 @@ visible = false
 [connection signal="next_tutorial" from="task" to="." method="_on_task_next_tutorial"]
 [connection signal="back_tutorial" from="paula" to="." method="_on_paula_back_tutorial"]
 [connection signal="next_tutorial" from="paula" to="." method="_on_paula_next_tutorial"]
+[connection signal="back_tutorial" from="skip" to="." method="_on_skip_back_tutorial"]
 [connection signal="end_tutorial" from="skip" to="." method="_on_skip_end_tutorial"]
 [connection signal="next_tutorial" from="skip" to="." method="_on_skip_next_tutorial"]
 [connection signal="back_tutorial" from="introduction" to="." method="_on_introduction_back_tutorial"]
