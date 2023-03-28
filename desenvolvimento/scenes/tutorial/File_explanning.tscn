@@ -153,22 +153,6 @@ rotation = -2.9531
 scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
-[node name="back_button" type="TextureButton" parent="."]
-margin_left = 768.0
-margin_top = 696.0
-margin_right = 816.0
-margin_bottom = 744.0
-rect_rotation = 180.0
-texture_normal = ExtResource( 7 )
-
-[node name="next_button" type="TextureButton" parent="."]
-margin_left = 1205.0
-margin_top = 645.0
-margin_right = 1253.0
-margin_bottom = 693.0
-texture_normal = ExtResource( 7 )
-
-
 [connection signal="dropped_item" from="Slot" to="." method="_on_Slot_dropped_item"]
 [connection signal="get_item" from="Slot" to="." method="_on_Slot_get_item"]
 [connection signal="pressed" from="text_box/back_button" to="." method="_on_back_button_pressed"]

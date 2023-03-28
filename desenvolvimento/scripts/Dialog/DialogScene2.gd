@@ -1,5 +1,10 @@
 extends Node2D
 
+onready var music_phase_2 = load("res://assets/Audio/Musica - Fase 2 oficial.wav")
+
+func _ready():
+	Audio.play_music(music_phase_2)
+
 # PT_BR: Função que muda a animação do sprite quando acionada 
 # EN_US: Function that changes the sprite animation when activated
 func change_anim(anim):
@@ -27,5 +32,5 @@ func _on_Button_pressed():
 func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase2/Phase2.tscn")
 
-
-
+func _on_DialogBox_exit_dialog():
+	get_tree().change_scene("res://scenes/Phases.tscn")

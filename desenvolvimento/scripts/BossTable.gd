@@ -21,12 +21,12 @@ func _on_TextureButton_mouse_exited():
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Function to play music when the task is dropped on the worker table.
 # EN_US (2): Parameter: slot - CenterContainer.
-func _on_WorkerTableControl2_get_item(_slot):
+func _on_WorkerTableControl2_get_item(slot):
 	$Task_soud.play()
 
 # PT_BR (1): Função para tocar música quando a ficha é colocada na mesa do funcionário.
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Function to play music when the file is dropped on the worker table.
 # EN_US (2): Parameter: slot - CenterContainer.
-func _on_ProfileControl2_get_item(_slot):
+func _on_ProfileControl2_get_item(slot):
 	$Task_soud.play()

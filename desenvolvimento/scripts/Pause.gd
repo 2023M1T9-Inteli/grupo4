@@ -54,3 +54,7 @@ func _on_QuitButton_pressed():
 # EN_US: Function executed when the tutorial button is pressed to open the tutorial popup.
 func _on_TutorialButton_pressed():
 	tutorial.open_tutorial()
+
+
+func _on_OptionsButton_pressed():
+	$Options.show()
