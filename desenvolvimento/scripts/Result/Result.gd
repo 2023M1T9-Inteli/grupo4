@@ -105,4 +105,3 @@ func _on_StarFull2_completed_change(_texture_progress_node):
 func _on_StarFull3_completed_change(_texture_progress_node):
 	score_bar.texture_progress = green_bar
 	$ScoreBar/StarFull3/Audio_3_star.play()
-

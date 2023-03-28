@@ -17,7 +17,10 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 # EN_US:
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
+func _ready():
+	Globals.score_phase_2 = 0
 
+	
 # PT_BR: Função para atualizar a pontuação do jogador
 # EN_US: Function to update the player's score
 func _change_score(new_value): 
@@ -109,10 +112,6 @@ func _input(event):
 	if event.is_action_pressed("click"):
 		$Click_sound.play()
 
-func _ready():
-  # PT_BR: Resetar a variável de pontos
-  # EN_US:
-	Globals.score_phase_2 = 0
 
 func _on_Pause_button_pressed():
 	Audio.change_music(paused_sound)

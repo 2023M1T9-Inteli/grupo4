@@ -17,6 +17,8 @@ onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBe
 # EN_US:
 var paused_sound = preload("res://assets/Audio/Pause.wav")
 
+func _ready():
+	Globals.score_phase_1 = 0
 
 #PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
 #EN_US: This funcction observes the mouse position and applies the hover on the files 
@@ -149,8 +151,6 @@ func _input(event):
 
 # PT_BR: Reseta a variável de pontos.
 # EN_US: Reset the points variable.
-func _ready():
-	Globals.score_phase_1 = 0
 	
 
 # PT_BR: Põe o som de pause.

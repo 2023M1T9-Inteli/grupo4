@@ -1,4 +1,9 @@
 extends Node2D
+
+onready var music_phase_1 = load("res://assets/Audio/music_phase_1.mp3")
+
+func _ready():
+	Audio.play_music(music_phase_1)
 # PT_BR: Função que muda a animação do sprite quando acionada 
 # EN_US: Function that changes the sprite animation when activated
 func change_anim(anim):
@@ -25,3 +30,6 @@ func _on_Button_pressed():
 # EN_US: Function that defines that when the dialog scene ends, the game start.
 func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+
+func _on_DialogBox_exit_dialog():
+	get_tree().change_scene("res://scenes/tutorial/Introduction_tutorial.tscn")

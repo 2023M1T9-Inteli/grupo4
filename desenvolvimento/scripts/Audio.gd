@@ -15,3 +15,6 @@ func play_music(music):
 func change_music(music):
 	$Music.stop()
 	play_music(music)
+
+func pause_music(music):
+	$Music.stop()
