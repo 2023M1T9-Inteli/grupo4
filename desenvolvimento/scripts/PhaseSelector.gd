@@ -1,9 +1,5 @@
 extends Node2D
 
-# PT_BR: Variável que carrega a música da primeira fase.
-# EN_US: Variable that loads the phase one music.
-onready var phase_1_musica = preload ("res://assets/Audio/music_phase_1.mp3")
-
 # PT_BR: Variável usada para armazenar o resultado do jogador na fase.
 # EN_US: Variable used to store the player's result in the phase.
 var result = 0
@@ -16,8 +12,6 @@ func _ready():
 	if Globals.player_phase_score["phase1"] >= 56:
 		$PhasesGridContainer/Phase2Button.texture_normal = load("res://assets/PhasesScreen/button_phase_2.png")
 		$PhasesGridContainer/Phase2Button.texture_hover = load("res://assets/PhasesScreen/button_phase_2_dark.png")
-  
-	Audio.change_music(phase_1_musica)
 
 # PT_BR: Abre a cena da primeira fase.
 # EN_US: Opens the first phase scene.

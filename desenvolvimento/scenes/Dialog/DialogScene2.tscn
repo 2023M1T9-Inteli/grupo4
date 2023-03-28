@@ -106,6 +106,7 @@ position = Vector2( 268, 481 )
 scale = Vector2( 4.5, 4.5 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -130,16 +131,30 @@ texture = ExtResource( 11 )
 
 [node name="PassButton" type="Button" parent="."]
 margin_left = 1154.0
-margin_top = 629.0
+margin_top = 449.0
 margin_right = 1214.0
-margin_bottom = 702.0
+margin_bottom = 522.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 icon = ExtResource( 2 )
 flat = true
 
+[node name="BackButton" type="Button" parent="."]
+margin_left = 1127.0
+margin_top = 521.0
+margin_right = 1187.0
+margin_bottom = 594.0
+rect_rotation = 180.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 2 )
+flat = true
+
+[connection signal="exit_dialog" from="DialogBox" to="." method="_on_DialogBox_exit_dialog"]
 [connection signal="finished_dialog" from="DialogBox" to="." method="_on_DialogBox_finished_dialog"]
 [connection signal="timeout" from="DialogBox/Timer" to="DialogBox" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="PassButton" to="DialogBox" method="_on_PassButton_pressed"]
+[connection signal="pressed" from="BackButton" to="DialogBox" method="_on_BackButton_pressed"]
