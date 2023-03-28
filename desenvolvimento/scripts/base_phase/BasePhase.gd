@@ -1,5 +1,4 @@
 extends Node2D
-class_name BasePhase
 
 # PT_BR: Exporta a variável para selecionar a fase
 # EN_US: Exports the variable for select the phase

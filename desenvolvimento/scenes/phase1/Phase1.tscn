@@ -29,12 +29,12 @@
 [ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
 
 [sub_resource type="DynamicFont" id=1]
-size = 35
+size = 31
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 16 )
 
-[node name="Phase1" type="Node2D"]
+[node name="Phase" type="Node2D"]
 script = ExtResource( 14 )
 phase_progress = NodePath("PhaseProgress")
 map = NodePath("Map")
@@ -248,12 +248,12 @@ visible = false
 [node name="Scores" type="Node2D" parent="."]
 
 [node name="ScorePhase" type="Label" parent="Scores"]
-margin_left = 291.0
-margin_top = 18.0
-margin_right = 487.0
-margin_bottom = 82.0
+margin_left = 293.0
+margin_top = 25.0
+margin_right = 489.0
+margin_bottom = 89.0
 custom_fonts/font = SubResource( 1 )
-text = "Score:"
+text = "Pontos:"
 align = 1
 valign = 1
 
@@ -289,15 +289,3 @@ texture_progress = ExtResource( 22 )
 
 [node name="ClickAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 27 )
-
-[connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
-[connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
-[connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
-[connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
-[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
-[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
-[connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
-[connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]
