@@ -29,10 +29,10 @@
 [ext_resource path="res://assets/Phase3/christmas_tree.png" type="Texture" id=27]
 [ext_resource path="res://assets/Phase3/gift_5.png" type="Texture" id=28]
 [ext_resource path="res://assets/Phase3/gift_2.png" type="Texture" id=29]
-[ext_resource path="res://assets/Phase3/Group 46.png" type="Texture" id=30]
+[ext_resource path="res://assets/Phase3/christmas_boot.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase3/gift_3.png" type="Texture" id=31]
 [ext_resource path="res://assets/Phase3/gift_4.png" type="Texture" id=32]
-[ext_resource path="res://assets/Phase3/image 125 (1) 1.png" type="Texture" id=33]
+[ext_resource path="res://assets/Phase3/decoration_christmas.png" type="Texture" id=33]
 
 [sub_resource type="PluginScript" id=11]
 
@@ -1527,69 +1527,13 @@ frame_1/delay_sec = 0.0
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "gift_2.png 1"
-1/texture = ExtResource( 29 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 36, 36 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "gift_5.png 2"
-2/texture = ExtResource( 28 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 36, 36 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "gift_4.png 3"
-3/texture = ExtResource( 32 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 36, 36 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "gift_3.png 4"
-4/texture = ExtResource( 31 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 36, 36 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
 
 [sub_resource type="TileSet" id=64]
-0/name = "Group 46.png 0"
+0/name = "christmas_boot.png 0"
 0/texture = ExtResource( 30 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -2, 1, 148, 45 )
+0/region = Rect2( 0, 3, 147, 44 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -1601,11 +1545,11 @@ frame_1/delay_sec = 0.0
 0/z_index = 0
 
 [sub_resource type="TileSet" id=65]
-0/name = "Group 46.png 0"
+0/name = "christmas_boot.png 0"
 0/texture = ExtResource( 30 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -1, 5, 147, 41 )
+0/region = Rect2( 0, 0, 147, 48 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -1829,7 +1773,7 @@ attributes = {
 }
 
 [node name="Roger" parent="." instance=ExtResource( 1 )]
-position = Vector2( 455, 247 )
+position = Vector2( 442, 245 )
 worker_size = Vector2( 100, 100 )
 worker_image = SubResource( 56 )
 attributes = {
@@ -1903,27 +1847,27 @@ hframes = 3
 vframes = 7
 frame = 1
 
-[node name="TileMap2" type="TileMap" parent="."]
+[node name="DecorationChristmas" type="TileMap" parent="."]
 tile_set = SubResource( 63 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 2, 4, 0, 18, 4, 0, 327685, 3, 0, 327687, 1, 0, 393221, 2, 0, 393223, 0, 0, 720898, 2, 0, 1114114, 3, 0 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="ChristmasTree" type="TileMap" parent="."]
 tile_set = SubResource( 62 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 65541, 0, 0 )
 
-[node name="TileMap3" type="TileMap" parent="."]
+[node name="ChristmasBoot2" type="TileMap" parent="."]
 rotation = -0.0174533
 tile_set = SubResource( 64 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 4849683, 0, 0 )
 
-[node name="TileMap4" type="TileMap" parent="."]
+[node name="ChristmasBoot" type="TileMap" parent="."]
 tile_set = SubResource( 65 )
 cell_size = Vector2( 10, 10 )
 format = 1

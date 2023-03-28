@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image 125 (1) 1.png-ed456ebe70692d833e41f048aaec55de.stex"
+path="res://.import/christmas_boot.png-cd4ba083f5d40a39a880ed1c74302654.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase3/image 125 (1) 1.png"
-dest_files=[ "res://.import/image 125 (1) 1.png-ed456ebe70692d833e41f048aaec55de.stex" ]
+source_file="res://assets/Phase3/christmas_boot.png"
+dest_files=[ "res://.import/christmas_boot.png-cd4ba083f5d40a39a880ed1c74302654.stex" ]
 
 [params]
 
