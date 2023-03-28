@@ -1,6 +1,9 @@
 extends Node2D
 
+# PT_BR: Variável local que armazena a música da fase 1
+# EN_US: Local variable that stores the music from phase 1
 onready var music_phase_1 = load("res://assets/Audio/music_phase_1.mp3")
+
 
 func _ready():
 	Audio.play_music(music_phase_1)
@@ -31,11 +34,13 @@ func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
 
 
-# PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia.
-# EN_US: Function that defines that when the dialog scene ends, the game start.
+# PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia
+# EN_US: Function that defines that when the dialog scene ends, the game start
 func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
 
 
+# PT_BR: Função que quando o botão de voltar do primeiro diálogo é clicado, volta para o tutorial
+# EN_US: Function that when the back button of the first dialog is clicked, it goes back to the tutorial
 func _on_DialogBox_exit_dialog():
 	get_tree().change_scene("res://scenes/tutorial/Introduction_tutorial.tscn")
