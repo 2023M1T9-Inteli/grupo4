@@ -41,7 +41,6 @@ onready var text_position = $text_box.rect_global_position
 # PT_BR: Função usada para definir a visibilidade do clock, progress e chronometer.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
 func _ready():
-	$next_button.hide()
 	clock.visible = false
 	progress.visible = false
 	chronometer.visible = false
@@ -75,7 +74,6 @@ func _process(_delta):
 		$back_timer.visible = false
 		run_task1 = 6
 		run_task2 = 0
-		
 
 	elif cont == 1:
 		$Path2D/path_table_worker/SmallTask.visible = true
@@ -84,7 +82,6 @@ func _process(_delta):
 		chronometer.visible = false
 		run_task1 = 0
 		run_task2 = 8
-		
 
 	elif cont == 2:
 		$Path2D/path_table_worker/SmallTask.visible = false
@@ -100,7 +97,6 @@ func _process(_delta):
 			cont += 1
 
 	elif cont == 3:
-		$next_button.show()
 		chronometer.visible = false
 		clock.visible = true
 		progress.visible = false
@@ -114,14 +110,12 @@ func _process(_delta):
 		$Circulo.visible = false
 		$text_box.rect_position = text_position
 		
-		
 	elif cont == 4:
 		$text_box.rect_position = Vector2(152,424)
 		$back_timer.visible = false
 		$Circulo.visible = true
 		progress.visible = true
 		clock.visible = false
-		
 		
 	elif cont == 5:
 		emit_signal("next_tutorial",self)
@@ -131,7 +125,7 @@ func _process(_delta):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the task is dropped on the table.
 # EN_US (2): Parameter: slot - CenterContainer.
-func _on_testeTarefa02_dropped_item(_slot):
+func _on_testeTarefa02_dropped_item(slot):
 	cont += 1
 
 

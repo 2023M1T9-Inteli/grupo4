@@ -1,5 +1,4 @@
 extends Node2D
-class_name BasePhase
 
 # PT_BR: Exporta a variável para selecionar a fase
 # EN_US: Exports the variable for select the phase
@@ -82,7 +81,7 @@ func _change_score(new_value):
 # EN_US: Function to change the scene when the game time is over
 func _on_TimeDisplayer_timer_is_over():
 	Globals.lose_by_time = true
-	var __ = get_tree().change_scene("res://scripts/Result/Result.gd")
+	var __ = get_tree().change_scene("res://scenes/Result/Result.tscn")
 
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
@@ -145,28 +144,28 @@ func _on_Map_roger_fineshed_task(worker):
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Kira"
 # EN_US: Calls the map function to iniciate the character's "Kira" task
-func _on_workSlotKira_get_item(slot):
+func _on_WorkSlotKira_get_item(slot):
 	slot.can_give = false
 	map.Kira_initiate_task(slot)
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Roger"
 # EN_US: Calls the map function to iniciate the character's "Roger" task
-func _on_workSlotRoger_get_item(slot):
+func _on_WorkSlotRoger_get_item(slot):
 	slot.can_give = false
 	map.Roger_initiate_task(slot)
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Bento"
 # EN_US: Calls the map function to iniciate the character's "Bento" task
-func _on_workSlotBento_get_item(slot):
+func _on_WorkSlotBento_get_item(slot):
 	slot.can_give = false
 	map.Bento_initiate_task(slot)
 
 
 # PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Ana"
 # EN_US: Calls the map function to iniciate the character's "Ana" task
-func _on_workSlotAna_get_item(slot):
+func _on_WorkSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
@@ -210,3 +209,4 @@ func _send_hover_effect_in_file(profile):
 	var end = begin + profile.rect_size
 	
 	_hover_file(begin, end, profile)
+

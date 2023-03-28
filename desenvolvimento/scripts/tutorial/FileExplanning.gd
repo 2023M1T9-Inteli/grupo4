@@ -28,8 +28,6 @@ Agora, para [color=#EE222B]devolver[/color] a ficha da pessoa colaboradora em su
 Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 	""
 ]
-func _ready():
-	$next_button.hide()
 
 func _ready():
 	$text_box/back_button.visible = false
@@ -67,7 +65,6 @@ func _process(_delta):
 	elif cont == 2:
 		$text_box/back_button.visible = true
 		$text_box/next_button.visible = true
-
 		$path2d_table_worker/pathfollow_table_worker/kira_table.visible = false
 		run_file2 = 0
 		
@@ -79,7 +76,7 @@ func _process(_delta):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the file is dropped on the expansion table.
 # EN_US (2): Parameter: slot - CenterContainer. 
-func _on_Slot_dropped_item(_slot):	
+func _on_Slot_dropped_item(slot):	
 	cont += 1
 
 
@@ -87,7 +84,7 @@ func _on_Slot_dropped_item(_slot):
 # PT_BR (2): Parâmetro: slot - CenterContainer.
 # EN_US (1): Custom signal that detects when the file is placed on the worker table.
 # EN_US (2): Parâmetro: slot - CenterContainer.
-func _on_Slot_get_item(_slot):
+func _on_Slot_get_item(slot):
 	cont += 1
 
 

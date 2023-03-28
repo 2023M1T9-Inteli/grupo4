@@ -32,7 +32,7 @@
 [ext_resource path="res://assets/phase_assets/Phase2Assets/flag.png" type="Texture" id=30]
 [ext_resource path="res://assets/phase_assets/Phase2Assets/straw.png" type="Texture" id=31]
 
-[sub_resource type="PluginScript" id=11]
+[sub_resource type="PluginScript" id=35]
 
 [sub_resource type="TileSet" id=4]
 0/name = "Modern_Office_32x32.png 0"
@@ -189,7 +189,7 @@
 9/shape_one_way_margin = 0.0
 9/shapes = [  ]
 9/z_index = 0
-script = SubResource( 11 )
+script = SubResource( 35 )
 
 [sub_resource type="TileSet" id=6]
 0/name = "Modern_Office_48x48.png 0"
@@ -441,17 +441,17 @@ tracks/1/keys = {
 "values": [ 18, 20, 18, 20, 12, 14, 12, 14, 18, 20, 18, 20, 18, 12, 14, 12, 14, 12, 14, 12, 14, 12, 14, 15, 17, 15, 17, 15, 17, 14, 9, 11, 9, 11, 9, 11, 9, 11, 9, 6, 8, 6, 8, 6, 8, 6, 8, 6, 3, 5, 3, 5, 3, 6, 8, 6, 8, 6, 3, 5 ]
 }
 
-[sub_resource type="StreamTexture" id=12]
+[sub_resource type="StreamTexture" id=36]
 flags = 4
 
-[sub_resource type="StreamTexture" id=14]
+[sub_resource type="StreamTexture" id=37]
 
-[sub_resource type="ConvexPolygonShape2D" id=28]
+[sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 
 [sub_resource type="TileSet" id=8]
 0/name = "Modern_Office_MV_2_TILESETS_B-C-D-E.png 0"
-0/texture = SubResource( 12 )
+0/texture = SubResource( 36 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 96, 288, 96, 128 )
@@ -465,7 +465,7 @@ points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Modern_Office_MV_2_TILESETS_B-C-D-E.png 1"
-1/texture = SubResource( 12 )
+1/texture = SubResource( 36 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 672, 384, 96, 64 )
@@ -535,7 +535,7 @@ points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "Modern_Office_Singles_48x48_102.png 13"
-13/texture = SubResource( 14 )
+13/texture = SubResource( 37 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 64, 64, 96 )
@@ -572,14 +572,14 @@ points = PoolVector2Array( 0, 0, 72, 0, 72, 105, 0, 105 )
 16/navigation_offset = Vector2( 0, 0 )
 16/shape_offset = Vector2( 0, 0 )
 16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-16/shape = SubResource( 28 )
+16/shape = SubResource( 38 )
 16/shape_one_way = false
 16/shape_one_way_margin = 1.0
 16/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 38 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 16/z_index = 0
@@ -634,14 +634,8 @@ frame_1/delay_sec = 0.0
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": null,
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
 1/z_index = 0
 2/name = "flag.png 2"
 2/texture = ExtResource( 30 )
@@ -672,9 +666,9 @@ frame_1/delay_sec = 0.0
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="StreamTexture" id=15]
+[sub_resource type="StreamTexture" id=39]
 
-[sub_resource type="StreamTexture" id=13]
+[sub_resource type="StreamTexture" id=40]
 
 [sub_resource type="TileSet" id=9]
 0/name = "asiatico.png 0"
@@ -692,7 +686,7 @@ frame_1/delay_sec = 0.0
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Cópia Cadeirante.png 1"
-1/texture = SubResource( 15 )
+1/texture = SubResource( 39 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 64, 64 )
@@ -720,7 +714,7 @@ frame_1/delay_sec = 0.0
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Personagem primeirosprite.png 3"
-3/texture = SubResource( 13 )
+3/texture = SubResource( 40 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 0, 32, 64 )

@@ -44,8 +44,6 @@ const results_texts: Dictionary = {
 }
 
 func _ready():
-	Globals.actual_score = 1500
-	Globals.lose_by_time = false
 	# PT_BR: Define uma variável "result" como o resultado de uma operação entre os scores da fase
 	# EN_US: Defines a variable "result" as the result of a operation between the phase scores
 	result = float(Globals.actual_score * 100) / float(Globals.phases_max_score[ selected_phase ])
@@ -134,4 +132,3 @@ func _on_StarFull2_completed_change(_texture_progress_node):
 func _on_StarFull3_completed_change(_texture_progress_node):
 	score_bar.texture_progress = green_bar
 	audio_star3.play()
-

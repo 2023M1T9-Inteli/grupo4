@@ -29,12 +29,12 @@
 [ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
 
 [sub_resource type="DynamicFont" id=1]
-size = 35
+size = 31
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 16 )
 
-[node name="Phase1" type="Node2D"]
+[node name="Phase" type="Node2D"]
 script = ExtResource( 14 )
 phase_progress = NodePath("PhaseProgress")
 map = NodePath("Map")
@@ -80,7 +80,7 @@ margin_bottom = 438.333
 margin_left = 8.88845
 margin_top = 88.8892
 margin_right = 136.888
-margin_bottom = 136.889
+margin_bottom = 128.889
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -118,7 +118,7 @@ margin_bottom = 429.444
 margin_left = 103.334
 margin_top = 97.7782
 margin_right = 231.334
-margin_bottom = 145.778
+margin_bottom = 137.778
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -156,7 +156,7 @@ margin_bottom = 648.333
 margin_left = 13.3335
 margin_top = 92.2226
 margin_right = 141.333
-margin_bottom = 140.223
+margin_bottom = 132.223
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -194,7 +194,7 @@ margin_bottom = 660.556
 margin_left = 88.8889
 margin_top = 79.9995
 margin_right = 216.889
-margin_bottom = 127.999
+margin_bottom = 119.999
 rect_min_size = Vector2( 128, 40 )
 custom_constants/separation = 28
 collection_size = Vector2( 128, 40 )
@@ -227,7 +227,6 @@ margin_left = 1015.0
 margin_top = 5.0
 margin_right = 1168.0
 margin_bottom = 102.0
-seconds = 30
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
@@ -249,10 +248,10 @@ visible = false
 [node name="Scores" type="Node2D" parent="."]
 
 [node name="ScorePhase" type="Label" parent="Scores"]
-margin_left = 280.0
-margin_top = 17.0
-margin_right = 483.0
-margin_bottom = 81.0
+margin_left = 293.0
+margin_top = 25.0
+margin_right = 489.0
+margin_bottom = 89.0
 custom_fonts/font = SubResource( 1 )
 text = "Pontos:"
 align = 1
@@ -295,10 +294,9 @@ stream = ExtResource( 27 )
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
-[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
-[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_WorkSlotBento_get_item"]
 [connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
 [connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]
