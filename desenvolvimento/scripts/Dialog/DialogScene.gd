@@ -4,10 +4,13 @@ onready var music_phase_1 = load("res://assets/Audio/music_phase_1.mp3")
 
 func _ready():
 	Audio.play_music(music_phase_1)
+
+
 # PT_BR: Função que muda a animação do sprite quando acionada 
 # EN_US: Function that changes the sprite animation when activated
 func change_anim(anim):
 	$RosalinneAnimSprite.animation = anim
+
 
 # PT_BR: Função que define se o sprite "Computer" deve aparecer ou ficar escondido 
 # EN_US: Function that defines if the sprite "Computer" should appear or stay hidden
@@ -21,15 +24,18 @@ func show_pc(show_pc):
 	else:
 		$Computer.hide() 
 		
+		
 # PT_BR: Função que define que após o pressionar do botão, a cena é mudada
 # EN_US: Function that definas that after the press of the button, the scene is changed
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/Menu.tscn")
 
+
 # PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia.
 # EN_US: Function that defines that when the dialog scene ends, the game start.
 func _on_DialogBox_finished_dialog():
 	get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+
 
 func _on_DialogBox_exit_dialog():
 	get_tree().change_scene("res://scenes/tutorial/Introduction_tutorial.tscn")

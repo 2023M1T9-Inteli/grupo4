@@ -6,7 +6,6 @@ onready var text_element := $Text
 onready var timer := $Timer
 var counter = 0
 
-
 # PT_BR: Inicializa os sinais usados para passar de cena do diálogo
 # EN_US: Initializes signals used to step through dialog scenes
 signal finished_dialog()
