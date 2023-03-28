@@ -289,3 +289,14 @@ texture_progress = ExtResource( 22 )
 
 [node name="ClickAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 27 )
+
+[connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
+[connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
+[connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
+[connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
+[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_WorkSlotBento_get_item"]
+[connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
+[connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]
