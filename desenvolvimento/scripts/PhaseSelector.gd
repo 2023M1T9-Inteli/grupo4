@@ -28,5 +28,7 @@ func _on_Phase2Button_pressed():
 		var __ = get_tree().change_scene("res://scenes/Dialog/DialogScene2.tscn")
 
 
+# PT_BR: Volta para a tela de menu inicial 
+# EN_US: Returns to the main menu screen
 func _on_TextureButton_pressed():
 	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
