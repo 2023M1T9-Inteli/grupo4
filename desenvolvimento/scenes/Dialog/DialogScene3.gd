@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var music_phase_3 = load("res://assets/Audio/music/X2Download.app - All I Want for Christmas Is You (8-Bit Version) (128 kbps) (mp3cut.net).wav")
+onready var music_phase_3 = load("res://assets/Audio/music/musica_fase_3_2 (mp3cut.net).wav")
 
 func _ready():
 	Audio.play_music(music_phase_3)
