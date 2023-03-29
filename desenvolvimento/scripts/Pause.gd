@@ -24,9 +24,11 @@ var is_paused = false setget set_is_paused
 # EN_US: Variable that stores the phase 1 soundtrack.
 var phase_1_music = preload("res://assets/Audio/music_phase_1.mp3")
 
-# PT_BR: Função executada sempre que a variável is paused é definida. Recebe value como parâmetro.
-# EN_US: Function executed every time that the variable is paused is defined. Receives value as parameter.
-func set_is_paused(value):
+# PT_BR (1): Função executada sempre que a variável is paused é definida. 
+# PT_BR (2): Parâmetro: value int.
+# EN_US (1): Function executed every time that the variable is paused is defined. 
+# EN_US (2): Parameter: value int.
+func set_is_paused(value: int):
 	is_paused = value
 	get_tree().paused = is_paused
 	visible = is_paused

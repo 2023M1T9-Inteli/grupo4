@@ -7,8 +7,10 @@ export(int) var seconds = 30 setget _set_seconds
 export(int) var minutes = 4 setget _set_minutes
 
 
-# PT_BR: Funções para definir variáveis
-# EN_US: Functions to set variables
+# PT_BR (1): Funções para definir as variáveis. 
+# PT_BR (2): Parâmetro: new_value
+# EN_US (1): Functions to set variables. 
+# EN_US (2): Parameter: new_value
 func _set_seconds(new_value):
 	seconds = new_value
 	if weakref($RichTextLabel).get_ref():
