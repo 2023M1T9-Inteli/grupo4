@@ -23,7 +23,7 @@ const phases_keys = {
 const phases_max_score = {
 	"phase1": 1500,
 	"phase2": 1800,
-	"phase3": 10,
+	"phase3": 1800,
 }
 
 # PT_BR: Inicializa a variável para guardar a maior pontuação feita pelo usuário
