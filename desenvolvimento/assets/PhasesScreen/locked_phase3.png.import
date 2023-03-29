@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phase3.png-c792939716da3e0e84396e7ca9e6156a.stex"
+path="res://.import/locked_phase3.png-2fdcfd683dca8de2ae18c700275a1375.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PhasesScreen/phase3.png"
-dest_files=[ "res://.import/phase3.png-c792939716da3e0e84396e7ca9e6156a.stex" ]
+source_file="res://assets/PhasesScreen/locked_phase3.png"
+dest_files=[ "res://.import/locked_phase3.png-2fdcfd683dca8de2ae18c700275a1375.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
