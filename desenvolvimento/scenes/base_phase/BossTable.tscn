@@ -68,6 +68,7 @@ images_size = Vector2( 436, 264 )
 [node name="TaskSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -3, 375 )
 stream = ExtResource( 2 )
+bus = "SFX"
 
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]

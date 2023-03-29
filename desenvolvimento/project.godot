@@ -14,10 +14,6 @@ config/name="Desenvolvimento: O Talento de Delegar"
 run/main_scene="res://scenes/Menu.tscn"
 config/icon="res://icon/icon.png"
 
-[audio]
-
-default_bus_layout=""
-
 [autoload]
 
 Audio="*res://scenes/Audio.tscn"
