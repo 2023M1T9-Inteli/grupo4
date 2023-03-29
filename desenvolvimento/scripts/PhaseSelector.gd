@@ -9,6 +9,7 @@ var result = 0
 # EN_US (1): Function used to calculate the result and if it is >=56, load the second
 # EN_US (2); phase's icon in the button and call the function change_music to change the music.
 func _ready():
+	Audio.stop()
 	if Globals.player_phase_score["phase1"] >= 56:
 		$PhasesGridContainer/Phase2Button.texture_normal = load("res://assets/PhasesScreen/button_phase_2.png")
 		$PhasesGridContainer/Phase2Button.texture_hover = load("res://assets/PhasesScreen/button_phase_2_dark.png")

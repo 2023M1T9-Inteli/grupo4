@@ -37,7 +37,7 @@ func _on_ContinueButton_pressed():
 # PT_BR: Função executada quando o botão opções é apertado para mostrar o objeto Options.
 # EN_US: Function executed when the options button is pressed to show the Options object.
 func open_pause_scene():
-	Audio.pause()
+	Audio.stop()
 	paused_sound.play()
 	self.is_paused = true
 	

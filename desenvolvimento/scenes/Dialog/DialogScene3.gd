@@ -1,5 +1,10 @@
 extends Node2D
 
+onready var music_phase_3 = load("res://assets/Audio/music/X2Download.app - All I Want for Christmas Is You (8-Bit Version) (128 kbps) (mp3cut.net).wav")
+
+func _ready():
+	Audio.play_music(music_phase_3)
+
 # PT_BR: Função que muda a animação do sprite quando acionada 
 # EN_US: Function that changes the sprite animation when activated
 func change_anim(anim):
@@ -31,7 +36,7 @@ func _on_Button_pressed():
 # PT_BR: Função que define que quando a cena de diálogo terminar, o jogo inicia.
 # EN_US: Function that defines that when the dialog scene ends, the game start.
 func _on_DialogBox_finished_dialog():
-	get_tree().change_scene("res://scenes/phase2/Phase2.tscn")
+	get_tree().change_scene("res://scenes/phase3/Phase3.tscn")
 
 func _on_DialogBox_exit_dialog():
 	get_tree().change_scene("res://scenes/Phases.tscn")

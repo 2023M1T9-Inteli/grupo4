@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var music_phase_2 = load("res://assets/Audio/Musica - Fase 2 oficial.wav")
+onready var music_phase_2 = load("res://assets/Audio/music/music_phase_2.wav")
 
 func _ready():
 	Audio.play_music(music_phase_2)

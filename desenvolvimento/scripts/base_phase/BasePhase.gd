@@ -57,7 +57,7 @@ func _process(_delta):
 	_send_hover_effect_in_file(profile_kira)
 	_send_hover_effect_in_file(profile_roger)
 	_send_hover_effect_in_file(profile_ana)
-	_send_hover_effect_in_file(profile_bento)
+	
 
 
 # PT_BR: Função para atualizar a pontuação do jogador
@@ -204,8 +204,8 @@ func _send_hover_effect_in_file(profile):
 	
 	_hover_file(begin, end, profile)
 
-
-
+#PT_BR: Quando pressionado, a cena de pause será aberta e sua função executada
+#EN_US: When oppend, the pause scene will open and it's function will be executed
 func _on_Pause_button_pressed():
 	pause_scene.open_pause_scene()
 

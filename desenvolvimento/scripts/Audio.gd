@@ -25,7 +25,7 @@ func resume():
 	$Music.seek(temp)
 
 
-func pause():
+func stop():
 	temp = $Music.get_playback_position()
 	$Music.stop()
 
