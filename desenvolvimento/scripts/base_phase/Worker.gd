@@ -53,14 +53,21 @@ onready var cronometer = $Cronometer
 # EN_US: Stores the FinishedTask object
 onready var audio_finished_task = $FinishedTask
 
+# PT_BR: Armazena a pontuação
+# EN_US: Stores the score
 var score = 0
 
-# PT_BR: Declara o sinal que será emitido quando o Worker terminar a tarefa
-# EN_US: Declares the signal that will be emitted when Worker finished the task
+# PT_BR(1): Declara o sinal que será emitido quando o NPC terminar a tarefa
+# PT_BR(2): Parâmetro: worker - mesa do NPC
+# EN_US(1): Declares the signal that will be emitted when NPC finished the task
+# EN_US(2): Parameter: worker - NPC table
 signal finished_task(worker)
 
-# PT_BR: Função que iniciará a tarefa. Não retorna valor
-# EN_US: Function that initiate task. Doesn't return value
+
+# PT_BR(1): Função que iniciará a tarefa
+# PT_BR(2): Parâmetro: task - tarefa que será iniciada
+# EN_US(1): Function that initiate task
+# EN_US(2): Parameter: task - task that will be started
 func initiate_task(task):
 	# PT_BR: Reseta os valores para iniciar o cronômetro
 	# EN_US: Resets the values to start the timer
@@ -70,8 +77,10 @@ func initiate_task(task):
 	_compare_attributes(task["attributes"])
 
 
-# PT_BR: Compara os atributos da tarefa com os atributos do Worker. Não retorna valor
-# EN_US: compares the attributes of a task with the attributes of the Worker. Doesn't return value
+# PT_BR(1): Compara os atributos da tarefa com os atributos do Worker
+# PT_BR(2): Parâmetro: task_attributes - atributo da tarefa
+# EN_US(1): Compares the attributes of a task with the attributes of the Worker
+# EN_US(2): Parameter: task_attributes - task attribute
 func _compare_attributes(task_attributes: Dictionary):
 	var comparedAttr = 0
 	for key in task_attributes.keys():
