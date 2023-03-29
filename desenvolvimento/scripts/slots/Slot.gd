@@ -25,8 +25,8 @@ enum SLOTS_TYPE {
 	PROFILE,	
 }
 
-# PT_BR: Inicializa os sinais
-# EN_US: Initialize the signals
+# PT_BR: Inicializa os sinais customizados
+# EN_US: Initialize the custom signals
 signal dropped_item(slot)
 signal get_item(slot)
 
@@ -95,8 +95,10 @@ export(Texture) var boss_table_image: Texture = null setget _set_boss_table_imag
 # EN_US: Local variables
 var is_dragging: bool = false
 
-# PT_BR: Funções setters
-# EN_US: Set Functions
+# PT_BR (1): Funções para definir as variáveis. 
+# PT_BR (2): Parâmetro: new_value
+# EN_US (1): Functions to set variables. 
+# EN_US (2): Parameter: new_value
 func _set_qtd(new_value) -> void:
 	qtd = new_value
 	if weakref($Qtd).get_ref():
@@ -223,9 +225,10 @@ func _get_location_node():
 DRAG AND DROP
 """
 
-# PT_BR: Função chamada automaticamente assim que uma ação de drag é identificada
-# EN_US: Function called automatically as soon as a drag action is identified
 func get_drag_data(_position):
+	# PT_BR: Função chamada automaticamente assim que uma ação de drag é identificada
+	# EN_US: Function called automatically as soon as a drag action is identified
+
 	# PT_BR: Se o item não pode ser tirado retorna falso
 	# EN_US: If item cannot by taked return false
 	if !can_give: return self
@@ -262,9 +265,10 @@ func get_drag_data(_position):
 	return self
 
 
-# PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
-# EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(_position, data) -> bool:
+	# PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
+	# EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
+
 	if !data["can_give"]: return false
 	if data == self: return false
 	var ret = false		
@@ -292,9 +296,9 @@ func can_drop_data(_position, data) -> bool:
 	return ret
 
 
-# PT_BR: Essa função captura o preview que estava sendo arrastado, e vem no parâmetro "data"
-# EN_US: This function captures the preview that was being dragged, and comes in the parameter "data"
 func drop_data(_position, data) -> void:
+	# PT_BR: Essa função captura o preview que estava sendo arrastado, e vem no parâmetro "data"
+	# EN_US: This function captures the preview that was being dragged, and comes in the parameter "data"
 	var qtd_drop = 1
 	
 	# PT_BR: Incrementa a quantidade
@@ -366,7 +370,3 @@ func drop_data(_position, data) -> void:
 # PT_BR: Código baseado no seguinte repositório:
 # EN_US: Code based on the following repository:
 # https://github.com/thiagobruno/godot_dragndrop.git
-
-
-
-

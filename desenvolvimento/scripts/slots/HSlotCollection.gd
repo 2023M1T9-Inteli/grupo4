@@ -25,8 +25,10 @@ export(bool) var active_space_between = true setget _set_active_space_between
 # EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
 
-# PT_BR: Funções para definir as variáveis. Recebe o novo valor. Não retorna nada
-# EN_US: Functions to set variables. Receives the new value. Dont return value
+# PT_BR (1): Funções para definir as variáveis. 
+# PT_BR (2): Parâmetro: new_value
+# EN_US (1): Functions to set variables. 
+# EN_US (2): Parameter: new_value
 func _set_collection_size(new_value) -> void:
 	collection_size = new_value
 	self.rect_min_size = collection_size
@@ -70,10 +72,10 @@ func _ready():
 											_get_object_property_orientation(orientation, collection_size) )
 
 
-# PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
-# PT_BR (2): Não retorna um valor
-# EN_US (1): Receives the number of child nodes, their total size and the size of the container.
-# EN_US (2): It does not return a value.
+# PT_BR (1): Função que muda a constante de separação do SlotCollection
+# PT_BR (2): Parâmetro: qtd_child int, total_children_size int, container_size int
+# EN_US (1): Function that changes the constant separation of the SlotCollection
+# EN_US (2): Parameter: qtd_child int, total_children_size int, container_size int
 func _change_separation_to_space_between(qtd_childs, total_children_size, container_size):
 	# PT_BR: Divide o espaço do Slot Collection igualmente entre os nós Control
 	# EN_US: Divide Slot Collection space equally between controls nodes
@@ -84,26 +86,31 @@ func _change_separation_to_space_between(qtd_childs, total_children_size, contai
 		self.add_constant_override("separation", 
 							_calc_space_between(container_size, total_children_size, qtd_childs) )
 
-# PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
-# PT_BR (2): Retorna a distância adequada entre os nodes
-# EN_US (1): Receives the number of child nodes, their total size and the size of the container.
-# EN_US (2): Return proper distance between nodes
+
+# PT_BR (1): Função que calcula o espaço que deve ter entre os nós filhos
+# PT_BR (2): Parâmetro: qtd_child int, total_children_size int, container_size int
+# PT_BR (3): Retorna a distância adequada entre os nodes
+# EN_US (1): Function that calculates the space that should be between child nodes
+# EN_US (2): Parameter: qtd_child int, total_children_size int, container_size int
+# EN_US (3): Return proper distance between nodes
 func _calc_space_between(container_size, total_children_size, qtd_childs):
 	return ( (container_size - total_children_size) / (qtd_childs - 1) )
 
 
-# PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos
-# PT_BR (2): Retorna o tamanho que cada slot deve ter
-# EN_US (1): Receive the slotCollection size and the number of child nodes
-# EN_US (2): Returns the size each slot should be
+# PT_BR (1): Função para calcular o tamanho que cada slot deve ter
+# PT_BR (2): Parâmetro: slot_collection_size int, qtd_child int
+# PT_BR (3): Retorna o tamanho que cada slot deve ter
+# EN_US (1): Function to calculate the size that each slot should be
+# EN_US (2): Parameter: slot_collection_size int, qtd_child int
+# EN_US (3): Returns the size each slot should be
 func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
 
-# PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
-# PT_BR (2): Não retorna um valor
-# EN_US (1): Receives the orientation to be obtained and the object property (Vector2)
-# EN_US (2): It does not return a value.
+# PT_BR (1): Função que retorna o tamanho de um Vector2 de um objeto na orientação enviada
+# PT_BR (2): Parâmetro: object_orientation: enum ORIENTATION_DIRECTION, object_property Vector2
+# EN_US (1): Function that returns the size of a Vector2 of an object in the sent orientation
+# EN_US (2): Parameter: object_orientation: enum ORIENTATION_DIRECTION, object_property Vector2
 func _get_object_property_orientation(object_orientation, object_property: Vector2):
 	# PT_BR: Essa função pega a orientação de uma propriedade que seja um Vector2
 	# EN_US: This function takes the orientation of a Vector2 property
@@ -147,6 +154,7 @@ func can_drop_data(position, data) -> bool:
 			if can_drop:
 				return can_drop
 	return can_drop
+
 
 func drop_data(position, data) -> void:
 	# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
