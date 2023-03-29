@@ -1,7 +1,9 @@
 extends TextureProgress
 
-# PT_BR: Criação do sinal personalizado.
-# # EN_US: Custom sign creation.
+# PT_BR (1): Criação do sinal personalizado.
+# PT_BR (2): Recebe texture_progress_node como parâmetro
+# EN_US (1): Custom sign creation.
+# EN_US (2): Receives texture_progress_node as parameter
 signal completed_change(texture_progress_node)
 
 # PT_BR (1): Função que adiciona um valor e emite um sinal caso a barra esteja preenchida.
