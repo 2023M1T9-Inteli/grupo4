@@ -45,6 +45,7 @@ onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key]
 # PT_BR: Reseta a variável de pontos.
 # EN_US: Reset the points variable.
 func _ready():
+	Globals.lose_by_time = false
 	Globals.set_actual_score(0)
 	Globals.set_actual_phase(phase_key)
 
@@ -53,11 +54,18 @@ func _ready():
 #EN_US: This funcction observes the mouse position and applies the hover on the files 
 func _process(_delta):
 	# PT_BR: As variáveis baixo armazenam o nó que será usado na função
-	# EN_US: The variables below stores a node which will be used by the function
-	_send_hover_effect_in_file(profile_kira)
-	_send_hover_effect_in_file(profile_roger)
-	_send_hover_effect_in_file(profile_ana)
+	# EN_US: The variables below stores a node which will be used by the function	
+	if self.has_node(profile_kira.get_path()):
+		_send_hover_effect_in_file(profile_kira)
 	
+	if self.has_node(profile_roger.get_path()):
+		_send_hover_effect_in_file(profile_roger)
+	
+	if self.has_node(profile_ana.get_path()):
+		_send_hover_effect_in_file(profile_ana)
+		
+	if self.has_node(profile_bento.get_path()):
+		_send_hover_effect_in_file(profile_bento)
 
 
 # PT_BR: Função para atualizar a pontuação do jogador
@@ -174,7 +182,7 @@ func _on_WorkSlotAna_get_item(slot):
 # EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
 	if event.is_action_pressed("click"):
-		$Click_sound.play()
+		click_audio.play()
 
 
 # PT_BR (1): Essa função aplica o hover nas fichas
@@ -204,8 +212,8 @@ func _send_hover_effect_in_file(profile):
 	
 	_hover_file(begin, end, profile)
 
-#PT_BR: Quando pressionado, a cena de pause será aberta e sua função executada
-#EN_US: When oppend, the pause scene will open and it's function will be executed
-func _on_Pause_button_pressed():
-	pause_scene.open_pause_scene()
 
+func _on_Pause_button_pressed():
+	# PT_BR: Abre a cena de pause
+	# EN_US: Opens the pause scene
+	pause_scene.open_pause_scene()
