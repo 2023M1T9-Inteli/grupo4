@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/phase4.png-065952eaf78afdd2ee29518e0f83e98b.stex"
+path="res://.import/button_phase_3.png-3428548953045bb187820d331c784aab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PhasesScreen/phase4.png"
-dest_files=[ "res://.import/phase4.png-065952eaf78afdd2ee29518e0f83e98b.stex" ]
+source_file="res://assets/PhasesScreen/button_phase_3.png"
+dest_files=[ "res://.import/button_phase_3.png-3428548953045bb187820d331c784aab.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

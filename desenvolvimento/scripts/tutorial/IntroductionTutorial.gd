@@ -17,7 +17,7 @@ var textos: Array = [
 	
 	"""Olá! Seja bem-vindo(a) ao tutorial do jogo O Talento de Delegar.
 
-Para avançar ou voltar, clique nas [color=#3a87ae]setas[/color] abaixo.""",
+Para avançar ou voltar, clique nas [color=#3a87ae]setas[/color] ao lado.""",
 
 ""
 
