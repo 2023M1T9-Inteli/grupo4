@@ -34,10 +34,10 @@ scale = Vector2( 0.537725, 0.457634 )
 texture = ExtResource( 1 )
 
 [node name="VolumeGrid" type="GridContainer" parent="."]
-margin_left = 74.0
-margin_top = 134.0
-margin_right = 1126.0
-margin_bottom = 219.0
+margin_left = 101.0
+margin_top = 128.0
+margin_right = 1103.0
+margin_bottom = 213.0
 rect_scale = Vector2( 0.6, 0.6 )
 mouse_default_cursor_shape = 2
 custom_constants/hseparation = 250
@@ -45,12 +45,42 @@ columns = 2
 
 [node name="VolumeOptionLabel" type="Label" parent="VolumeGrid"]
 margin_top = 6.0
+margin_right = 300.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "GEral:"
+
+[node name="Master_slider" type="HSlider" parent="VolumeGrid"]
+margin_left = 550.0
+margin_right = 1002.0
+margin_bottom = 85.0
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="VolumeGrid2" type="GridContainer" parent="."]
+margin_left = 69.0
+margin_top = 224.0
+margin_right = 1121.0
+margin_bottom = 309.0
+rect_scale = Vector2( 0.6, 0.6 )
+mouse_default_cursor_shape = 2
+custom_constants/hseparation = 250
+columns = 2
+
+[node name="VolumeOptionLabel" type="Label" parent="VolumeGrid2"]
+margin_top = 6.0
 margin_right = 350.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 5 )
-text = "Volume:"
+text = "Musica:"
 
-[node name="SliderMusic" type="HSlider" parent="VolumeGrid"]
+[node name="SliderMusic" type="HSlider" parent="VolumeGrid2"]
 margin_left = 600.0
 margin_right = 1052.0
 margin_bottom = 85.0
@@ -59,8 +89,39 @@ custom_icons/grabber = ExtResource( 2 )
 custom_styles/slider = SubResource( 2 )
 custom_styles/grabber_area_highlight = SubResource( 3 )
 custom_styles/grabber_area = SubResource( 4 )
-min_value = -40.0
-max_value = 0.0
+max_value = 2.0
+step = 0.05
+value = 1.0
+
+[node name="VolumeGrid3" type="GridContainer" parent="."]
+margin_left = 37.0
+margin_top = 320.0
+margin_right = 1139.0
+margin_bottom = 405.0
+rect_scale = Vector2( 0.6, 0.6 )
+mouse_default_cursor_shape = 2
+custom_constants/hseparation = 250
+columns = 2
+
+[node name="VolumeOptionLabel" type="Label" parent="VolumeGrid3"]
+margin_top = 6.0
+margin_right = 400.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 5 )
+text = "efeitos:"
+
+[node name="SFX_slider" type="HSlider" parent="VolumeGrid3"]
+margin_left = 650.0
+margin_right = 1102.0
+margin_bottom = 85.0
+custom_icons/grabber_highlight = ExtResource( 2 )
+custom_icons/grabber = ExtResource( 2 )
+custom_styles/slider = SubResource( 2 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
+max_value = 2.0
+step = 0.05
+value = 1.0
 
 [node name="BackButton" type="Button" parent="."]
 margin_left = 723.0
@@ -71,5 +132,7 @@ rect_scale = Vector2( 0.7, 0.7 )
 icon = ExtResource( 3 )
 flat = true
 
-[connection signal="value_changed" from="VolumeGrid/SliderMusic" to="." method="_on_SliderMusic_value_changed"]
+[connection signal="value_changed" from="VolumeGrid/Master_slider" to="." method="_on_Master_slider_value_changed"]
+[connection signal="value_changed" from="VolumeGrid2/SliderMusic" to="." method="_on_SliderMusic_value_changed"]
+[connection signal="value_changed" from="VolumeGrid3/SFX_slider" to="." method="_on_SFX_slider_value_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

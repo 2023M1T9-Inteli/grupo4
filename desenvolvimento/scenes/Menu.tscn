@@ -100,9 +100,9 @@ texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
 script = ExtResource( 3 )
 
-[node name="Options" parent="." instance=ExtResource( 7 )]
-
 [node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
+
+[node name="Options" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

@@ -6,6 +6,7 @@ var temp = 0.0
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Set the music and play.
 # EN_US (2): Parameter: music - arquivo de música.
+
 func play_music(music):
 	$Music.stream = music
 	$Music.play()
