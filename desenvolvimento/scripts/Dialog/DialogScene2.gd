@@ -1,8 +1,9 @@
 extends Node2D
 
+
 # PT_BR: Variável local que armazena a música da fase 2
 # EN_US: Local variable that stores the music from phase 2
-onready var music_phase_2 = load("res://assets/Audio/Musica - Fase 2 oficial.wav")
+onready var music_phase_2 = load("res://assets/Audio/music/music_phase_2.wav")
 
 
 func _ready():

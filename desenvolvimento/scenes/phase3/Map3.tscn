@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/phase_assets/OfficeItems/left_lamp.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/phase_assets/OfficeItems/chair.png" type="Texture" id=6]
 [ext_resource path="res://assets/phase_assets/OfficeItems/full_open_trash.png" type="Texture" id=7]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=8]
+[ext_resource path="res://scripts/Phase1/Map.gd" type="Script" id=9]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=10]
 [ext_resource path="res://assets/characters/kira.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3.png" type="Texture" id=12]
@@ -1568,6 +1569,7 @@ frame_1/delay_sec = 0.0
 0/z_index = 0
 
 [node name="Map" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Parede e Chão" type="TileMap" parent="."]
 tile_set = SubResource( 29 )
@@ -1869,3 +1871,7 @@ tile_set = SubResource( 65 )
 cell_size = Vector2( 10, 10 )
 format = 1
 tile_data = PoolIntArray( 3866671, 0, 0 )
+
+[connection signal="finished_task" from="Kira" to="." method="_on_Kira_finished_task"]
+[connection signal="finished_task" from="Roger" to="." method="_on_Roger_finished_task"]
+[connection signal="finished_task" from="Ana" to="." method="_on_Ana_finished_task"]

@@ -3,25 +3,27 @@ extends Node
 # PT_BR: Inicializa as constantes para exportar como variáveis em outras cenas
 # EN_US: Initialize constants for export them as variables in other scenes
 enum PHASES {
-	PHASE_1 = 0,
-	PHASE_2 = 1,
+	PHASE_1 = 1,
+	PHASE_2 = 2,
 	PHASE_3 = 3,
 }
 
+
 # PT_BR: Inicializa a constante para navegar entre os dicionários
 # EN_US: Initializes tue constant for navigating between the dictionaries
-const phases_keys = [
-	"phase1",
-	"phase2",
-	"phase3",
-]
+const phases_keys = {
+	1: "phase1",
+	2: "phase2",
+	3: "phase3",
+}
+
 
 # PT_BR: Inicializa a constante das pontuações máximas
 # EN_US: Initializes max score constant
 const phases_max_score = {
 	"phase1": 1500,
 	"phase2": 1800,
-	"phase3": 0,
+	"phase3": 10,
 }
 
 # PT_BR: Inicializa a variável para guardar a maior pontuação feita pelo usuário

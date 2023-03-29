@@ -106,3 +106,5 @@ func _on_Timer_timeout():
 		cronometer.hide()
 		audio_finished_task.play()
 		emit_signal("finished_task", self)
+
+

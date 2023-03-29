@@ -20,10 +20,10 @@ wait_time = 0.45
 
 [node name="Cronometer" type="TextureProgress" parent="."]
 visible = false
-margin_left = 8.0
-margin_top = -52.0
-margin_right = 56.0
-margin_bottom = -4.0
+margin_left = 21.0
+margin_top = -51.0
+margin_right = 69.0
+margin_bottom = -3.0
 texture_under = ExtResource( 3 )
 texture_progress = ExtResource( 2 )
 fill_mode = 4

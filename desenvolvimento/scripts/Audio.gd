@@ -28,7 +28,7 @@ func resume():
 
 # PT_BR: Função que pausa a música e salva onde parou
 # EN_US: Function that pauses the music and saves where it stops
-func pause():
+func stop():
 	temp = $Music.get_playback_position()
 	$Music.stop()
 
