@@ -64,8 +64,6 @@ func _process(_delta):
 	if self.has_node(profile_ana.get_path()):
 		_send_hover_effect_in_file(profile_ana)
 		
-	if self.has_node(profile_bento.get_path()):
-		_send_hover_effect_in_file(profile_bento)
 
 
 # PT_BR: Função para atualizar a pontuação do jogador
@@ -182,7 +180,7 @@ func _on_WorkSlotAna_get_item(slot):
 # EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
 	if event.is_action_pressed("click"):
-		click_audio.play()
+		$ClickAudio.play()
 
 
 # PT_BR (1): Essa função aplica o hover nas fichas
@@ -217,3 +215,4 @@ func _on_Pause_button_pressed():
 	# PT_BR: Abre a cena de pause
 	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()
+

@@ -294,7 +294,7 @@ stream = ExtResource( 27 )
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
-[connection signal="pressed" from="PauseButton" to="Pause" method="_on_PauseButton_pressed"]
+[connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]
