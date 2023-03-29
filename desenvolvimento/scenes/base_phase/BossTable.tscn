@@ -37,9 +37,8 @@ margin_top = 95.0
 margin_right = 509.0
 margin_bottom = 625.0
 rect_min_size = Vector2( 512, 530 )
-custom_constants/separation = -522
+custom_constants/separation = 36
 collection_size = Vector2( 512, 530 )
-orientation = 1
 
 [node name="ProfileControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
 margin_right = 517.0
@@ -55,9 +54,9 @@ slot_size = Vector2( 517, 230 )
 images_size = Vector2( 420, 230 )
 
 [node name="WorkerTableControl2" parent="SlotCollectioVBoxContainer" instance=ExtResource( 6 )]
-margin_top = -292.0
+margin_top = 266.0
 margin_right = 517.0
-margin_bottom = -28.0
+margin_bottom = 530.0
 rect_min_size = Vector2( 517, 250 )
 mouse_filter = 2
 size_flags_horizontal = 0
@@ -66,9 +65,10 @@ location = 2
 slot_size = Vector2( 517, 250 )
 images_size = Vector2( 436, 264 )
 
-[node name="Task_soud" type="AudioStreamPlayer2D" parent="."]
+[node name="TaskSound" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -3, 375 )
 stream = ExtResource( 2 )
+bus = "SFX"
 
 [connection signal="mouse_entered" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="mouse_exited" from="taskNoHover/TextureButton" to="." method="_on_TextureButton_mouse_exited"]

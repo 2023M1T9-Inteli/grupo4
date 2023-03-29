@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase2/Map2.tscn" type="PackedScene" id=2]
@@ -13,7 +13,7 @@
 [ext_resource path="res://assets/items/profile_sheets/ana_light_sheet.png" type="Texture" id=11]
 [ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/phase2/Phase2.gd" type="Script" id=14]
+[ext_resource path="res://scripts/base_phase/BasePhase.gd" type="Script" id=14]
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=16]
 [ext_resource path="res://scenes/phase2/Phase2Drawer.tscn" type="PackedScene" id=17]
@@ -27,8 +27,6 @@
 [ext_resource path="res://assets/Phase2/circle_purple.png" type="Texture" id=25]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
 [ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
-[ext_resource path="res://assets/Audio/Conclued_task.wav" type="AudioStream" id=28]
-[ext_resource path="res://assets/Audio/Pause.wav" type="AudioStream" id=29]
 [ext_resource path="res://assets/Phase2/tend_dark.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase2/tend (1).png" type="Texture" id=31]
 
@@ -40,6 +38,20 @@ font_data = ExtResource( 16 )
 
 [node name="Phase2" type="Node2D"]
 script = ExtResource( 14 )
+phase_key = 2
+phase_progress = NodePath("PhaseProgress")
+map = NodePath("Map")
+slot_kira = NodePath("Slots/SlotExpansorKira")
+slot_roger = NodePath("Slots/SlotExpansorRoger")
+slot_ana = NodePath("Slots/SlotExpansorAna")
+slot_bento = NodePath("Slots/SlotExpansorBento")
+profile_kira = NodePath("Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira")
+profile_roger = NodePath("Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger")
+profile_ana = NodePath("Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna")
+profile_bento = NodePath("Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento")
+star1 = NodePath("Scores/StarProgress1")
+star2 = NodePath("Scores/StarProgress2")
+star3 = NodePath("Scores/StarProgress3")
 
 [node name="Table" parent="." instance=ExtResource( 1 )]
 position = Vector2( 772, 0 )
@@ -282,24 +294,17 @@ max_value = 12.0
 texture_under = ExtResource( 23 )
 texture_progress = ExtResource( 22 )
 
-[node name="Click_sound" type="AudioStreamPlayer2D" parent="."]
+[node name="ClickAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 27 )
-
-[node name="Conclued_task" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 28 )
-
-[node name="Paused_audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 29 )
 
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
 [connection signal="pressed" from="Pause_button" to="." method="_on_Pause_button_pressed"]
-[connection signal="pressed" from="Pause_button" to="Pause" method="_on_ExitButton_pressed"]
-[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_workSlotKira_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_workSlotRoger_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_workSlotAna_get_item"]
-[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_workSlotBento_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]
+[connection signal="get_item" from="Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento" to="." method="_on_WorkSlotBento_get_item"]
 [connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
 [connection signal="completed_change" from="PhaseProgress" to="." method="_on_PhaseProgress_completed_change"]

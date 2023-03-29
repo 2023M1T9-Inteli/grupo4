@@ -1,5 +1,4 @@
 extends Node2D
-class_name BasePhase
 
 # PT_BR: Exporta a variável para selecionar a fase
 # EN_US: Exports the variable for select the phase
@@ -46,19 +45,24 @@ onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key]
 # PT_BR: Reseta a variável de pontos.
 # EN_US: Reset the points variable.
 func _ready():
+	Globals.lose_by_time = false
 	Globals.set_actual_score(0)
 	Globals.set_actual_phase(phase_key)
 
 
-#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
-#EN_US: This funcction observes the mouse position and applies the hover on the files 
+
 func _process(_delta):
-	# PT_BR: As variáveis baixo armazenam o nó que será usado na função
-	# EN_US: The variables below stores a node which will be used by the function
-	_send_hover_effect_in_file(profile_kira)
-	_send_hover_effect_in_file(profile_roger)
-	_send_hover_effect_in_file(profile_ana)
-	_send_hover_effect_in_file(profile_bento)
+	#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
+	#EN_US: This funcction observes the mouse position and applies the hover on the files 
+	if self.has_node(profile_kira.get_path()):
+		_send_hover_effect_in_file(profile_kira)
+	
+	if self.has_node(profile_roger.get_path()):
+		_send_hover_effect_in_file(profile_roger)
+	
+	if self.has_node(profile_ana.get_path()):
+		_send_hover_effect_in_file(profile_ana)
+		
 
 
 # PT_BR: Função para atualizar a pontuação do jogador
@@ -143,45 +147,55 @@ func _on_Map_roger_fineshed_task(worker):
 	slot_roger.can_give = true
 
 
-# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Kira"
-# EN_US: Calls the map function to iniciate the character's "Kira" task
-func _on_workSlotKira_get_item(slot):
+# PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
+# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
+# EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
+# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (3): Calls the map function to start the character's task
+func _on_WorkSlotKira_get_item(slot):
 	slot.can_give = false
 	map.Kira_initiate_task(slot)
 
 
-# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Roger"
-# EN_US: Calls the map function to iniciate the character's "Roger" task
-func _on_workSlotRoger_get_item(slot):
+# PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
+# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
+# EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
+# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (3): Calls the map function to start the character's task
+func _on_WorkSlotRoger_get_item(slot):
 	slot.can_give = false
 	map.Roger_initiate_task(slot)
 
 
-# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Bento"
-# EN_US: Calls the map function to iniciate the character's "Bento" task
-func _on_workSlotBento_get_item(slot):
+# PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
+# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
+# EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
+# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (3): Calls the map function to start the character's task
+func _on_WorkSlotBento_get_item(slot):
 	slot.can_give = false
 	map.Bento_initiate_task(slot)
 
 
-# PT_BR: Chama a função do mapa para iniciar a tarefa do personagem "Ana"
-# EN_US: Calls the map function to iniciate the character's "Ana" task
-func _on_workSlotAna_get_item(slot):
+# PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
+# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
+# EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
+# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (3): Calls the map function to start the character's task
+func _on_WorkSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
 
-# PT_BR: Dá o comando de emitir o som assim que o mouse é pressionado.
-# EN_US: Gives the command to emit the sound when the mouse is pressed.
 func _input(event):
+	# PT_BR: Emite o som de click assim que o mouse é pressionado.
+	# EN_US: Emits the click sound when the mouse is pressed.
 	if event.is_action_pressed("click"):
-		click_audio.play()
-
-
-# PT_BR: Põe o som de pause.
-# EN_US: Put the pause sound.
-func _on_PauseButton_pressed():
-	pause_scene.open_pause_scene()
+		$ClickAudio.play()
 
 
 # PT_BR (1): Essa função aplica o hover nas fichas
@@ -210,3 +224,11 @@ func _send_hover_effect_in_file(profile):
 	var end = begin + profile.rect_size
 	
 	_hover_file(begin, end, profile)
+
+	
+
+func _on_PauseButton_pressed():
+	# PT_BR: Abre a cena de pause
+	# EN_US: Opens the pause scene
+	pause_scene.open_pause_scene()
+

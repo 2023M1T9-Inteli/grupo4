@@ -15,6 +15,7 @@ onready var back_button = $BackButton/ButtonLabel
 onready var final_score = $FinalScore
 
 onready var selected_phase = Globals.phases_keys[ Globals.actual_phase ]
+
 # PT_BR: Guarda o resultado que o jogador fez
 # EN_US: Stores the player result
 var result := 0.0
@@ -115,21 +116,26 @@ func _on_BackButton_pressed():
 	
 	Globals.actual_score = 0
 
-# PT_BR: Função da "StarFull1" que troca a cor da barra e toca um audio
-# EN_US: Function from "StarFull1" that changes the bar color and plays an audio
+# PT_BR (1): Função conectada a um sinal customizado "StarFull1" que troca a cor da barra e toca um audio.
+# PT_BR (2): Parâmetro: texture_progress_node TextureProgress
+# EN_US (1): Function connect in a custom signal from "StarFull1" that changes the bar color and plays an audio
+# EN_US (2): Parameter: texture_progress_node TextureProgress
 func _on_StarFull1_completed_change(_texture_progress_node):
 	score_bar.texture_progress = yellow_bar
 	audio_star1.playing = true
 
-# PT_BR: Função da "StarFull2" que toca um audio
-# EN_US: Function from "StarFull2" that plays an audio
+# PT_BR (1): Função conectada a um sinal customizado "StarFull2" que toca um audio
+# PT_BR (2): Parâmetro: texture_progress_node TextureProgress
+# EN_US (1): Function connect in a custom signal from "StarFull2" that plays an audio
+# EN_US (2): Parameter: texture_progress_node TextureProgress
 func _on_StarFull2_completed_change(_texture_progress_node):
 	audio_star2.play()
 
 
-# PT_BR: Função da "StarFull3" que troca a cor da barra e toca um audio
-# EN_US: Function from "StarFull3" that changes the bar color and plays an audio
+# PT_BR (1): Função conectada a um sinal customizado "StarFull1" que troca a cor da barra e toca um audio
+# PT_BR (2): Parâmetro: texture_progress_node TextureProgress
+# EN_US (1): Function connect in a custom signal from "StarFull1" that changes the bar color and plays an audio
+# EN_US (2): Parameter: texture_progress_node TextureProgress
 func _on_StarFull3_completed_change(_texture_progress_node):
 	score_bar.texture_progress = green_bar
 	audio_star3.play()
-

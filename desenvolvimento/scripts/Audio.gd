@@ -6,6 +6,7 @@ var temp = 0.0
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Set the music and play.
 # EN_US (2): Parameter: music - arquivo de música.
+
 func play_music(music):
 	$Music.stream = music
 	$Music.play()
@@ -19,12 +20,21 @@ func change_music(music):
 		$Music.stop()
 		play_music(music)
 
-
+# PT_BR: Função que continua a música
+# EN_US: Function that resume the music
 func resume():
 	$Music.play()
 	$Music.seek(temp)
 
 
-func pause():
+# PT_BR: Função que pausa a música e salva onde parou
+# EN_US: Function that pauses the music and saves where it stops
+func stop():
 	temp = $Music.get_playback_position()
+	$Music.stop()
+
+
+# PT_BR: Função que para a música
+# EN_US: Function that stops the music
+func pause_music():
 	$Music.stop()
