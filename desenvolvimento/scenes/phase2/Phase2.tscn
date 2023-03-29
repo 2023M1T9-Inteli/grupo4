@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase2/Map2.tscn" type="PackedScene" id=2]
@@ -27,8 +27,6 @@
 [ext_resource path="res://assets/Phase2/circle_purple.png" type="Texture" id=25]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
 [ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
-[ext_resource path="res://assets/Audio/Conclued_task.wav" type="AudioStream" id=28]
-[ext_resource path="res://assets/Audio/Pause.wav" type="AudioStream" id=29]
 [ext_resource path="res://assets/Phase2/tend_dark.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase2/tend (1).png" type="Texture" id=31]
 
@@ -295,14 +293,8 @@ max_value = 12.0
 texture_under = ExtResource( 23 )
 texture_progress = ExtResource( 22 )
 
-[node name="Click_sound" type="AudioStreamPlayer2D" parent="."]
+[node name="ClickAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 27 )
-
-[node name="Conclued_task" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 28 )
-
-[node name="Paused_audio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 29 )
 
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]

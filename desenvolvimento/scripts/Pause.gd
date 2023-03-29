@@ -1,12 +1,19 @@
 extends CanvasLayer
 
-
+# PT_BR: Guarda o objeto nas variável
+# EN_US: Stores the object in the variable
 onready var depaused_sound = $DepausedSound
 
+# PT_BR: Guarda o objeto nas variável
+# EN_US: Stores the object in the variable
 onready var paused_sound = $PauseSound
 
+# PT_BR: Guarda o objeto nas variável
+# EN_US: Stores the object in the variable
 onready var options = $Options
 
+# PT_BR: Guarda o objeto nas variável
+# EN_US: Stores the object in the variable
 onready var tutorial = $Tutorial
 
 # PT_BR: Variável booleana que armazena se o jogo está pausado.
@@ -50,16 +57,14 @@ func _on_QuitButton_pressed():
 	self.is_paused = false
 
 
-# PT_BR: Função executada quando o botão tutorial é apertado que abre o popup do tutorial.
-# EN_US: Function executed when the tutorial button is pressed to open the tutorial popup.
 func _on_TutorialButton_pressed():
+	# PT_BR: Quando o botão tutorial é apertado que abre o popup do tutorial
+	# EN_US: Executed when the tutorial button is pressed to open the tutorial popup.
 	tutorial.open_tutorial()
 
 
 func _on_OptionsButton_pressed():
+	# PT_BR: Abre o tela de opções
+	# EN_US: Open the options screen
 	$Options.show()
 
-
-func _on_PauseButton_pressed():
-	self.is_paused = !is_paused
-	open_pause_scene()

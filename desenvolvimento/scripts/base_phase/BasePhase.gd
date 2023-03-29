@@ -45,6 +45,7 @@ onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key]
 # PT_BR: Reseta a variável de pontos.
 # EN_US: Reset the points variable.
 func _ready():
+	Globals.lose_by_time = false
 	Globals.set_actual_score(0)
 	Globals.set_actual_phase(phase_key)
 
@@ -213,4 +214,6 @@ func _send_hover_effect_in_file(profile):
 
 
 func _on_Pause_button_pressed():
+	# PT_BR: Abre a cena de pause
+	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()

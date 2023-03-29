@@ -4,6 +4,7 @@ extends Node2D
 # EN_US: Variable used to store the player's result in the phase.
 var result = 0
 
+
 # PT_BR (1): Função usada para calcular o resultado e se for >=56, carregar o ícone 
 # PT_BR (2): da segunda fase no botão e chamar a função change_music para trocar a música.
 # EN_US (1): Function used to calculate the result and if it is >=56, load the second
@@ -15,6 +16,7 @@ func _ready():
 	if Globals.player_phase_score["phase2"] >= 56:
 		$PhasesGridContainer/Phase3Button.texture_normal = load("res://assets/PhasesScreen/button_phase_3.png")
 		$PhasesGridContainer/Phase3Button.texture_hover = load("res://assets/PhasesScreen/button_phase_3_dark.png")
+
 
 # PT_BR: Abre a cena da primeira fase.
 # EN_US: Opens the first phase scene.
@@ -29,6 +31,8 @@ func _on_Phase2Button_pressed():
 		var __ = get_tree().change_scene("res://scenes/Dialog/DialogScene2.tscn")
 
 
+# PT_BR: Volta para a tela de menu inicial 
+# EN_US: Returns to the main menu screen
 func _on_TextureButton_pressed():
 	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
 
@@ -36,3 +40,4 @@ func _on_TextureButton_pressed():
 func _on_Phase3Button_pressed():
 	if Globals.player_phase_score["phase2"] >= 56:
 		var __ = get_tree().change_scene("res://scenes/Dialog/DialogScene3.tscn")
+
