@@ -40,6 +40,7 @@ font_data = ExtResource( 16 )
 
 [node name="Phase2" type="Node2D"]
 script = ExtResource( 14 )
+phase_key = 2
 phase_progress = NodePath("PhaseProgress")
 map = NodePath("Map")
 slot_kira = NodePath("Slots/SlotExpansorKira")
