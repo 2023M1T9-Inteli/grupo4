@@ -103,6 +103,10 @@ script = ExtResource( 3 )
 [node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
 
 [node name="Options" parent="." instance=ExtResource( 7 )]
+margin_left = 235.0
+margin_top = 139.0
+margin_right = -236.0
+margin_bottom = -143.0
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
