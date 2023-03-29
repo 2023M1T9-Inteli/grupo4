@@ -26,8 +26,10 @@ func _on_Button2_pressed():
 	$Worker.initiate_task(self)
 
 
-# PT_BR: Sinal personalizado que aumenta a pontuação quando o NPC acabar a tarefa
-# EN_US: Custom signal which increases the score when the NPC finishes the task
+# PT_BR(1): Sinal personalizado que aumenta a pontuação quando o NPC acabar a tarefa
+# PT_BR(2): Parâmetro: worker - mesa do respectivo NPC
+# EN_US(1): Custom signal which increases the score when the NPC finishes the task
+# EN_US(2): Parameter: worker - desk of the respective NPC
 func _on_Worker_finished_task(worker):
 	phase_progress.increase_value()
 	_change_score(worker.score)
