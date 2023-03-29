@@ -1,11 +1,15 @@
 extends Node2D
-# PT_BR: Função que muda a animação do sprite quando acionada 
-# EN_US: Function that changes the sprite animation when activated
+# PT_BR (1): Função que muda a animação do sprite quando acionada 
+# PT_BR (2): Recebe o objeto anim como parâmetro, que é a animação do personagem
+# EN_US (1): Function that changes the sprite animation when activated
+# EN_US (2): Receives the anim object as parameter, that is the character animation
 func change_anim(anim):
 	$RosalinneAnimSprite.animation = anim
 
-# PT_BR: Função que define se o sprite "Computer" deve aparecer ou ficar escondido 
-# EN_US: Function that defines if the sprite "Computer" should appear or stay hidden
+# PT_BR (1): Função que define se o sprite "Computer" deve aparecer ou ficar escondido 
+# PT_BR (2): Recebe o objeto show_pc como parâmetro
+# EN_US (1): Function that defines if the sprite "Computer" should appear or stay hidden
+# EN_US (2): Receives the show_pc object as parameter
 func show_pc(show_pc):
 	# PT_BR: Se o a variável for acionada, o sprite deve aparecer na tela
 	# EN_US: If the variable is activated, ths sprite should appear on screen

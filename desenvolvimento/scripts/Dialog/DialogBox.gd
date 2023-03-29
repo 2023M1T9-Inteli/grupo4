@@ -39,8 +39,12 @@ var message_queue: Dictionary = {
 		},
 	}
 
-# PT_BR: Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
-# EN_US: Function that erases the anterior text and executes the function of sprite change for the character
+# PT_BR (1): Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
+# PT_BR (2): Recebe o objeto speech como parâmetro, que é o texto do balão de diálogo
+# PT_BR (3): Recebe o objeto anim como parâmetro, que é a animação do personagem
+# EN_US (1): Function that erases the anterior text and executes the function of sprite change for the character
+# EN_US (2): Receives the speech object as parameter, that is the text of the dialogue bubble
+# EN_US (3): Receives the anim object as parameter, that is the character animation
 func change_speech(speech, anim):
 	$InitialText.hide()
 	text_element.visible_characters = 0
