@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase3/Map3.tscn" type="PackedScene" id=2]
@@ -56,10 +56,9 @@ position = Vector2( 772, 0 )
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
 [node name="TextureButton" parent="." instance=ExtResource( 32 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 17.0
+margin_right = 57.0
+rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="MainDrawer" parent="." instance=ExtResource( 17 )]
 position = Vector2( 766, 619 )

@@ -58,10 +58,9 @@ position = Vector2( 772, 0 )
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
 [node name="TextureButton" parent="." instance=ExtResource( 12 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 17.0
+margin_right = 57.0
+rect_scale = Vector2( 1.5, 1.5 )
 
 [node name="Slots" type="Node2D" parent="."]
 scale = Vector2( 0.9, 0.9 )

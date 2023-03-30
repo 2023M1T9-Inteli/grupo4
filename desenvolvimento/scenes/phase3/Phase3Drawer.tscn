@@ -68,10 +68,12 @@ script = ExtResource( 23 )
 margin_right = 768.0
 margin_bottom = 64.0
 grow_vertical = 0
-rect_min_size = Vector2( 0, 64 )
+rect_min_size = Vector2( 768, 64 )
 mouse_default_cursor_shape = 2
 custom_constants/separation = 0
 script = ExtResource( 1 )
+drawer_size = Vector2( 768, 64 )
+qtd_task = 12
 
 [node name="root" type="Node2D" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox"]
 visible = false
