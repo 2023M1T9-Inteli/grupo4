@@ -11,9 +11,11 @@ const bus_names = {
 
 #PT_BR: Aqui o valor dos slider são atribuídos à globais
 func _ready():
-	$VolumeGrid/Master_slider.value = Audio.MasterValue
-	$VolumeGrid2/SliderMusic.value = Audio.MusicValue
-	$VolumeGrid3/SFX_slider.value = Audio.SfxValue
+	$Master_slider.value = Audio.MasterValue
+	$SliderMusic.value = Audio.MusicValue
+	$SFX_slider.value = Audio.SfxValue
+	
+	#$Video.add_color_override("font_color", "#000000")
 
 
 #PT_BR: Essa função seta o valor do nacal de áudio
