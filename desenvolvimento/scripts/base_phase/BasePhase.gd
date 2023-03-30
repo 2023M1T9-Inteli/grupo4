@@ -73,7 +73,7 @@ func _ready():
 func _process(_delta):
 	#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
 	#EN_US: This funcction observes the mouse position and applies the hover on the files 
-	if profile_kira != null:
+	if profile_kira != null and not profile_kira is NodePath:
 		_send_hover_effect_in_file(profile_kira)
 	
 	if profile_roger != null:
@@ -109,8 +109,8 @@ func _change_score(new_value):
 # PT_BR (2): Parâmetro: node_path - NodePath
 # EN_US (1): Function to return an object from its node path
 # EN_US (2): Parameter:  node_path - NodePath
-func _return_object_by_node_path(node_path: NodePath):
-	if node_path != null:
+func _return_object_by_node_path(node_path):
+	if node_path != null and not node_path.is_empty():
 		return self.get_node(node_path)
 	return null
 

@@ -9,15 +9,31 @@ signal ana_fineshed_task(worker)
 
 # PT_BR: Inicializa variáveis e atribui referências de cada personagem
 # EN_US: Initialize variables and attribute references from each character
-onready var kira = $Kira
-onready var roger = $Roger
-onready var bento = $Bento
-onready var ana = $Ana
+export(NodePath) var kira = null
+export(NodePath) var roger = null
+export(NodePath) var bento = null
+export(NodePath) var ana = null
+
 
 # PT_BR: Variável para armazenar a lista de informações para entrega de tarefas
 # EN_US: Variable to store the list of informations for task delivery
 var task_wait_list = []
 
+func _ready():
+	kira = _return_object_by_node_path(kira)
+	roger = _return_object_by_node_path(roger)
+	bento = _return_object_by_node_path(bento)
+	ana = _return_object_by_node_path(ana)
+
+
+# PT_BR (1): Função para retornar um objeto a partir do seu node path
+# PT_BR (2): Parâmetro: node_path - NodePath
+# EN_US (1): Function to return an object from its node path
+# EN_US (2): Parameter:  node_path - NodePath
+func _return_object_by_node_path(node_path):
+	if node_path != null and not node_path.is_empty():
+		return self.get_node(node_path)
+	return null
 
 # PT_BR (1): Recebe node do Path2D, node do AnimationPlayer, nome da animação, 
 # PT_BR (2): tempo para entregar a tarefa, node do trabalhador e o node da tarefa
@@ -70,7 +86,7 @@ func Kira_initiate_task(task):
 		"anim_name": "delivery_kira", 
 		"time": 2.1, 
 		"worker": kira, 
-		"task_node": task
+		"task_node": task,
 	}
 	_receive_task_order(task_info)
 
@@ -85,7 +101,7 @@ func Roger_initiate_task(task):
 		"anim_name": "delivery_roger", 
 		"time": 0.8, 
 		"worker": roger, 
-		"task_node": task
+		"task_node": task,
 	}
 	_receive_task_order(task_info)
 
@@ -100,7 +116,7 @@ func Bento_initiate_task(task):
 		"anim_name": "delivery_bento", 
 		"time": 3, 
 		"worker": bento, 
-		"task_node": task
+		"task_node": task,
 	}
 	_receive_task_order(task_info)
 
@@ -115,7 +131,7 @@ func Ana_initiate_task(task):
 		"anim_name": "delivery_ana", 
 		"time": 3.4, 
 		"worker": ana, 
-		"task_node": task
+		"task_node": task,
 	}
 	_receive_task_order(task_info)
 
