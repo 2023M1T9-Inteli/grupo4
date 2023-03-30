@@ -21,6 +21,14 @@ const phases_keys = {
 
 # PT_BR: Inicializa a constante do Path do final ruim da fase
 # EN_US: Initializes phase bad end path constant
+var phase_musics = {
+	"phase1": Audio.music_phase_1,
+	"phase2": Audio.music_phase_2,
+	"phase3": Audio.music_phase_3,
+}
+
+# PT_BR: Inicializa a constante do Path do final ruim da fase
+# EN_US: Initializes phase bad end path constant
 const bad_end_phase_path = {
 	"phase1": "res://scenes/phase1/Phase1.tscn",
 	"phase2": "res://scenes/phase2/Phase2.tscn",
