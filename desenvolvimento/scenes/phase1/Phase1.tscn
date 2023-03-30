@@ -217,8 +217,6 @@ margin_left = 1015.0
 margin_top = 5.0
 margin_right = 1168.0
 margin_bottom = 102.0
-seconds = 10
-minutes = 1
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
