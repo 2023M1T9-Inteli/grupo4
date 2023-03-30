@@ -25,9 +25,10 @@ onready var music_node = $Music
 # EN_US (1): Set the music and play.
 # EN_US (2): Parameter: music - arquivo de música.
 
-func play_music(music_node):
-	music_node.stream = music_node
-	music_node.play()
+func play_music(music):
+	if music != music_node.stream:
+		music_node.stream = music
+		music_node.play()
 
 # PT_BR (1): Função para trocar de música.
 # PT_BR (2): Parâmetro: music - arquivo de música.
