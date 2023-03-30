@@ -29,6 +29,7 @@ size = 30
 font_data = ExtResource( 6 )
 
 [node name="Options" type="PopupMenu"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 195.0
@@ -129,13 +130,12 @@ custom_colors/font_color_shadow = Color( 0.698039, 0.427451, 0.427451, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Volume"
 
-[node name="Video" type="Label" parent="."]
+[node name="Video" type="Button" parent="."]
 margin_left = 485.0
 margin_top = 88.0
 margin_right = 609.0
 margin_bottom = 124.0
 custom_colors/font_color = Color( 0.956863, 0.933333, 0.933333, 1 )
-custom_colors/font_color_shadow = Color( 0.698039, 0.427451, 0.427451, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "Vídeo"
 
@@ -143,3 +143,4 @@ text = "Vídeo"
 [connection signal="value_changed" from="SliderMusic" to="." method="_on_SliderMusic_value_changed"]
 [connection signal="value_changed" from="SFX_slider" to="." method="_on_SFX_slider_value_changed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Video" to="." method="_on_Video_pressed"]

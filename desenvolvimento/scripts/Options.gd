@@ -44,3 +44,12 @@ func _on_SliderMusic_value_changed(value):
 func _on_SFX_slider_value_changed(value):
 	change_volume(bus_names.sfx_bus, value)
 	Audio.SfxValue = value
+
+
+func _on_Video_pressed():
+	$VolumeOptionLabel.visible = false
+	$Master_slider.visible = false
+	$SliderMusic.visible = false
+	$VolumeOptionLabel2.visible = false
+	$SFX_slider.visible = false
+	$VolumeOptionLabel3.visible = false
