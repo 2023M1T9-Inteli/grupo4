@@ -19,6 +19,21 @@ const phases_keys = {
 	3: "phase3",
 }
 
+# PT_BR: Inicializa a constante do Path do final ruim da fase
+# EN_US: Initializes phase bad end path constant
+const bad_end_phase_path = {
+	"phase1": "res://scenes/Phases.tscn",
+	"phase2": "res://scenes/Phases.tscn",
+	"phase3": "res://scenes/FinalScene/FinalScene.tscn",
+}
+
+# PT_BR: Inicializa a constante do Path do final bom da fase
+# EN_US: Initializes phase good end path constant
+const good_end_phase_path = {
+	"phase1": "res://scenes/Phases.tscn",
+	"phase2": "res://scenes/Phases.tscn",
+	"phase3": "res://scenes/FinalScene/FinalScene.tscn",
+}
 
 # PT_BR: Inicializa a constante das pontuações máximas
 # EN_US: Initializes max score constant
