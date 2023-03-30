@@ -26,9 +26,9 @@ onready var music_node = $Music
 # EN_US (2): Parameter: music - arquivo de música.
 
 func play_music(music):
-	if music != music_node.stream:
-		music_node.stream = music
-		music_node.play()
+	music_node.stream = music
+	music_node.play()
+		
 
 # PT_BR (1): Função para trocar de música.
 # PT_BR (2): Parâmetro: music - arquivo de música.
@@ -38,6 +38,10 @@ func change_music(music):
 	if music != music_node.stream:
 		music_node.stop()
 		play_music(music)
+	
+	elif not music_node.playing:
+		self.resume()
+	
 
 # PT_BR: Função que continua a música
 # EN_US: Function that resume the music

@@ -45,7 +45,7 @@ onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key]
 func _ready():
 	# PT_BR: Toca a música da fase
 	# EN_US: Plays the phase music
-	Audio.play_music(Globals.phase_musics[ Globals.phases_keys[phase_key] ])
+	Audio.change_music(Globals.phase_musics[ Globals.phases_keys[phase_key] ])
 	
 	# PT_BR: Reseta a variável de pontos.
 	# EN_US: Reset the points variable.
