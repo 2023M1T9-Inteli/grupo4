@@ -88,7 +88,6 @@ func _on_TimeDisplayer_timer_is_over():
 	Globals.lose_by_time = true
 	var __ = get_tree().change_scene("res://scenes/Result/Result.tscn")
 
-
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
 # EN_US: Function to change the scene when the player concludes all tasks
 func _on_PhaseProgress_completed_change():
@@ -226,7 +225,7 @@ func _send_hover_effect_in_file(profile):
 	_hover_file(begin, end, profile)
 
 
-func _on_Pause_button_pressed():
+func _on_PauseButton_pressed():
 	# PT_BR: Abre a cena de pause
 	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()

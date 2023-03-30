@@ -1,5 +1,7 @@
 extends Node
 
+
+
 # PT_BR: Inicializa as constantes para exportar como variáveis em outras cenas
 # EN_US: Initialize constants for export them as variables in other scenes
 enum PHASES {
