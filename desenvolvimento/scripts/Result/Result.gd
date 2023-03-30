@@ -109,13 +109,15 @@ func _change_bar():
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
-	if result < 56:
-		var path = Globals.phases_keys[ Globals.actual_phase ]
-		var __ = get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	var path = ""
 	if result >= 56:
-		var __ = get_tree().change_scene("res://scenes/Phases.tscn")
+		path = Globals.bad_end_phase_path[ Globals.actual_phase ]
+	else:
+		path = Globals.good_end_phase_path[ Globals.actual_phase ]
 	
 	Globals.actual_score = 0
+	var __ = get_tree().change_scene(path)
+	
 
 # PT_BR (1): Função conectada a um sinal customizado "StarFull1" que troca a cor da barra e toca um audio.
 # PT_BR (2): Parâmetro: texture_progress_node TextureProgress
