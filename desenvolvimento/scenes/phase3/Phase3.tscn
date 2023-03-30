@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/phase3/Map3.tscn" type="PackedScene" id=2]
@@ -6,11 +6,11 @@
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=5]
 [ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/PouseButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Drawer/Tasks/task_teste.png" type="Texture" id=8]
 [ext_resource path="res://assets/items/profile_sheets/roger_light_sheet.png" type="Texture" id=9]
 [ext_resource path="res://assets/items/profile_sheets/kira_light_sheet.png" type="Texture" id=10]
 [ext_resource path="res://assets/items/profile_sheets/ana_light_sheet.png" type="Texture" id=11]
-[ext_resource path="res://assets/buttons/icon_pause.png" type="Texture" id=12]
 [ext_resource path="res://scenes/slots/HSlotCollection.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scripts/base_phase/BasePhase.gd" type="Script" id=14]
 [ext_resource path="res://scenes/base_phase/TimeDisplayer.tscn" type="PackedScene" id=15]
@@ -23,7 +23,6 @@
 [ext_resource path="res://assets/Feedbacks/little_star_empty.png" type="Texture" id=23]
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Phase3/circle_green.png" type="Texture" id=25]
-[ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
 [ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
 [ext_resource path="res://assets/Audio/Conclued_task.wav" type="AudioStream" id=28]
 [ext_resource path="res://assets/Audio/Pause.wav" type="AudioStream" id=29]
@@ -56,19 +55,14 @@ position = Vector2( 772, 0 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
+[node name="TextureButton" parent="." instance=ExtResource( 7 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="MainDrawer" parent="." instance=ExtResource( 17 )]
 position = Vector2( 766, 623 )
-
-[node name="Pause_button" type="TextureButton" parent="."]
-margin_left = 15.0
-margin_top = 13.0
-margin_right = 75.0
-margin_bottom = 73.0
-rect_scale = Vector2( 1.2, 1.2 )
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 12 )
-texture_hover = ExtResource( 26 )
-expand = true
 
 [node name="Slots" type="Node2D" parent="."]
 scale = Vector2( 0.9, 0.9 )
@@ -267,7 +261,6 @@ stream = ExtResource( 29 )
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]
 [connection signal="kira_fineshed_task" from="Map" to="." method="_on_Map_kira_fineshed_task"]
 [connection signal="roger_fineshed_task" from="Map" to="." method="_on_Map_roger_fineshed_task"]
-[connection signal="pressed" from="Pause_button" to="." method="_on_Pause_button_pressed"]
 [connection signal="get_item" from="Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger" to="." method="_on_WorkSlotRoger_get_item"]
 [connection signal="get_item" from="Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna" to="." method="_on_WorkSlotAna_get_item"]

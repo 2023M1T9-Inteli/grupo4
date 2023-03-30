@@ -20,9 +20,6 @@ onready var tutorial = $Tutorial
 # EN_US: Boolean variable that stores whether the game is paused.
 var is_paused = false setget set_is_paused
 
-# PT_BR: Variável que armazena a trilha sonora da fase 1.
-# EN_US: Variable that stores the phase 1 soundtrack.
-var phase_1_music = preload("res://assets/Audio/music_phase_1.mp3")
 
 # PT_BR (1): Função executada sempre que a variável is paused é definida. 
 # PT_BR (2): Parâmetro: value int.
@@ -40,13 +37,13 @@ func _on_ContinueButton_pressed():
 	self.is_paused = false
 	self.hide()
 	depaused_sound.play()
-	Audio.resume()
+	#Audio.resume()
 	
 
 # PT_BR: Função executada quando o botão opções é apertado para mostrar o objeto Options.
 # EN_US: Function executed when the options button is pressed to show the Options object.
 func open_pause_scene():
-	Audio.stop()
+#	Audio.stop()
 	paused_sound.play()
 	self.is_paused = true
 	
@@ -55,7 +52,7 @@ func open_pause_scene():
 # EN_US: Function executed when the exit button is pressed which returns to the game menu.
 func _on_QuitButton_pressed():
 	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
-	Audio.resume()
+#	Audio.resume()
 	self.is_paused = false
 
 

@@ -228,7 +228,9 @@ func _send_hover_effect_in_file(profile):
 	_hover_file(begin, end, profile)
 
 
-func _on_Pause_button_pressed():
-		# PT_BR: Abre a cena de pause
+
+
+func _on_PauseButton_pressed():
+	# PT_BR: Abre a cena de pause
 	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()
