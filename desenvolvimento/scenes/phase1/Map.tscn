@@ -1044,6 +1044,10 @@ frame_1/delay_sec = 0.0
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 17 )
+kira = NodePath("Kira")
+roger = NodePath("Roger")
+bento = NodePath("Bento")
+ana = NodePath("Ana")
 
 [node name="Parede e Chão" type="TileMap" parent="."]
 tile_set = SubResource( 4 )
