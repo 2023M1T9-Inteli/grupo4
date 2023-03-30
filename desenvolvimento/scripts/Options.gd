@@ -49,9 +49,12 @@ func _on_SFX_slider_value_changed(value):
 # PT_BR: Função que oculta os itens quando o botão de vídeo é clicado
 # EN_US: 
 func _on_Video_pressed():
+	$Video.add_color_override("font_color", "#000000")
 	$VolumeOptionLabel.visible = false
 	$Master_slider.visible = false
 	$SliderMusic.visible = false
 	$VolumeOptionLabel2.visible = false
 	$SFX_slider.visible = false
 	$VolumeOptionLabel3.visible = false
+	
+	
