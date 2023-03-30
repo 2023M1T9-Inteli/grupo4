@@ -9,9 +9,9 @@ func change_anim(anim):
 
 
 # PT_BR (1): Função que define se o sprite "gift_circle" deve aparecer ou ficar escondido 
-# PT_BR (2): Recebe o objeto show_tent como parâmetro
+# PT_BR (2): Parâmetro: show_tent - ícone do projeto da fase
 # EN_US (1): Function that defines if the sprite "gift_circle" should appear or stay hidden
-# EN_US (2): Receives the show_tent object as parameter
+# EN_US (2): Parameter: show_tent - stage design icon
 func show_tent(show_tent):
 	# PT_BR: Se o a variável for acionada, o sprite deve aparecer na tela
 	# EN_US: If the variable is activated, ths sprite should appear on screen
