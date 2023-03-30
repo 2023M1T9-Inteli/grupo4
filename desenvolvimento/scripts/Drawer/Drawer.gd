@@ -57,7 +57,7 @@ func _ready():
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 			if child.connect("dropped_item", self, "_delete_slot") != OK:
 				print("Erro ao conectar o sinal dropped_item do node ", self)
-	self.rect_min_sizev.x = total_children_size
+	self.rect_min_size.x = total_children_size
 
 
 # PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos

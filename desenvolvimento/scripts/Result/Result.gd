@@ -110,6 +110,7 @@ func _change_bar():
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
 	if result < 56:
+		var path = Globals.phases_keys[ Globals.actual_phase ]
 		var __ = get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
 	if result >= 56:
 		var __ = get_tree().change_scene("res://scenes/Phases.tscn")
