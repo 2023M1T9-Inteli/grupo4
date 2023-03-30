@@ -11,6 +11,7 @@ export(Vector2) var scroll_container_size: Vector2 = Vector2(510, 99) setget _se
 # EN_US (1): Functions to set variables. 
 # EN_US (2): Parameter: new_value
 func _set_scroll_container_size(new_value) -> void:	
+	scroll_container_size = new_value
 	self.rect_size = scroll_container_size
 	self.rect_min_size = scroll_container_size
 

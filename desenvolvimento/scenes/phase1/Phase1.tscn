@@ -220,6 +220,7 @@ margin_bottom = 102.0
 seconds = 10
 minutes = 1
 
+
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
 scale = Vector2( 0.65, 0.65 )
