@@ -55,6 +55,7 @@ position = Vector2( 772, 0 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
+
 [node name="PauseButton" type="TextureButton" parent="."]
 margin_left = 16.0
 margin_top = 16.0
@@ -64,6 +65,7 @@ rect_scale = Vector2( 1.5, 1.5 )
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 26 )
+
 
 [node name="Slots" type="Node2D" parent="."]
 scale = Vector2( 0.9, 0.9 )

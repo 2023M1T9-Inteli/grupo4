@@ -44,4 +44,4 @@ func _on_DialogBox_finished_dialog():
 # PT_BR: Função que quando o botão de voltar do primeiro diálogo é clicado, volta para o tutorial
 # EN_US: Function that when the back button of the first dialog is clicked, it goes back to the tutorial
 func _on_DialogBox_exit_dialog():
-	get_tree().change_scene("res://scenes/tutorial/Introduction_tutorial.tscn")
+	get_tree().change_scene("res://scenes/Phases.tscn")
