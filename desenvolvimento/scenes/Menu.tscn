@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/MenuScreen/hover_options_button.png" type="Texture" id=12]
 [ext_resource path="res://assets/MenuScreen/hover_about_button.png" type="Texture" id=13]
 [ext_resource path="res://assets/MenuScreen/hover_exit_button.png" type="Texture" id=14]
+[ext_resource path="res://scenes/Credits.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
@@ -103,6 +104,8 @@ script = ExtResource( 3 )
 [node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
 
 [node name="Options" parent="." instance=ExtResource( 7 )]
+
+[node name="Credits" parent="." instance=ExtResource( 15 )]
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
