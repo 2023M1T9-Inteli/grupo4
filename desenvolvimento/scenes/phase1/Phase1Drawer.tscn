@@ -149,7 +149,7 @@ uid = "colours"
 qtd = 1
 location = 1
 attributes = {
-"ART_THINK": 2
+"LOGIC_RAC": -2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -169,7 +169,7 @@ uid = "Build"
 qtd = 1
 location = 1
 attributes = {
-"MANUAL_WORK": 2
+"ART_THINK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -189,7 +189,7 @@ uid = "os"
 qtd = 1
 location = 1
 attributes = {
-"LOGIC_RAC": 2
+"MANUAL_WORK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
