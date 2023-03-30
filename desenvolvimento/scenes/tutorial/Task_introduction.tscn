@@ -228,7 +228,7 @@ rect_clip_content = true
 margin_left = 4.0
 margin_right = 580.0
 margin_bottom = 64.0
-rect_min_size = Vector2( 576, 64 )
+rect_min_size = Vector2( 64, 64 )
 custom_constants/separation = 0
 script = ExtResource( 3 )
 
