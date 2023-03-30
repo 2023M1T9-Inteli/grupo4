@@ -63,6 +63,9 @@ func _process(_delta):
 	if self.has_node(profile_ana.get_path()):
 		_send_hover_effect_in_file(profile_ana)
 		
+	if self.has_node(profile_bento.get_path()):
+		_send_hover_effect_in_file(profile_bento)
+		
 
 
 # PT_BR (1): Função para atualizar a pontuação do jogador
