@@ -46,6 +46,8 @@ func _on_SFX_slider_value_changed(value):
 	Audio.SfxValue = value
 
 
+# PT_BR: Função que oculta os itens quando o botão de vídeo é clicado
+# EN_US: 
 func _on_Video_pressed():
 	$VolumeOptionLabel.visible = false
 	$Master_slider.visible = false
