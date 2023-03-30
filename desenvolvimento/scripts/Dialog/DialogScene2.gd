@@ -1,13 +1,9 @@
 extends Node2D
 
-
-# PT_BR: Variável local que armazena a música da fase 2
-# EN_US: Local variable that stores the music from phase 2
-onready var music_phase_2 = load("res://assets/Audio/music/music_fase_2.wav")
-
-
 func _ready():
-	Audio.play_music(music_phase_2)
+	# PT_BR: Toca a música da fase
+	# EN_US: Plays the phase music
+	Audio.play_music(Audio.music_phase_2)
 
 
 # PT_BR (1): Função que muda a animação do sprite quando acionada 

@@ -1,13 +1,10 @@
 extends Node2D
 
-# PT_BR: Carrega a música da fase 
-# EN_US: Loads the phase music
-onready var music_phase_3 = load("res://assets/Audio/music/musica_fase_3_2 (mp3cut.net).wav")
 
 func _ready():
 	# PT_BR: Toca a música da fase
 	# EN_US: Plays the phase music
-	Audio.play_music(music_phase_3)
+	Audio.play_music(Audio.music_phase_3)
 
 
 # PT_BR (1): Função que muda a animação do sprite quando acionada 
