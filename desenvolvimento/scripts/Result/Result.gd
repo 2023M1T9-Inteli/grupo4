@@ -45,6 +45,7 @@ const results_texts: Dictionary = {
 }
 
 func _ready():
+	
 	# PT_BR: Define uma variável "result" como o resultado de uma operação entre os scores da fase
 	# EN_US: Defines a variable "result" as the result of a operation between the phase scores
 	result = float(Globals.actual_score * 100) / float(Globals.phases_max_score[ selected_phase ])
@@ -109,12 +110,15 @@ func _change_bar():
 # PT_BR: Abre a cena de Fases
 # EN_US: Open the phases scene
 func _on_BackButton_pressed():
-	if result < 56:
-		var __ = get_tree().change_scene("res://scenes/phase1/Phase1.tscn")
+	var path = ""
 	if result >= 56:
-		var __ = get_tree().change_scene("res://scenes/Phases.tscn")
+		path = Globals.good_end_phase_path[ selected_phase ]
+	else:
+		path = Globals.bad_end_phase_path[ selected_phase ]
 	
 	Globals.actual_score = 0
+	var __ = get_tree().change_scene(path)
+	
 
 # PT_BR (1): Função conectada a um sinal customizado "StarFull1" que troca a cor da barra e toca um audio.
 # PT_BR (2): Parâmetro: texture_progress_node TextureProgress
@@ -123,6 +127,7 @@ func _on_BackButton_pressed():
 func _on_StarFull1_completed_change(_texture_progress_node):
 	score_bar.texture_progress = yellow_bar
 	audio_star1.playing = true
+
 
 # PT_BR (1): Função conectada a um sinal customizado "StarFull2" que toca um audio
 # PT_BR (2): Parâmetro: texture_progress_node TextureProgress
