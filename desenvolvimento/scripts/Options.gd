@@ -22,8 +22,12 @@ func _ready():
 	$CheckBoxFullScreen.visible = false
 
 
-#PT_BR: Função que seta o valor do canal de áudio
-# EN_US: Function that sets the value of the audio channel
+# PT_BR(1): Função que seta o valor do canal de áudio
+# PT_BR(2): Parâmetro 1: BusName - nome do canal de áudio
+# PT_BR(3): Parâmetro 2: ChangedValue - valor alterado do volume
+# EN_US(1): Function that sets the value of the audio channel
+# EN_US(2): Parameter 1: BusName - audio channel name
+# EN_US(3): Parameter 2: ChangedValue - changed volume value
 func change_volume(BusName,ChangedValue):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(BusName), linear2db(ChangedValue))
 
@@ -34,22 +38,28 @@ func _on_BackButton_pressed():
 	self.hide()
 
 
-# PT_BR: Função que muda o volume do canal Master
-# EN_US: Function that changes the volume of the Master channel
+# PT_BR(1): Função que muda o volume do canal Master
+# PT_BR(2): Parâmetro: value - valor do volume
+# EN_US(1): Function that changes the volume of the Master channel
+# EN_US(2): Parameter: value - volume value
 func _on_Master_slider_value_changed(value):
 	change_volume(bus_names.master_bus, value)
 	Audio.MasterValue = value
 
 
-# PT_BR: Função que muda o volume do canal Music
-# EN_US: Function that changes the volume of the Music channel
+# PT_BR(1): Função que muda o volume do canal Music
+# PT_BR(2): Parâmetro: value - valor do volume
+# EN_US(1): Function that changes the volume of the Music channel
+# EN_US(2): Parameter: value - volume value
 func _on_SliderMusic_value_changed(value):
 	change_volume(bus_names.music_bus, value)
 	Audio.MusicValue = value
 
 
-# PT_BR: Função que muda o volume do canal SFX
-# EN_US: Function that changes the volume of the SFX channel
+# PT_BR(1): Função que muda o volume do canal SFX
+# PT_BR(2): Parâmetro: value - valor do volume
+# EN_US(1): Function that changes the volume of the SFX channel
+# EN_US(2): Parameter: value - volume value
 func _on_SFX_slider_value_changed(value):
 	change_volume(bus_names.sfx_bus, value)
 	Audio.SfxValue = value
