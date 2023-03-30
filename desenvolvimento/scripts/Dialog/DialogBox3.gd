@@ -57,8 +57,12 @@ var message_queue: Dictionary = {
 	}
 
 
-# PT_BR: Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
-# EN_US: Function that erases the anterior text and executes the function of sprite change for the character
+# PT_BR (1): Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
+# PT_BR (2): Recebe o objeto speech como parâmetro, que é o texto do balão de diálogo
+# PT_BR (3): Recebe o objeto anim como parâmetro, que é a animação do personagem
+# EN_US (1): Function that erases the anterior text and executes the function of sprite change for the character
+# EN_US (2): Receives the speech object as parameter, that is the text of the dialogue bubble
+# EN_US (3): Receives the anim object as parameter, that is the character animation
 func change_speech(speech, anim):
 	text_element.visible_characters = 0
 	text_element.bbcode_text = speech
@@ -71,8 +75,10 @@ func _on_PassButton_pressed():
 		show_message(1)
 
 
-# PT_BR: Função que verifica se o texto exibido na tela é o mesmo que o dentro do item do dicionário.
-# EN_US: Function that verifies if the text on screen is the same as the inside the dictionary item.
+# PT_BR (1): Função que verifica se o texto exibido na tela é o mesmo que o dentro do item do dicionário.
+# PT_BR (2): Recebe update_counter como parâmetro
+# EN_US (1): Function that verifies if the text on screen is the same as the inside the dictionary item.
+# EN_US (2): Receives update_counter as parameter
 func show_message(update_counter) -> void:
 	# PT_BR(1): Se o timer não estiver parado, o texto na tela deve progredir para que alcance o mesmo tamanho do elemento
 	# PT_BR(2): contido no dicionário
