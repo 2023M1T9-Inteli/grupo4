@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://scripts/Dialog/DialogScene.gd" type="Script" id=1]
-[ext_resource path="res://scripts/Dialog/DialogBox.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Dialog/DialogScene1.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Dialog/DialogBox1.gd" type="Script" id=2]
 [ext_resource path="res://assets/Dialog/Dialog1/dialog_box.png" type="Texture" id=3]
 [ext_resource path="res://assets/Dialog/Dialog1/rosaline_idle1.png" type="Texture" id=4]
 [ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=5]
