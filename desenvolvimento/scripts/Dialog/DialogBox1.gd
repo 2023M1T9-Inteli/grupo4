@@ -6,68 +6,69 @@ onready var text_element := $Text
 onready var timer := $Timer
 var counter = 0
 
+# PT_BR: Inicializa os sinais usados para passar de cena do diálogo
+# EN_US: Initializes signals used to step through dialog scenes
 signal finished_dialog()
 signal exit_dialog()
+
+
 func _ready():
 	show_message(0)
+	
+	
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
-			"text": "[color=#368E69]Xarmes[/color]: Socorro! Está tudo acabado!",
+			"text": "[color=#d69856]Rosaline[/color]: Olá, tudo bem?",
 			"anim": "idle",
-			"showGift": false,
-			"showBento": false,
+			"showPC": false,
 		},
 	1: {
-			"text": "[color=#368E69]Xarmes[/color]: Ei você! Meu nome é Xarmes, o duende de natal, e preciso da sua ajuda urgentemente!",
+			"text": "[color=#d69856]Rosaline[/color]: Meu nome é Rosaline, sou Chief Operating Officer da minha empresa e estou aqui porque necessito de seus serviços. Tenho um projeto a ser realizado, de extrema urgência!",
 			"anim": "idle",
-			"showGift": false,
-			"showBento": false,
+			"showPC": false,
 		},
 	2: {
-			"text": "[color=#368E69]Xarmes[/color]: O papai noel sumiu, e não sabemos o que vamos fazer! Sem ele, o natal está arruinado e as crianças vão ficar sem seus presentes!",
+			"text": "[color=#d69856]Rosaline[/color]: Minha empresa está trabalhando no desenvolvimento de novos hardwares para comercialização, e nossos investidores estão nos pressionando para que o projeto saia o mais rápido possível. ",
 			"anim": "arm_up",
-			"showGift": true,
-			"showBento": false,
+			"showPC": true,
 		}, 
 	3: {
-			"text": "[color=#368E69]Xarmes[/color]: Vocês são os melhores para me ajudar nessa situação, pois temos que ser rápidos para salvar esse natal!",
+			"text": "[color=#d69856]Rosaline[/color]:Mesmo com bom ritmo de trabalho, estamos atrasados e acreditamos que a sua empresa poderá nos auxiliar em acelerar esse processo, pois sua equipe possui os profissionais mais qualificados do mercado. ",
 			"anim": "idle",
-			"showGift": false,
-			"showBento": false,
+			"showPC": false,
 		},
 	4: {
-			"text": "[color=#368E69]Xarmes[/color]: Porém, teremos que trabalhar com pessoal reduzido pois alguém tem que assumir o lugar do papai noel, então seu funcionário Bento terá de assumir essa responsabilidade!",
-			"anim": "arm_up",
-			"showGift": false,
-			"showBento": true,
+			"text": "[color=#d69856]Rosaline[/color]: Então, chega de conversa fiada e vamos ao trabalho! ",
+			"anim": "idle",
+			"showPC": false,
 		},
 	5: {
-			"text": "[color=#368E69]Xarmes[/color]: Chega de conversa e mãos a obra!",
-			"anim": "idle",
-			"showGift": false,
-			"showBento": false,
-		},
-	6: {
 			"text": "",
 			"anim": "idle",
-			"showGift": false,
-			"showBento": false,
-		}
+			"showPC": false,
+		},
 	}
 
-# PT_BR: Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
-# EN_US: Function that erases the anterior text and executes the function of sprite change for the character
+
+# PT_BR (1): Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
+# PT_BR (2): Recebe o objeto speech como parâmetro, que é o texto do balão de diálogo
+# PT_BR (3): Recebe o objeto anim como parâmetro, que é a animação do personagem
+# EN_US (1): Function that erases the anterior text and executes the function of sprite change for the character
+# EN_US (2): Receives the speech object as parameter, that is the text of the dialogue bubble
+# EN_US (3): Receives the anim object as parameter, that is the character animation
 func change_speech(speech, anim):
 	text_element.visible_characters = 0
 	text_element.bbcode_text = speech
 	self.get_parent().change_anim(anim)
 
+
 # PT_BR: Função que define que após pressionado o botão esquerdo do mouse, a função "show_message" é executada
 # EN_US: Function that defines that after the button of the mouse is pressed, the function "show_message" is executed
 func _on_PassButton_pressed():
-		show_message(1)
+	show_message(1)
+
 
 # PT_BR: Função que verifica se o texto exibido na tela é o mesmo que o dentro do item do dicionário.
 # EN_US: Function that verifies if the text on screen is the same as the inside the dictionary item.
@@ -88,17 +89,17 @@ func show_message(update_counter) -> void:
 		elif counter < 0:
 			emit_signal("exit_dialog")
 			return
+		
 		# PT_BR: Variáveis que contém o texto, animações e a imagem do sprite, associando os mesmos a itens na lista
 		# EN_US(1): Variables that have the text, animations and images from the sprite, merging them with the itens in
 		# EN_US(2): the list
 		var write_text = message_queue[counter]["text"]
 		var anim = message_queue[counter]["anim"]
-		var show_gift = message_queue[counter]["showGift"]
-		var show_bento = message_queue[counter]["showBento"]
+		var show_pc = message_queue[counter]["showPC"]
 		change_speech(write_text, anim)
-		self.get_parent().show_gift(show_gift)
-		self.get_parent().show_bento(show_bento)
+		self.get_parent().show_pc(show_pc)
 		timer.start()
+		
 
 # PT_BR: Função que define a exibição do texto caracter por caracter e para o timer
 # EN_US: Function that defines the text exibition character per character and stops the timer
@@ -111,5 +112,8 @@ func _on_Timer_timeout():
 		# EN_US: Raises the number of charactesr visible on the screen
 	text_element.visible_characters += 2
 
+
+# PT_BR: Função que volta para o diálogo anterior 
+# EN_US: Function that returns to the previous dialog
 func _on_BackButton_pressed():
 	show_message(-1)

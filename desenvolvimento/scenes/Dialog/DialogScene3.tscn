@@ -2,8 +2,8 @@
 
 [ext_resource path="res://assets/Dialog/Dialog1/dialog_box.png" type="Texture" id=1]
 [ext_resource path="res://assets/Dialog/Dialog1/button_right.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Dialog/DialogScene3.gd" type="Script" id=3]
-[ext_resource path="res://scenes/Dialog/DialogBox3.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Dialog/DialogScene3.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Dialog/DialogBox3.gd" type="Script" id=4]
 [ext_resource path="res://assets/Dialog/Dialog3/xarmes2.png" type="Texture" id=5]
 [ext_resource path="res://assets/Dialog/Dialog3/xarmes.png" type="Texture" id=6]
 [ext_resource path="res://assets/Dialog/Dialog3/xarmes_pointing.png" type="Texture" id=7]
@@ -175,6 +175,7 @@ visible = false
 position = Vector2( 798, 281 )
 scale = Vector2( 7, 7 )
 frames = SubResource( 25 )
+frame = 1
 playing = true
 
 [connection signal="exit_dialog" from="DialogBox" to="." method="_on_DialogBox_exit_dialog"]

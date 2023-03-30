@@ -104,6 +104,10 @@ script = ExtResource( 3 )
 [node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
 
 [node name="Options" parent="." instance=ExtResource( 7 )]
+margin_left = 235.0
+margin_top = 139.0
+margin_right = -236.0
+margin_bottom = -143.0
 
 [node name="Credits" parent="." instance=ExtResource( 15 )]
 

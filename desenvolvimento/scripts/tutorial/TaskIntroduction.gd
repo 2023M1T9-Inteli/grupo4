@@ -47,7 +47,6 @@ func _ready():
 	$text_box/next_button.visible = false
 	$text_box/back_button.visible = false
 	$Circulo.visible = false
-	print(text_position)
 	
 
 

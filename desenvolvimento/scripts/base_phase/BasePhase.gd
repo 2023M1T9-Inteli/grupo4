@@ -42,9 +42,9 @@ onready var pause_scene = $Pause
 onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key] ]
 
 
-# PT_BR: Reseta a variável de pontos.
-# EN_US: Reset the points variable.
 func _ready():
+	# PT_BR: Reseta a variável de pontos.
+	# EN_US: Reset the points variable.
 	Globals.lose_by_time = false
 	Globals.set_actual_score(0)
 	Globals.set_actual_phase(phase_key)
@@ -68,8 +68,10 @@ func _process(_delta):
 		
 
 
-# PT_BR: Função para atualizar a pontuação do jogador
-# EN_US: Function to update the player's score
+# PT_BR (1): Função para atualizar a pontuação do jogador
+# PT_BR (2): Parâmetro: new_value int
+# EN_US (1): Function to update the player's score
+# EN_US (2): Parameter: new_value int
 func _change_score(new_value): 
 	Globals.set_actual_score(Globals.actual_score + new_value)
 	var actual_score = Globals.actual_score
@@ -229,7 +231,7 @@ func _send_hover_effect_in_file(profile):
 
 
 func _on_PauseButton_pressed():
+
 	# PT_BR: Abre a cena de pause
 	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()
-
