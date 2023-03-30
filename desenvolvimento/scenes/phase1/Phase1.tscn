@@ -55,7 +55,6 @@ position = Vector2( 772, 0 )
 
 [node name="Map" parent="." instance=ExtResource( 2 )]
 
-
 [node name="PauseButton" type="TextureButton" parent="."]
 margin_left = 16.0
 margin_top = 16.0
@@ -65,7 +64,6 @@ rect_scale = Vector2( 1.5, 1.5 )
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 texture_hover = ExtResource( 26 )
-
 
 [node name="Slots" type="Node2D" parent="."]
 scale = Vector2( 0.9, 0.9 )
@@ -88,7 +86,6 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -97,7 +94,6 @@ images_size = Vector2( 48, 48 )
 [node name="ProfileSlotKira" parent="Slots/SlotExpansorKira/SlotCollectionKira" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "kira_profile"
@@ -126,7 +122,6 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -135,7 +130,6 @@ images_size = Vector2( 48, 48 )
 [node name="ProfileSlotRoger" parent="Slots/SlotExpansorRoger/SlotCollectionRoger" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "roger_profile"
@@ -164,7 +158,6 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -173,7 +166,6 @@ images_size = Vector2( 48, 48 )
 [node name="ProfileSlotAna" parent="Slots/SlotExpansorAna/SlotCollectionAna" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "ana_profile"
@@ -202,7 +194,6 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_right = 50.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -211,7 +202,6 @@ images_size = Vector2( 48, 48 )
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
-margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "bento_profile"
