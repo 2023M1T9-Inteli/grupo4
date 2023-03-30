@@ -186,7 +186,7 @@ enabled_focus_mode = 0
 text = "Vídeo"
 flat = true
 
-[node name="Label" type="Label" parent="."]
+[node name="FullScreen" type="Label" parent="."]
 margin_left = 253.0
 margin_top = 202.0
 margin_right = 501.0
@@ -194,7 +194,7 @@ margin_bottom = 238.0
 custom_fonts/font = SubResource( 8 )
 text = "Tela Cheia"
 
-[node name="CheckBox" type="CheckBox" parent="."]
+[node name="CheckBoxFullScreen" type="CheckBox" parent="."]
 margin_left = 525.0
 margin_top = 208.0
 margin_right = 541.0
@@ -206,12 +206,6 @@ custom_styles/hover_pressed = SubResource( 12 )
 custom_styles/normal = SubResource( 10 )
 align = 1
 icon_align = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 381.0
-margin_top = 304.0
-margin_right = 657.0
-margin_bottom = 344.0
 
 [connection signal="value_changed" from="Master_slider" to="." method="_on_Master_slider_value_changed"]
 [connection signal="value_changed" from="SliderMusic" to="." method="_on_SliderMusic_value_changed"]
