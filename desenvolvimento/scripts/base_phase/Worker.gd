@@ -4,7 +4,7 @@ extends Node2D
 # PT_BR: Define uma constante para padronizar os atributos que o Worker terá
 # EN_US: Define a constant to standardize the attributes that the Worker will have
 enum ATTRIBUTES_TYPE {
-	 MANUAL_WORK = 3,
+	 MANUAL_WORK = 0,
 	 LOGIC_RAC = 0,
 	 ART_THINK = 0,
 }
@@ -73,6 +73,7 @@ func initiate_task(task):
 	# EN_US: Resets the values to start the timer
 	cronometer.value = 0
 	cronometer.show()
+	self.score = 0
 	timer.start()
 	_compare_attributes(task["attributes"])
 

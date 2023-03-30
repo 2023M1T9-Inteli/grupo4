@@ -159,7 +159,7 @@ uid = "colours"
 qtd = 1
 location = 1
 attributes = {
-"LOGIC_RAC": -2
+"LOGIC_RAC": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
