@@ -34,10 +34,10 @@ func play_music(music):
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Function to change the music. Receives music as parameter.
 # EN_US (2): Parameter: music - arquivo de música.
-func change_music(music_node):
-	if music_node != music_node.stream:
+func change_music(music):
+	if music != music_node.stream:
 		music_node.stop()
-		play_music(music_node)
+		play_music(music)
 
 # PT_BR: Função que continua a música
 # EN_US: Function that resume the music
