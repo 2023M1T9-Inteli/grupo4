@@ -2,6 +2,10 @@ extends Node
 
 var temp = 0.0
 
+var MasterValue = 1
+var MusicValue = 1
+var SfxValue = 1
+
 # PT_BR (1): Função que define a música e coloca para tocar. 
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Set the music and play.

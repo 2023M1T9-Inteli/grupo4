@@ -59,9 +59,8 @@ custom_icons/grabber = ExtResource( 2 )
 custom_styles/slider = SubResource( 2 )
 custom_styles/grabber_area_highlight = SubResource( 3 )
 custom_styles/grabber_area = SubResource( 4 )
-max_value = 2.0
+max_value = 1.0
 step = 0.05
-value = 1.0
 
 [node name="VolumeGrid2" type="GridContainer" parent="."]
 margin_left = 69.0
@@ -89,9 +88,8 @@ custom_icons/grabber = ExtResource( 2 )
 custom_styles/slider = SubResource( 2 )
 custom_styles/grabber_area_highlight = SubResource( 3 )
 custom_styles/grabber_area = SubResource( 4 )
-max_value = 2.0
+max_value = 1.0
 step = 0.05
-value = 1.0
 
 [node name="VolumeGrid3" type="GridContainer" parent="."]
 margin_left = 37.0
@@ -119,9 +117,8 @@ custom_icons/grabber = ExtResource( 2 )
 custom_styles/slider = SubResource( 2 )
 custom_styles/grabber_area_highlight = SubResource( 3 )
 custom_styles/grabber_area = SubResource( 4 )
-max_value = 2.0
+max_value = 1.0
 step = 0.05
-value = 1.0
 
 [node name="BackButton" type="Button" parent="."]
 margin_left = 723.0
