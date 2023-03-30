@@ -5,7 +5,7 @@ extends TextureRect
 # EN_US: Declare the cronometer seconds and minutes
 export(int) var seconds = 30 setget _set_seconds
 export(int) var minutes = 4 setget _set_minutes
-
+var counter = 0
 
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
@@ -37,6 +37,7 @@ func _on_Timer_timeout():
 		# PT_BR: Se o minuto for igual a 1
 		# EN_US: If minutes equals 1
 		if minutes == 1:
+			
 			# PT_BR: Toca o som de tempo passando
 			# EN_US: Plays time passing sound	
 			$TimePassing.play()
