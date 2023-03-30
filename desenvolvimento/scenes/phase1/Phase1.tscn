@@ -185,7 +185,6 @@ drawer_image = ExtResource( 8 )
 boss_table_image = ExtResource( 24 )
 
 [node name="SlotExpansorBento" parent="Slots" instance=ExtResource( 6 )]
-visible = false
 margin_left = 480.0
 margin_top = 515.556
 margin_right = 725.0
@@ -202,6 +201,7 @@ collection_size = Vector2( 128, 40 )
 
 [node name="WorkSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_right = 50.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 slot_size = Vector2( 50, 32 )
@@ -210,6 +210,7 @@ images_size = Vector2( 48, 48 )
 [node name="ProfileSlotBento" parent="Slots/SlotExpansorBento/SlotCollectionBento" instance=ExtResource( 4 )]
 margin_left = 78.0
 margin_right = 128.0
+margin_bottom = 48.0
 rect_min_size = Vector2( 50, 32 )
 mouse_filter = 2
 uid = "bento_profile"
@@ -226,8 +227,8 @@ margin_left = 1015.0
 margin_top = 5.0
 margin_right = 1168.0
 margin_bottom = 102.0
-seconds = 5
-minutes = 0
+seconds = 10
+minutes = 1
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
