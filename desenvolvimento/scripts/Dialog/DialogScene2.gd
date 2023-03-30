@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # PT_BR: Variável local que armazena a música da fase 2
 # EN_US: Local variable that stores the music from phase 2
 onready var music_phase_2 = load("res://assets/Audio/music/music_fase_2.wav")
@@ -9,14 +10,17 @@ func _ready():
 	Audio.play_music(music_phase_2)
 
 
-# PT_BR: Função que muda a animação do sprite quando acionada 
-# EN_US: Function that changes the sprite animation when activated
+# PT_BR (1): Função que muda a animação do sprite quando acionada 
+# PT_BR (2): Recebe o objeto anim como parâmetro
+# EN_US (1): Function that changes the sprite animation when activated
+# EN_US (2): Receives the anim object as parameter
 func change_anim(anim):
 	$ChicoAnimatedSprite.animation = anim
 
-
-# PT_BR: Função que define se o sprite "Computer" deve aparecer ou ficar escondido 
-# EN_US: Function that defines if the sprite "Computer" should appear or stay hidden
+# PT_BR (1): Função que define se o sprite "tend_circle" deve aparecer ou ficar escondido 
+# PT_BR (2): Recebe o objeto show_tent como parâmetro
+# EN_US (1): Function that defines if the sprite "tend_circle" should appear or stay hidden
+# EN_US (2): Receives the show_tent object as parameter
 func show_tent(show_tent):
 	# PT_BR: Se o a variável for acionada, o sprite deve aparecer na tela
 	# EN_US: If the variable is activated, ths sprite should appear on screen

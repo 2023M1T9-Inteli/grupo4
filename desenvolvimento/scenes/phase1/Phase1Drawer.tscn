@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://assets/Phase1/detailed_task/big_task04.png" type="Texture" id=23]
 [ext_resource path="res://assets/Phase1/detailed_task/big_task05.png" type="Texture" id=24]
 [ext_resource path="res://assets/Phase1/detailed_task/big_task07.png" type="Texture" id=25]
+[ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=26]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Gaveta Copy Copy.png 0"
@@ -44,27 +45,35 @@
 
 [node name="MainDrawer" type="Node2D"]
 
-[node name="HSlotExpansor" type="ScrollContainer" parent="."]
-margin_right = 512.0
-margin_bottom = 100.0
+[node name="SlotExpansor" parent="." instance=ExtResource( 26 )]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_clip_content = true
+
+[node name="ScrollSlotContainer" type="ScrollContainer" parent="SlotExpansor" groups=["slot"]]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 510, 99 )
+rect_clip_content = false
+mouse_default_cursor_shape = 2
 follow_focus = true
 scroll_vertical_enabled = false
 script = ExtResource( 8 )
-drawer_size = Vector2( 510, 95 )
 
-[node name="DrawerHBox" type="HBoxContainer" parent="HSlotExpansor"]
+[node name="DrawerHBox" type="HBoxContainer" parent="SlotExpansor/ScrollSlotContainer" groups=["slot"]]
 margin_right = 640.0
 margin_bottom = 64.0
 grow_vertical = 0
 rect_min_size = Vector2( 640, 64 )
+mouse_default_cursor_shape = 2
 custom_constants/separation = 0
 script = ExtResource( 2 )
 drawer_size = Vector2( 640, 64 )
 
-[node name="root" type="Node2D" parent="HSlotExpansor/DrawerHBox"]
+[node name="root" type="Node2D" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox"]
 visible = false
 
-[node name="SlotExample" parent="HSlotExpansor/DrawerHBox/root" instance=ExtResource( 4 )]
+[node name="SlotExample" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox/root" instance=ExtResource( 4 )]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -79,7 +88,7 @@ attributes = {
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 
-[node name="task01ReqSys" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task01ReqSys" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -98,7 +107,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 3 )
 boss_table_image = ExtResource( 21 )
 
-[node name="task02Physics" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task02Physics" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 64.0
 margin_right = 128.0
 margin_bottom = 64.0
@@ -118,7 +127,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 7 )
 boss_table_image = ExtResource( 20 )
 
-[node name="task03ProjArq" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task03ProjArq" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 128.0
 margin_right = 192.0
 margin_bottom = 64.0
@@ -138,7 +147,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 14 )
 boss_table_image = ExtResource( 17 )
 
-[node name="task04Colours" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task04Colours" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 192.0
 margin_right = 256.0
 margin_bottom = 64.0
@@ -150,7 +159,7 @@ uid = "colours"
 qtd = 1
 location = 1
 attributes = {
-"ART_THINK": 2
+"LOGIC_RAC": -2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -158,7 +167,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 15 )
 boss_table_image = ExtResource( 23 )
 
-[node name="task05Build" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task05Build" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 256.0
 margin_right = 320.0
 margin_bottom = 64.0
@@ -170,7 +179,7 @@ uid = "Build"
 qtd = 1
 location = 1
 attributes = {
-"MANUAL_WORK": 2
+"ART_THINK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -178,7 +187,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 10 )
 boss_table_image = ExtResource( 24 )
 
-[node name="task06Os" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task06Os" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 320.0
 margin_right = 384.0
 margin_bottom = 64.0
@@ -190,7 +199,7 @@ uid = "os"
 qtd = 1
 location = 1
 attributes = {
-"LOGIC_RAC": 2
+"MANUAL_WORK": 2
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
@@ -198,7 +207,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 11 )
 boss_table_image = ExtResource( 18 )
 
-[node name="task07Fit" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task07Fit" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 384.0
 margin_right = 448.0
 margin_bottom = 64.0
@@ -218,7 +227,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 13 )
 boss_table_image = ExtResource( 25 )
 
-[node name="task08Connection" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task08Connection" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 448.0
 margin_right = 512.0
 margin_bottom = 64.0
@@ -238,7 +247,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 16 )
 boss_table_image = ExtResource( 19 )
 
-[node name="task09Construct" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task09Construct" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 512.0
 margin_right = 576.0
 margin_bottom = 64.0
@@ -258,7 +267,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 12 )
 boss_table_image = ExtResource( 5 )
 
-[node name="task10Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task10Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 4 )]
 margin_left = 576.0
 margin_right = 640.0
 margin_bottom = 64.0
@@ -278,7 +287,7 @@ table_image = ExtResource( 6 )
 drawer_image = ExtResource( 9 )
 boss_table_image = ExtResource( 22 )
 
-[node name="drawer" type="TileMap" parent="HSlotExpansor"]
+[node name="drawer" type="TileMap" parent="SlotExpansor/ScrollSlotContainer"]
 position = Vector2( -1409.01, -641 )
 scale = Vector2( 1.00787, 1 )
 tile_set = SubResource( 1 )

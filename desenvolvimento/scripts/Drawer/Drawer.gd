@@ -17,6 +17,10 @@ enum ORIENTATION_DIRECTION {
 # EN_US: Slot Collection size
 export(Vector2) var drawer_size: Vector2 = Vector2(64, 64) setget _set_drawer_size
 
+# PT_BR: Tamanho da coleção de slote
+# EN_US: Slot Collection size
+export var qtd_task: int = 10 setget _set_qtd_task
+
 # PT_BR: Ativar o espaçamento entre os itens
 # EN_US: Enable spacing between items
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
@@ -28,7 +32,11 @@ func _set_drawer_size(new_value) -> void:
 	self.rect_min_size = drawer_size
 	self.rect_size = drawer_size
 
-# PT_BR: Inicializa as variáveis locais
+func _set_qtd_task(new_value) -> void:
+	qtd_task = new_value
+	drawer_size.x = new_value * 64
+
+# PT_BR: Inicializa as variáveis locais=-
 # EN_US: Initialize local variables
 var qtd_control_children = 0
 
@@ -49,7 +57,7 @@ func _ready():
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 			if child.connect("dropped_item", self, "_delete_slot") != OK:
 				print("Erro ao conectar o sinal dropped_item do node ", self)
-	drawer_size.x = total_children_size
+	self.rect_min_sizev.x = total_children_size
 
 
 # PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos
@@ -59,12 +67,18 @@ func _ready():
 func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
-# PT_BR: Função para definir o tamanho horizonta do slot collection. Recebe o quanto o slot deve aumentar ou diminuir.
-# EN_US: Function to define the horizontal size of the slot collection. Gets how much the slot should grow or shrink.
-func _set_slot_collection_size_x(size_variation):
-	var new_x = abs(int(drawer_size.x + size_variation))
-	self.rect_min_size = Vector2(new_x, drawer_size.y) 
-	self.rect_size = Vector2(new_x, drawer_size.y) 
+# PT_BR (1): Função para definir o tamanho horizonta do slot collection. 
+# PT_BR (2): Recebe o quanto o slot deve aumentar ou diminuir.
+# EN_US (1): Function to define the horizontal size of the slot collection. 
+# EN_US (2): Gets how much the slot should grow or shrink.
+func _set_slot_collection_size_x():
+	var new_size_x = 0
+	for child in get_children():
+		if child.is_in_group("slot"):
+			new_size_x += child.rect_size.x
+		
+	_set_drawer_size( Vector2(new_size_x, self.drawer_size.y) )
+	
 
 # PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
 # PT_BR (2): Retorna o valor daquela propriedade na orientação informada
@@ -79,19 +93,22 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 		return object_property.y
 
 
-# PT_BR: Função para apagar um node filho e ajustar o tamanho a quantidade de nodes. Recebe o node.
-# EN_US: Function to delete a child node and adjust the size to the number of nodes. Receives the node.
+# PT_BR (1): Função para apagar um node filho e ajustar o tamanho a quantidade de nodes. 
+# PT_BR (2): Recebe o node.
+# EN_US (1): Function to delete a child node and adjust the size to the number of nodes. 
+# EN_US (2): Receives the node.
 func _delete_slot(node) -> void:
-	self._set_slot_collection_size_x(-node.rect_size.x)
 	node.queue_free()
 	_count_control_childs()
+	self._set_slot_collection_size_x()
 
 
-# PT_BR: Função para duplicar o slot padrão dentro de root. Retorna o novo slot
-# EN_US: Function to duplicate the default slot inside root. Returns the new slot
+# PT_BR (1): Função para duplicar o slot padrão dentro de root. 
+# PT_BR (2): Retorna o novo slot
+# EN_US (1): Function to duplicate the default slot inside root. 
+# EN_US (2): Returns the new slot
 func _duplicate_slot():
 	var new_slot = $root/SlotExample.duplicate()
-	self._set_slot_collection_size_x(+new_slot.rect_size.x)
 	new_slot.connect("dropped_item", self, "_delete_slot")
 	return new_slot
 
@@ -142,3 +159,5 @@ func drop_data(position, data) -> void:
 	new_slot.drop_data(position, data)
 	.add_child(new_slot)
 	_count_control_childs()
+	_set_slot_collection_size_x()
+	
