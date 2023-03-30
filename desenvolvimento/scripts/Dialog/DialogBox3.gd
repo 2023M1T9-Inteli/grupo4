@@ -13,49 +13,57 @@ signal exit_dialog()
 
 
 func _ready():
+	# PT_BR: Mostra a primeira mensagem
+	# EN_US: Shows the first message
 	show_message(0)
-	
-	
+
+
 # PT_BR: Dicionário de falas da introdução da primeira fase
 # EN_US: Speech dictionary fot the first level introduction
 var message_queue: Dictionary = {
 	0: {
 			"text": "[color=#368E69]Xarmes[/color]: Socorro! Está tudo acabado!",
 			"anim": "idle",
-			"showTent": false,
+			"showGift": false,
+			"showBento": false,
 		},
 	1: {
 			"text": "[color=#368E69]Xarmes[/color]: Ei você! Meu nome é Xarmes, o duende de natal, e preciso da sua ajuda urgentemente!",
 			"anim": "idle",
-			"showTent": false,
+			"showGift": false,
+			"showBento": false,
 		},
 	2: {
 			"text": "[color=#368E69]Xarmes[/color]: O papai noel sumiu, e não sabemos o que vamos fazer! Sem ele, o natal está arruinado e as crianças vão ficar sem seus presentes!",
 			"anim": "arm_up",
-			"showTent": true,
+			"showGift": true,
+			"showBento": false,
 		}, 
 	3: {
 			"text": "[color=#368E69]Xarmes[/color]: Vocês são os melhores para me ajudar nessa situação, pois temos que ser rápidos para salvar esse natal!",
 			"anim": "idle",
-			"showTent": false,
+			"showGift": false,
+			"showBento": false,
 		},
 	4: {
 			"text": "[color=#368E69]Xarmes[/color]: Porém, teremos que trabalhar com pessoal reduzido pois alguém tem que assumir o lugar do papai noel, então seu funcionário Bento terá de assumir essa responsabilidade!",
-			"anim": "idle",
-			"showTent": false,
+			"anim": "arm_up",
+			"showGift": false,
+			"showBento": true,
 		},
 	5: {
 			"text": "[color=#368E69]Xarmes[/color]: Chega de conversa e mãos a obra!",
 			"anim": "idle",
-			"showTent": false,
+			"showGift": false,
+			"showBento": false,
 		},
 	6: {
 			"text": "",
 			"anim": "idle",
-			"showTent": false,
+			"showGift": false,
+			"showBento": false,
 		}
 	}
-
 
 # PT_BR (1): Função que apaga o texto anterior e executa a função de mudança de sprite da personagem
 # PT_BR (2): Recebe o objeto speech como parâmetro, que é o texto do balão de diálogo
@@ -101,9 +109,11 @@ func show_message(update_counter) -> void:
 		# EN_US(2): the list
 		var write_text = message_queue[counter]["text"]
 		var anim = message_queue[counter]["anim"]
-		var show_tent = message_queue[counter]["showTent"]
+		var show_gift = message_queue[counter]["showGift"]
+		var show_bento = message_queue[counter]["showBento"]
 		change_speech(write_text, anim)
-		self.get_parent().show_tent(show_tent)
+		self.get_parent().show_gift(show_gift)
+		self.get_parent().show_bento(show_bento)
 		timer.start()
 
 
