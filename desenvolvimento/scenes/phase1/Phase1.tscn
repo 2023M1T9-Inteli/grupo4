@@ -26,7 +26,7 @@
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Timer/circulo.png" type="Texture" id=25]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
-[ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
+[ext_resource path="res://assets/Audio/effects/Click.wav" type="AudioStream" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 31
@@ -226,6 +226,8 @@ margin_left = 1015.0
 margin_top = 5.0
 margin_right = 1168.0
 margin_bottom = 102.0
+seconds = 5
+minutes = 1
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )

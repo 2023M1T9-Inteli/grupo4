@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TimeLow.mp3-2a7b03313edd738ecda10d0b2d9e5f79.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/effects/TimeLow.mp3"
+dest_files=[ "res://.import/TimeLow.mp3-2a7b03313edd738ecda10d0b2d9e5f79.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
