@@ -10,6 +10,7 @@ const bus_names = {
 }
 
 
+
 # PT_BR(1): Assim que inicia o jogo, o valor dos sliders são atribuídos ao script global
 # PT_BR(2): Os nós "FullScreen" e "CheckboxFullScreen" se tornam invisíveis 
 # EN_US(1): As soon as you start the game, the value of the sliders are assigned to the global script
@@ -20,7 +21,7 @@ func _ready():
 	$SFX_slider.value = Audio.SfxValue
 	$FullScreen.visible = false
 	$CheckBoxFullScreen.visible = false
-
+	$CheckBoxFullScreen.pressed = OS.window_fullscreen
 
 # PT_BR(1): Função que seta o valor do canal de áudio
 # PT_BR(2): Parâmetro 1: BusName - nome do canal de áudio
@@ -98,4 +99,4 @@ func _on_Volume_pressed():
 # PT_BR: Função que deixa a tela cheia quando o checkbox é selecionado
 # EN_US: Function that leaves the full screen when the checkbox is selected
 func _on_CheckBoxFullScreen_pressed():
-	OS.window_fullscreen = not OS.window_fullscreen
+	Globals.click_checkbox_options($CheckBoxFullScreen)
