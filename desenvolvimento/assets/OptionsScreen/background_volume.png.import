@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/volume_background.png-df2209a45403935c25e2dd19a9f2afae.stex"
+path="res://.import/background_volume.png-a4a89f437ec8888aaf61634b28c7cd88.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/OptionsScreen/volume_background.png"
-dest_files=[ "res://.import/volume_background.png-df2209a45403935c25e2dd19a9f2afae.stex" ]
+source_file="res://assets/OptionsScreen/background_volume.png"
+dest_files=[ "res://.import/background_volume.png-a4a89f437ec8888aaf61634b28c7cd88.stex" ]
 
 [params]
 
