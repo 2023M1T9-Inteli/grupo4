@@ -10,6 +10,11 @@ extents = Vector2( 25, 48 )
 
 [node name="Worker" type="StaticBody2D"]
 script = ExtResource( 4 )
+attributes = {
+"ART_THINK": 0,
+"LOGIC_RAC": 0,
+"MANUAL_WORK": 3
+}
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 16, 16 )

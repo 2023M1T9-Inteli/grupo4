@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/phase_assets/OfficeItems/chair.png" type="Texture" id=6]
 [ext_resource path="res://assets/phase_assets/OfficeItems/full_open_trash.png" type="Texture" id=7]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=8]
-[ext_resource path="res://scripts/Phase1/Map.gd" type="Script" id=9]
+[ext_resource path="res://scripts/base_phase/Map.gd" type="Script" id=9]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=10]
 [ext_resource path="res://assets/characters/kira.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/Characters_Phase_3/ana_phase3.png" type="Texture" id=12]
@@ -1570,6 +1570,10 @@ frame_1/delay_sec = 0.0
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 9 )
+kira = NodePath("Kira")
+roger = NodePath("Roger")
+bento = NodePath("")
+ana = NodePath("Ana")
 
 [node name="Parede e Chão" type="TileMap" parent="."]
 tile_set = SubResource( 29 )

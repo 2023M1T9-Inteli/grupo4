@@ -16,7 +16,7 @@
 [ext_resource path="res://assets/phase_assets/OfficeItems/empty_open_trash.png" type="Texture" id=14]
 [ext_resource path="res://assets/phase_assets/BaseAssets/Modern_Office_48x48.png" type="Texture" id=15]
 [ext_resource path="res://scenes/base_phase/Worker.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scripts/Phase1/Map.gd" type="Script" id=17]
+[ext_resource path="res://scripts/base_phase/Map.gd" type="Script" id=17]
 [ext_resource path="res://assets/phase_assets/OfficeItems/monitor.png" type="Texture" id=18]
 [ext_resource path="res://assets/phase_assets/OfficeItems/bigger_chair.png" type="Texture" id=19]
 [ext_resource path="res://assets/characters/paula_sprite_sheet.png" type="Texture" id=20]
@@ -31,6 +31,7 @@
 [ext_resource path="res://assets/phase_assets/Phase2Assets/baloon.png" type="Texture" id=29]
 [ext_resource path="res://assets/phase_assets/Phase2Assets/flag.png" type="Texture" id=30]
 [ext_resource path="res://assets/phase_assets/Phase2Assets/straw.png" type="Texture" id=31]
+
 
 [sub_resource type="PluginScript" id=35]
 
@@ -1121,6 +1122,10 @@ frame_1/delay_sec = 0.0
 
 [node name="Map" type="Node2D"]
 script = ExtResource( 17 )
+kira = NodePath("Kira")
+roger = NodePath("Roger")
+bento = NodePath("Bento")
+ana = NodePath("Ana")
 
 [node name="Parede e Chão" type="TileMap" parent="."]
 tile_set = SubResource( 4 )

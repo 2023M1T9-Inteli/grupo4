@@ -1,38 +1,39 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=1]
-[ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=2]
-[ext_resource path="res://assets/items/drawers_task/task01.png" type="Texture" id=3]
-[ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_6.png" type="Texture" id=5]
-[ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=6]
-[ext_resource path="res://assets/items/drawers_task/task02.png" type="Texture" id=7]
-[ext_resource path="res://scripts/slots/HSlotExpansor.gd" type="Script" id=8]
-[ext_resource path="res://assets/items/drawers_task/task10.png" type="Texture" id=9]
-[ext_resource path="res://assets/items/drawers_task/task05.png" type="Texture" id=10]
-[ext_resource path="res://assets/items/drawers_task/task06.png" type="Texture" id=11]
-[ext_resource path="res://assets/items/drawers_task/task09.png" type="Texture" id=12]
-[ext_resource path="res://assets/items/drawers_task/task07.png" type="Texture" id=13]
-[ext_resource path="res://assets/items/drawers_task/task03.png" type="Texture" id=14]
-[ext_resource path="res://assets/items/drawers_task/task04.png" type="Texture" id=15]
-[ext_resource path="res://assets/items/drawers_task/task08.png" type="Texture" id=16]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_9.png" type="Texture" id=17]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_2.png" type="Texture" id=18]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_10.png" type="Texture" id=19]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_4.png" type="Texture" id=20]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_7.png" type="Texture" id=21]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_12.png" type="Texture" id=22]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_8.png" type="Texture" id=23]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_5.png" type="Texture" id=24]
-[ext_resource path="res://assets/items/task/tasks3/dtask3_1.png" type="Texture" id=25]
-[ext_resource path="res://assets/items/drawers_task/task12.png" type="Texture" id=26]
-[ext_resource path="res://assets/items/drawers_task/task11.png" type="Texture" id=27]
+[ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=1]
+[ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=2]
+[ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=3]
+[ext_resource path="res://assets/items/drawers_task/task09.png" type="Texture" id=4]
+[ext_resource path="res://assets/items/drawers_task/task07.png" type="Texture" id=5]
+[ext_resource path="res://assets/items/drawers_task/task08.png" type="Texture" id=6]
+[ext_resource path="res://assets/items/drawers_task/task10.png" type="Texture" id=7]
+[ext_resource path="res://assets/items/drawers_task/task04.png" type="Texture" id=8]
+[ext_resource path="res://assets/items/drawers_task/task05.png" type="Texture" id=9]
+[ext_resource path="res://assets/items/drawers_task/task03.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/drawers_task/task01.png" type="Texture" id=11]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_6.png" type="Texture" id=12]
+[ext_resource path="res://assets/items/drawers_task/task02.png" type="Texture" id=13]
+[ext_resource path="res://assets/items/drawers_task/task06.png" type="Texture" id=14]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_10.png" type="Texture" id=15]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_7.png" type="Texture" id=16]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_12.png" type="Texture" id=17]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_9.png" type="Texture" id=18]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_4.png" type="Texture" id=19]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_2.png" type="Texture" id=20]
+[ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scripts/slots/HSlotExpansor.gd" type="Script" id=23]
+[ext_resource path="res://assets/items/drawers_task/task11.png" type="Texture" id=24]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_5.png" type="Texture" id=25]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_8.png" type="Texture" id=26]
+[ext_resource path="res://assets/items/drawers_task/task12.png" type="Texture" id=27]
 [ext_resource path="res://assets/items/task/tasks3/dtask3_3.png" type="Texture" id=28]
 [ext_resource path="res://assets/items/task/tasks3/dtask3_11.png" type="Texture" id=29]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_1.png" type="Texture" id=30]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Gaveta Copy Copy.png 0"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 512, 96 )
@@ -48,26 +49,36 @@
 
 [node name="MainDrawer" type="Node2D"]
 
-[node name="HSlotExpansor" type="ScrollContainer" parent="."]
-margin_right = 512.0
-margin_bottom = 100.0
+[node name="SlotExpansor" parent="." instance=ExtResource( 22 )]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_clip_content = true
+
+[node name="ScrollSlotContainer" type="ScrollContainer" parent="SlotExpansor" groups=["slot"]]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 510, 99 )
+rect_clip_content = false
+mouse_default_cursor_shape = 2
 follow_focus = true
 scroll_vertical_enabled = false
-script = ExtResource( 8 )
+script = ExtResource( 23 )
 
-[node name="DrawerHBox" type="HBoxContainer" parent="HSlotExpansor"]
+[node name="DrawerHBox" type="HBoxContainer" parent="SlotExpansor/ScrollSlotContainer" groups=["slot"]]
 margin_right = 768.0
 margin_bottom = 64.0
 grow_vertical = 0
 rect_min_size = Vector2( 768, 64 )
+mouse_default_cursor_shape = 2
 custom_constants/separation = 0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 drawer_size = Vector2( 768, 64 )
+qtd_task = 12
 
-[node name="root" type="Node2D" parent="HSlotExpansor/DrawerHBox"]
+[node name="root" type="Node2D" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox"]
 visible = false
 
-[node name="SlotExample" parent="HSlotExpansor/DrawerHBox/root" instance=ExtResource( 4 )]
+[node name="SlotExample" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox/root" instance=ExtResource( 21 )]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -82,7 +93,7 @@ attributes = {
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
 
-[node name="task01ReqSys" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task01ReqSys" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -97,11 +108,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 3 )
-boss_table_image = ExtResource( 25 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 11 )
+boss_table_image = ExtResource( 30 )
 
-[node name="task02Physics" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task02Physics" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 64.0
 margin_right = 128.0
 margin_bottom = 64.0
@@ -117,11 +128,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 7 )
-boss_table_image = ExtResource( 18 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 13 )
+boss_table_image = ExtResource( 20 )
 
-[node name="task03ProjArq" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task03ProjArq" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 128.0
 margin_right = 192.0
 margin_bottom = 64.0
@@ -137,11 +148,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 14 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 10 )
 boss_table_image = ExtResource( 28 )
 
-[node name="task04Colours" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task04Colours" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 192.0
 margin_right = 256.0
 margin_bottom = 64.0
@@ -157,11 +168,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 15 )
-boss_table_image = ExtResource( 20 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 8 )
+boss_table_image = ExtResource( 19 )
 
-[node name="task05Build" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task05Build" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 256.0
 margin_right = 320.0
 margin_bottom = 64.0
@@ -177,11 +188,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 10 )
-boss_table_image = ExtResource( 24 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 9 )
+boss_table_image = ExtResource( 25 )
 
-[node name="task06Os" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task06Os" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 320.0
 margin_right = 384.0
 margin_bottom = 64.0
@@ -197,11 +208,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 11 )
-boss_table_image = ExtResource( 5 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 14 )
+boss_table_image = ExtResource( 12 )
 
-[node name="task07Fit" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task07Fit" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 384.0
 margin_right = 448.0
 margin_bottom = 64.0
@@ -217,11 +228,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 13 )
-boss_table_image = ExtResource( 21 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 5 )
+boss_table_image = ExtResource( 16 )
 
-[node name="task08Connection" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task08Connection" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 448.0
 margin_right = 512.0
 margin_bottom = 64.0
@@ -237,11 +248,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 16 )
-boss_table_image = ExtResource( 23 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 6 )
+boss_table_image = ExtResource( 26 )
 
-[node name="task09Construct" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task09Construct" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 512.0
 margin_right = 576.0
 margin_bottom = 64.0
@@ -257,11 +268,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 12 )
-boss_table_image = ExtResource( 17 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 4 )
+boss_table_image = ExtResource( 18 )
 
-[node name="task10Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task10Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 576.0
 margin_right = 640.0
 margin_bottom = 64.0
@@ -277,11 +288,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 9 )
-boss_table_image = ExtResource( 19 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 7 )
+boss_table_image = ExtResource( 15 )
 
-[node name="task11Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task11Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 640.0
 margin_right = 704.0
 margin_bottom = 64.0
@@ -297,11 +308,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 27 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 24 )
 boss_table_image = ExtResource( 29 )
 
-[node name="task12Id" parent="HSlotExpansor/DrawerHBox" instance=ExtResource( 4 )]
+[node name="task12Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
 margin_left = 704.0
 margin_right = 768.0
 margin_bottom = 64.0
@@ -317,11 +328,11 @@ attributes = {
 }
 slot_size = Vector2( 64, 64 )
 images_size = Vector2( 64, 64 )
-table_image = ExtResource( 6 )
-drawer_image = ExtResource( 26 )
-boss_table_image = ExtResource( 22 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 27 )
+boss_table_image = ExtResource( 17 )
 
-[node name="drawer" type="TileMap" parent="HSlotExpansor"]
+[node name="drawer" type="TileMap" parent="SlotExpansor/ScrollSlotContainer"]
 position = Vector2( -1409.01, -641 )
 scale = Vector2( 1.00787, 1 )
 tile_set = SubResource( 1 )

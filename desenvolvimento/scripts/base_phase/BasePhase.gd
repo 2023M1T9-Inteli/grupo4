@@ -6,28 +6,28 @@ export(Globals.PHASES) var phase_key = Globals.PHASES.PHASE_1
 
 # PT_BR: Inicializa variáveis de cenas importantes da fase
 # EN_US: Initialize variables of important scenes of the phase
-export(NodePath) onready var phase_progress = $PhaseProgress
-export(NodePath) onready var map = $Map
+export(NodePath) var phase_progress = null
+export(NodePath) var map = null
 
 # PT_BR: Inicializa variáveis responsáveis por armazenar os slots das tarefas de cada personagem
 # EN_US: Initialize variables responsible for storing the tasks slots of each character
-export(NodePath) onready var slot_kira = $Slots/SlotExpansorKira/SlotCollectionKira/WorkSlotKira
-export(NodePath) onready var slot_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/WorkSlotRoger
-export(NodePath) onready var slot_ana = $Slots/SlotExpansorAna/SlotCollectionAna/WorkSlotAna
-export(NodePath) onready var slot_bento = $Slots/SlotExpansorBento/SlotCollectionBento/WorkSlotBento
+export(NodePath) var slot_kira = null
+export(NodePath) var slot_roger = null
+export(NodePath) var slot_ana = null
+export(NodePath) var slot_bento = null
 
 # PT_BR: Inicializa variáveis responsáveis por armazenar os slots das fichas de perfil de cada personagem
 # EN_US: Initialize variables responsible for storing the profile sheets slots of each character
-export(NodePath) onready var profile_kira = $Slots/SlotExpansorKira/SlotCollectionKira/ProfileSlotKira
-export(NodePath) onready var profile_roger = $Slots/SlotExpansorRoger/SlotCollectionRoger/ProfileSlotRoger
-export(NodePath) onready var profile_ana = $Slots/SlotExpansorAna/SlotCollectionAna/ProfileSlotAna
-export(NodePath) onready var profile_bento = $Slots/SlotExpansorBento/SlotCollectionBento/ProfileSlotBento
+export(NodePath) var profile_kira = null
+export(NodePath) var profile_roger = null
+export(NodePath) var profile_ana = null
+export(NodePath) var profile_bento = null
 
 # PT_BR: Inicializa variáveis que armazenam os as estrelas da pontuação
 # EN_US: Initialize variables that stores the progress stars
-export(NodePath) onready var star1 = $Scores/StarProgress1
-export(NodePath) onready var star2 = $Scores/StarProgress2
-export(NodePath) onready var star3 = $Scores/StarProgress3
+export(NodePath) var star1 = null
+export(NodePath) var star2 = null
+export(NodePath) var star3 = null
 
 # PT_BR: Armazena a referência do objeto ClickAudio
 # EN_US: Stores the ClickAudio object reference
@@ -43,25 +43,51 @@ onready var max_score = Globals.phases_max_score[ Globals.phases_keys[phase_key]
 
 
 func _ready():
+	# PT_BR: Toca a música da fase
+	# EN_US: Plays the phase music
+	Audio.change_music(Globals.phase_musics[ Globals.phases_keys[phase_key] ])
+	
 	# PT_BR: Reseta a variável de pontos.
 	# EN_US: Reset the points variable.
 	Globals.lose_by_time = false
 	Globals.set_actual_score(0)
 	Globals.set_actual_phase(phase_key)
+	
+	# PT_BR: Armazena os objetos dos NodePaths
+	# EN_US: Stores the NodePath's Objects
+	phase_progress = _return_object_by_node_path(phase_progress)
+	map = _return_object_by_node_path(map)
+	
+	slot_kira = _return_object_by_node_path(slot_kira)
+	slot_roger = _return_object_by_node_path(slot_roger)
+	slot_ana = _return_object_by_node_path(slot_ana)
+	slot_bento = _return_object_by_node_path(slot_bento)
+	
+	profile_kira = _return_object_by_node_path(profile_kira)
+	profile_roger = _return_object_by_node_path(profile_roger)
+	profile_ana = _return_object_by_node_path(profile_ana)
+	profile_bento = _return_object_by_node_path(profile_bento)
+	
+	star1 = _return_object_by_node_path(star1)
+	star2 = _return_object_by_node_path(star2)
+	star3 = _return_object_by_node_path(star3)
 
 
 
 func _process(_delta):
 	#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
 	#EN_US: This funcction observes the mouse position and applies the hover on the files 
-	if self.has_node(profile_kira.get_path()):
+	if profile_kira != null and not profile_kira is NodePath:
 		_send_hover_effect_in_file(profile_kira)
 	
-	if self.has_node(profile_roger.get_path()):
+	if profile_roger != null:
 		_send_hover_effect_in_file(profile_roger)
 	
-	if self.has_node(profile_ana.get_path()):
+	if profile_ana != null:
 		_send_hover_effect_in_file(profile_ana)
+		
+	if profile_bento != null:
+		_send_hover_effect_in_file(profile_bento)
 		
 
 
@@ -79,9 +105,18 @@ func _change_score(new_value):
 		star2.value = clamp((result - 56), 0, 17)
 	elif result > 56: 
 		star2.value = clamp((result - 56), 0, 17)
-		star1.value = clamp(result, 0, 56)
-		
+				
 	star1.value = clamp(result, 0, 56)
+	
+
+# PT_BR (1): Função para retornar um objeto a partir do seu node path
+# PT_BR (2): Parâmetro: node_path - NodePath
+# EN_US (1): Function to return an object from its node path
+# EN_US (2): Parameter:  node_path - NodePath
+func _return_object_by_node_path(node_path):
+	if node_path != null and not node_path.is_empty():
+		return self.get_node(node_path)
+	return null
 
 
 # PT_BR: Função para mudar a cena quando o tempo do jogo acaba
@@ -228,7 +263,6 @@ func _send_hover_effect_in_file(profile):
 
 
 func _on_PauseButton_pressed():
-
 	# PT_BR: Abre a cena de pause
 	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()
