@@ -1,12 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/table/table.png" type="Texture" id=1]
-[ext_resource path="res://assets/Audio/Paper.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/Audio/effects/Paper.mp3" type="AudioStream" id=2]
 [ext_resource path="res://scenes/slots/VSlotCollection.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/Drawer/Tasks/task_no_hover.png" type="Texture" id=7]
 [ext_resource path="res://assets/Drawer/TasksHover/task_with_hover.png" type="Texture" id=8]
 [ext_resource path="res://scripts/base_phase/BossTable.gd" type="Script" id=9]
+
 
 [sub_resource type="GDScript" id=3]
 
