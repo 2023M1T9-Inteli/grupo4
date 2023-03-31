@@ -47,9 +47,7 @@ func _on_Timer_timeout():
 		# PT_BR: Se o minuto for igual a 1
 		# EN_US: If minutes equals 1
 		if minutes == 1:
-			
-			pisca_pisca_or_blink_blink()
-			
+			blink_blink()
 			
 			# PT_BR: Toca o som de tempo passando
 			# EN_US: Plays time passing sound	
@@ -75,7 +73,7 @@ func _on_Timer_timeout():
 
 # PT_BR: Essa função faz o display piscar
 # EN_US: This function makes the display blink
-func pisca_pisca_or_blink_blink():
+func blink_blink():
 	for i in range(6):
 		if i % 2 == 1:
 			self.modulate.a = 1
