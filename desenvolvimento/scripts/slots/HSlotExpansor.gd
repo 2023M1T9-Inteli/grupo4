@@ -25,7 +25,7 @@ func can_drop_data(position, data) -> bool:
 	# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 	var can_drop = false
 	for child in self.get_children():
-		if child is Control:
+		if child.is_in_group("slot"):
 			can_drop = can_drop or child.can_drop_data(position, data)
 			if can_drop:
 				return can_drop
