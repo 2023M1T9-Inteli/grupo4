@@ -6,7 +6,7 @@
 [ext_resource path="res://scripts/Options.gd" type="Script" id=5]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/OptionsScreen/line_options.png" type="Texture" id=7]
-[ext_resource path="res://assets/OptionsScreen/volume_control2.png" type="Texture" id=8]
+[ext_resource path="res://assets/OptionsScreen/volume_control.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=5]
 size = 30
