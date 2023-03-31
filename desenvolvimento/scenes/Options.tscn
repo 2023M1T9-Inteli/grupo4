@@ -189,6 +189,7 @@ custom_fonts/font = SubResource( 8 )
 text = "Tela Cheia"
 
 [node name="CheckBoxFullScreen" type="CheckBox" parent="."]
+pause_mode = 2
 margin_left = 525.0
 margin_top = 208.0
 margin_right = 541.0

@@ -94,3 +94,12 @@ func set_actual_score(new_value: int):
 func set_actual_phase(new_value := PHASES.PHASE_1):
 	actual_phase = new_value
 
+
+# PT_BR: Função responsável por deixar a tela do jogo cheia
+# EN_US: Function responsible for making the game screen full
+func click_checkbox_options(checkbox):
+	if checkbox.pressed == true:
+		OS.window_fullscreen = not OS.window_fullscreen
+	else:
+		OS.window_fullscreen = OS.window_fullscreen
+	
