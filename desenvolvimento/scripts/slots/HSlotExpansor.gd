@@ -30,6 +30,8 @@ DRAG AND DROP
 """
 
 func get_drag_data(position):
+	# PT_BR: Pega a primeira drag_data do primeiro slot filho e retorn
+	# EN_US: Gets the first drag_data of the first slot child and return it
 	for child in get_children():
 		if child.is_in_group('slot'):
 			return child.get_drag_data(position)
