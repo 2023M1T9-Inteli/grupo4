@@ -80,7 +80,7 @@ margin_top = 184.0
 margin_right = 338.0
 margin_bottom = 220.0
 custom_fonts/font = SubResource( 5 )
-text = "GEral:"
+text = "Geral:"
 
 [node name="Master_slider" type="HSlider" parent="."]
 margin_left = 445.0
@@ -114,7 +114,7 @@ margin_top = 248.0
 margin_right = 362.0
 margin_bottom = 284.0
 custom_fonts/font = SubResource( 5 )
-text = "Musica:"
+text = "Música:"
 
 [node name="SFX_slider" type="HSlider" parent="."]
 margin_left = 445.0
