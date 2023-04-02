@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=1]
 [ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/items/task/tasks3/dtask3_3.png" type="Texture" id=28]
 [ext_resource path="res://assets/items/task/tasks3/dtask3_11.png" type="Texture" id=29]
 [ext_resource path="res://assets/items/task/tasks3/dtask3_1.png" type="Texture" id=30]
+[ext_resource path="res://scenes/Drawer/drawer_theme.tres" type="Theme" id=31]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Gaveta Copy Copy.png 0"
@@ -60,6 +61,7 @@ margin_bottom = 99.0
 rect_min_size = Vector2( 510, 99 )
 rect_clip_content = false
 mouse_default_cursor_shape = 2
+theme = ExtResource( 31 )
 follow_focus = true
 scroll_vertical_enabled = false
 script = ExtResource( 23 )
@@ -69,6 +71,7 @@ margin_right = 768.0
 margin_bottom = 64.0
 grow_vertical = 0
 rect_min_size = Vector2( 768, 64 )
+mouse_filter = 2
 mouse_default_cursor_shape = 2
 custom_constants/separation = 0
 script = ExtResource( 1 )

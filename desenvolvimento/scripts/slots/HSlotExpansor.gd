@@ -6,15 +6,6 @@ extends ScrollContainer
 export(Vector2) var scroll_container_size: Vector2 = Vector2(510, 99) setget _set_scroll_container_size
 
 
-
-func _ready():
-	# PT_BR: Coloca o mouse filter como ignore para funcionar o drag and drop
-	# EN_US: Set mouse_filter as ignore to work drag and drop
-	for child in get_children():
-		if "mouse_filter" in child:
-			child.mouse_filter = MOUSE_FILTER_IGNORE
-
-
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
 # EN_US (1): Functions to set variables. 
@@ -23,7 +14,6 @@ func _set_scroll_container_size(new_value) -> void:
 	scroll_container_size = new_value
 	self.rect_size = scroll_container_size
 	self.rect_min_size = scroll_container_size
-
 
 """ 
 DRAG AND DROP
