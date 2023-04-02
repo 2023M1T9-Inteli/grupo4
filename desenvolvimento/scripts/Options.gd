@@ -9,7 +9,10 @@ const bus_names = {
 	sfx_bus = "SFX"
 }
 
-
+onready var master_slider = $VolumeNode2D/MasterSlider
+onready var music_slider = $VolumeNode2D/MusicSlider
+onready var sfx_slider = $VolumeNode2D/SFX_slider
+onready var fullscreen_checkbox = $VideoNode2D/CheckBoxFullScreen
 
 # PT_BR(1): Assim que inicia o jogo, o valor dos sliders são atribuídos ao script global
 # PT_BR(2): Os nós "FullScreen" e "CheckboxFullScreen" se tornam invisíveis 
