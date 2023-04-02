@@ -4,7 +4,6 @@ extends Control
 DRAG AND DROP
 """
 
-
 func can_drop_data(position, data) -> bool:
 	# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
 	# EN_US: Checks if any child Control accepts the object being dragged and returns the result
