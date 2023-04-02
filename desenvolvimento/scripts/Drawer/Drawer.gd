@@ -53,7 +53,6 @@ func _ready():
 		if "mouse_filter" in child:
 			child.mouse_filter = MOUSE_FILTER_IGNORE
 		if child.is_in_group("slot"):
-			child.mouse_filter = MOUSE_FILTER_IGNORE
 			qtd_control_children += 1
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 			if child.connect("dropped_item", self, "_delete_slot") != OK:

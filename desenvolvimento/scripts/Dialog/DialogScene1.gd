@@ -14,6 +14,7 @@ func _ready():
 func change_anim(anim):
 	$RosalinneAnimSprite.animation = anim
 
+
 # PT_BR (1): Função que define se o sprite "Computer" deve aparecer ou ficar escondido 
 # PT_BR (2): Recebe o booleano show_pc como parâmetro
 # EN_US (1): Function that defines if the sprite "Computer" should appear or stay hidden
@@ -27,8 +28,8 @@ func show_pc(show_pc):
 	# EN_US: In other case, it should stay hidden
 	else:
 		$Computer.hide() 
-		
-		
+
+
 # PT_BR: Função que define que após o pressionar do botão, a cena é mudada
 # EN_US: Function that definas that after the press of the button, the scene is changed
 func _on_Button_pressed():
