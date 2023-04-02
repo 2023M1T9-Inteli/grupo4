@@ -22,6 +22,7 @@ func _ready():
 	$FullScreen.visible = false
 	$CheckBoxFullScreen.visible = false
 	$CheckBoxFullScreen.pressed = OS.window_fullscreen
+	$Volume.add_color_override("font_color", "#f97171")
 
 # PT_BR(1): Função que seta o valor do canal de áudio
 # PT_BR(2): Parâmetro 1: BusName - nome do canal de áudio
