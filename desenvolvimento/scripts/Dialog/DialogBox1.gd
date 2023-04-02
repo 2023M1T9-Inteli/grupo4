@@ -83,7 +83,7 @@ func show_message(update_counter) -> void:
 		counter += update_counter
 		# PT_BR: Se o timer parar e o texto já tiver atingido seu tamanho, ele deve mudar para a próxima cena definida
 		# EN_US: If the timer stops and the text reached it's limit, it needs to change to the next defined scene
-		if counter == ( len(message_queue) - 1 ):
+		if counter >= ( len(message_queue) - 1 ):
 			emit_signal("finished_dialog")
 			return
 		elif counter < 0:
@@ -106,7 +106,7 @@ func show_message(update_counter) -> void:
 func _on_Timer_timeout():
 # PT_BR: Se o texto visível for igual ao limite do alcance do texto, o timer para 
 # EN_US: If the visible text is equal to the limite of the text range, the timer stops
-	if text_element.visible_characters == text_element.bbcode_text.length():
+	if text_element.visible_characters >= text_element.bbcode_text.length():
 		timer.stop()
 		# PT_BR: Aumenta o numero de caracteres visíveis na tela
 		# EN_US: Raises the number of charactesr visible on the screen

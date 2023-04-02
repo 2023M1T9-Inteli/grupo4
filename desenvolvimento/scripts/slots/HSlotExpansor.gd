@@ -15,10 +15,18 @@ func _set_scroll_container_size(new_value) -> void:
 	self.rect_size = scroll_container_size
 	self.rect_min_size = scroll_container_size
 
-
 """ 
 DRAG AND DROP
 """
+
+func get_drag_data(position):
+	# PT_BR: Pega a primeira drag_data do primeiro slot filho e retorn
+	# EN_US: Gets the first drag_data of the first slot child and return it
+	for child in get_children():
+		if child.is_in_group('slot'):
+			return child.get_drag_data(position)
+			
+
 
 func can_drop_data(position, data) -> bool:
 	# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
