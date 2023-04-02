@@ -9,8 +9,8 @@ const bus_names = {
 	sfx_bus = "SFX"
 }
 
-# PT_BR: Armazena os objetos que serão usados para 
-# EN_US: List that determines which audio channel will have its volume changed
+# PT_BR: Armazena os objetos da cena
+# EN_US: Stores the scene's objects 
 onready var master_slider = $VolumeNode2D/MasterSlider
 onready var music_slider = $VolumeNode2D/MusicSlider
 onready var sfx_slider = $VolumeNode2D/SFX_slider
