@@ -99,4 +99,4 @@ func _on_Volume_pressed():
 # PT_BR: Função que deixa a tela cheia quando o checkbox é selecionado
 # EN_US: Function that leaves the full screen when the checkbox is selected
 func _on_CheckBoxFullScreen_pressed():
-	Globals.click_checkbox_options($CheckBoxFullScreen)
+	Globals.change_window_fullscreen()
