@@ -24,7 +24,7 @@
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=22]
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Phase3/circle_green.png" type="Texture" id=25]
-[ext_resource path="res://assets/Audio/effects/Click.wav" type="AudioStream" id=27]
+[ext_resource path="res://assets/Audio/effects/Click.mp3" type="AudioStream" id=27]
 [ext_resource path="res://assets/Phase3/gift.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase3/gift_dark.png" type="Texture" id=31]
 

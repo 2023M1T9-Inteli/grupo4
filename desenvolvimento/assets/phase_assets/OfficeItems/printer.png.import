@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/printer.png-87495bdab4be35ec23005e3c4627f5da.stex"
+path="res://.import/printer.png-52c26f40454d676353951f66824063bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phase_assets/OfficeItems/printer.png"
-dest_files=[ "res://.import/printer.png-87495bdab4be35ec23005e3c4627f5da.stex" ]
+source_file="res://assets/Phase_assets/OfficeItems/printer.png"
+dest_files=[ "res://.import/printer.png-52c26f40454d676353951f66824063bc.stex" ]
 
 [params]
 

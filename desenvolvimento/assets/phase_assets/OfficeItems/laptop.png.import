@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/laptop.png-5f671cc394e6bf3a1c0034baece8e719.stex"
+path="res://.import/laptop.png-9676e588307dced6e381c164e885e81b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phase_assets/OfficeItems/laptop.png"
-dest_files=[ "res://.import/laptop.png-5f671cc394e6bf3a1c0034baece8e719.stex" ]
+source_file="res://assets/Phase_assets/OfficeItems/laptop.png"
+dest_files=[ "res://.import/laptop.png-9676e588307dced6e381c164e885e81b.stex" ]
 
 [params]
 
