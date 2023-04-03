@@ -63,7 +63,7 @@ func _process(_delta):
 	var path_table_worker = $Path2D/path_table_worker
 	path_table_worker.set_offset(path_table_worker.get_offset()+run_task2)
 	
-	if cont == -1:
+	if cont <= -1:
 		emit_signal("back_tutorial",self)
 
 	elif cont == 0:
@@ -98,6 +98,7 @@ func _process(_delta):
 	elif cont == 3:
 		chronometer.visible = false
 		clock.visible = true
+		clock.start_timer()
 		progress.visible = false
 		
 		$text_box/next_button.visible = true
@@ -145,3 +146,9 @@ func _on_next_button_pressed():
 # EN_US: Custom signal that detects when the back button is pressed.
 func _on_back_button_pressed():
 	cont -= 1
+
+
+# PT_BR: Sinal customizado que detecta quando o temporizador acaba
+# EN_US: Custom signal that detects when the timer is over.
+func _on_TimeDisplayer_timer_is_over():
+		emit_signal("next_tutorial",self)

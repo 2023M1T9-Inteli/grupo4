@@ -6,10 +6,11 @@
 [ext_resource path="res://scripts/base_phase/Worker.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 25, 48 )
+extents = Vector2( 16, 16 )
 
 [node name="Worker" type="StaticBody2D"]
 script = ExtResource( 4 )
+worker_hyper_speed = false
 attributes = {
 "ART_THINK": 0,
 "LOGIC_RAC": 0,

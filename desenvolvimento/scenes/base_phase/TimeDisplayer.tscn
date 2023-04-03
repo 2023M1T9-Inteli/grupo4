@@ -28,6 +28,4 @@ autostart = true
 [node name="TimePassing" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
-[node name="TimerShow" type="Timer" parent="."]
-
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
