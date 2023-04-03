@@ -5,6 +5,11 @@ extends TextureRect
 # EN_US: Declare the cronometer seconds and minutes
 export(int) var seconds = 30 setget _set_seconds
 export(int) var minutes = 4 setget _set_minutes
+
+# PT_BR: Declara variavéis de controle de propriedades dos objetos filhos
+# EN_US: Declare the Variables to control the children object properties
+export(bool) var autostart = true setget _set_autostart
+var running = false
 var counter = 0
 
 # PT_BR (1): Funções para definir as variáveis. 
@@ -17,12 +22,17 @@ func _set_seconds(new_value):
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
 
-
 func _set_minutes(new_value):
 	minutes = new_value
 	if weakref($RichTextLabel).get_ref():
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
+
+func _set_autostart(new_value):
+	autostart = new_value
+	if weakref($Timer).get_ref():
+		$Timer.autostart = autostart
+		running = autostart
 
 
 # PT_BR: Sinal enviado quando o tempo se esgotar
@@ -61,6 +71,13 @@ func _on_Timer_timeout():
 		# PT_BR: Emite o sinal que o tempo acabaou
 		# EN_US: Emits the signal that time is over
 		self.emit_signal("timer_is_over")
+
+# PT_BR: Função que inicia o timer 
+# EN_US: Function that start the timer
+func start_timer():
+	if not running:
+		$Timer.start()
+		running = true
 
 
 # PT_BR: Essa função faz o display piscar

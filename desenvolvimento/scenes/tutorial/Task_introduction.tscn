@@ -151,6 +151,8 @@ margin_left = 1016.0
 margin_top = 7.0
 margin_right = 1135.0
 margin_bottom = 70.0
+minutes = 0
+autostart = false
 
 [node name="back_task" type="Panel" parent="."]
 margin_left = 144.0
@@ -307,5 +309,6 @@ margin_bottom = 952.0
 
 [connection signal="pressed" from="text_box/next_button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="text_box/back_button" to="." method="_on_back_button_pressed"]
+[connection signal="timer_is_over" from="TimeDisplayer" to="." method="_on_TimeDisplayer_timer_is_over"]
 [connection signal="get_item" from="SlotExpansorKira/WorkSlotKira" to="." method="_on_WorkSlotKira_get_item"]
 [connection signal="dropped_item" from="SlotExpansor/HBoxContainer/testeTarefa02" to="." method="_on_testeTarefa02_dropped_item"]
