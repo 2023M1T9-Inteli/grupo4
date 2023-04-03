@@ -17,11 +17,21 @@ func _set_seconds(new_value):
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
 		
+	if weakref($RichTextLabel2).get_ref():
+		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
+		$RichTextLabel2.bbcode_text = format_string
+
+
 func _set_minutes(new_value):
 	minutes = new_value
 	if weakref($RichTextLabel).get_ref():
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
+
+	if weakref($RichTextLabel2).get_ref():
+		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
+		$RichTextLabel2.bbcode_text = format_string
+
 
 # PT_BR: Sinal enviado quando o tempo se esgotar
 # EN_US: Signal sended when the time runs out.
@@ -37,6 +47,7 @@ func _on_Timer_timeout():
 		# PT_BR: Se o minuto for igual a 1
 		# EN_US: If minutes equals 1
 		if minutes == 1:
+			blink_blink()
 			
 			# PT_BR: Toca o som de tempo passando
 			# EN_US: Plays time passing sound	
@@ -58,3 +69,15 @@ func _on_Timer_timeout():
 		# PT_BR: Emite o sinal que o tempo acabaou
 		# EN_US: Emits the signal that time is over
 		self.emit_signal("timer_is_over")
+
+
+# PT_BR: Essa função faz o display piscar
+# EN_US: This function makes the display blink
+func blink_blink():
+	for i in range(6):
+		if i % 2 == 1:
+			self.modulate.a = 1
+		else:
+			self.modulate.a = 0
+			
+		yield(get_tree().create_timer(0.25),"timeout")

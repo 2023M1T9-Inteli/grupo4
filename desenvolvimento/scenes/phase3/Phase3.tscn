@@ -22,11 +22,12 @@
 [ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=20]
 [ext_resource path="res://scenes/Pause.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=22]
+[ext_resource path="res://assets/Audio/Effects/Click.mp3" type="AudioStream" id=23]
 [ext_resource path="res://assets/items/profile_sheets/ana_big_sheet.png" type="Texture" id=24]
 [ext_resource path="res://assets/Phase3/circle_green.png" type="Texture" id=25]
-[ext_resource path="res://assets/Audio/Click.wav" type="AudioStream" id=27]
 [ext_resource path="res://assets/Phase3/gift.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase3/gift_dark.png" type="Texture" id=31]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -190,8 +191,7 @@ margin_left = 1016.0
 margin_top = 4.0
 margin_right = 1169.0
 margin_bottom = 101.0
-seconds = 45
-minutes = 3
+seconds = 0
 
 [node name="Circulo" type="Sprite" parent="."]
 position = Vector2( 68, 653 )
@@ -255,7 +255,7 @@ texture_under = ExtResource( 20 )
 texture_progress = ExtResource( 7 )
 
 [node name="ClickAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 27 )
+stream = ExtResource( 23 )
 
 [connection signal="ana_fineshed_task" from="Map" to="." method="_on_Map_ana_fineshed_task"]
 [connection signal="bento_fineshed_task" from="Map" to="." method="_on_Map_bento_fineshed_task"]

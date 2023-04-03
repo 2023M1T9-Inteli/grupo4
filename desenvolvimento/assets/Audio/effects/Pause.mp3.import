@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pause.mp3-6feaad309e027744a1c9b5c73352c615.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/Effects/Pause.mp3"
+dest_files=[ "res://.import/Pause.mp3-6feaad309e027744a1c9b5c73352c615.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Conclued_task.mp3-21dbc17c07268def26c543516a12b15b.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/Effects/Conclued_task.mp3"
+dest_files=[ "res://.import/Conclued_task.mp3-21dbc17c07268def26c543516a12b15b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

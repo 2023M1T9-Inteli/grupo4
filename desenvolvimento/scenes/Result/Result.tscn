@@ -10,11 +10,12 @@
 [ext_resource path="res://assets/Feedbacks/star_full.png" type="Texture" id=8]
 [ext_resource path="res://scripts/Result/Result.gd" type="Script" id=9]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/Audio/Effects/1_Star.mp3" type="AudioStream" id=11]
 [ext_resource path="res://scripts/Result/StarFull.gd" type="Script" id=12]
-[ext_resource path="res://assets/Audio/2_Star.wav" type="AudioStream" id=13]
-[ext_resource path="res://assets/Audio/3_Star.wav" type="AudioStream" id=14]
-[ext_resource path="res://assets/Audio/1_Star.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/Audio/Effects/2_Star.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/Effects/3_Star.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/Feedbacks/continue.png" type="Texture" id=16]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -120,7 +121,7 @@ script = ExtResource( 12 )
 [node name="AudioStar1" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
 position = Vector2( -11075, -3025 )
 scale = Vector2( 25, 25 )
-stream = ExtResource( 15 )
+stream = ExtResource( 11 )
 
 [node name="StarFull2" type="TextureProgress" parent="ScoreBar"]
 margin_left = 517.0

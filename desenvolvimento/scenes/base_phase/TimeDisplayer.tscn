@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/base_phase/TimeDisplayer.gd" type="Script" id=1]
-[ext_resource path="res://assets/Audio/TimeLow.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/Audio/Effects/TimeLow.mp3" type="AudioStream" id=2]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=3]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 20

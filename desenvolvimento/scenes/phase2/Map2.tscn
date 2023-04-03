@@ -27,11 +27,10 @@
 [ext_resource path="res://assets/characters/Characters_Phase_2/ana_phase2(2).png" type="Texture" id=25]
 [ext_resource path="res://assets/characters/Characters_Phase_2/kira_phase2(2).png" type="Texture" id=26]
 [ext_resource path="res://assets/characters/Characters_Phase_2/roger_phase2(2).png" type="Texture" id=27]
-[ext_resource path="res://assets/phase_assets/Phase2Assets/corn.png" type="Texture" id=28]
-[ext_resource path="res://assets/phase_assets/Phase2Assets/baloon.png" type="Texture" id=29]
-[ext_resource path="res://assets/phase_assets/Phase2Assets/flag.png" type="Texture" id=30]
-[ext_resource path="res://assets/phase_assets/Phase2Assets/straw.png" type="Texture" id=31]
-
+[ext_resource path="res://assets/Phase2/corn.png" type="Texture" id=28]
+[ext_resource path="res://assets/Phase2/baloon.png" type="Texture" id=29]
+[ext_resource path="res://assets/Phase2/flag.png" type="Texture" id=30]
+[ext_resource path="res://assets/Phase2/straw.png" type="Texture" id=31]
 
 [sub_resource type="PluginScript" id=35]
 
@@ -610,11 +609,11 @@ frame_1/texture = ExtResource( 25 )
 frame_1/delay_sec = 0.0
 
 [sub_resource type="TileSet" id=33]
-0/name = "baloon.png 0"
-0/texture = ExtResource( 29 )
+0/name = "corn.png 0"
+0/texture = ExtResource( 28 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( -32, -32, 96, 128 )
+0/region = Rect2( 0, 0, 32, 32 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -624,11 +623,11 @@ frame_1/delay_sec = 0.0
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "corn.png 1"
-1/texture = ExtResource( 28 )
+1/name = "flag.png 1"
+1/texture = ExtResource( 30 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 32, 32 )
+1/region = Rect2( 0, 0, 192, 64 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
@@ -638,11 +637,11 @@ frame_1/delay_sec = 0.0
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "flag.png 2"
-2/texture = ExtResource( 30 )
+2/name = "baloon.png 2"
+2/texture = ExtResource( 29 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 192, 64 )
+2/region = Rect2( 0, 0, 64, 96 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
@@ -1106,7 +1105,6 @@ frame_1/delay_sec = 0.0
 
 [sub_resource type="TileSet" id=34]
 0/name = "corn.png 0"
-0/texture = ExtResource( 28 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -1286,7 +1284,7 @@ tile_data = PoolIntArray( 983043, 0, 0, 983044, 0, 1, 983045, 0, 1, 983046, 0, 1
 tile_set = SubResource( 33 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 1, 0, 0, 5, 0, 0, 327682, 3, 0, 327692, 1, 0, 1048597, 3, 0, 1179653, 2, 0, 1179662, 2, 0 )
+tile_data = PoolIntArray( 3, 2, 0, 6, 2, 0, 327663, 0, 0, 327682, 3, 0, 589806, 0, 0, 655364, 0, 0, 655379, 0, 0, 720905, 0, 0, 720911, 0, 0, 1048558, 0, 0, 1048581, 0, 0, 1048592, 0, 0, 1048597, 3, 0, 1114120, 0, 0, 1114132, 0, 0, 1179652, 1, 0, 1179662, 1, 0, 1310703, 0, 0 )
 
 [node name="KitMouseAndKeyboard2" type="Sprite" parent="."]
 position = Vector2( 296, 456 )
@@ -1305,7 +1303,7 @@ format = 1
 tile_set = SubResource( 10 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 65540, 8, 0, 65544, 9, 0, 65557, 11, 0, 131092, 4, 0, 262144, 15, 0, 262157, 12, 0, 262158, 24, 0, 327701, 18, 0, 589831, 22, 0, 589833, 24, 0, 589838, 24, 0, 589840, 24, 0, 786435, 3, 0, 983047, 22, 0, 983049, 24, 0, 983054, 24, 0, 983056, 20, 0, 1179651, 3, 0, 1179667, 3, 0 )
+tile_data = PoolIntArray( 65541, 8, 0, 65544, 9, 0, 65557, 11, 0, 131092, 4, 0, 262144, 15, 0, 262157, 12, 0, 262158, 24, 0, 327701, 18, 0, 589831, 22, 0, 589833, 24, 0, 589838, 24, 0, 589840, 24, 0, 786435, 3, 0, 983047, 22, 0, 983049, 24, 0, 983054, 24, 0, 983056, 20, 0, 1179651, 3, 0, 1179667, 3, 0 )
 
 [node name="Bordas" type="TileMap" parent="."]
 tile_set = SubResource( 5 )

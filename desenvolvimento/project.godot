@@ -12,7 +12,6 @@ config_version=4
 
 config/name="Desenvolvimento: O Talento de Delegar"
 run/main_scene="res://scenes/Menu.tscn"
-config/icon="res://icon/icon.png"
 
 [autoload]
 

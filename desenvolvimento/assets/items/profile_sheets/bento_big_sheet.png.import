@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bento_big_sheet.png-2de7381a4e203e3e0967eac19cb9864a.stex"
+path="res://.import/bento_big_sheet.png-134ef6b21763341dd777bd98c34d13de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/profile_sheets/bento_big_sheet.png"
-dest_files=[ "res://.import/bento_big_sheet.png-2de7381a4e203e3e0967eac19cb9864a.stex" ]
+source_file="res://assets/Items/profile_sheets/bento_big_sheet.png"
+dest_files=[ "res://.import/bento_big_sheet.png-134ef6b21763341dd777bd98c34d13de.stex" ]
 
 [params]
 

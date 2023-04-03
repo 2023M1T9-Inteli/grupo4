@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roger_big_sheet.png-3e6096514c9d475305e8ae3c6976a127.stex"
+path="res://.import/roger_big_sheet.png-ec9bc9f88dcb67e11d4c7e11ac60a67d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/profile_sheets/roger_big_sheet.png"
-dest_files=[ "res://.import/roger_big_sheet.png-3e6096514c9d475305e8ae3c6976a127.stex" ]
+source_file="res://assets/Items/profile_sheets/roger_big_sheet.png"
+dest_files=[ "res://.import/roger_big_sheet.png-ec9bc9f88dcb67e11d4c7e11ac60a67d.stex" ]
 
 [params]
 
