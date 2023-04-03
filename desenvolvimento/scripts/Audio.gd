@@ -6,6 +6,7 @@ var temp = 0.0
 
 # PT_BR: Variáveis para armazenar as músicas do jogo
 # EN_US: Variable to store the game musics
+
 var menu_music = preload("res://assets/Audio/music/main_music.mp3")
 var music_phase_1 = load("res://assets/Audio/music/music_phase_1.mp3")
 var music_phase_2 = load("res://assets/Audio/Music/music_fase_2 (mp3cut.net).mp3")

@@ -16,10 +16,6 @@ func _set_seconds(new_value):
 	if weakref($RichTextLabel).get_ref():
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
-		
-	if weakref($RichTextLabel2).get_ref():
-		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
-		$RichTextLabel2.bbcode_text = format_string
 
 
 func _set_minutes(new_value):
@@ -27,10 +23,6 @@ func _set_minutes(new_value):
 	if weakref($RichTextLabel).get_ref():
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
-
-	if weakref($RichTextLabel2).get_ref():
-		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
-		$RichTextLabel2.bbcode_text = format_string
 
 
 # PT_BR: Sinal enviado quando o tempo se esgotar

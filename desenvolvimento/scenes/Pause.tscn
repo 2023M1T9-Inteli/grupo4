@@ -15,7 +15,6 @@
 [ext_resource path="res://assets/Audio/Effects/Pause.mp3" type="AudioStream" id=13]
 [ext_resource path="res://assets/Audio/Effects/Depause.mp3" type="AudioStream" id=14]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 80
 outline_size = 2

@@ -9,7 +9,6 @@
 [ext_resource path="res://scripts/base_phase/BossTable.gd" type="Script" id=9]
 
 
-
 [sub_resource type="GDScript" id=3]
 
 [node name="BossTable" type="Node2D"]
