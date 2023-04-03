@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flag.png-fbc2637b656c243dd8d49e6e6a6ea9f9.stex"
+path="res://.import/flag.png-54f1cfcbd153463ca150c408609f1a31.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phase_assets/Phase2Assets/flag.png"
-dest_files=[ "res://.import/flag.png-fbc2637b656c243dd8d49e6e6a6ea9f9.stex" ]
+source_file="res://assets/Phase_assets/Phase2Assets/flag.png"
+dest_files=[ "res://.import/flag.png-54f1cfcbd153463ca150c408609f1a31.stex" ]
 
 [params]
 

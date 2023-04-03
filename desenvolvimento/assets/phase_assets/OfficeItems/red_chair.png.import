@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_chair.png-f6ba61dbceedb76920c482ff0bdf7bab.stex"
+path="res://.import/red_chair.png-0d35b9a569da4e7464e89275122911b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phase_assets/OfficeItems/red_chair.png"
-dest_files=[ "res://.import/red_chair.png-f6ba61dbceedb76920c482ff0bdf7bab.stex" ]
+source_file="res://assets/Phase_assets/OfficeItems/red_chair.png"
+dest_files=[ "res://.import/red_chair.png-0d35b9a569da4e7464e89275122911b3.stex" ]
 
 [params]
 

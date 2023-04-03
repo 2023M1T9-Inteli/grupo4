@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/music_fase_2 (mp3cut.net).mp3-4ad775bc44123867da7ab2da055585cb.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/Music/music_fase_2 (mp3cut.net).mp3"
+dest_files=[ "res://.import/music_fase_2 (mp3cut.net).mp3-4ad775bc44123867da7ab2da055585cb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

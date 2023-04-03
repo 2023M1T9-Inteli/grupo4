@@ -12,8 +12,8 @@
 [ext_resource path="res://assets/buttons/button_exit.png" type="Texture" id=10]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://scenes/tutorial/TutorialPopup.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/Audio/effects/Pause.wav" type="AudioStream" id=13]
-[ext_resource path="res://assets/Audio/effects/Depause.wav" type="AudioStream" id=14]
+[ext_resource path="res://assets/Audio/effects/Pause.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/effects/Depause.mp3" type="AudioStream" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 80

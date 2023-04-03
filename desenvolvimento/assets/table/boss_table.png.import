@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boss_table.png-7b639cb3e837e2075872efef6a90b0b7.stex"
+path="res://.import/boss_table.png-3836631ac466aa57c6725e6bde0ba97b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/table/boss_table.png"
-dest_files=[ "res://.import/boss_table.png-7b639cb3e837e2075872efef6a90b0b7.stex" ]
+source_file="res://assets/Table/boss_table.png"
+dest_files=[ "res://.import/boss_table.png-3836631ac466aa57c6725e6bde0ba97b.stex" ]
 
 [params]
 

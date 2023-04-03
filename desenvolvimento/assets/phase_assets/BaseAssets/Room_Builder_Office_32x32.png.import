@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Room_Builder_Office_32x32.png-b8cba02c17c37d78b91a9c52afab89a0.stex"
+path="res://.import/Room_Builder_Office_32x32.png-dc2e56593e829725fb9c3efa7feea7f0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/phase_assets/BaseAssets/Room_Builder_Office_32x32.png"
-dest_files=[ "res://.import/Room_Builder_Office_32x32.png-b8cba02c17c37d78b91a9c52afab89a0.stex" ]
+source_file="res://assets/Phase_assets/BaseAssets/Room_Builder_Office_32x32.png"
+dest_files=[ "res://.import/Room_Builder_Office_32x32.png-dc2e56593e829725fb9c3efa7feea7f0.stex" ]
 
 [params]
 
