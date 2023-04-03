@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/MenuScreen/hover_about_button.png" type="Texture" id=13]
 [ext_resource path="res://assets/MenuScreen/hover_exit_button.png" type="Texture" id=14]
 [ext_resource path="res://scenes/Credits.tscn" type="PackedScene" id=15]
+[ext_resource path="res://icon/LogoCia.png" type="Texture" id=16]
 
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
@@ -56,6 +57,11 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="LogoCia" type="Sprite" parent="."]
+position = Vector2( 1180, 671 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 16 )
 
 [node name="ButtonsVBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
