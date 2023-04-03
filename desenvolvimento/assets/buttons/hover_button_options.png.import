@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hover_button_options.png-5f39b488b22bb2bd3ef1aed926920af8.stex"
+path="res://.import/hover_button_options.png-ef1293036c54c8ecf849265c521d8fcd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buttons/hover_button_options.png"
-dest_files=[ "res://.import/hover_button_options.png-5f39b488b22bb2bd3ef1aed926920af8.stex" ]
+source_file="res://assets/buttons/hover_button_options.png"
+dest_files=[ "res://.import/hover_button_options.png-ef1293036c54c8ecf849265c521d8fcd.stex" ]
 
 [params]
 

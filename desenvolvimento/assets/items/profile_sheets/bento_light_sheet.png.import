@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bento_light_sheet.png-35eb000303ec878e4a063f01f336ef55.stex"
+path="res://.import/bento_light_sheet.png-49c9fa5ab9d3a2d309c37e4b1932195d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/profile_sheets/bento_light_sheet.png"
-dest_files=[ "res://.import/bento_light_sheet.png-35eb000303ec878e4a063f01f336ef55.stex" ]
+source_file="res://assets/items/profile_sheets/bento_light_sheet.png"
+dest_files=[ "res://.import/bento_light_sheet.png-49c9fa5ab9d3a2d309c37e4b1932195d.stex" ]
 
 [params]
 

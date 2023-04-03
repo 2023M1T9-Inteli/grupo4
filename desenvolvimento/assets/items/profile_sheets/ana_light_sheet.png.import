@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ana_light_sheet.png-2bbdd17536e264e146762e72e9aa247a.stex"
+path="res://.import/ana_light_sheet.png-0cd5bbc632a72964af65f8924a605d08.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/profile_sheets/ana_light_sheet.png"
-dest_files=[ "res://.import/ana_light_sheet.png-2bbdd17536e264e146762e72e9aa247a.stex" ]
+source_file="res://assets/items/profile_sheets/ana_light_sheet.png"
+dest_files=[ "res://.import/ana_light_sheet.png-0cd5bbc632a72964af65f8924a605d08.stex" ]
 
 [params]
 

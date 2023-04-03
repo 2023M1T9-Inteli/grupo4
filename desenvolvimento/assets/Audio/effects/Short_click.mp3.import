@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Short_click.mp3-bc60e523c986fec1f2fc410b10e9bd0d.mp3str"
+path="res://.import/Short_click.mp3-684c28c65a9220c084d95885582f6175.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/Effects/Short_click.mp3"
-dest_files=[ "res://.import/Short_click.mp3-bc60e523c986fec1f2fc410b10e9bd0d.mp3str" ]
+source_file="res://assets/Audio/effects/Short_click.mp3"
+dest_files=[ "res://.import/Short_click.mp3-684c28c65a9220c084d95885582f6175.mp3str" ]
 
 [params]
 

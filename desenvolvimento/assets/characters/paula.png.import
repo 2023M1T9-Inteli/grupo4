@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paula.png-95b6e9ee348091d4ce68370381999d7d.stex"
+path="res://.import/paula.png-5b83368c2db1f0b9068eb186adc15005.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/paula.png"
-dest_files=[ "res://.import/paula.png-95b6e9ee348091d4ce68370381999d7d.stex" ]
+source_file="res://assets/characters/paula.png"
+dest_files=[ "res://.import/paula.png-5b83368c2db1f0b9068eb186adc15005.stex" ]
 
 [params]
 

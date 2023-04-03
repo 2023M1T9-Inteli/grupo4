@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/small_folder.png-cea41895db7502c9f84b3affc37d101f.stex"
+path="res://.import/small_folder.png-9440488ebf93dd462f9dfb7512448c53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tutorial/map/small_folder.png"
-dest_files=[ "res://.import/small_folder.png-cea41895db7502c9f84b3affc37d101f.stex" ]
+source_file="res://assets/tutorial/map/small_folder.png"
+dest_files=[ "res://.import/small_folder.png-9440488ebf93dd462f9dfb7512448c53.stex" ]
 
 [params]
 

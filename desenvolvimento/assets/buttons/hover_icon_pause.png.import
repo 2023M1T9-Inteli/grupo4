@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hover_icon_pause.png-d8a48dbb6026a9b81d63fb626c34fcf6.stex"
+path="res://.import/hover_icon_pause.png-2b924e836b45ef1db386e43dee5e2dc8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buttons/hover_icon_pause.png"
-dest_files=[ "res://.import/hover_icon_pause.png-d8a48dbb6026a9b81d63fb626c34fcf6.stex" ]
+source_file="res://assets/buttons/hover_icon_pause.png"
+dest_files=[ "res://.import/hover_icon_pause.png-2b924e836b45ef1db386e43dee5e2dc8.stex" ]
 
 [params]
 
