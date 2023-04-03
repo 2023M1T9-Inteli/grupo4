@@ -28,7 +28,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
-modulate_color = Color( 0.592157, 0.529412, 0.415686, 1 )
+modulate_color = Color( 0.329412, 0.6, 0.741176, 1 )
 
 [sub_resource type="StyleBoxTexture" id=17]
 content_margin_left = 2.0
@@ -41,7 +41,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
-modulate_color = Color( 0.843137, 0.74902, 0.588235, 1 )
+modulate_color = Color( 0.466667, 0.72549, 0.858824, 1 )
 
 [sub_resource type="StyleBoxTexture" id=18]
 content_margin_left = 2.0
@@ -54,7 +54,7 @@ margin_left = 5.0
 margin_right = 5.0
 margin_top = 5.0
 margin_bottom = 5.0
-modulate_color = Color( 0.933333, 0.831373, 0.654902, 1 )
+modulate_color = Color( 0.466667, 0.72549, 0.858824, 1 )
 
 [sub_resource type="Image" id=20]
 data = {
