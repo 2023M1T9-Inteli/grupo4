@@ -73,7 +73,6 @@ func _ready():
 	star3 = _return_object_by_node_path(star3)
 
 
-
 func _process(_delta):
 	#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
 	#EN_US: This funcction observes the mouse position and applies the hover on the files 
@@ -89,7 +88,6 @@ func _process(_delta):
 	if profile_bento != null:
 		_send_hover_effect_in_file(profile_bento)
 		
-
 
 # PT_BR (1): Função para atualizar a pontuação do jogador
 # PT_BR (2): Parâmetro: new_value int
@@ -124,6 +122,7 @@ func _return_object_by_node_path(node_path):
 func _on_TimeDisplayer_timer_is_over():
 	Globals.lose_by_time = true
 	var __ = get_tree().change_scene("res://scenes/Result/Result.tscn")
+
 
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
 # EN_US: Function to change the scene when the player concludes all tasks
