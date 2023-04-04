@@ -1,23 +1,23 @@
 extends Node2D
 
-# PT_BR: Inicializa os sinais usados para passar de cena do tutorial.
-# EN_US: Initializes the signals used to pass the tutorial scene.
+# PT_BR: Inicializa os sinais usados para passar de cena do tutorial
+# EN_US: Initializes the signals used to pass the tutorial scene
 signal next_tutorial(task)
 signal back_tutorial(task)
 
-# PT_BR: Variáveis usadas para fazer a movimentação da animação da ficha do funcionário entre as mesas.
-# EN_US: Variables used to move the worker file animation between tables.
+# PT_BR: Variáveis usadas para fazer a movimentação da animação da ficha do funcionário entre as mesas
+# EN_US: Variables used to move the worker file animation between tables
 var run_task1 = 0
 var run_task2 = 0
 
-# PT_BR (1): Variável que definirá a ordem de execução e exibição dos itens da cena, 
-# PT_BR (2): qual texto aparecerá e o que ficará visível ou não.
-# EN_US (1): Variable that will define the execution and exhibition order of the scene items,
-# EN_US (2): which text will appear and what will be visible or not.
+# PT_BR (1): Variável que definirá a ordem de execução e exibição dos itens da cena
+# PT_BR (2): a qual texto aparecerá e o que ficará visível ou não
+# EN_US (1): Variable that will define the execution and exhibition order of the scene items
+# EN_US (2): which text will appear and what will be visible or not
 var cont = 0 
 
-# PT_BR: Lista de textos que serão exibidos no Label.
-# EN_US: List of texts that will be exhibited in the label.
+# PT_BR: Lista de textos que serão exibidos no Label
+# EN_US: List of texts that will be exhibited in the label
 var text = [
 	"""Agora, é preciso [color=#EE222B]ler as tarefas[/color].
 Para isso, tente arrastar a pasta do arquivo para a mesa de expansão, como demonstra o exemplo.""",
@@ -31,16 +31,16 @@ Assim que for concluída, você pode [color=#3a87ae]atribuir mais uma tarefa par
 	""
 ]
 
-# PT_BR: Variáveis que guardam referências do objeto no tempo de execução.
-# EN_US: Variables that store object references at runtime.
+# PT_BR: Variáveis que guardam referências do objeto no tempo de execução
+# EN_US: Variables that store object references at runtime
 onready var clock = $TimeDisplayer
 onready var progress = $PhaseProgress
 onready var chronometer = $Cronometer
 onready var text_position = $text_box.rect_global_position
 
 
-# PT_BR: Função usada para definir a visibilidade do clock, progress e chronometer.
-# EN_US: Function that checks the variable cont and decides which text will appear in the scene.
+# PT_BR: Função usada para definir a visibilidade do clock, progress e chronometer
+# EN_US: Function that checks the variable cont and decides which text will appear in the scene
 func _ready():
 	clock.visible = false
 	progress.visible = false
@@ -50,8 +50,8 @@ func _ready():
 	$Circulo.visible = false
 	
 
-# PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
-# EN_US: Function that checks the variable cont and decides which text will appear in the scene.
+# PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena
+# EN_US: Function that checks the variable cont and decides which text will appear in the scene
 func _process(_delta):
 	$text_box/text.bbcode_text = text[cont]
 
@@ -119,35 +119,35 @@ func _process(_delta):
 		emit_signal("next_tutorial",self)
 
 
-# PT_BR (1): Sinal customizado que detecta quando a tarefa é colocada na mesa.
-# PT_BR (2): Parâmetro: slot - CenterContainer.
-# EN_US (1): Custom signal that detects when the task is dropped on the table.
-# EN_US (2): Parameter: slot - CenterContainer.
+# PT_BR (1): Sinal customizado que detecta quando a tarefa é colocada na mesa
+# PT_BR (2): Parâmetro: _slot - CenterContainer
+# EN_US (1): Custom signal that detects when the task is dropped on the table
+# EN_US (2): Parameter: _slot - CenterContainer
 func _on_testeTarefa02_dropped_item(_slot):
 	cont += 1
 
 
 # PT_BR (1): Sinal customizado que detecta quando a ficha é retirada do slot do Kira
-# PT_BR (2): Parâmetro: slot - CenterContainer.
-# EN_US (1): Custom signal that detects when the task is taken from Kira's table.
-# EN_US (2): Parameter: slot - CenterContainer.
+# PT_BR (2): Parâmetro: _slot - CenterContainer
+# EN_US (1): Custom signal that detects when the task is taken from Kira's table
+# EN_US (2): Parameter: _slot - CenterContainer
 func _on_WorkSlotKira_get_item(_slot):
 	cont += 1
 
 
-# PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado.
-# EN_US: Custom signal that detects when the next button is pressed.
+# PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado
+# EN_US: Custom signal that detects when the next button is pressed
 func _on_next_button_pressed():
 	cont += 1
 
 
-# PT_BR: Sinal customizado que detecta quando o botão de voltar é pressionado.
-# EN_US: Custom signal that detects when the back button is pressed.
+# PT_BR: Sinal customizado que detecta quando o botão de voltar é pressionado
+# EN_US: Custom signal that detects when the back button is pressed
 func _on_back_button_pressed():
 	cont -= 1
 
 
 # PT_BR: Sinal customizado que detecta quando o temporizador acaba
-# EN_US: Custom signal that detects when the timer is over.
+# EN_US: Custom signal that detects when the timer is over
 func _on_TimeDisplayer_timer_is_over():
 		emit_signal("next_tutorial",self)
