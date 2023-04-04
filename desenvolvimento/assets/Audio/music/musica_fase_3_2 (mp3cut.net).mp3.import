@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/musica_fase_3_2 (mp3cut.net).mp3-b6fd4b4abdb93b4cbbc60d35c412d75a.mp3str"
+path="res://.import/musica_fase_3_2 (mp3cut.net).mp3-4678ad3949d85b216a190537b98e45c3.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/Music/musica_fase_3_2 (mp3cut.net).mp3"
-dest_files=[ "res://.import/musica_fase_3_2 (mp3cut.net).mp3-b6fd4b4abdb93b4cbbc60d35c412d75a.mp3str" ]
+source_file="res://assets/Audio/music/musica_fase_3_2 (mp3cut.net).mp3"
+dest_files=[ "res://.import/musica_fase_3_2 (mp3cut.net).mp3-4678ad3949d85b216a190537b98e45c3.mp3str" ]
 
 [params]
 

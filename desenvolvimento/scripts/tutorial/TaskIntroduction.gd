@@ -83,6 +83,8 @@ func _process(_delta):
 		run_task2 = 8
 
 	elif cont == 2:
+		$text_box/next_button.visible = true
+		$text_box/back_button.visible = true
 		$Path2D/path_table_worker/SmallTask.visible = false
 		$back_timer.visible = false
 		$SlotExpansorKira/WorkSlotKira.visible = true
@@ -93,7 +95,6 @@ func _process(_delta):
 		chronometer.value += (0.5)
 		if chronometer.value == 750:
 			chronometer.value = 0
-			cont += 1
 
 	elif cont == 3:
 		chronometer.visible = false
@@ -101,8 +102,6 @@ func _process(_delta):
 		clock.start_timer()
 		progress.visible = false
 		
-		$text_box/next_button.visible = true
-		$text_box/back_button.visible = true
 		$SlotExpansorKira/WorkSlotKira.visible = false
 		$back_task.visible = false
 		$BossTable.visible = false
