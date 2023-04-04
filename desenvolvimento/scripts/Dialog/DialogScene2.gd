@@ -1,5 +1,6 @@
 extends Node2D
 
+
 func _ready():
 	# PT_BR: Toca a música da fase
 	# EN_US: Plays the phase music
@@ -12,6 +13,7 @@ func _ready():
 # EN_US (2): Receives the anim object as parameter
 func change_anim(anim):
 	$ChicoAnimatedSprite.animation = anim
+
 
 # PT_BR (1): Função que define se o sprite "tend_circle" deve aparecer ou ficar escondido 
 # PT_BR (2): Recebe o objeto show_tent como parâmetro
