@@ -14,7 +14,6 @@
     <table>
         <tr>
             <td align="center"><a href="https://github.com/CaioPaula"><img src="https://user-images.githubusercontent.com/86068799/221302346-4ab5de25-3e89-4fdf-8248-3204d77ad6cb.png" width="100px" alt=""/><br><sub><b>Caio</b></sub></a><br /></td>
-            <td align="center"><a href="https://github.com/enricopasmanik"><img src="https://user-images.githubusercontent.com/86068799/221302401-f0fba7c0-33b3-4361-9aa4-83fec54e2656.jpg" width="100px;" alt=""/><br><sub><b>Enrico</b></sub></a><br></td>
            <td align="center"><a href="https://github.com/heitorep"><img src="https://user-images.githubusercontent.com/86068799/221302754-e3a126ba-415f-4a5a-ac25-9a9ca01f7d8a.png" width="100px;" alt=""/><br><sub><b>Heitor</b></sub></a><br></td>
            <td align="center"><a href="https://github.com/henriqueecox"><img src="https://user-images.githubusercontent.com/86068799/221303201-d9e51fec-21d9-4288-9ebf-e16342d0d098.png" width="100px;" alt=""/><br><sub><b>Henrique</b></sub></a><br></td>
             </tr>
