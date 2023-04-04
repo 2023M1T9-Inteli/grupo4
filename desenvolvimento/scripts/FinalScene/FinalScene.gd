@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # PT_BR: Função que toca a música, realiza animação e aparece um texto final
 # EN_US: Function that plays the music, performs animation and a final text appears
 func _ready():
