@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/VictoryMusic.mp3-f2f2f451e97a7e0508522ba6f2b23a80.mp3str"
+path="res://.import/VictoryMusic.mp3-e1d0bb2b9c638d66b98f2d503976a3e6.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/music/VictoryMusic.mp3"
-dest_files=[ "res://.import/VictoryMusic.mp3-f2f2f451e97a7e0508522ba6f2b23a80.mp3str" ]
+source_file="res://assets/Audio/Music/VictoryMusic.mp3"
+dest_files=[ "res://.import/VictoryMusic.mp3-e1d0bb2b9c638d66b98f2d503976a3e6.mp3str" ]
 
 [params]
 

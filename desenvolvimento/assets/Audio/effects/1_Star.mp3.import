@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/1_Star.mp3-24de5168f17954f4f29ddf621f6cdf5f.mp3str"
+path="res://.import/1_Star.mp3-ad6efce435c6dee20c30d29dcac6dd70.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/effects/1_Star.mp3"
-dest_files=[ "res://.import/1_Star.mp3-24de5168f17954f4f29ddf621f6cdf5f.mp3str" ]
+source_file="res://assets/Audio/Effects/1_Star.mp3"
+dest_files=[ "res://.import/1_Star.mp3-ad6efce435c6dee20c30d29dcac6dd70.mp3str" ]
 
 [params]
 

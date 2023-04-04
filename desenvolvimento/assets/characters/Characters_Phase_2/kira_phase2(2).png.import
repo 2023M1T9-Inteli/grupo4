@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kira_phase2(2).png-845128c6356ebc60fa34b162ecda8201.stex"
+path="res://.import/kira_phase2(2).png-dfea30e44adbd961e3552b442877678d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Characters_Phase_2/kira_phase2(2).png"
-dest_files=[ "res://.import/kira_phase2(2).png-845128c6356ebc60fa34b162ecda8201.stex" ]
+source_file="res://assets/Characters/Characters_Phase_2/kira_phase2(2).png"
+dest_files=[ "res://.import/kira_phase2(2).png-dfea30e44adbd961e3552b442877678d.stex" ]
 
 [params]
 

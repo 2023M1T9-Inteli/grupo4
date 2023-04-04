@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roger_phase3(1).png-f6ae5ab7a36a3edbd3e6a239362b8b03.stex"
+path="res://.import/roger_phase3(1).png-3a9d6702969425a9100e8eebecbf059f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Characters_Phase_3/roger_phase3(1).png"
-dest_files=[ "res://.import/roger_phase3(1).png-f6ae5ab7a36a3edbd3e6a239362b8b03.stex" ]
+source_file="res://assets/Characters/Characters_Phase_3/roger_phase3(1).png"
+dest_files=[ "res://.import/roger_phase3(1).png-3a9d6702969425a9100e8eebecbf059f.stex" ]
 
 [params]
 

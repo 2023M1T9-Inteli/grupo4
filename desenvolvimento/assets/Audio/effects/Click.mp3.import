@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Click.mp3-37ffab8c925e3dee1ee72cc6148e4971.mp3str"
+path="res://.import/Click.mp3-36a1aed400772db7b1aaae2ab1928cf5.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/effects/Click.mp3"
-dest_files=[ "res://.import/Click.mp3-37ffab8c925e3dee1ee72cc6148e4971.mp3str" ]
+source_file="res://assets/Audio/Effects/Click.mp3"
+dest_files=[ "res://.import/Click.mp3-36a1aed400772db7b1aaae2ab1928cf5.mp3str" ]
 
 [params]
 
