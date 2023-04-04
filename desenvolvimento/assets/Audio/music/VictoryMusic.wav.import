@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/VictoryMusic.wav-72c87ba07ad99d9c8bbe84e2698e30d3.sample"
+path="res://.import/VictoryMusic.wav-352f0c4414b3cbcbaf9fe2bbfeadca50.sample"
 
 [deps]
 
-source_file="res://assets/Audio/Music/VictoryMusic.wav"
-dest_files=[ "res://.import/VictoryMusic.wav-72c87ba07ad99d9c8bbe84e2698e30d3.sample" ]
+source_file="res://assets/Audio/music/VictoryMusic.wav"
+dest_files=[ "res://.import/VictoryMusic.wav-352f0c4414b3cbcbaf9fe2bbfeadca50.sample" ]
 
 [params]
 

@@ -42,10 +42,9 @@ scroll_vertical_enabled = false
 script = ExtResource( 8 )
 
 [node name="DrawerHBox" type="HBoxContainer" parent="SlotExpansor/ScrollSlotContainer" groups=["slot"]]
-margin_right = 640.0
 margin_bottom = 64.0
 grow_vertical = 0
-rect_min_size = Vector2( 640, 64 )
+rect_min_size = Vector2( 0, 64 )
 mouse_default_cursor_shape = 2
 custom_constants/separation = 0
 script = ExtResource( 2 )

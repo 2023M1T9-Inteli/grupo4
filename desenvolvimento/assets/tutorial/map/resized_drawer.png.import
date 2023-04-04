@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/resized_drawer.png-0ebdfcbc0bce909c1714fa58d7a3d080.stex"
+path="res://.import/resized_drawer.png-f637776be48ae172d05c9b0c206830e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tutorial/map/resized_drawer.png"
-dest_files=[ "res://.import/resized_drawer.png-0ebdfcbc0bce909c1714fa58d7a3d080.stex" ]
+source_file="res://assets/tutorial/map/resized_drawer.png"
+dest_files=[ "res://.import/resized_drawer.png-f637776be48ae172d05c9b0c206830e7.stex" ]
 
 [params]
 
