@@ -37,7 +37,8 @@ func _on_Phase2Button_pressed():
 func _on_TextureButton_pressed():
 	var __ = get_tree().change_scene("res://scenes/Menu.tscn")
 
-
+# PT_BR: Função que permite ir para a fase 3 de acordo com a pontuação obtida na fase 2 
+# EN_US: Function that allows you to go to phase 3 according to the score obtained in phase 2
 func _on_Phase3Button_pressed():
 	if Globals.player_phase_score["phase2"] >= 56:
 		var __ = get_tree().change_scene("res://scenes/Dialog/DialogScene3.tscn")
