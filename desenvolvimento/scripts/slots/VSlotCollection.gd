@@ -25,6 +25,7 @@ export(bool) var active_space_between = true setget _set_active_space_between
 # EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.Y
 
+
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
 # EN_US (1): Functions to set variables. 
@@ -33,6 +34,7 @@ func _set_collection_size(new_value) -> void:
 	collection_size = new_value
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
+
 
 func _set_active_space_between(new_value) -> void:
 	active_space_between = new_value
@@ -45,7 +47,6 @@ var qtd_control_children = 0
 func _ready():	
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# PT_BR (2): Define todos os nós filhos como MOUSE_FILTER_IGNORE
-	
 	# EN_US (1): It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
 	var total_children_size = 0
@@ -122,12 +123,12 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 """ 
 DRAG AND DROP
 """
-
+# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
+# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
+# PT_BR (3): Parâmetro: position - espaço 
+# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
+# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined
 func get_drag_data(position):
-	# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
-	# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
-	# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
-	# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 	var actual_child = 0
 	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
