@@ -1,5 +1,6 @@
 extends Control
 
+
 # PT_BR: Inicia o jogo abrindo o tutorial.
 # EN_US: Start the game opening the tutorial.
 func _on_StartButton_pressed():
