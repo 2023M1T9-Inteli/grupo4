@@ -13,7 +13,6 @@ onready var audio_star3 = $ScoreBar/StarFull3/AudioStar3
 onready var paula_image = $PaulaSprite
 onready var back_button = $BackButton/ButtonLabel
 onready var final_score = $FinalScore
-
 onready var selected_phase = Globals.phases_keys[ Globals.actual_phase ]
 
 # PT_BR: Guarda o resultado que o jogador fez
@@ -44,8 +43,8 @@ const results_texts: Dictionary = {
 	4: 'Que pena! Infelizmente você não conseguiu delegar todas as tarefas a tempo. Tente não acumular tarefas para apenas um funcionário, enquanto existem outros disponíveis. Com isso, sua delegação de tarefas pode se tornar mais eficiente e você poderá obter melhores resultados!',
 }
 
+
 func _ready():
-	
 	# PT_BR: Define uma variável "result" como o resultado de uma operação entre os scores da fase
 	# EN_US: Defines a variable "result" as the result of a operation between the phase scores
 	result = float(Globals.actual_score * 100) / float(Globals.phases_max_score[ selected_phase ])
@@ -79,12 +78,14 @@ func _ready():
 		result_description.bbcode_text = results_texts[3]
 		paula_image.texture = paula_execelent
 
+
 func _process(_delta):
 	# PT_BR: Muda a cor da barra de progresso de acordo com a variável "count"
 	# EN_US: Changes the bar's color accordign to the variable "count"
 	if count < 1:
 		_change_bar()
 		count += 1
+
 
 # PT_BR: Função que enche as estrelas de acordo com o progresso da barra
 # EN_US: Function that fullfil the strars according to the bar's progress
