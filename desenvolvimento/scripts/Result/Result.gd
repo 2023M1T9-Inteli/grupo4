@@ -86,7 +86,6 @@ func _process(_delta):
 		_change_bar()
 		count += 1
 
-
 # PT_BR: Função que enche as estrelas de acordo com o progresso da barra
 # EN_US: Function that fullfil the strars according to the bar's progress
 func _change_bar():
