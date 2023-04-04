@@ -29,9 +29,11 @@ Clique na seta para [color=#3a87ae]continuar o tutorial[/color].""",
 	""
 ]
 
+
 func _ready():
 	$text_box/back_button.visible = false
 	$text_box/next_button.visible = false
+
 
 # PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
@@ -70,7 +72,7 @@ func _process(_delta):
 		
 	elif cont == 3:
 		emit_signal("next_tutorial",self)
-	
+
 
 # PT_BR (1): Sinal customizado que detecta quando a ficha é solta na mesa de expansão. 
 # PT_BR (2): Parâmetro: slot - CenterContainer.
