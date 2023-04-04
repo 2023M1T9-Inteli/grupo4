@@ -38,6 +38,7 @@ onready var progress = $PhaseProgress
 onready var chronometer = $Cronometer
 onready var text_position = $text_box.rect_global_position
 
+
 # PT_BR: Função usada para definir a visibilidade do clock, progress e chronometer.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
 func _ready():
@@ -48,8 +49,6 @@ func _ready():
 	$text_box/back_button.visible = false
 	$Circulo.visible = false
 	
-
-
 
 # PT_BR: Função que checa a variável cont e decide qual texto aparecerá na cena.
 # EN_US: Function that checks the variable cont and decides which text will appear in the scene.
@@ -134,6 +133,7 @@ func _on_testeTarefa02_dropped_item(_slot):
 # EN_US (2): Parameter: slot - CenterContainer.
 func _on_WorkSlotKira_get_item(_slot):
 	cont += 1
+
 
 # PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado.
 # EN_US: Custom signal that detects when the next button is pressed.
