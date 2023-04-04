@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Conclued_task.mp3-cf862ed965d84fceba9663738f181327.m
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
