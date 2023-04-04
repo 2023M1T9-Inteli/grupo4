@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/musica_fase_3_2.wav-a0acefa07d0888be22ea89a84b360cc3.sample"
+path="res://.import/musica_fase_3_2.wav-5163ba528fb95a8156bbd0ed25dd28dc.sample"
 
 [deps]
 
-source_file="res://assets/Audio/music/musica_fase_3_2.wav"
-dest_files=[ "res://.import/musica_fase_3_2.wav-a0acefa07d0888be22ea89a84b360cc3.sample" ]
+source_file="res://assets/Audio/Music/musica_fase_3_2.wav"
+dest_files=[ "res://.import/musica_fase_3_2.wav-5163ba528fb95a8156bbd0ed25dd28dc.sample" ]
 
 [params]
 
