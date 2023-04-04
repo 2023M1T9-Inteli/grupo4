@@ -24,7 +24,7 @@ func get_drag_data(position):
 	# EN_US: Gets the first drag_data of the first slot child and return it
 	for child in get_children():
 		if child.is_in_group('slot'):
-			var new_pos = Vector2(position.x + self.scroll_horizontal, position.y)
+			var new_pos = Vector2(position.x + abs(self.scroll_horizontal), position.y)
 			return child.get_drag_data(new_pos)
 			
 
