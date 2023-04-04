@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ana_phase2.png-4eab4bfdeed2a5bd517598bfe2576d7b.stex"
+path="res://.import/ana_phase2.png-3c3f132547e3797f4e74b546cfe738a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Characters_Phase_2/ana_phase2.png"
-dest_files=[ "res://.import/ana_phase2.png-4eab4bfdeed2a5bd517598bfe2576d7b.stex" ]
+source_file="res://assets/characters/Characters_Phase_2/ana_phase2.png"
+dest_files=[ "res://.import/ana_phase2.png-3c3f132547e3797f4e74b546cfe738a0.stex" ]
 
 [params]
 

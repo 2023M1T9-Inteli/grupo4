@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/full_open_trash.png-3cf14b0307d1826e52909c06f2247d4d.stex"
+path="res://.import/full_open_trash.png-2fe002549d49a157f5e07aaa7f820da5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase_assets/OfficeItems/full_open_trash.png"
-dest_files=[ "res://.import/full_open_trash.png-3cf14b0307d1826e52909c06f2247d4d.stex" ]
+source_file="res://assets/phase_assets/OfficeItems/full_open_trash.png"
+dest_files=[ "res://.import/full_open_trash.png-2fe002549d49a157f5e07aaa7f820da5.stex" ]
 
 [params]
 

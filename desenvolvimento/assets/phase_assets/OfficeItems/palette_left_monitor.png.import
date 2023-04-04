@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/palette_left_monitor.png-7e4fda7a5cb2e991cf1fdab95a776e12.stex"
+path="res://.import/palette_left_monitor.png-cded53ac2da7adaca854425cf93c7c6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase_assets/OfficeItems/palette_left_monitor.png"
-dest_files=[ "res://.import/palette_left_monitor.png-7e4fda7a5cb2e991cf1fdab95a776e12.stex" ]
+source_file="res://assets/phase_assets/OfficeItems/palette_left_monitor.png"
+dest_files=[ "res://.import/palette_left_monitor.png-cded53ac2da7adaca854425cf93c7c6c.stex" ]
 
 [params]
 

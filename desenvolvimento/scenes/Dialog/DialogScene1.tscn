@@ -127,11 +127,7 @@ custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/disabled = SubResource( 7 )
 custom_styles/normal = SubResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="Button"]
-position = Vector2( 50, 43 )
-scale = Vector2( 1.14286, 1.07971 )
-texture = ExtResource( 7 )
+icon = ExtResource( 7 )
 
 [node name="Computer" type="Sprite" parent="."]
 visible = false

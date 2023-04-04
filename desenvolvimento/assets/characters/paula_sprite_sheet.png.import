@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paula_sprite_sheet.png-1dab91662f63d0ecc0810735a3e15e23.stex"
+path="res://.import/paula_sprite_sheet.png-36eecf41209069d3625eb5084ed8fc25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/paula_sprite_sheet.png"
-dest_files=[ "res://.import/paula_sprite_sheet.png-1dab91662f63d0ecc0810735a3e15e23.stex" ]
+source_file="res://assets/characters/paula_sprite_sheet.png"
+dest_files=[ "res://.import/paula_sprite_sheet.png-36eecf41209069d3625eb5084ed8fc25.stex" ]
 
 [params]
 

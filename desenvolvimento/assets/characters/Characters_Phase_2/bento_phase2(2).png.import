@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bento_phase2(2).png-898e32d0510ccf24b2ea5b323b5434fb.stex"
+path="res://.import/bento_phase2(2).png-d1bc8d9b99b22041855dc4a56f7ed639.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/Characters_Phase_2/bento_phase2(2).png"
-dest_files=[ "res://.import/bento_phase2(2).png-898e32d0510ccf24b2ea5b323b5434fb.stex" ]
+source_file="res://assets/characters/Characters_Phase_2/bento_phase2(2).png"
+dest_files=[ "res://.import/bento_phase2(2).png-d1bc8d9b99b22041855dc4a56f7ed639.stex" ]
 
 [params]
 

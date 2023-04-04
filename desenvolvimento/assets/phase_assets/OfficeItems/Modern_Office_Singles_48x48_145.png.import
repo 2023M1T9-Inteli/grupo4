@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Modern_Office_Singles_48x48_145.png-f723e005d4768d57b5b7fe62c3ced080.stex"
+path="res://.import/Modern_Office_Singles_48x48_145.png-8c6235af228606656ac98fae0e83cea3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase_assets/OfficeItems/Modern_Office_Singles_48x48_145.png"
-dest_files=[ "res://.import/Modern_Office_Singles_48x48_145.png-f723e005d4768d57b5b7fe62c3ced080.stex" ]
+source_file="res://assets/phase_assets/OfficeItems/Modern_Office_Singles_48x48_145.png"
+dest_files=[ "res://.import/Modern_Office_Singles_48x48_145.png-8c6235af228606656ac98fae0e83cea3.stex" ]
 
 [params]
 

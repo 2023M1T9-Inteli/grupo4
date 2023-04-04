@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left_lamp.png-37be5e6631289845b6cfe6c7d597f80e.stex"
+path="res://.import/left_lamp.png-c72aa4ba668967922e04b30c4a10c6a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase_assets/OfficeItems/left_lamp.png"
-dest_files=[ "res://.import/left_lamp.png-37be5e6631289845b6cfe6c7d597f80e.stex" ]
+source_file="res://assets/phase_assets/OfficeItems/left_lamp.png"
+dest_files=[ "res://.import/left_lamp.png-c72aa4ba668967922e04b30c4a10c6a0.stex" ]
 
 [params]
 
