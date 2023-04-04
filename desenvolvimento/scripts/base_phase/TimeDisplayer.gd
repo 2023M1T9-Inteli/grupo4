@@ -12,6 +12,7 @@ export(bool) var autostart = true setget _set_autostart
 var running = false
 var counter = 0
 
+
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
 # EN_US (1): Functions to set variables. 
@@ -22,11 +23,13 @@ func _set_seconds(new_value):
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
 
+
 func _set_minutes(new_value):
 	minutes = new_value
 	if weakref($RichTextLabel).get_ref():
 		var format_string = "[color=#e01f28]%02d:%02d[/color]" % [minutes, seconds]
 		$RichTextLabel.bbcode_text = format_string
+
 
 func _set_autostart(new_value):
 	autostart = new_value
@@ -71,6 +74,7 @@ func _on_Timer_timeout():
 		# PT_BR: Emite o sinal que o tempo acabaou
 		# EN_US: Emits the signal that time is over
 		self.emit_signal("timer_is_over")
+
 
 # PT_BR: Função que inicia o timer 
 # EN_US: Function that start the timer

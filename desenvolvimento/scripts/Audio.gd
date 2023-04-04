@@ -18,13 +18,15 @@ var MasterValue = 1
 var MusicValue = 1
 var SfxValue = 1
 
+# PT_BR: Variável que armazena o nó de player de música
+# EN_US: Variable that stores the music player node
 onready var music_node = $Music
+
 
 # PT_BR (1): Função que define a música e coloca para tocar. 
 # PT_BR (2): Parâmetro: music - arquivo de música.
 # EN_US (1): Set the music and play.
 # EN_US (2): Parameter: music - arquivo de música.
-
 func play_music(music):
 	music_node.stream = music
 	music_node.play()

@@ -14,10 +14,10 @@ export(NodePath) var roger = null
 export(NodePath) var bento = null
 export(NodePath) var ana = null
 
-
 # PT_BR: Variável para armazenar a lista de informações para entrega de tarefas
 # EN_US: Variable to store the list of informations for task delivery
 var task_wait_list = []
+
 
 func _ready():
 	kira = _return_object_by_node_path(kira)
@@ -34,6 +34,7 @@ func _return_object_by_node_path(node_path):
 	if node_path != null and not node_path.is_empty():
 		return self.get_node(node_path)
 	return null
+
 
 # PT_BR (1): Recebe node do Path2D, node do AnimationPlayer, nome da animação, 
 # PT_BR (2): tempo para entregar a tarefa, node do trabalhador e o node da tarefa
@@ -90,6 +91,7 @@ func Kira_initiate_task(task):
 	}
 	_receive_task_order(task_info)
 
+
 # PT_BR (1): Função para receber as informações das tarefas do personagem "Roger"
 # PT_BR (2): E chamar a função para armazenar na lista de espera
 # EN_US (1): Function to receives the task informations from the character "Roger"
@@ -105,6 +107,7 @@ func Roger_initiate_task(task):
 	}
 	_receive_task_order(task_info)
 
+
 # PT_BR (1): Função para receber as informações das tarefas do personagem "Bento"
 # PT_BR (2): E chamar a função para armazenar na lista de espera
 # EN_US (1): Function to receives the task informations from the character "Bento"
@@ -119,6 +122,7 @@ func Bento_initiate_task(task):
 		"task_node": task,
 	}
 	_receive_task_order(task_info)
+
 
 # PT_BR (1): Função para receber as informações das tarefas do personagem "Ana"
 # PT_BR (2): E chamar a função para armazenar na lista de espera
@@ -141,15 +145,18 @@ func Ana_initiate_task(task):
 func _on_Kira_finished_task(worker):
 	emit_signal("kira_fineshed_task", worker)
 
+
 # PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Roger"
 # EN_US: Function to emit the task conclusion signal from the character "Roger"
 func _on_Roger_finished_task(worker):
 	emit_signal("roger_fineshed_task", worker)
 
+
 # PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Bento"
 # EN_US: Function to emit the task conclusion signal from the character "Bento"
 func _on_Bento_finished_task(worker):
 	emit_signal("bento_fineshed_task", worker)
+
 
 # PT_BR: Função para emitir o sinal de conclusão de tarefa do personagem "Ana"
 # EN_US: Function to emit the task conclusion signal from the character "Ana"

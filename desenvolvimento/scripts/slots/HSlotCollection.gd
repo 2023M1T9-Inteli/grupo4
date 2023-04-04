@@ -25,6 +25,7 @@ export(bool) var active_space_between = true setget _set_active_space_between
 # EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
 
+
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
 # EN_US (1): Functions to set variables. 
@@ -33,6 +34,7 @@ func _set_collection_size(new_value) -> void:
 	collection_size = new_value
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
+
 
 func _set_active_space_between(new_value) -> void:
 	active_space_between = new_value

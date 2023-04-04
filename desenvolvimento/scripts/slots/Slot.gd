@@ -90,10 +90,10 @@ export(Texture) var drawer_image: Texture = null setget _set_drawer_image
 # EN_US: Slot image in the boss table
 export(Texture) var boss_table_image: Texture = null setget _set_boss_table_image
 
-
 # PT_BR: Variaveis locais
 # EN_US: Local variables
 var is_dragging: bool = false
+
 
 # PT_BR (1): Funções para definir as variáveis. 
 # PT_BR (2): Parâmetro: new_value
@@ -104,15 +104,18 @@ func _set_qtd(new_value) -> void:
 	if weakref($Qtd).get_ref():
 		$Qtd.text = str(qtd)
 
+
 func _set_show_qtd(new_value) -> void:
 	show_qtd = new_value
 	if weakref($Qtd).get_ref():
 		$Qtd.set("visible", show_qtd)
 
+
 func _set_slot_size(new_value) -> void:
 	slot_size = new_value
 	rect_min_size = slot_size
 	rect_size = slot_size
+	
 	
 func _set_image_size(new_value) -> void:
 	images_size = new_value
@@ -126,11 +129,14 @@ func _set_image_size(new_value) -> void:
 	$BossTableImage.rect_min_size = images_size
 	$BossTableImage.rect_size = images_size
 
+
 func _set_preview_size(new_value) -> void:
 	preview_size = new_value
 
+
 func _set_slot_type(new_value) -> void:
 		slot_type = new_value
+
 
 func _set_location(new_value) -> void:
 	location = new_value
@@ -148,15 +154,18 @@ func _set_location(new_value) -> void:
 			$DrawerImage.set("visible", false)
 			$BossTableImage.set("visible", true)
 
+
 func _set_table_image(new_value) -> void:
 	table_image = new_value
 	if weakref($TableImage).get_ref():
 		$TableImage.texture = table_image
 
+
 func _set_drawer_image(new_value) -> void:
 	drawer_image = new_value
 	if weakref($DrawerImage).get_ref():
 		$DrawerImage.texture = drawer_image
+
 
 func _set_boss_table_image(new_value) -> void:
 	boss_table_image = new_value
@@ -186,7 +195,6 @@ func _input(event) -> void:
 		# EN_US: If released click
 		if event.is_action_released("click"):
 			is_dragging = false
-
 
 
 # PT_BR: Uma função para resetar o slote
@@ -224,7 +232,6 @@ func _get_location_node():
 """ 
 DRAG AND DROP
 """
-
 func get_drag_data(_position):
 	# PT_BR: Função chamada automaticamente assim que uma ação de drag é identificada
 	# EN_US: Function called automatically as soon as a drag action is identified

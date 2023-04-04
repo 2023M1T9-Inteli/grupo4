@@ -1,6 +1,5 @@
 extends PopupMenu
 
-
 # PT_BR: Lista que determina qual o canal de áudio terá seu volume alterado
 # EN_US: List that determines which audio channel will have its volume changed
 const bus_names = {
@@ -19,6 +18,7 @@ onready var node_volume = $VolumeNode2D
 onready var node_video = $VideoNode2D
 onready var volume_button = $VolumeButton
 onready var video_button = $VideoButton
+
 
 # PT_BR(1): Assim que inicia o jogo, o valor dos sliders são atribuídos ao script global
 # PT_BR(2): Os nós "FullScreen" e "CheckboxFullScreen" se tornam invisíveis 

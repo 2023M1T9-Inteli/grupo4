@@ -13,6 +13,7 @@ signal next_tutorial()
 signal back_tutorial()
 signal end_tutorial()
 
+
 # PT_BR: Sinal customizado que detecta quando o botão de pular é pressionado.
 # EN_US: Custom signal that detects when the skip button is pressed.
 func _on_skip_button_pressed():

@@ -73,10 +73,9 @@ func _ready():
 	star3 = _return_object_by_node_path(star3)
 
 
-
+# PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
+# EN_US: This funcction observes the mouse position and applies the hover on the files 
 func _process(_delta):
-	#PR_BR: Essa função observa a posição do mouse e aplica o hover nas fichas
-	#EN_US: This funcction observes the mouse position and applies the hover on the files 
 	if profile_kira != null and not profile_kira is NodePath:
 		_send_hover_effect_in_file(profile_kira)
 	
@@ -89,7 +88,6 @@ func _process(_delta):
 	if profile_bento != null:
 		_send_hover_effect_in_file(profile_bento)
 		
-
 
 # PT_BR (1): Função para atualizar a pontuação do jogador
 # PT_BR (2): Parâmetro: new_value int
@@ -125,6 +123,7 @@ func _on_TimeDisplayer_timer_is_over():
 	Globals.lose_by_time = true
 	var __ = get_tree().change_scene("res://scenes/Result/Result.tscn")
 
+
 # PT_BR: Função para mudar a cena quando o jogador conclui todas as tarefas
 # EN_US: Function to change the scene when the player concludes all tasks
 func _on_PhaseProgress_completed_change():
@@ -132,10 +131,10 @@ func _on_PhaseProgress_completed_change():
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Ana" finaliza uma tarefa
-# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: worker - espaço que está a tarefa
 # PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
 # EN_US (1): Signal that is sent when the character "Ana" ends a task
-# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (2): Parameter: worker - space where the task is
 # EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_ana_fineshed_task(worker):
 	phase_progress.increase_value()
@@ -145,10 +144,10 @@ func _on_Map_ana_fineshed_task(worker):
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Bento" finaliza uma tarefa
-# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: worker - espaço que está a tarefa
 # PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
 # EN_US (1): Signal that is sent when the character "Bento" ends a task
-# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (2): Parameter: worker - space where the task is
 # EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_bento_fineshed_task(worker):
 	phase_progress.increase_value()
@@ -158,10 +157,10 @@ func _on_Map_bento_fineshed_task(worker):
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Kira" finaliza uma tarefa
-# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: worker - espaço que está a tarefa
 # PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
 # EN_US (1): Signal that is sent when the character "Kira" ends a task
-# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (2): Parameter: worker - space where the task is
 # EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_kira_fineshed_task(worker):
 	phase_progress.increase_value()
@@ -171,10 +170,10 @@ func _on_Map_kira_fineshed_task(worker):
 
 
 # PT_BR (1): Sinal que é emitido quando o personagem "Roger" finaliza uma tarefa
-# PT_BR (2): Recebe o objeto worker como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: worker - espaço que está a tarefa
 # PT_BR (3): Atualiza o progresso da fase, pontuação e retira o item do slot
 # EN_US (1): Signal that is sent when the character "Roger" ends a task
-# EN_US (2): Receives the worker object as parameter to be sent
+# EN_US (2): Parameter: worker - space where the task is
 # EN_US (3): Updates the phase progress, score and removes the item from slot
 func _on_Map_roger_fineshed_task(worker):
 	phase_progress.increase_value()
@@ -184,10 +183,10 @@ func _on_Map_roger_fineshed_task(worker):
 
 
 # PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
-# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: slot 
 # PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
 # EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
-# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (2): Parameter: slot
 # EN_US (3): Calls the map function to start the character's task
 func _on_WorkSlotKira_get_item(slot):
 	slot.can_give = false
@@ -195,10 +194,10 @@ func _on_WorkSlotKira_get_item(slot):
 
 
 # PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
-# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: slot 
 # PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
 # EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
-# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (2): Parameter: slot
 # EN_US (3): Calls the map function to start the character's task
 func _on_WorkSlotRoger_get_item(slot):
 	slot.can_give = false
@@ -206,10 +205,10 @@ func _on_WorkSlotRoger_get_item(slot):
 
 
 # PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
-# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: slot 
 # PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
 # EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
-# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (2): Parameter: slot
 # EN_US (3): Calls the map function to start the character's task
 func _on_WorkSlotBento_get_item(slot):
 	slot.can_give = false
@@ -217,31 +216,31 @@ func _on_WorkSlotBento_get_item(slot):
 
 
 # PT_BR (1): Função conectada ao sinal que é emitido quando o slot do personagem pega um item
-# PT_BR (2): Recebe o objeto slot como parâmetro para ser emitido
+# PT_BR (2): Parâmetro: slot 
 # PT_BR (3): Chama a função do mapa para iniciar a tarefa do personagem
 # EN_US (1): Function connected to the signal that is emitted when the character's slot picks up an item
-# EN_US (2): Receives the slot object as a parameter to be sent
+# EN_US (2): Parameter: slot
 # EN_US (3): Calls the map function to start the character's task
 func _on_WorkSlotAna_get_item(slot):
 	slot.can_give = false
 	map.Ana_initiate_task(slot)
 
 
+# PT_BR: Emite o som de click assim que o mouse é pressionado
+# EN_US: Emits the click sound when the mouse is pressed
 func _input(event):
-	# PT_BR: Emite o som de click assim que o mouse é pressionado.
-	# EN_US: Emits the click sound when the mouse is pressed.
 	if event.is_action_pressed("click"):
 		$ClickAudio.play()
 
 
 # PT_BR (1): Essa função aplica o hover nas fichas
-# PT_BR (2): Recebe: begin, que é o limite inferior da zona de entrada do mouse: Vector2
-# PT_BR (3): Recebe: end, que é o limite superior da zona de entrada do mouse: Vector2
-# PT_BR (4): Recebe: slot, que é um nó da cena
+# PT_BR (2): Parâmetro: begin, que é o limite inferior da zona de entrada do mouse: Vector2
+# PT_BR (3): Parâmetro: end, que é o limite superior da zona de entrada do mouse: Vector2
+# PT_BR (4): Parâmetro: slot, que é um nó da cena
 # EN_US (1): This function applies the hover to the files
-# EN_US (2): Receive: begin, which is the lower limit of the mouse input zone: Vector2
-# EN_US (3): Receive: end, which is the higher limit of the mouse input zone: Vector2
-# EN_US (4): Receive: slot, which is a node in the scene
+# EN_US (2): Parameter: begin, which is the lower limit of the mouse input zone: Vector2
+# EN_US (3): Parameter: end, which is the higher limit of the mouse input zone: Vector2
+# EN_US (4): Parameter: slot, which is a node in the scene
 func _hover_file(begin: Vector2, end: Vector2, slot:CenterContainer):
 	var mouse = get_global_mouse_position()
 	
@@ -252,9 +251,9 @@ func _hover_file(begin: Vector2, end: Vector2, slot:CenterContainer):
 
 
 # PT_BR (1): Essa função simplifica a chamada da função hover file
-# PT_BR (2): Recebe o perfil: Center Container
+# PT_BR (2): Parâmetro: profile - Center Container
 # EN_US (1): This function simplifies calling the hover file function
-# EN_US (2): Receives the profile: Center Container
+# EN_US (2): Parameter: profile - Center Container
 func _send_hover_effect_in_file(profile):
 	var begin = profile.rect_global_position
 	var end = begin + profile.rect_size
@@ -262,7 +261,7 @@ func _send_hover_effect_in_file(profile):
 	_hover_file(begin, end, profile)
 
 
+# PT_BR: Abre a cena de pause
+# EN_US: Opens the pause scene
 func _on_PauseButton_pressed():
-	# PT_BR: Abre a cena de pause
-	# EN_US: Opens the pause scene
 	pause_scene.open_pause_scene()
