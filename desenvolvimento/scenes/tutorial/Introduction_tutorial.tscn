@@ -41,7 +41,6 @@ func _process(_delta):
 		emit_signal(\"next_tutorial\")
 	
 	$text_box/introduction_text.bbcode_text = textos[cont]
-	
 
 
 # PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado.
