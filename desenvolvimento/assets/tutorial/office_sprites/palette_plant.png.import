@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/palette_plant.png-ad7338d1333b5cc1409ad12fc77279be.stex"
+path="res://.import/palette_plant.png-f56fbe4d5df83345b148481a7c2ba90e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tutorial/office_sprites/palette_plant.png"
-dest_files=[ "res://.import/palette_plant.png-ad7338d1333b5cc1409ad12fc77279be.stex" ]
+source_file="res://assets/Tutorial/office_sprites/palette_plant.png"
+dest_files=[ "res://.import/palette_plant.png-f56fbe4d5df83345b148481a7c2ba90e.stex" ]
 
 [params]
 
