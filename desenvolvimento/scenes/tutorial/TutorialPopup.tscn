@@ -17,6 +17,7 @@ export var is_in_menu = true
 var file_scene = preload(\"res://scenes/Tutorial/File_explanning.tscn\")
 var task_scene = preload(\"res://scenes/Tutorial/Task_introduction.tscn\")
 
+
 # PT_BR: Função usada para finalizar o tutorial e definir se deve abrir a tela de fases ou esconder o popup.
 # EN_US: Function used to end the tutorial and define wheter to open the phases scee or hide the popup.
 func end_tutorial():
@@ -44,15 +45,6 @@ func create_task():
 	self.add_child(task_instance)
 	task_instance.connect(\"back_tutorial\", self,\"_on_task_back_tutorial\")
 	task_instance.connect(\"next_tutorial\", self, \"_on_task_next_tutorial\")
-
-
-# PT_BR (1): Função chamada para decidir se irá encerrar o jogo.
-# PT_BR (2): Parâmetro: event.
-# EN_US (1): Function called to decide if the game will be ended. 
-# EN_US (2): Parameter: event.
-func _input(event):
-	if event.is_action_pressed(\"home\"):
-		get_tree().quit()
 
 
 # PT_BR: Sinal customizado para mostrar a introdução e ocultar o próprio node2D.
