@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
-[ext_resource path="res://scripts/buttons/ExitButton.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Tutorial/TutorialPopup.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=4]
 [ext_resource path="res://assets/MenuScreen/start_button.png" type="Texture" id=5]
 [ext_resource path="res://assets/MenuScreen/options_button.png" type="Texture" id=6]
@@ -10,7 +10,6 @@
 [ext_resource path="res://assets/MenuScreen/exit_button.png" type="Texture" id=8]
 [ext_resource path="res://assets/MenuScreen/about_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/MenuScreen/hover_start_button.png" type="Texture" id=10]
-[ext_resource path="res://scenes/tutorial/TutorialPopup.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/MenuScreen/hover_options_button.png" type="Texture" id=12]
 [ext_resource path="res://assets/MenuScreen/hover_about_button.png" type="Texture" id=13]
 [ext_resource path="res://assets/MenuScreen/hover_exit_button.png" type="Texture" id=14]
@@ -105,9 +104,8 @@ margin_bottom = 267.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
-script = ExtResource( 3 )
 
-[node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
+[node name="TutorialPopup" parent="." instance=ExtResource( 3 )]
 
 [node name="Options" parent="." instance=ExtResource( 7 )]
 margin_left = 235.0
@@ -120,4 +118,4 @@ margin_bottom = -143.0
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/kira_small_sheet.png-7e060c2a8b33acf954306601d4b32443.stex"
+path="res://.import/kira_small_sheet.png-6e6b36e01c37e9e23310ecffd7034f72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Items/profile_sheets/kira_small_sheet.png"
-dest_files=[ "res://.import/kira_small_sheet.png-7e060c2a8b33acf954306601d4b32443.stex" ]
+source_file="res://assets/items/profile_sheets/kira_small_sheet.png"
+dest_files=[ "res://.import/kira_small_sheet.png-6e6b36e01c37e9e23310ecffd7034f72.stex" ]
 
 [params]
 

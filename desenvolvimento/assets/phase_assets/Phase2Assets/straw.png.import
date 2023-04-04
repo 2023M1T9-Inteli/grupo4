@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/straw.png-46213888e0656be46a214529bef6ed8a.stex"
+path="res://.import/straw.png-7c7a315d2813db0de157a86f811a2f45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Phase_assets/Phase2Assets/straw.png"
-dest_files=[ "res://.import/straw.png-46213888e0656be46a214529bef6ed8a.stex" ]
+source_file="res://assets/phase_assets/Phase2Assets/straw.png"
+dest_files=[ "res://.import/straw.png-7c7a315d2813db0de157a86f811a2f45.stex" ]
 
 [params]
 

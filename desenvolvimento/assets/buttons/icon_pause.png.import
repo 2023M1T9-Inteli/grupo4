@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_pause.png-1fae80f72ddbd3a634c71e51c18110f5.stex"
+path="res://.import/icon_pause.png-384a830978cd417ea807ccf08872ad5e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Buttons/icon_pause.png"
-dest_files=[ "res://.import/icon_pause.png-1fae80f72ddbd3a634c71e51c18110f5.stex" ]
+source_file="res://assets/buttons/icon_pause.png"
+dest_files=[ "res://.import/icon_pause.png-384a830978cd417ea807ccf08872ad5e.stex" ]
 
 [params]
 

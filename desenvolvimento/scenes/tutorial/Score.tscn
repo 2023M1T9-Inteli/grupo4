@@ -3,9 +3,29 @@
 [ext_resource path="res://assets/Feedbacks/star_empty.png" type="Texture" id=1]
 [ext_resource path="res://assets/Feedbacks/star_full.png" type="Texture" id=2]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://assets/tutorial/map/background_tutorial.png" type="Texture" id=4]
+[ext_resource path="res://assets/Tutorial/map/background_tutorial.png" type="Texture" id=4]
 [ext_resource path="res://assets/buttons/right_button.png" type="Texture" id=5]
-[ext_resource path="res://scripts/tutorial/Score.gd" type="Script" id=7]
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Node2D
+
+# PT_BR: Inicializa os sinais usados para passar de cena do tutorial.
+# EN_US: Initializes the signals used to pass the tutorial scene.
+signal next_tutorial()
+signal back_tutorial()
+
+
+# PT_BR: Sinal customizado que detecta quando o botão de avançar é pressionado.
+# EN_US: Custom signal that detects when the next button is pressed.
+func _on_next_button_pressed():
+	emit_signal(\"next_tutorial\")
+
+
+# PT_BR: Sinal customizado que detecta quando o botão de voltar é pressionado.
+# EN_US: Custom signal that detects when the back button is pressed.
+func _on_back_button_pressed():
+	emit_signal(\"back_tutorial\")
+"
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.466667, 0.72549, 0.858824, 1 )
@@ -42,7 +62,7 @@ size = 23
 font_data = ExtResource( 3 )
 
 [node name="Score" type="Node2D"]
-script = ExtResource( 7 )
+script = SubResource( 5 )
 
 [node name="BackGround" type="Sprite" parent="."]
 position = Vector2( 640, 360 )
