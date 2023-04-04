@@ -7,10 +7,10 @@ var temp = 0.0
 # PT_BR: Variáveis para armazenar as músicas do jogo
 # EN_US: Variable to store the game musics
 var menu_music = preload("res://assets/Audio/Music/main_music.mp3")
-var music_phase_1 = load("res://assets/Audio/Music/music_phase_1.mp3")
-var music_phase_2 = load("res://assets/Audio/Music/music_fase_2 (mp3cut.net).mp3")
-var music_phase_3 = load("res://assets/Audio/Music/musica_fase_3_2 (mp3cut.net).mp3")
-var final_music = load("res://assets/Audio/Music/VictoryMusic.mp3")
+var music_phase_1 = preload("res://assets/Audio/Music/music_phase_1.mp3")
+var music_phase_2 = preload("res://assets/Audio/Music/music_fase_2 (mp3cut.net).mp3")
+var music_phase_3 = preload("res://assets/Audio/Music/musica_fase_3_2 (mp3cut.net).mp3")
+var final_music = preload("res://assets/Audio/Music/VictoryMusic.mp3")
 
 # PT_BR: Variáveis para armazenar todos os volumes do jogo
 # EN_US: Variable to store the all the volumes of the game

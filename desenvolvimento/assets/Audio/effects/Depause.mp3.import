@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Depause.mp3-9ecd301a5dd839eac9d05cd16599f36d.mp3str"
+path="res://.import/Depause.mp3-9cdc75678bcd29e517c599cf044f92c7.mp3str"
 
 [deps]
 
-source_file="res://assets/Audio/effects/Depause.mp3"
-dest_files=[ "res://.import/Depause.mp3-9ecd301a5dd839eac9d05cd16599f36d.mp3str" ]
+source_file="res://assets/Audio/Effects/Depause.mp3"
+dest_files=[ "res://.import/Depause.mp3-9cdc75678bcd29e517c599cf044f92c7.mp3str" ]
 
 [params]
 

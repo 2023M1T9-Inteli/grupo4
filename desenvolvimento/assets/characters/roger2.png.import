@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roger2.png-e0ff9dc340ddbb6c461c615b3c2a6edb.stex"
+path="res://.import/roger2.png-8ba916edf50e9a4ede6eee59c2a34f98.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/roger2.png"
-dest_files=[ "res://.import/roger2.png-e0ff9dc340ddbb6c461c615b3c2a6edb.stex" ]
+source_file="res://assets/Characters/roger2.png"
+dest_files=[ "res://.import/roger2.png-8ba916edf50e9a4ede6eee59c2a34f98.stex" ]
 
 [params]
 
