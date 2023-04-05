@@ -11,9 +11,9 @@
 [ext_resource path="res://scripts/Result/Result.gd" type="Script" id=9]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://scripts/Result/StarFull.gd" type="Script" id=12]
-[ext_resource path="res://assets/Audio/2_Star.wav" type="AudioStream" id=13]
-[ext_resource path="res://assets/Audio/3_Star.wav" type="AudioStream" id=14]
-[ext_resource path="res://assets/Audio/1_Star.wav" type="AudioStream" id=15]
+[ext_resource path="res://assets/Audio/effects/2_Star.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/Audio/effects/3_Star.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/Audio/effects/1_Star.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/Feedbacks/continue.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
@@ -53,7 +53,7 @@ font_data = ExtResource( 10 )
 [sub_resource type="StyleBoxEmpty" id=10]
 
 [sub_resource type="DynamicFont" id=7]
-size = 12
+size = 10
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
@@ -117,7 +117,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="Audio_1_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
+[node name="AudioStar1" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull1"]
 position = Vector2( -11075, -3025 )
 scale = Vector2( 25, 25 )
 stream = ExtResource( 15 )
@@ -133,7 +133,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="Audio_2_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
+[node name="AudioStar2" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull2"]
 stream = ExtResource( 13 )
 
 [node name="StarFull3" type="TextureProgress" parent="ScoreBar"]
@@ -147,7 +147,7 @@ texture_under = ExtResource( 7 )
 texture_progress = ExtResource( 8 )
 script = ExtResource( 12 )
 
-[node name="Audio_3_star" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
+[node name="AudioStar3" type="AudioStreamPlayer2D" parent="ScoreBar/StarFull3"]
 stream = ExtResource( 14 )
 
 [node name="Result" type="Label" parent="ScoreBar"]
@@ -185,6 +185,7 @@ margin_top = 84.0
 margin_right = 1240.0
 margin_bottom = 172.0
 custom_fonts/font = SubResource( 1 )
+text = "00%"
 align = 1
 valign = 1
 
@@ -194,6 +195,7 @@ margin_top = 531.0
 margin_right = 1083.0
 margin_bottom = 600.0
 rect_scale = Vector2( 2, 2 )
+mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 8 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/focus = SubResource( 11 )
@@ -209,7 +211,6 @@ margin_right = 99.0
 margin_bottom = 44.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 7 )
-text = "Continue"
 align = 1
 valign = 1
 

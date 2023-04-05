@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/buttons/close_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/Dialog/Dialog 2/chico_pointing2.png" type="Texture" id=10]
 [ext_resource path="res://assets/Dialog/Dialog 2/tend_circle (2).png" type="Texture" id=11]
-[ext_resource path="res://assets/PhasesScreen/phase_background.png" type="Texture" id=12]
+[ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=8]
 size = 20
@@ -68,8 +68,10 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="BackgroundDialog" type="Sprite" parent="."]
-position = Vector2( 639.5, 360 )
-scale = Vector2( 0.669271, 0.672222 )
+
+[node name="Background" type="Sprite" parent="BackgroundDialog"]
+position = Vector2( 643, 400 )
+scale = Vector2( 1.26, 1.26 )
 texture = ExtResource( 12 )
 
 [node name="DialogBox" type="NinePatchRect" parent="."]
@@ -106,6 +108,7 @@ position = Vector2( 268, 481 )
 scale = Vector2( 4.5, 4.5 )
 frames = SubResource( 1 )
 animation = "idle"
+frame = 1
 speed_scale = 0.5
 playing = true
 
@@ -120,8 +123,6 @@ custom_styles/focus = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
 icon = ExtResource( 9 )
 
-[node name="Sprite" type="Sprite" parent="Button"]
-
 [node name="Tent" type="Sprite" parent="."]
 visible = false
 position = Vector2( 799, 268 )
@@ -130,16 +131,30 @@ texture = ExtResource( 11 )
 
 [node name="PassButton" type="Button" parent="."]
 margin_left = 1154.0
-margin_top = 629.0
+margin_top = 449.0
 margin_right = 1214.0
-margin_bottom = 702.0
+margin_bottom = 522.0
 custom_styles/hover = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 icon = ExtResource( 2 )
 flat = true
 
+[node name="BackButton" type="Button" parent="."]
+margin_left = 1127.0
+margin_top = 521.0
+margin_right = 1187.0
+margin_bottom = 594.0
+rect_rotation = 180.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 2 )
+flat = true
+
+[connection signal="exit_dialog" from="DialogBox" to="." method="_on_DialogBox_exit_dialog"]
 [connection signal="finished_dialog" from="DialogBox" to="." method="_on_DialogBox_finished_dialog"]
 [connection signal="timeout" from="DialogBox/Timer" to="DialogBox" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="PassButton" to="DialogBox" method="_on_PassButton_pressed"]
+[connection signal="pressed" from="BackButton" to="DialogBox" method="_on_BackButton_pressed"]

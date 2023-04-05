@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/base_phase/TimeDisplayer.gd" type="Script" id=1]
+[ext_resource path="res://assets/Audio/effects/TimeLow.mp3" type="AudioStream" id=2]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -17,11 +18,14 @@ margin_right = 123.0
 margin_bottom = 42.0
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
-bbcode_text = "[color=#e01f28]00:00[/color]"
-text = "00:00"
+bbcode_text = "[color=#e01f28]04:30[/color]"
+text = "04:30"
 scroll_active = false
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="TimePassing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

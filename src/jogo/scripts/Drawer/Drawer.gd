@@ -17,6 +17,10 @@ enum ORIENTATION_DIRECTION {
 # EN_US: Slot Collection size
 export(Vector2) var drawer_size: Vector2 = Vector2(64, 64) setget _set_drawer_size
 
+# PT_BR: Tamanho da coleção de slote
+# EN_US: Slot Collection size
+export var qtd_task: int = 10 setget _set_qtd_task
+
 # PT_BR: Ativar o espaçamento entre os itens
 # EN_US: Enable spacing between items
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
@@ -28,7 +32,11 @@ func _set_drawer_size(new_value) -> void:
 	self.rect_min_size = drawer_size
 	self.rect_size = drawer_size
 
-# PT_BR: Inicializa as variáveis locais
+func _set_qtd_task(new_value) -> void:
+	qtd_task = new_value
+	drawer_size.x = new_value * 64
+
+# PT_BR: Inicializa as variáveis locais=-
 # EN_US: Initialize local variables
 var qtd_control_children = 0
 
@@ -49,7 +57,7 @@ func _ready():
 			total_children_size += _get_object_property_orientation(orientation, child.rect_size)
 			if child.connect("dropped_item", self, "_delete_slot") != OK:
 				print("Erro ao conectar o sinal dropped_item do node ", self)
-	drawer_size.x = total_children_size
+	self.rect_min_size.x = total_children_size
 
 
 # PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos
@@ -59,17 +67,23 @@ func _ready():
 func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
-# PT_BR: Função para definir o tamanho horizonta do slot collection
-# EN_US:
-func _set_slot_collection_size_x(size_variation):
-	var new_x = abs(int(drawer_size.x + size_variation))
-	self.rect_min_size = Vector2(new_x, drawer_size.y) 
-	self.rect_size = Vector2(new_x, drawer_size.y) 
+# PT_BR (1): Função para definir o tamanho horizonta do slot collection. 
+# PT_BR (2): Recebe o quanto o slot deve aumentar ou diminuir.
+# EN_US (1): Function to define the horizontal size of the slot collection. 
+# EN_US (2): Gets how much the slot should grow or shrink.
+func _set_slot_collection_size_x():
+	var new_size_x = 0
+	for child in get_children():
+		if child.is_in_group("slot"):
+			new_size_x += child.rect_size.x
+		
+	_set_drawer_size( Vector2(new_size_x, self.drawer_size.y) )
+	
 
 # PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
-# PT_BR (2): Não retorna um valor
+# PT_BR (2): Retorna o valor daquela propriedade na orientação informada
 # EN_US (1): Receives the orientation to be obtained and the object property (Vector2)
-# EN_US (2): It does not return a value.
+# EN_US (2): Returns the value of that property in the given orientation.
 func _get_object_property_orientation(object_orientation, object_property: Vector2):
 	# PT_BR: Essa função pega a orientação de uma propriedade que seja um Vector2
 	# EN_US: This function takes the orientation of a Vector2 property
@@ -79,42 +93,46 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 		return object_property.y
 
 
-# PT_BR: Função para apagar o slot após 
-# EN_US:
+# PT_BR (1): Função para apagar um node filho e ajustar o tamanho a quantidade de nodes. 
+# PT_BR (2): Recebe o node.
+# EN_US (1): Function to delete a child node and adjust the size to the number of nodes. 
+# EN_US (2): Receives the node.
 func _delete_slot(node) -> void:
-	self._set_slot_collection_size_x(-node.rect_size.x)
 	node.queue_free()
 	_count_control_childs()
+	self._set_slot_collection_size_x()
 
 
-# PT_BR:
-# EN_US:
+# PT_BR (1): Função para duplicar o slot padrão dentro de root. 
+# PT_BR (2): Retorna o novo slot
+# EN_US (1): Function to duplicate the default slot inside root. 
+# EN_US (2): Returns the new slot
 func _duplicate_slot():
 	var new_slot = $root/SlotExample.duplicate()
-	self._set_slot_collection_size_x(+new_slot.rect_size.x)
 	new_slot.connect("dropped_item", self, "_delete_slot")
 	return new_slot
 
 
-# PT_BR:
-# EN_US:
+# PT_BR: Função que conta os controls filhos
+# EN_US: Function that counts child controls
 func _count_control_childs():
 	var new_qtd = 0
 	for child in self.get_children():
 		if child.is_in_group("slot"):
 				new_qtd += 1
 	qtd_control_children = new_qtd
+
 """ 
 DRAG AND DROP
 """
 
-# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
-# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
-# PT_BR (3): Ao final, é verificado se a posição horizontal clicada é a que o Control está
-# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
-# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
-# EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
 func get_drag_data(position):
+	# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
+	# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
+	# PT_BR (3): Ao final, é verificado se a posição horizontal clicada é a que o Control está
+	# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
+	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
+	# EN_US (3): At the end, it is checked if the clicked horizontal position is the one the Control is in.
 	var actual_child = 0
 	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
@@ -141,3 +159,5 @@ func drop_data(position, data) -> void:
 	new_slot.drop_data(position, data)
 	.add_child(new_slot)
 	_count_control_childs()
+	_set_slot_collection_size_x()
+	

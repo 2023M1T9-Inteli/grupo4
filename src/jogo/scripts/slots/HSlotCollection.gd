@@ -25,19 +25,24 @@ export(bool) var active_space_between = true setget _set_active_space_between
 # EN_US: Selected object orientation
 export(ORIENTATION_DIRECTION) var orientation = ORIENTATION_DIRECTION.X
 
-# PT_BR: Funções para definir as variáveis
-# EN_US: Functions to set variables
-func _set_collection_size(newValue) -> void:
-	collection_size = newValue
+
+# PT_BR (1): Funções para definir as variáveis. 
+# PT_BR (2): Parâmetro: new_value
+# EN_US (1): Functions to set variables. 
+# EN_US (2): Parameter: new_value
+func _set_collection_size(new_value) -> void:
+	collection_size = new_value
 	self.rect_min_size = collection_size
 	self.rect_size = collection_size
 
-func _set_active_space_between(newValue) -> void:
-	active_space_between = newValue
+
+func _set_active_space_between(new_value) -> void:
+	active_space_between = new_value
 
 # PT_BR: Inicializa as variáveis locais
 # EN_US: Initialize local variables
 var qtd_control_children = 0
+
 
 func _ready():	
 	# PT_BR (1): É necessário colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
@@ -45,7 +50,6 @@ func _ready():
 	
 	# EN_US (1): It is necessary to put the mouse filter as ignore, otherwise the drag will not work
 	# EN_US (2): Set all children as MOUSE_FILTER_IGNORE 
-	
 	var total_children_size = 0
 	
 	for child in get_children():
@@ -70,10 +74,10 @@ func _ready():
 											_get_object_property_orientation(orientation, collection_size) )
 
 
-# PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
-# PT_BR (2): Não retorna um valor
-# EN_US (1): Receives the number of child nodes, their total size and the size of the container.
-# EN_US (2): It does not return a value.
+# PT_BR (1): Função que muda a constante de separação do SlotCollection
+# PT_BR (2): Parâmetro: qtd_child int, total_children_size int, container_size int
+# EN_US (1): Function that changes the constant separation of the SlotCollection
+# EN_US (2): Parameter: qtd_child int, total_children_size int, container_size int
 func _change_separation_to_space_between(qtd_childs, total_children_size, container_size):
 	# PT_BR: Divide o espaço do Slot Collection igualmente entre os nós Control
 	# EN_US: Divide Slot Collection space equally between controls nodes
@@ -84,26 +88,31 @@ func _change_separation_to_space_between(qtd_childs, total_children_size, contai
 		self.add_constant_override("separation", 
 							_calc_space_between(container_size, total_children_size, qtd_childs) )
 
-# PT_BR (1): Recebe a quantidade de nós filhos, o tamanho total deles e o tamanho do container.
-# PT_BR (2): Retorna a distância adequada entre os nodes
-# EN_US (1): Receives the number of child nodes, their total size and the size of the container.
-# EN_US (2): Return proper distance between nodes
+
+# PT_BR (1): Função que calcula o espaço que deve ter entre os nós filhos
+# PT_BR (2): Parâmetro: qtd_child int, total_children_size int, container_size int
+# PT_BR (3): Retorna a distância adequada entre os nodes
+# EN_US (1): Function that calculates the space that should be between child nodes
+# EN_US (2): Parameter: qtd_child int, total_children_size int, container_size int
+# EN_US (3): Return proper distance between nodes
 func _calc_space_between(container_size, total_children_size, qtd_childs):
 	return ( (container_size - total_children_size) / (qtd_childs - 1) )
 
 
-# PT_BR (1): Recebe o tamanho do slotCollection e a quantidade de nodes filhos
-# PT_BR (2): Retorna o tamanho que cada slot deve ter
-# EN_US (1): Receive the slotCollection size and the number of child nodes
-# EN_US (2): Returns the size each slot should be
+# PT_BR (1): Função para calcular o tamanho que cada slot deve ter
+# PT_BR (2): Parâmetro: slot_collection_size int, qtd_child int
+# PT_BR (3): Retorna o tamanho que cada slot deve ter
+# EN_US (1): Function to calculate the size that each slot should be
+# EN_US (2): Parameter: slot_collection_size int, qtd_child int
+# EN_US (3): Returns the size each slot should be
 func _calc_slot_size(slot_collection_size, qtd_child):
 	return ( (slot_collection_size) / qtd_child )
 
 
-# PT_BR (1): Recebe a orientação a ser obtida e a propriedade do objeto (Vector2)
-# PT_BR (2): Não retorna um valor
-# EN_US (1): Receives the orientation to be obtained and the object property (Vector2)
-# EN_US (2): It does not return a value.
+# PT_BR (1): Função que retorna o tamanho de um Vector2 de um objeto na orientação enviada
+# PT_BR (2): Parâmetro: object_orientation: enum ORIENTATION_DIRECTION, object_property Vector2
+# EN_US (1): Function that returns the size of a Vector2 of an object in the sent orientation
+# EN_US (2): Parameter: object_orientation: enum ORIENTATION_DIRECTION, object_property Vector2
 func _get_object_property_orientation(object_orientation, object_property: Vector2):
 	# PT_BR: Essa função pega a orientação de uma propriedade que seja um Vector2
 	# EN_US: This function takes the orientation of a Vector2 property
@@ -116,11 +125,11 @@ func _get_object_property_orientation(object_orientation, object_property: Vecto
 DRAG AND DROP
 """
 
-# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
-# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
-# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
-# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 func get_drag_data(position):
+	# PT_BR (1): No get_drag_data é dividido na horizontal um espaço igual para cada Control
+	# PT_BR (2): Depois é visto todos os Controls no nó e definido o começo e o fim do espaço
+	# EN_US (1): In get_drag_data an equal horizontally space is divided for each Control
+	# EN_US (2): Then all the Controls in the node are seen and the beginning and end of the space are defined.
 	var actual_child = 0
 	var orientation_position = _get_object_property_orientation(orientation, position)
 	for child in self.get_children():
@@ -137,9 +146,9 @@ func get_drag_data(position):
 			actual_child += 1
 
 
-# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
-# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 func can_drop_data(position, data) -> bool:
+	# PT_BR: Verifica se algum Control filho aceita o objeto que está sendo arrastado e retorna o resultado
+	# EN_US: Checks if any child Control accepts the object being dragged and returns the result
 	var can_drop = false
 	for child in self.get_children():
 		if child.is_in_group("slot"):
@@ -149,11 +158,11 @@ func can_drop_data(position, data) -> bool:
 	return can_drop
 
 
-# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
-# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
-# EN_US (1): Checks which of the child Controls accepts the object and
-# EN_US (2): When found, sends the dragged object to the Control
 func drop_data(position, data) -> void:
+	# PT_BR (1): Checa qual dos Controls filhos aceita o objeto
+	# PT_BR (2): Ao achar, o envia o objeto arrastado para o Control
+	# EN_US (1): Checks which of the child Controls accepts the object and
+	# EN_US (2): When found, sends the dragged object to the Control
 	for child in self.get_children():
 		if child.is_in_group("slot") and child.can_drop_data(position, data):
 			child.drop_data(position, data)

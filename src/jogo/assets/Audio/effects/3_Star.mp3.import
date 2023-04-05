@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/3_Star.mp3-94faf0bc4197517f5f32a35e24282af6.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/effects/3_Star.mp3"
+dest_files=[ "res://.import/3_Star.mp3-94faf0bc4197517f5f32a35e24282af6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,19 +1,20 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
-[ext_resource path="res://scripts/buttons/ExitButton.gd" type="Script" id=3]
-[ext_resource path="res://assets/MenuScreen/background.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Tutorial/TutorialPopup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=4]
 [ext_resource path="res://assets/MenuScreen/start_button.png" type="Texture" id=5]
 [ext_resource path="res://assets/MenuScreen/options_button.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/MenuScreen/exit_button.png" type="Texture" id=8]
 [ext_resource path="res://assets/MenuScreen/about_button.png" type="Texture" id=9]
 [ext_resource path="res://assets/MenuScreen/hover_start_button.png" type="Texture" id=10]
-[ext_resource path="res://scenes/tutorial/TutorialPopup.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/MenuScreen/hover_options_button.png" type="Texture" id=12]
 [ext_resource path="res://assets/MenuScreen/hover_about_button.png" type="Texture" id=13]
 [ext_resource path="res://assets/MenuScreen/hover_exit_button.png" type="Texture" id=14]
+[ext_resource path="res://scenes/Credits.tscn" type="PackedScene" id=15]
+[ext_resource path="res://icon/LogoCia.png" type="Texture" id=16]
 
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
@@ -43,8 +44,8 @@ margin_right = 640.0
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 641, 359 )
-scale = Vector2( 0.664062, 0.662963 )
+position = Vector2( 643, 400 )
+scale = Vector2( 1.26, 1.26 )
 texture = ExtResource( 4 )
 
 [node name="Logo" type="Sprite" parent="."]
@@ -55,6 +56,11 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="LogoCia" type="Sprite" parent="."]
+position = Vector2( 1180, 671 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 16 )
 
 [node name="ButtonsVBoxContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -71,6 +77,7 @@ alignment = 1
 margin_top = 35.0
 margin_right = 225.0
 margin_bottom = 90.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 10 )
 
@@ -78,6 +85,7 @@ texture_hover = ExtResource( 10 )
 margin_top = 94.0
 margin_right = 225.0
 margin_bottom = 149.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 12 )
 
@@ -85,6 +93,7 @@ texture_hover = ExtResource( 12 )
 margin_top = 153.0
 margin_right = 225.0
 margin_bottom = 208.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 13 )
 
@@ -92,15 +101,21 @@ texture_hover = ExtResource( 13 )
 margin_top = 212.0
 margin_right = 225.0
 margin_bottom = 267.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
-script = ExtResource( 3 )
+
+[node name="TutorialPopup" parent="." instance=ExtResource( 3 )]
 
 [node name="Options" parent="." instance=ExtResource( 7 )]
+margin_left = 235.0
+margin_top = 139.0
+margin_right = -236.0
+margin_bottom = -143.0
 
-[node name="TutorialPopup" parent="." instance=ExtResource( 11 )]
+[node name="Credits" parent="." instance=ExtResource( 15 )]
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/CreditsButton" to="." method="_on_CreditsButton_pressed"]
-[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="ButtonsVBoxContainer/ExitButton" method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="ButtonsVBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

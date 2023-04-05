@@ -1,0 +1,345 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://scripts/Drawer/Drawer.gd" type="Script" id=1]
+[ext_resource path="res://assets/Drawer/drawer.png" type="Texture" id=2]
+[ext_resource path="res://assets/items/task/small_task.png" type="Texture" id=3]
+[ext_resource path="res://assets/items/drawers_task/task09.png" type="Texture" id=4]
+[ext_resource path="res://assets/items/drawers_task/task07.png" type="Texture" id=5]
+[ext_resource path="res://assets/items/drawers_task/task08.png" type="Texture" id=6]
+[ext_resource path="res://assets/items/drawers_task/task10.png" type="Texture" id=7]
+[ext_resource path="res://assets/items/drawers_task/task04.png" type="Texture" id=8]
+[ext_resource path="res://assets/items/drawers_task/task05.png" type="Texture" id=9]
+[ext_resource path="res://assets/items/drawers_task/task03.png" type="Texture" id=10]
+[ext_resource path="res://assets/items/drawers_task/task01.png" type="Texture" id=11]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_6.png" type="Texture" id=12]
+[ext_resource path="res://assets/items/drawers_task/task02.png" type="Texture" id=13]
+[ext_resource path="res://assets/items/drawers_task/task06.png" type="Texture" id=14]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_10.png" type="Texture" id=15]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_7.png" type="Texture" id=16]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_12.png" type="Texture" id=17]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_9.png" type="Texture" id=18]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_4.png" type="Texture" id=19]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_2.png" type="Texture" id=20]
+[ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/slots/SlotExpansor.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scripts/slots/HSlotExpansor.gd" type="Script" id=23]
+[ext_resource path="res://assets/items/drawers_task/task11.png" type="Texture" id=24]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_5.png" type="Texture" id=25]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_8.png" type="Texture" id=26]
+[ext_resource path="res://assets/items/drawers_task/task12.png" type="Texture" id=27]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_3.png" type="Texture" id=28]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_11.png" type="Texture" id=29]
+[ext_resource path="res://assets/items/task/tasks3/dtask3_1.png" type="Texture" id=30]
+[ext_resource path="res://scenes/Drawer/drawer_theme.tres" type="Theme" id=31]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Gaveta Copy Copy.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 512, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="MainDrawer" type="Node2D"]
+
+[node name="SlotExpansor" parent="." instance=ExtResource( 22 )]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_clip_content = true
+
+[node name="ScrollSlotContainer" type="ScrollContainer" parent="SlotExpansor" groups=["slot"]]
+margin_right = 510.0
+margin_bottom = 99.0
+rect_min_size = Vector2( 510, 99 )
+rect_clip_content = false
+mouse_default_cursor_shape = 2
+theme = ExtResource( 31 )
+follow_focus = true
+scroll_vertical_enabled = false
+script = ExtResource( 23 )
+
+[node name="DrawerHBox" type="HBoxContainer" parent="SlotExpansor/ScrollSlotContainer" groups=["slot"]]
+margin_right = 768.0
+margin_bottom = 64.0
+grow_vertical = 0
+rect_min_size = Vector2( 768, 64 )
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+custom_constants/separation = 0
+script = ExtResource( 1 )
+drawer_size = Vector2( 768, 64 )
+qtd_task = 12
+
+[node name="root" type="Node2D" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox"]
+visible = false
+
+[node name="SlotExample" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox/root" instance=ExtResource( 21 )]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+location = 1
+attributes = {
+"ART_THINK": 0,
+"LOGIC_RAC": 0,
+"MANUAL_WORK": 0
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+
+[node name="task01ReqSys" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "reqSys"
+qtd = 1
+location = 1
+attributes = {
+"MANUAL_WORK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 11 )
+boss_table_image = ExtResource( 30 )
+
+[node name="task02Physics" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 64.0
+margin_right = 128.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "physics"
+qtd = 1
+location = 1
+attributes = {
+"MANUAL_WORK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 13 )
+boss_table_image = ExtResource( 20 )
+
+[node name="task03ProjArq" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 128.0
+margin_right = 192.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "projArq"
+qtd = 1
+location = 1
+attributes = {
+"LOGIC_RAC": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 10 )
+boss_table_image = ExtResource( 28 )
+
+[node name="task04Colours" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 192.0
+margin_right = 256.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "colours"
+qtd = 1
+location = 1
+attributes = {
+"ART_THINK": 2.0
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 8 )
+boss_table_image = ExtResource( 19 )
+
+[node name="task05Build" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 256.0
+margin_right = 320.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "Build"
+qtd = 1
+location = 1
+attributes = {
+"ART_THINK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 9 )
+boss_table_image = ExtResource( 25 )
+
+[node name="task06Os" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 320.0
+margin_right = 384.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "os"
+qtd = 1
+location = 1
+attributes = {
+"LOGIC_RAC": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 14 )
+boss_table_image = ExtResource( 12 )
+
+[node name="task07Fit" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 384.0
+margin_right = 448.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "fit"
+qtd = 1
+location = 1
+attributes = {
+"LOGIC_RAC": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 5 )
+boss_table_image = ExtResource( 16 )
+
+[node name="task08Connection" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 448.0
+margin_right = 512.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "connection"
+qtd = 1
+location = 1
+attributes = {
+"MANUAL_WORK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 6 )
+boss_table_image = ExtResource( 26 )
+
+[node name="task09Construct" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 512.0
+margin_right = 576.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "construct"
+qtd = 1
+location = 1
+attributes = {
+"MANUAL_WORK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 4 )
+boss_table_image = ExtResource( 18 )
+
+[node name="task10Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 576.0
+margin_right = 640.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "id"
+qtd = 1
+location = 1
+attributes = {
+"MANUAL_WORK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 7 )
+boss_table_image = ExtResource( 15 )
+
+[node name="task11Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 640.0
+margin_right = 704.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "id"
+qtd = 1
+location = 1
+attributes = {
+"ART_THINK": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 24 )
+boss_table_image = ExtResource( 29 )
+
+[node name="task12Id" parent="SlotExpansor/ScrollSlotContainer/DrawerHBox" instance=ExtResource( 21 )]
+margin_left = 704.0
+margin_right = 768.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+mouse_filter = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+uid = "id"
+qtd = 1
+location = 1
+attributes = {
+"LOGIC_RAC": 2
+}
+slot_size = Vector2( 64, 64 )
+images_size = Vector2( 64, 64 )
+table_image = ExtResource( 3 )
+drawer_image = ExtResource( 27 )
+boss_table_image = ExtResource( 17 )
+
+[node name="drawer" type="TileMap" parent="SlotExpansor/ScrollSlotContainer"]
+position = Vector2( -1409.01, -641 )
+scale = Vector2( 1.00787, 1 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 2621527, 0, 0 )
