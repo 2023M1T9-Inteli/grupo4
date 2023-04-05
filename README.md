@@ -104,6 +104,11 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🗃 Histórico de lançamentos
 
+* 1.0.0 - 05/04/2023
+    * Finalização da fase 2;
+    * Finalização da fase 3;
+    * Atualização do readme.
+  
 * 0.5.0 - 26/03/2023 
     * Finalização da fase 1;
     * Atualização do GDD, versão 2.9;
