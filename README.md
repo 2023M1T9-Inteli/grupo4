@@ -94,13 +94,11 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 💻 Configuração para Desenvolvimento
 
-1 - Faça o download do GODOT e deste repositório.
-2 - Abra o GODOT, ao ser prontificado clique em IMPORTAR.
-3 - Selecione a pasta onde descompactou este repositório.
+Para abrir este projeto você precisa baixar a engine <a href="https://godotengine.org/download">Godot</a>.
 
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
+1. Faça o download do Godot e deste repositório;
+2. Abra o Godor e, ao ser carregar a tela inicial, clique em **importar**;
+3. Selecione a pasta onde descompactou este repositório e selecione o arquivo **project.godot**.
 
 ## 🗃 Histórico de lançamentos
 
