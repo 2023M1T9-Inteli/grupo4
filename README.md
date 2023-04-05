@@ -147,5 +147,5 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🎓 Referências
 
-Aqui estão as referências usadas no projeto.
+* Modern Office por https://limezu.itch.io/
 
