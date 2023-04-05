@@ -147,5 +147,7 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 ## 🎓 Referências
 
-* Modern Office por https://limezu.itch.io/
-
+* Assets: Modern Office por https://limezu.itch.io/
+* Fonte: https://www.tutoriart.com.br/fontes-pixeladas-pixel-fonts-para-download-gratis/
+* Música e efeitos sonoros: <a href="https://pixabay.com/"> Pixabay </a>, <a href="https://freesound.org/">Freesound</a> e <a href="https://www.youtube.com/watch?v=unFxvHCoJQQ&feature=youtu.be">YouTube</a> (Todos os áudios isentos de direitos autorais)
+* Inspirações: Pokémon, Pinguin Dinner, Overcooked e Papers, please
