@@ -16,6 +16,7 @@
             <td align="center"><a href="https://github.com/CaioPaula"><img src="https://user-images.githubusercontent.com/86068799/221302346-4ab5de25-3e89-4fdf-8248-3204d77ad6cb.png" width="100px" alt=""/><br><sub><b>Caio</b></sub></a><br /></td>
            <td align="center"><a href="https://github.com/heitorep"><img src="https://user-images.githubusercontent.com/86068799/221302754-e3a126ba-415f-4a5a-ac25-9a9ca01f7d8a.png" width="100px;" alt=""/><br><sub><b>Heitor</b></sub></a><br></td>
            <td align="center"><a href="https://github.com/henriqueecox"><img src="https://user-images.githubusercontent.com/86068799/221303201-d9e51fec-21d9-4288-9ebf-e16342d0d098.png" width="100px;" alt=""/><br><sub><b>Henrique</b></sub></a><br></td>
+            <td align="center"><a href="https://github.com/uMorit4"><img src="https://user-images.githubusercontent.com/86068799/221303626-7d5bf19c-ce19-436d-bcf3-04a4c41d069e.png" width="100px;" alt=""/><br><sub><b>Pedro</b></sub></a><br></td>
             </tr>
     </table>
 </div>
@@ -23,7 +24,6 @@
 <div align="center">
     <table>
         <tr>
-         <td align="center"><a href="https://github.com/uMorit4"><img src="https://user-images.githubusercontent.com/86068799/221303626-7d5bf19c-ce19-436d-bcf3-04a4c41d069e.png" width="100px;" alt=""/><br><sub><b>Pedro</b></sub></a><br></td>
         <td align="center"><a href="https://github.com/raissavieiram"><img src="https://user-images.githubusercontent.com/86068799/221303964-ae6a070d-72ed-4686-906c-ff7d2c08a7fd.png" width="100px;" alt=""/><br><sub><b>Raíssa</b></sub></a><br></td>
         <td align="center"><a href="https://github.com/raphaelaferraz"><img src="https://user-images.githubusercontent.com/86068799/221304209-0a1ae3a4-de56-44bf-9c0e-b2271723a6b4.png" width="100px;" alt=""/><br><sub><b>Raphaela</b></sub></a><br></td>
         <td align="center"><a href="https://github.com/YanMCoutinho"><img src="https://user-images.githubusercontent.com/86068799/221304522-698f454c-3b9b-441d-927f-2f2a03ca9ed3.png" width="100px;" alt=""/><br><sub><b>Yan</b></sub></a><br></td>
