@@ -93,6 +93,7 @@ Para abrir este projeto você precisa baixar a engine <a href="https://godotengi
 * 1.0.0 - 05/04/2023
     * Finalização da fase 2;
     * Finalização da fase 3;
+    * Atualização do GDD, versão 3.6;
     * Atualização do readme.
   
 * 0.5.0 - 26/03/2023 
