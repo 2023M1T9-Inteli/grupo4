@@ -131,13 +131,13 @@ Para abrir este projeto você precisa baixar a engine <a href="https://godotengi
 ## 📋 Licença/License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
-<p> Caio Teixeira de Paula: </br> <a href=https://www.linkedin.com/in/raissa-vieira-de-melo/>https://www.linkedin.com/in/raissa-vieira-de-melo/</a>
-    Heitor Elias Prudente: </br>
-    Henrique Cox Cabral Oliveira de Moura: </br>
-    Pedro Morita Bannwart: </br>
-    Raíssa Vieira de Melo: </br>
-    Raphaela Guiland Ferraz : </br>
-    Yan Mendonça Coutinho: </p>
+<p> Caio Teixeira de Paula:<a href=https://www.linkedin.com/in/caio-paula-36b187264/>https://www.linkedin.com/in/caio-paula-36b187264/</a>
+    Heitor Elias Prudente: <a href=https://www.linkedin.com/in/heitorprudente/>https://www.linkedin.com/in/heitorprudente/</a>
+    Henrique Cox Cabral Oliveira de Moura: <a href=https://www.linkedin.com/in/raissa-vieira-de-melo/>https://www.linkedin.com/in/raissa-vieira-de-melo/</a>
+    Pedro Morita Bannwart: <a href=https://www.linkedin.com/in/pedro-bannwart-0565aa264/>https://www.linkedin.com/in/pedro-bannwart-0565aa264/</a>
+    Raíssa Vieira de Melo: <a href=https://www.linkedin.com/in/raissa-vieira-de-melo>https://www.linkedin.com/in/raissa-vieira-de-melo</a>
+    Raphaela Guiland Ferraz : <a href=https://www.linkedin.com/in/raphaela-guiland-ferraz/>https://www.linkedin.com/in/raphaela-guiland-ferraz/</a>
+    Yan Mendonça Coutinho: <a href=https://www.linkedin.com/in/yan-m-coutinho/>https://www.linkedin.com/in/yan-m-coutinho/</a> </p>
 
 ## 🎓 Referências
 
