@@ -28,6 +28,7 @@
 [ext_resource path="res://assets/Phase3/gift.png" type="Texture" id=30]
 [ext_resource path="res://assets/Phase3/gift_dark.png" type="Texture" id=31]
 
+
 [sub_resource type="DynamicFont" id=1]
 size = 35
 outline_size = 2

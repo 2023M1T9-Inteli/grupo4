@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/Tutorial/map/background_tutorial.png" type="Texture" id=2]
+[ext_resource path="res://assets/tutorial/map/background_tutorial.png" type="Texture" id=2]
 [ext_resource path="res://assets/buttons/right_button.png" type="Texture" id=3]
 
 [sub_resource type="GDScript" id=6]

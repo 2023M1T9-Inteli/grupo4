@@ -5,6 +5,7 @@
 [ext_resource path="res://scripts/Credits.gd" type="Script" id=3]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=4]
 
+
 [sub_resource type="Shader" id=13]
 code = "shader_type canvas_item;
 

@@ -2,6 +2,7 @@
 
 [ext_resource path="res://scripts/Audio.gd" type="Script" id=2]
 
+
 [node name="MusicController" type="Node"]
 pause_mode = 2
 script = ExtResource( 2 )

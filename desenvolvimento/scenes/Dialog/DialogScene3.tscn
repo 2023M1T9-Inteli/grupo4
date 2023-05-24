@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/Dialog/Dialog3/bento_claus.png" type="Texture" id=13]
 [ext_resource path="res://assets/Dialog/Dialog3/bento_claus2.png" type="Texture" id=14]
 
+
 [sub_resource type="DynamicFont" id=8]
 size = 20
 font_data = ExtResource( 8 )

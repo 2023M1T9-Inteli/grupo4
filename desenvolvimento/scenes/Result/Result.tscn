@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/Audio/effects/1_Star.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/Feedbacks/continue.png" type="Texture" id=16]
 
+
 [sub_resource type="DynamicFont" id=1]
 size = 50
 outline_size = 2

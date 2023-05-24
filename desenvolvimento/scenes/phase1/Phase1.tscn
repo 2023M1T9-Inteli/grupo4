@@ -28,6 +28,7 @@
 [ext_resource path="res://assets/buttons/hover_icon_pause.png" type="Texture" id=26]
 [ext_resource path="res://assets/Audio/effects/Click.mp3" type="AudioStream" id=27]
 
+
 [sub_resource type="DynamicFont" id=1]
 size = 31
 outline_size = 2

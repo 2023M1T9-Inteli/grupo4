@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://assets/Tutorial/map/background_tutorial.png" type="Texture" id=1]
+[ext_resource path="res://assets/tutorial/map/background_tutorial.png" type="Texture" id=1]
 [ext_resource path="res://scenes/base_phase/BossTable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scenes/slots/Slot.tscn" type="PackedScene" id=4]

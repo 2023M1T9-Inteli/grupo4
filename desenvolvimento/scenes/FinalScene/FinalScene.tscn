@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/Feedbacks/continue.png" type="Texture" id=6]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=7]
 
+
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 

@@ -26,6 +26,7 @@
 [ext_resource path="res://assets/characters/ana2.png" type="Texture" id=24]
 
 
+
 [sub_resource type="PluginScript" id=11]
 
 [sub_resource type="TileSet" id=4]

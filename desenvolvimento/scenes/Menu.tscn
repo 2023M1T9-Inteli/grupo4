@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MenuScreen/logo.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Tutorial/TutorialPopup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/tutorial/TutorialPopup.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/Backgrounds/Background.png" type="Texture" id=4]
 [ext_resource path="res://assets/MenuScreen/start_button.png" type="Texture" id=5]
 [ext_resource path="res://assets/MenuScreen/options_button.png" type="Texture" id=6]
@@ -105,8 +105,6 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 14 )
 
-[node name="TutorialPopup" parent="." instance=ExtResource( 3 )]
-
 [node name="Options" parent="." instance=ExtResource( 7 )]
 margin_left = 235.0
 margin_top = 139.0
@@ -114,6 +112,9 @@ margin_right = -236.0
 margin_bottom = -143.0
 
 [node name="Credits" parent="." instance=ExtResource( 15 )]
+visible = false
+
+[node name="TutorialPopup" parent="." instance=ExtResource( 3 )]
 
 [connection signal="pressed" from="ButtonsVBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="ButtonsVBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

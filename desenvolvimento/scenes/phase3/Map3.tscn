@@ -34,6 +34,7 @@
 [ext_resource path="res://assets/Phase3/decoration_christmas.png" type="Texture" id=33]
 [ext_resource path="res://assets/characters/Characters_Phase_3/kira_phase3(1).png" type="Texture" id=34]
 
+
 [sub_resource type="PluginScript" id=11]
 
 [sub_resource type="TileSet" id=29]
