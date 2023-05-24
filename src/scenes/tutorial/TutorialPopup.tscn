@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/tutorial/Introduction_tutorial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tutorial/Paula_introduction.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/tutorial/Skip_button_explanning.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/tutorial/Score.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/tutorial/TutorialPopup.gd" type="Script" id=5]
+
+[node name="PopupMenu" type="Node2D"]
+visible = false
+script = ExtResource( 5 )
+
+[node name="score" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="paula" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="skip" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="introduction" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[connection signal="back_tutorial" from="score" to="." method="_on_score_back_tutorial"]
+[connection signal="next_tutorial" from="score" to="." method="_on_score_next_tutorial"]
+[connection signal="back_tutorial" from="paula" to="." method="_on_paula_back_tutorial"]
+[connection signal="next_tutorial" from="paula" to="." method="_on_paula_next_tutorial"]
+[connection signal="back_tutorial" from="skip" to="." method="_on_skip_back_tutorial"]
+[connection signal="end_tutorial" from="skip" to="." method="_on_skip_end_tutorial"]
+[connection signal="next_tutorial" from="skip" to="." method="_on_skip_next_tutorial"]
+[connection signal="back_tutorial" from="introduction" to="." method="_on_introduction_back_tutorial"]
+[connection signal="next_tutorial" from="introduction" to="." method="_on_introduction_next_tutorial"]
