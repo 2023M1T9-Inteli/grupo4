@@ -12,7 +12,6 @@
 > 📜 O respectivo projeto foi desenvolvido pelo grupo Pandawan no módolo 1 da turma 2023.1 do Inteli (Instituto de Tecnologia e Liderança) em parceria com a Companhia de Talentos. De forma resumida, o projeto será utilizado para os treinamentos de desenvolvimento profissional que a Cia de Talentos realiza e, por isso, a temática que ele aborda é sobre <strong>delegação de tarefas</strong>.
 <br><br>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/86068799/221307640-22321c57-e621-4e6c-abe1-888d73c7ec8b.png" alt="Logotipo do jogo O Talento de Delegar" border="0">
 </p>
 
 
