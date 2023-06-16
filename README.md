@@ -18,6 +18,10 @@
 💡 O jogo se passa em uma empresa de consultoria e gerenciamento de projetos, a qual é composta por uma chefe, a Paula, que será controlada pelo jogador, e outros quatro funcionários. Dessa forma, esses personagens compõem uma equipe que irá receber de seus clientes um projeto que deverá ser desenvolvido. Para que isso seja possível, o jogador terá que delegar as pequenas tarefas que fazem parte do projeto para os seus funcionários e, para isso, ele deverá interpretar tanto os requisitos de tais atividades quanto as habilidades de cada subordinado. 
 <br><br>
 
+## 🎮 Jogue agora
+
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Pandawan](https://2023m1t9-inteli.github.io/grupo4/)
+
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
